@@ -102,7 +102,9 @@
 <meta property="og:description" content="git是什么？Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。Git 是 Linus 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。说白了就是一个版本控制工具，帮助大家管理自己的代码。">
 <meta property="og:image" content="http://yoursite.com/images/git-1.png">
 <meta property="og:image" content="http://yoursite.com/images/git-2.png">
-<meta property="og:updated_time" content="2017-07-14T09:08:59.000Z">
+<meta property="og:image" content="http://yoursite.com/images/git-3.png">
+<meta property="og:image" content="http://yoursite.com/images/git-4.png">
+<meta property="og:updated_time" content="2017-07-20T08:26:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 简介">
 <meta name="twitter:description" content="git是什么？Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。Git 是 Linus 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。说白了就是一个版本控制工具，帮助大家管理自己的代码。">
@@ -366,7 +368,7 @@
 <ul>
 <li>git（工具）是一个开源的分布式版本控制系统</li>
 <li>github（社区）是一个用git做版本控制的项目托管平台，并附带交友分享功能。。类似的平台还有bitbucket、oschina的码云。这些平台基本都是以开源项目著称的，当然也提供一定的收费私有化托管服务。</li>
-<li>当然（私有化），估计大家还听说过coding、gitlab、gogs，这些都是做一些私有化项目托管的平台。gitlab、gogs都是开源的git托管平台，可以自己私有化部署。</li>
+<li>当然（私有化），比如coding、gitlab、gogs，这些都是做一些私有化项目托管的平台。gitlab、gogs都是开源的git托管平台，可以自己私有化部署。</li>
 </ul>
 <h2 id="工作原理："><a href="#工作原理：" class="headerlink" title="工作原理："></a>工作原理：</h2><p><img src="/images/git-2.png" alt=""></p>
 <ul>
@@ -375,7 +377,12 @@
 <li>Workspace:工作区，执行<code>git add *</code> 命令就把改动提交到了暂存区，执行<code>git pull</code> 命令将远程仓库的数据拉到当前分支并合并，执行<code>git checkout [branch-name]</code> 切换分支</li>
 <li>Index:暂存区，执行<code>git commit -m</code> ‘说明’ 命令就把改动提交到了仓库区（当前分支）<br>注：实际操作命令和上述命令会有所不同，这里是解释清楚命令和仓库的关系。</li>
 </ul>
-<h2 id="未完待续。。。"><a href="#未完待续。。。" class="headerlink" title="未完待续。。。"></a>未完待续。。。</h2>
+<h2 id="git版本控制方法"><a href="#git版本控制方法" class="headerlink" title="git版本控制方法"></a>git版本控制方法</h2><ul>
+<li>当文件变更提交时，git底层文件系统存储的则为文件快照，即整个文件内容，并保存指向快照的索引，考虑到性能因素，如果文件内容没有发生任何变化，该文件系统则不会重复保存文件，只是简单地保存文件的链接。<br><img src="/images/git-3.png" alt=""></li>
+<li>git之所以选择这样的底层存储数据结构，主要是为了提高git分支的使用效率。实际上，git分支本质上是一个指向索引对象的可变指针，而每一个索引对象又指向文件快照，这样一来，创建分支可以瞬间完成。<br><img src="/images/git-4.png" alt=""><h2 id="去中心化"><a href="#去中心化" class="headerlink" title="去中心化"></a>去中心化</h2></li>
+<li>git可以没有中心服务器的，每个人机器上都是一个完整的库，自带备份效果，我们平时开发代码时的中央服务器其实和我们自己机器上的库内容是完全一样的（格式有点不同，是bare的）。虽然平时大家都是将代码提交到中央服务器上再统一pull别人的代码，但实际情况你可以总是pull张三的库，然后push给李四等等操作。去中心化设计思想所带来的另外一大好处是支持离线工作，在git中的绝大多数操作都只需要访问本地文件和资源。<h2 id="未完待续。。。"><a href="#未完待续。。。" class="headerlink" title="未完待续。。。"></a>未完待续。。。</h2></li>
+</ul>
+
       
     </div>
 
@@ -612,7 +619,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git是什么？"><span class="nav-number">1.</span> <span class="nav-text">git是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git与github有什么区别？"><span class="nav-number">2.</span> <span class="nav-text">git与github有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工作原理："><span class="nav-number">3.</span> <span class="nav-text">工作原理：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未完待续。。。"><span class="nav-number">4.</span> <span class="nav-text">未完待续。。。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git是什么？"><span class="nav-number">1.</span> <span class="nav-text">git是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git与github有什么区别？"><span class="nav-number">2.</span> <span class="nav-text">git与github有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工作原理："><span class="nav-number">3.</span> <span class="nav-text">工作原理：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git版本控制方法"><span class="nav-number">4.</span> <span class="nav-text">git版本控制方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#去中心化"><span class="nav-number">5.</span> <span class="nav-text">去中心化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未完待续。。。"><span class="nav-number">6.</span> <span class="nav-text">未完待续。。。</span></a></li></ol></div>
             
 
           </div>
