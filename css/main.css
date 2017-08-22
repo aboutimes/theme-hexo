@@ -932,13 +932,16 @@ pre .javascript .function {
   right: 30px;
   z-index: 1050;
   padding: 0 6px;
-  width: 24px;
-  background: #222;
-  font-size: 12px;
+  height: 40px;
+  width: 40px;
+  line-height: 34px;
+  background: #f0f0f0;
+  font-size: 20px;
   opacity: 1;
-  color: #fff;
+  color: #000;
   cursor: pointer;
   text-align: center;
+  border-radius: 50%;
   -webkit-transform: translateZ(0);
   transition-property: bottom;
   transition-duration: 0.2s;
@@ -1678,7 +1681,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #22ffa4;
+  background: #c43dad;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2472,6 +2475,8 @@ embed {
   padding: 5px;
   max-width: 150px;
   background: #fff;
+  border-radius: 50%;
+  border-color: transparent;
 }
 @media (max-width: 767px) {
   .site-nav {
