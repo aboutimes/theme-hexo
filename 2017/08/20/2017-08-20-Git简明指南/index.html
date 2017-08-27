@@ -93,23 +93,23 @@
 
 
 
-<meta name="description" content="git是什么？Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。Git 是 Linus 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。说白了就是一个版本控制工具，帮助大家管理自己的代码。">
+<meta name="description" content="GitGit是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。Git 是 Linus 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。说白了就是一个版本控制工具，帮助大家管理自己的代码。">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git 简明指南">
 <meta property="og:url" content="http://yoursite.com/2017/08/20/2017-08-20-Git简明指南/index.html">
 <meta property="og:site_name" content="华灯初上">
-<meta property="og:description" content="git是什么？Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。Git 是 Linus 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。说白了就是一个版本控制工具，帮助大家管理自己的代码。">
+<meta property="og:description" content="GitGit是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。Git 是 Linus 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。说白了就是一个版本控制工具，帮助大家管理自己的代码。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/git-1.png">
 <meta property="og:image" content="http://yoursite.com/images/git-2.png">
 <meta property="og:image" content="http://yoursite.com/images/git-3.png">
 <meta property="og:image" content="http://yoursite.com/images/git-4.png">
 <meta property="og:image" content="http://yoursite.com/images/git-5.png">
-<meta property="og:updated_time" content="2017-08-25T14:02:47.000Z">
+<meta property="og:updated_time" content="2017-08-27T02:33:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 简明指南">
-<meta name="twitter:description" content="git是什么？Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。Git 是 Linus 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。说白了就是一个版本控制工具，帮助大家管理自己的代码。">
+<meta name="twitter:description" content="GitGit是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。Git 是 Linus 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。说白了就是一个版本控制工具，帮助大家管理自己的代码。">
 <meta name="twitter:image" content="http://yoursite.com/images/git-1.png">
 
 
@@ -355,7 +355,7 @@
 
       
         <p><img src="/images/git-1.png" alt=""></p>
-<h2 id="git是什么？"><a href="#git是什么？" class="headerlink" title="git是什么？"></a>git是什么？</h2><p>Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。Git 是 Linus 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。说白了就是一个版本控制工具，帮助大家管理自己的代码。<a id="more"></a></p>
+<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p>Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。Git 是 Linus 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。说白了就是一个版本控制工具，帮助大家管理自己的代码。<a id="more"></a></p>
 <h2 id="工作原理："><a href="#工作原理：" class="headerlink" title="工作原理："></a>工作原理：</h2><p><img src="/images/git-2.png" alt=""></p>
 <ul>
 <li>Remote:远程仓库，就是类似github，coding等网站所提供的仓库</li>
@@ -363,7 +363,7 @@
 <li>Workspace:工作区，执行<code>git add *</code> 命令就把改动提交到了暂存区，执行<code>git pull</code> 命令将远程仓库的数据拉到当前分支并合并，执行<code>git checkout [branch-name]</code> 切换分支</li>
 <li>Index:暂存区，执行<code>git commit -m</code> ‘说明’ 命令就把改动提交到了仓库区（当前分支）<br>注：实际操作命令和上述命令会有所不同，这里是解释清楚命令和仓库的关系。</li>
 </ul>
-<h2 id="git版本控制方法"><a href="#git版本控制方法" class="headerlink" title="git版本控制方法"></a>git版本控制方法</h2><ul>
+<h2 id="Git版本控制方法"><a href="#Git版本控制方法" class="headerlink" title="Git版本控制方法"></a>Git版本控制方法</h2><ul>
 <li>当文件变更提交时，git底层文件系统存储的则为文件快照，即整个文件内容，并保存指向快照的索引，考虑到性能因素，如果文件内容没有发生任何变化，该文件系统则不会重复保存文件，只是简单地保存文件的链接。<br><img src="/images/git-3.png" alt=""></li>
 <li>git之所以选择这样的底层存储数据结构，主要是为了提高git分支的使用效率。实际上，git分支本质上是一个指向索引对象的可变指针，而每一个索引对象又指向文件快照，这样一来，创建分支可以瞬间完成。<br><img src="/images/git-4.png" alt=""></li>
 </ul>
@@ -436,6 +436,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/27/2017-08-27-修正笔记本内建显示器连接类型为eDP/" rel="prev" title="修正笔记本内建显示器连接类型为eDP">
+                修正笔记本内建显示器连接类型为eDP <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
