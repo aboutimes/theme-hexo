@@ -107,7 +107,7 @@
 <meta property="og:image" content="http://yoursite.com/images/2017-08-27-05.png">
 <meta property="og:image" content="http://yoursite.com/images/2017-08-27-04.png">
 <meta property="og:image" content="http://yoursite.com/images/2017-08-27-06.png">
-<meta property="og:updated_time" content="2017-08-27T05:03:50.000Z">
+<meta property="og:updated_time" content="2017-09-01T07:25:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="修正笔记本内建显示器连接类型为eDP">
 <meta name="twitter:description" content="英特尔在新一代Haswell处理器平台中，放弃传统的低电压差动讯号接口（LVDS），全面转向支持嵌入式数码音视讯传输接口（Embedded DisplayPort，eDP），从Haswell起，大部分笔记本内建显示器的连接类型(connector type)已经采用eDP，但是AppleIntelFramebufferAzul中ig-platform-id所在port 0000上面的conne">
@@ -186,9 +186,9 @@
       </div>
     
     <span style="color:lightgray;font-size: 10px;font-weight:lighter;'">华灯初上，相逢亦非晚</span>
-    
+    <!-- 
       <p class="site-subtitle"></p>
-    
+     -->
   </div>
 
   <div class="site-nav-toggle">
@@ -443,11 +443,11 @@
 <li>EDID：扩展显示表示数据，用来存储显示器参数</li>
 <li>DPCD：eDP 配置数据，与链路管理层相连用于链路的配置</li>
 </ul>
-<h2 id="3-查看笔记本内屏接口类型"><a href="#3-查看笔记本内屏接口类型" class="headerlink" title="3. 查看笔记本内屏接口类型"></a>3. 查看笔记本内屏接口类型</h2><ul>
+<h2 id="3-查看内屏接口类型"><a href="#3-查看内屏接口类型" class="headerlink" title="3. 查看内屏接口类型"></a>3. 查看内屏接口类型</h2><ul>
 <li>ubuntu下终端输入<code>xrandr</code>，得到如下结果，<code>connected primary</code>行<code>eDP</code>即为笔记本内屏连接类型</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">Screen 0: minimum 320 x 200, current 2560 x 1440, maximum 3200 x 2000</div><div class="line">eDP-1 connected primary 2560x1440+0+0 (normal left inverted right x axis y axis)</div><div class="line">   2560x1440     59.98*+  47.99  </div><div class="line">   2048x1536     60.00  </div><div class="line">   1920x1440     60.00  </div><div class="line">   1856x1392     60.01  </div><div class="line">   1792x1344     60.01  </div><div class="line">   1920x1200     59.95  </div><div class="line">   1920x1080     59.93  </div><div class="line">   1600x1200     60.00  </div><div class="line">   1680x1050     59.95    59.88  </div><div class="line">   1600x1024     60.17  </div><div class="line">   1400x1050     59.98  </div><div class="line">   1280x1024     60.02  </div><div class="line">   1440x900      59.89  </div><div class="line">   1280x960      60.00  </div><div class="line">   1360x768      59.80    59.96  </div><div class="line">   1152x864      60.00  </div><div class="line">   1024x768      60.04    60.00  </div><div class="line">   960x720       60.00  </div><div class="line">   928x696       60.05  </div><div class="line">   896x672       60.01  </div><div class="line">   960x600       60.00  </div><div class="line">   960x540       59.99  </div><div class="line">   800x600       60.00    60.32    56.25  </div><div class="line">   840x525       60.01    59.88  </div><div class="line">   800x512       60.17  </div><div class="line">   700x525       59.98  </div><div class="line">   640x512       60.02  </div><div class="line">   720x450       59.89  </div><div class="line">   640x480       60.00    59.94  </div><div class="line">   680x384       59.80    59.96  </div><div class="line">   576x432       60.06  </div><div class="line">   512x384       60.00  </div><div class="line">   400x300       60.32    56.34  </div><div class="line">   320x240       60.05  </div><div class="line">DP-1 disconnected (normal right inverted right x axis y axis)</div><div class="line">HDMI-1 disconnected (normal left inverted right x axis y axis)</div></pre></td></tr></table></figure>
-<h2 id="4-查看笔记本在macOS下内屏接口类型"><a href="#4-查看笔记本在macOS下内屏接口类型" class="headerlink" title="4. 查看笔记本在macOS下内屏接口类型"></a>4. 查看笔记本在macOS下内屏接口类型</h2><ul>
+<h2 id="4-查看在macOS下内屏接口类型"><a href="#4-查看在macOS下内屏接口类型" class="headerlink" title="4. 查看在macOS下内屏接口类型"></a>4. 查看在macOS下内屏接口类型</h2><ul>
 <li>通过IORegistryExplorer软件查看显卡(IGPU)下<code>AppleIntelFramebuffer@0</code>的<code>connector-type</code></li>
 </ul>
 <p><img src="/images/2017-08-27-03.png" alt=""></p>
@@ -487,7 +487,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="5-查看笔记本在macOS下加载的AppleIntelFramebuffer"><a href="#5-查看笔记本在macOS下加载的AppleIntelFramebuffer" class="headerlink" title="5. 查看笔记本在macOS下加载的AppleIntelFramebuffer"></a>5. 查看笔记本在macOS下加载的AppleIntelFramebuffer</h2><ul>
+<h2 id="5-确认加载的AppleIntelFramebuffer"><a href="#5-确认加载的AppleIntelFramebuffer" class="headerlink" title="5. 确认加载的AppleIntelFramebuffer"></a>5. 确认加载的AppleIntelFramebuffer</h2><ul>
 <li>打开<code>系统信息－&gt;功能扩展</code>查看自己笔记本加载的显AppleIntelFramebuffer驱动,如图记住<code>AppleIntelFramebufferAzui</code></li>
 </ul>
 <p><img src="/images/2017-08-27-05.png" alt=""></p>
@@ -597,7 +597,7 @@
           
   
 
-      
+  
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
       <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
@@ -607,23 +607,19 @@
   </div>
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
-      
-      
+        
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
             文章目录
           </li>
-          <!-- <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li> -->
         </ul>
-      
+
       
       <!--noindex-->
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
               
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-eDP与LVDS比较"><span class="nav-text">1. eDP与LVDS比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-eDP架构"><span class="nav-text">2. eDP架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-查看笔记本内屏接口类型"><span class="nav-text">3. 查看笔记本内屏接口类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-查看笔记本在macOS下内屏接口类型"><span class="nav-text">4. 查看笔记本在macOS下内屏接口类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-查看笔记本在macOS下加载的AppleIntelFramebuffer"><span class="nav-text">5. 查看笔记本在macOS下加载的AppleIntelFramebuffer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-修正connector-type"><span class="nav-text">6. 修正connector type</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-eDP与LVDS比较"><span class="nav-text">1. eDP与LVDS比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-eDP架构"><span class="nav-text">2. eDP架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-查看内屏接口类型"><span class="nav-text">3. 查看内屏接口类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-查看在macOS下内屏接口类型"><span class="nav-text">4. 查看在macOS下内屏接口类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-确认加载的AppleIntelFramebuffer"><span class="nav-text">5. 确认加载的AppleIntelFramebuffer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-修正connector-type"><span class="nav-text">6. 修正connector type</span></a></li></ol></div>
           </div>
         </section>
       <!--/noindex-->
