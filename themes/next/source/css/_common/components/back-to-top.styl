@@ -1,0 +1,32 @@
+.back-to-top {
+  box-sizing: border-box;
+  position: fixed;
+  bottom: $b2t-position-bottom;
+  right: $b2t-position-right;
+  z-index: $zindex-5;
+  padding: 0 6px;
+  height: 40px;
+  width: 40px;
+  line-height: 34px;
+  background: #f0;
+  font-size: 20px;
+  opacity: $b2t-opacity;
+  color: black;
+  cursor: pointer;
+  text-align: center;
+  border-radius:50%;
+  -webkit-transform: translateZ(0);
+  transition-property: bottom;
+  the-transition();
+
+  +mobile() {
+    display: none;
+  }
+  +tablet() {
+    display: none;
+  }
+
+  &.back-to-top-on {
+    bottom: $b2t-position-bottom-on;
+  }
+}
