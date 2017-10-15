@@ -1,6 +1,6 @@
 {% macro render(post) %}
 
-  <article class="post post-type-{{ post.type | default('normal') }}" itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-{{ post.type | default('normal') }}">
     <header class="post-header">
 
       <{% if theme.seo %}h3{% else %}h2{% endif %} class="post-title">
@@ -10,7 +10,7 @@
             <i class="fa fa-external-link"></i>
           </a>
         {% else %}
-            <a class="post-title-link" href="{{ url_for(post.path) }}" itemprop="url">
+            <a class="post-title-link" href="{{ url_for(post.path) }}">
               {% if post.type === 'picture' %}
                 {{ post.content }}
               {% else %}

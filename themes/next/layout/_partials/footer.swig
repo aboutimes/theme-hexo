@@ -14,7 +14,7 @@
     {% endfor %}
   {% endif %}
 </div>
-<ul class="links-of-blogroll-list" style="font-weight:lighter;">
+<ul class="links-of-blogroll-list" style="font-weight:200;">
   {% for name, link in theme.links %}
     <li class="links-of-blogroll-item"  style="display: inline-block;">
       <a href="{{ link }}" title="{{ name }}" target="_blank">{{ name }}</a>

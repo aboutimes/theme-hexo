@@ -8,16 +8,16 @@
     {% set post_class = post_class + ' ' + 'post-sticky' %}
   {% endif %}
 
-  <article class="{{ post_class }}" itemscope itemtype="http://schema.org/Article">
+  <article class="{{ post_class }}" ">
     <link itemprop="mainEntityOfPage" href="{{ config.url }}{{ url_for(post.path) }}">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <span hidden itemprop="author">
       <meta itemprop="name" content="{{ theme.author }}">
       <meta itemprop="description" content="{{ theme.signature }}">
       <meta itemprop="image" content="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}">
     </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher">
       <meta itemprop="name" content="{{ config.title }}">
     </span>
 
@@ -46,7 +46,7 @@
                     <i class="fa fa-thumb-tack"></i>
                   </span>
                 {% endif %}
-                <a class="post-title-link" href="{{ url_for(post.path) }}" itemprop="url">{#
+                <a class="post-title-link" href="{{ url_for(post.path) }}" >{#
                 #}{{ post.title | default(__('post.untitled'))}}{#
               #}</a>{#
             #}{% else %}{{ post.title }}{% endif %}{#
@@ -98,7 +98,7 @@
                 <span class="post-meta-item-text">{{ __('post.in') }}</span>
               {% endif %} -->
               {% for cat in post.categories %}
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <span itemprop="about">
                   <a href="{{ url_for(cat.path) }}" itemprop="url" rel="index">
                     <span itemprop="name">{{ cat.name }}</span>
                   </a>
@@ -245,13 +245,12 @@
 
       {# Gallery support #}
       {% if post.photos and post.photos.length %}
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+        <div class="post-gallery">
           {% set COLUMN_NUMBER = 3 %}
           {% for photo in post.photos %}
             {% if loop.index0 % COLUMN_NUMBER === 0 %}<div class="post-gallery-row">{% endif %}
               <a class="post-gallery-img fancybox"
-                 href="{{ url_for(photo) }}" rel="gallery_{{ post._id }}"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                 href="{{ url_for(photo) }}" rel="gallery_{{ post._id }}" itemprop="url">
                 <img src="{{ url_for(photo) }}" itemprop="contentUrl"/>
               </a>
             {% if loop.index0 % COLUMN_NUMBER === 2 %}</div>{% endif %}
