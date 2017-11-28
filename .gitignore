@@ -4,3 +4,6 @@
 /source/_posts
 .DS_Store
 */.DS_Store
+/.deploy_git
+/.git
+db.json
