@@ -22,7 +22,7 @@
 </ul>
 <div class="copyright" style="top:50px;font-weight:lighter;">
   {% set current = date(Date.now(), "YYYY") %}
-  &copy; 2012-{% if theme.since and theme.since != current %} {{ theme.since }} - {% endif %}
+  &copy; {% if theme.since and theme.since != current %} {{ theme.since }} - {% endif %}
   <span itemprop="copyrightYear">{{ current }}</span>  
   <span class="author" itemprop="copyrightHolder">{{ config.author }}</span>
 </div>
