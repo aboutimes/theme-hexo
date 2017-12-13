@@ -4,7 +4,7 @@
     {% if theme.custom_logo.image and theme.scheme === 'Muse' %}
       <div class="site-meta-headline">
         <a>
-          <img class="custom-logo-image" src="/images/avatar.jpg"
+          <img class="custom-logo-image" src="/images/avatar.png"
                alt="{{ config.title }}"/>
         </a>
       </div>

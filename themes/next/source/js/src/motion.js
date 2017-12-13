@@ -115,6 +115,7 @@ $(document).ready(function () {
       }
       sidebarToggleLines.init();
     },
+    //显示目录
     showSidebar: function () {
       var self = this;
 
@@ -129,7 +130,7 @@ $(document).ready(function () {
             $('.sidebar .motion-element').velocity(
               'transition.slideRightIn',
               {
-                stagger: 50,
+                stagger: 0,
                 drag: true,
                 complete: function () {
                   self.sidebarEl.trigger('sidebar.motion.complete');
