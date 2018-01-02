@@ -95,6 +95,8 @@ $(document).ready(function () {
             {paddingRight: SIDEBAR_WIDTH},
             SIDEBAR_DISPLAY_DURATION
           );
+          //目录显示边框
+          $("#sidebarinner").css("border-left","1px solid #1abc9c33");
         })
         .on('sidebar.isHiding', function () {
         });
@@ -146,6 +148,7 @@ $(document).ready(function () {
       );
 
       this.sidebarEl.trigger('sidebar.isShowing');
+
     },
     hideSidebar: function () {
       NexT.utils.isDesktop() && $('body').velocity('stop').velocity({paddingRight: 0});

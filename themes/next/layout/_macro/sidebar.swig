@@ -9,7 +9,7 @@
     </div>
   </div>
   <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
+    <div class="sidebar-inner" id="sidebarinner">
         
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
