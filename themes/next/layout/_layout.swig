@@ -27,7 +27,7 @@
     </header>
 
     <main id="main" class="main">
-      <div class="main-inner">
+      <div class="main-inner" id="maininner">
         <div class="content-wrap">
           <div id="content" class="content">
             {% block content %}{% endblock %}

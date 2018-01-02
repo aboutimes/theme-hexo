@@ -97,8 +97,10 @@ $(document).ready(function () {
           );
           //目录显示边框
           $("#sidebarinner").css("border-left","1px solid #1abc9c33");
+          $("#maininner").css("width","90%");
         })
         .on('sidebar.isHiding', function () {
+          $("#maininner").css("width","80%");
         });
     },
     clickHandler: function () {
