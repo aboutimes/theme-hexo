@@ -23,7 +23,11 @@
     <!-- <div class="headband"></div> -->
 
     <header id="header" class="header">
-      <div class="header-inner"> {%- include '_partials/header.swig' %} </div>
+      <div class="header-inner"> {%- include '_partials/header.swig' %} 
+        <!-- 下划线 -->
+      <hr class="headerline">
+      </div>
+      
     </header>
 
     <main id="main" class="main">
