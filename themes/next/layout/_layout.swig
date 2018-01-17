@@ -24,8 +24,6 @@
 
     <header id="header" class="header">
       <div class="header-inner"> {%- include '_partials/header.swig' %} 
-        <!-- 下划线 -->
-      <hr class="headerline">
       </div>
       
     </header>
