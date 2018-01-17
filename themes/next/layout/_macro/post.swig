@@ -261,7 +261,7 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="{{ url_for(post.path) }}">
-              {{ __('post.read_more') }} &raquo;
+              {{ __('post.read_more') }}
             </a>
           </div>
           <!--/noindex-->
@@ -270,7 +270,7 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}#{{ __('post.more') }}{% endif %}" rel="contents">
-              {{ __('post.read_more') }} &raquo;
+              {{ __('post.read_more') }}
             </a>
           </div>
           <!--/noindex-->
@@ -281,7 +281,7 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}#{{ __('post.more') }}{% endif %}" rel="contents">
-              {{ __('post.read_more') }} &raquo;
+              {{ __('post.read_more') }}
             </a>
           </div>
           <!--/noindex-->
