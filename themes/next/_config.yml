@@ -92,7 +92,7 @@ scheme: Muse
 # - Introduce in 5.0.1
 # ---------------------------------------------------------------
 font:
-  enable: false
+  enable: true
 
   # 外链字体库地址，例如 //fonts.googleapis.com (默认值)
   host:
@@ -100,28 +100,28 @@ font:
   # 全局字体，应用在 body 元素上
   global:
     external: true
-    family: Hiragino Sans GB
+    family: Lato
 
   # 标题字体 (h1, h2, h3, h4, h5, h6)
   headings:
-    external: false
-    family:
+    external: true
+    family: Hiragino Sans GB
 
   # 文章字体
   posts:
-    external: false
-    family:
+    external: true
+    family: Hiragino Sans GB
 
   # Logo 字体
   logo:
-    external: false
-    family:
+    external: true
+    family: Hiragino Sans GB
     size: 
 
   # 代码字体，应用于 code 以及代码块
   codes:
-    external: false
-    family:
+    external: true
+    family: Hiragino Sans GB
 
 
 
