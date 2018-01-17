@@ -92,42 +92,36 @@ scheme: Muse
 # - Introduce in 5.0.1
 # ---------------------------------------------------------------
 font:
-  enable: true
+  enable: false
 
-  # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
+  # 外链字体库地址，例如 //fonts.googleapis.com (默认值)
   host:
 
-  # Global font settings used on <body> element.
+  # 全局字体，应用在 body 元素上
   global:
-    # external: true will load this font family from host.
     external: true
-    family: Lato
+    family: Hiragino Sans GB
 
-  # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
-  # Fallback to `global` font settings.
+  # 标题字体 (h1, h2, h3, h4, h5, h6)
   headings:
-    external: true
+    external: false
     family:
 
-  # Font settings for posts
-  # Fallback to `global` font settings.
+  # 文章字体
   posts:
-    external: true
+    external: false
     family:
 
-  # Font settings for Logo
-  # Fallback to `global` font settings.
-  # The `size` option use `px` as unit
+  # Logo 字体
   logo:
-    external: true
+    external: false
     family:
-    size:
+    size: 
 
-  # Font settings for <code> and code blocks.
+  # 代码字体，应用于 code 以及代码块
   codes:
-    external: true
+    external: false
     family:
-    size:
 
 
 
