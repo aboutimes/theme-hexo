@@ -73,15 +73,6 @@ menu_icons:
 
 
 
-# ---------------------------------------------------------------
-# Scheme Settings
-# ---------------------------------------------------------------
-
-# Schemes
-scheme: Muse
-#scheme: Mist
-#scheme: Pisces
-
 
 # ---------------------------------------------------------------
 # Font Settings 字体设置
@@ -148,13 +139,6 @@ social_icons:
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
   Email: envelope-o
-
-
-
-# Sidebar Avatar
-# in theme directory(source/images): /images/avatar.jpg
-# in site  directory(source/uploads): /uploads/avatar.jpg
-avatar: /images/avatar.png
 
 
 # Table Of Contents in the Sidebar
@@ -264,12 +248,7 @@ post_copyright:
 
 
 
-# ---------------------------------------------------------------
-# Misc Theme Settings
-# ---------------------------------------------------------------
-
 # Custom Logo.
-# !!Only available for Default Scheme currently.
 # Options:
 #   enabled: [true/false] - Replace with specific image
 #   image: url-of-image   - Images's url
@@ -533,9 +512,7 @@ canvas_lines: false
 # canvas_sphere
 canvas_sphere: false
 
-# Only fit scheme Pisces
-# Canvas-ribbon
-canvas_ribbon: false
+
 
 # Script Vendors.
 # Set a CDN address for the vendor you want to customize.

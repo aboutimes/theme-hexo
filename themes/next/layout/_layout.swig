@@ -64,7 +64,7 @@
   {% include '_scripts/vendors.swig' %}
   {% include '_scripts/commons.swig' %}
 
-  {% set scheme_script = '_scripts/schemes/' + theme.scheme | lower + '.swig' %}
+  {% set scheme_script = '_scripts/schemes/' + 'Muse' | lower + '.swig' %}
   {% include scheme_script %}
 
   {% block script_extra %}

@@ -112,7 +112,6 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '{{ theme.root }}',
-    scheme: '{{ theme.scheme }}',
     sidebar: {{ theme.sidebar | json_encode }},
     fancybox: {{ theme.fancybox }},
     motion: {{ theme.use_motion }},

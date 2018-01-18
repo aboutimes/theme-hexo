@@ -205,12 +205,6 @@ $(document).ready(function () {
         o: {duration: 200}
       });
 
-      NexT.utils.isMist() && hasElement([$logoLineTop, $logoLineBottom]) &&
-      sequence.push(
-        getMistLineSettings($logoLineTop, '100%'),
-        getMistLineSettings($logoLineBottom, '-100%')
-      );
-
       hasElement($title) && sequence.push({
         e: $title,
         p: {opacity: 1, top: 0},
@@ -232,17 +226,6 @@ $(document).ready(function () {
         integrator.next();
       }
 
-
-      function getMistLineSettings (element, translateX) {
-        return {
-          e: $(element),
-          p: {translateX: translateX},
-          o: {
-            duration: 500,
-            sequenceQueue: false
-          }
-        };
-      }
 
       /**
        * Check if $elements exist.

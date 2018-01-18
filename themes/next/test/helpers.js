@@ -113,21 +113,5 @@ define([
 
     '#displaySidebar': function () {},
 
-    '#isMist': {
-      beforeEach: function () {
-        CONFIG = {
-          scheme: ''
-        };
-      },
-      'should be true': function () {
-        CONFIG.scheme = 'Mist';
-        assert.isTrue( isMist() );
-      },
-      'should be false': function () {
-        CONFIG.scheme = 'Minimal';
-        assert.isFalse( isMist() );
-      }
-    }
-
   });
 });
