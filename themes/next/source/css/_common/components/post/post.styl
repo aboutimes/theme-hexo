@@ -1,7 +1,11 @@
 .post-body {
   font-family: $font-family-posts;
+  /*段落对齐*/
+  word-break:break-all;
+  text-align: justify;
+  text-justify: inter-ideograph;/*IE*/
   +mobile() {
-    word-break: break-word;
+    word-break: break-all;
   }
 }
 
