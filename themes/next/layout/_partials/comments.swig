@@ -1,5 +1,22 @@
 {% if page.comments %}
   <div class="comments" id="comments">
+    <!-- 评论 -->
+    <div id="container"></div>
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <script>
+    var gitment = new Gitment({
+      id: 'couh', 
+      owner: 'aboutimes',
+      repo: 'blog',
+        oauth: {
+          client_id: '785bfb02d2fb125b3e5c',
+          client_secret: '09edea55bc18062120c3f157bb64e1ee4b378985',
+      },
+    });
+    gitment.render('container');
+    </script>
+    <!-- 评论 -->
     {% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %}
       <div class="ds-thread" data-thread-key="{{ page.path }}"
            data-title="{{ page.title }}" data-url="{{ page.permalink }}">
