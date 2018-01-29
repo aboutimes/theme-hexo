@@ -1,4 +1,3 @@
-
 <div class="me" style="font-weight:lighter;">
   {% if theme.social %}
     {% for name, link in theme.social %}
