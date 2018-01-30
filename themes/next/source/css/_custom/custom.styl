@@ -2,8 +2,10 @@
 /*主页文章 设置顺滑渲染*/
  
   /*分割线*/
-
- .post {
+  html,body {
+    background-color: rgba(252,252,252,1);
+  }
+  .post {
    -webkit-font-smoothing: antialiased;
    text-rendering: optimizeLegibility;
   }
@@ -15,7 +17,7 @@
     border:1px solid lightgray;
   }
   /*限制图片宽度*/
-  img {
+  .post img {
     max-width:85%;
     /*max-height:100%;*/
   }
