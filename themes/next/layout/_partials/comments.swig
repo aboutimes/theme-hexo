@@ -6,12 +6,12 @@
     <script src="/js/gitment.js"></script>
     <script>
     var gitment = new Gitment({
-      id: 'couh', 
-      owner: 'aboutimes',
-      repo: 'blog',
+      id: '{{ config.gitment_id }}', 
+      owner: '{{ config.gitment_owner }}',
+      repo: '{{ config.gitment_repo }}',
         oauth: {
-          client_id: '785bfb02d2fb125b3e5c',
-          client_secret: '09edea55bc18062120c3f157bb64e1ee4b378985',
+          client_id: '{{ config.client_id }}',
+          client_secret: '{{ config.client_secret }}',
       },
     });
     gitment.render('container');

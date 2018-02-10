@@ -9,7 +9,7 @@
         </a>
       </div>
     {% endif %}
-    <span style="color:lightgray;font-size: 10px;font-weight:lighter;'">华灯初上，相逢亦非晚</span>
+    <span style="color:lightgray;font-size: 10px;font-weight:lighter;'">{{ config.description }}</span>
     <!-- {% if theme.seo %}
       <h1 class="site-subtitle" itemprop="description">{{ config.subtitle }}</h1>
     {% else %}
