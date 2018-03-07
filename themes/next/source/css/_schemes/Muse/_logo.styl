@@ -14,9 +14,14 @@
 }
 
 .custom-logo-image {
-  margin: 0 auto;
+  float: left;
   padding: 5px;
-  max-width: 150px;
-  border-radius: 50%;
+  max-width: 50px;
+  /*border-radius: 50%;*/
   border-color: transparent;
+  +mobile() {
+    margin-left: 10px;
+    margin-top: 5px;
+    max-width: 40px;
+  }
 }

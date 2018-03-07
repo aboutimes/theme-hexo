@@ -9,7 +9,7 @@
         </a>
       </div>
     {% endif %}
-    <span style="color:lightgray;font-size: 10px;font-weight:lighter;'">{{ config.description }}</span>
+    <span class="description">{{ config.description }}</span>
     <!-- {% if theme.seo %}
       <h1 class="site-subtitle" itemprop="description">{{ config.subtitle }}</h1>
     {% else %}
@@ -36,13 +36,12 @@
         <li class="menu-item menu-item-{{ itemName }}">
           <a href="{{ url_for(path) }}" rel="section">
             {% if theme.menu_icons.enable %}
-              <i class="menu-item-icon fa fa-fw fa-{{theme.menu_icons[itemName] | default('question-circle') | lower }}"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-{{theme.menu_icons[itemName] | default('question-circle') | lower }}"></i>
             {% endif %}
             {{ __('menu.' + name) }}
           </a>
         </li>
       {% endfor %}
-
       {% if hasSearch %}
         <li class="menu-item menu-item-search">
           {% if theme.swiftype_key %}
@@ -68,3 +67,4 @@
 </nav>
 
 {% include '../_custom/header.swig' %}
+

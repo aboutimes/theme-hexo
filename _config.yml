@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 华灯初上
+title: 无事种芭蕉
 subtitle:
-description: 无事种芭蕉
+description: 这个人很懒，什么都没有留下
 author: Couh
 language: zh-CN
 timezone:
@@ -75,6 +75,7 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: next
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
