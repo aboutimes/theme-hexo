@@ -76,6 +76,9 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: next
 
+#注脚
+plugins:
+  hexo-footnotes
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
