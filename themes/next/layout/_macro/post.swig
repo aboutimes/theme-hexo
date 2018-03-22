@@ -105,7 +105,7 @@
               {% endfor %}
             </span>
           {% endif %}
-          <span> ｜ </span><span class="fa fa-user-o"> </span><span  style="color:#222;"> {{ post.author }}</span>
+          <span class="post-meta-divider">|</span><span class="fa fa-user-o"> </span><span  style="color:#222;"> {{ post.author }}</span>
           <!-- 增加作者 -->
           {% if post.comments %}
             {% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %}
