@@ -34,12 +34,28 @@
       {% for name, path in theme.menu %}
         {% set itemName = name.toLowerCase() %}
         <li class="menu-item menu-item-{{ itemName }}">
-          <a href="{{ url_for(path) }}" rel="section">
-            {% if theme.menu_icons.enable %}
-              <i class="menu-item-icon fa fa-fw fa-{{theme.menu_icons[itemName] | default('question-circle') | lower }}"></i>
-            {% endif %}
-            {{ __('menu.' + name) }}
-          </a>
+          {% if name=='categories' %}
+            <a href="{{ url_for(path) }}">
+              {% if theme.menu_icons.enable %}
+                <i class="menu-item-icon fa fa-fw fa-{{theme.menu_icons[itemName] | default('question-circle') | lower }}"></i>
+              {% endif %}
+              {{ __('menu.' + name) }}
+              <span class="arrow"></span>
+              <ul class="submenu">
+                {%  for cat in site.categories  %}
+                  <li><a href="{{ url_for(path) }}" class="nav-link">{{ cat.name }}</a></li>
+                {% endfor %}
+              </ul>
+            </a>
+            
+          {% elseif name!='categories' %}
+            <a href="{{ url_for(path) }}" rel="section">
+              {% if theme.menu_icons.enable %}
+                <i class="menu-item-icon fa fa-fw fa-{{theme.menu_icons[itemName] | default('question-circle') | lower }}"></i>
+              {% endif %}
+              {{ __('menu.' + name) }}
+            </a>
+          {% endif %}
         </li>
       {% endfor %}
       {% if hasSearch %}

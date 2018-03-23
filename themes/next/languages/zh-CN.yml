@@ -1,16 +1,16 @@
 title:
-  archive: 归档
+  archive: 文章列表
   category: 分类
-  tag: 标签
+  tag: 标签列表
   schedule: 日程表
 
 author: 博主
 
 menu:
   home: 首页
-  archives: 归档
+  archives: 文章列表
   categories: 分类
-  tags: 标签
+  tags: 标签列表
   about: 关于
   search: 搜索
   schedule: 日程表
@@ -42,7 +42,7 @@ post:
 
 page:
   totally: 共有
-  tags: 标签
+  tags: 标签列表
 
 footer:
   powered: "Powered by %s"
@@ -67,7 +67,7 @@ counter:
 state:
   posts: 日志
   pages: 页面
-  tags: 标签
+  tags: 标签列表
   categories: 分类
 
 search:
