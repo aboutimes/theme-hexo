@@ -42,8 +42,9 @@
               {{ __('menu.' + name) }}
               <span class="arrow"></span>
               <ul class="submenu">
+              <!-- 分类链接 -->
                 {%  for cat in site.categories  %}
-                  <li><a href="{{ url_for(path) }}" class="nav-link">{{ cat.name }}</a></li>
+                  <li><a href="{{ url_for(cat.path) }}" class="nav-link">{{ cat.name }}</a></li>
                 {% endfor %}
               </ul>
             </a>

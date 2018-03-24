@@ -65,25 +65,37 @@
     }*/
     
   }
-  ul.menu li{
+  ul.menu{
     position:relative;
-    list-style-type:none;
 }
   ul.submenu {
     display:none;
     position: absolute;
     padding: 0;
     margin: 0;
-    /*left: 0;*/
-    right: -160px;
-    width: 400px;
+    right: 0;
+    left: -12px;
+    width: 100px;
+    line-height: 2rem;
+    text-align: left;
   }
-  ul.submenu li {list-style-type: none;padding: 0; margin:0 10px; line-height: 1.6rem; display: inline-block; }
+  ul.submenu li {
+    list-style-type: none;
+    padding: 0;
+    margin:0 10px;
+    line-height: 1.6rem;
+    display: inline-block;
+  }
   /*ul.submenu a {text-decoration: none;display:block;}*/
       /*导航*/
       /* 关键 */    
   /*ul.submenu li {position:relative;padding: 0px; margin: 0;}*/
-  li:hover>ul.submenu {display: block; }
+  li:hover>ul.submenu {
+    display: block;
+    +mobile() {
+      display:none;
+    }
+  }
   /* 一级菜单*/
   /*二级菜单*/
   /*ul.submenu li ul.submenu {top: 0px; left: 100%; }*/
@@ -99,4 +111,7 @@
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
     border-top: 5px solid #ccc;
+    +mobile() {
+      display:none;
+    }
   }
