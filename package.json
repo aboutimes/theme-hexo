@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "gitment": "0.0.3",
-    "hexo": "^3.4.2",
+    "hexo": "^3.7.1",
     "hexo-deployer-git": "^0.3.1",
     "hexo-footnotes": "^1.0.2",
     "hexo-generator-archive": "^0.1.5",
@@ -20,7 +20,8 @@
     "hexo-search": "^1.0.4",
     "hexo-server": "^0.2.2",
     "highlight": "^0.2.4",
-    "marked": "^0.3.9",
-    "uglify-js": "^3.2.0"
+    "hoek": "^5.0.3",
+    "marked": "^0.3.19",
+    "uglify-js": "^3.3.22"
   }
 }
