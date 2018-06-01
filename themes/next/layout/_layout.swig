@@ -1,18 +1,13 @@
 <!doctype html>
 
-{% set html_class = 'theme-next ' + theme.scheme %}
-{% if theme.use_motion %}
-  {% set html_class = html_class + ' use-motion' %}
-{% endif %}
-
-<html class="{{ html_class | lower }}" lang="{{ config.language }}">
+<html lang="{{ config.language }}">
 <head>
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
   {% include '_third-party/analytics/index.swig' %}
 </head>
 
-<body lang="{{ page.lang || page.language || config.language }}">
+<body>
 
   {% set container_class = "container " %}
   {% if theme.sidebar.position %}
@@ -52,7 +47,7 @@
 
     {% if not theme.sidebar.b2t %}
       <div class="back-to-top">
-        <i class="fa fa-angle-up"></i>
+        <span class="icon-up"></span>
         {% if theme.sidebar.scrollpercent %}
           <span id="scrollpercent"><span>0</span>%</span>
         {% endif %}

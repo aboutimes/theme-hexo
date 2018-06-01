@@ -1,6 +1,9 @@
-<meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="google" content="notranslate">
 
 {% if theme.pace %}
   {% set pace_css_uri = url_for(theme.vendors._internal + '/pace/'+ theme.pace_theme +'.min.css?v=1.0.2') %}
@@ -64,17 +67,9 @@
 {% if theme.vendors.fontawesome %}
   {% set font_awesome_uri = theme.vendors.fontawesome %}
 {% endif %}
-<link href="{{ font_awesome_uri }}" rel="stylesheet" type="text/css" />
 
 <link href="{{ url_for(theme.css) }}/main.css?v={{ theme.version }}" rel="stylesheet" type="text/css" />
-
-{% if page.keywords %}
-  <meta name="keywords" content="{{ page.keywords }}" />
-{% elif page.tags and page.tags.length %}
-  <meta name="keywords" content="{% for tag in page.tags %}{{ tag.name }},{% endfor %}" />
-{% elif theme.keywords %}
-  <meta name="keywords" content="{{ theme.keywords }}" />
-{% endif %}
+<link href="{{ url_for(theme.css) }}/style.css" rel="stylesheet" type="text/css" />
 
 
 {% if theme.rss === '' and config.feed and config.feed.path %}
@@ -89,21 +84,6 @@
   <link rel="shortcut icon" type="image/x-icon" href="{{ url_for(theme.favicon) }}?v={{ theme.version }}" />
 {% endif %}
 
-
-{% if theme.facebook_sdk.enable and theme.facebook_sdk.webmaster %}
-  <meta property="fb:admins" content="{{ theme.facebook_sdk.fb_admin }}" />
-  <meta property="fb:app_id" content="{{ theme.facebook_sdk.app_id }}" />
-{% endif %}
-
-
-{{
-  open_graph({
-    twitter_id: theme.twitter,
-    google_plus: theme.google_plus,
-    fb_admins: theme.fb_admins,
-    fb_app_id: theme.fb_app_id
-  })
-}}
 
 
 {# Export some HEXO Configurations to Front-End #}

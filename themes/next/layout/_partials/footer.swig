@@ -2,13 +2,15 @@
   {% if theme.social %}
     {% for name, link in theme.social %}
       <span class="links-of-author-item">
-        <a href="{{ link }}" target="_blank" title="{{ name }}">
-          {% if theme.social_icons.enable %}
-            <i class="fa fa-fw fa-{{ theme.social_icons[name] | default('globe') | lower }}"></i>
-          {% endif %}
+        {% if theme.social_icons.enable %}
+        <a href="{{ link }}" target="_blank" title="{{ name }}" class="icon-{{ theme.social_icons[name] | default('globe') | lower }}">
+          
+            <!-- <i class="icon-{{ theme.social_icons[name] | default('globe') | lower }}"> </i> -->
+          
           {{ name }}
         </a>
-      </span>
+        {% endif %}
+       </span>
     {% endfor %}
   {% endif %}
 </div>

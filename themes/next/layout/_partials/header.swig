@@ -3,8 +3,8 @@
   <div class="site-meta {% if theme.custom_logo.enabled %}custom-logo{% endif %}">
     {% if theme.custom_logo.image %}
       <div class="site-meta-headline">
-        <a>
-          <img class="custom-logo-image" src="/images/avatar.png"
+        <a href="{{ url_for('/') }}">
+          <img class="custom-logo-image" src="/images/logo.png"
                alt="{{ config.title }}"/>
         </a>
       </div>

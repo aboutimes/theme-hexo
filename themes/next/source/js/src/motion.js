@@ -277,4 +277,26 @@ $(document).ready(function () {
     }
   };
 
+  // 菜单滚动隐藏
+  let lastScrollY = 0;
+  //绑定滚动事件
+  window.onscroll = function() {
+    headerScroll();
+  };
+  function headerScroll() {
+    //获取导航栏元素
+    const header = document.getElementById('header');
+    if (window.scrollY - lastScrollY > 0 && window.scrollY > 165)
+    {
+      //往下滚动，隐藏导航栏
+      header.classList.add('is-hidden');
+    }
+    else if (window.scrollY - lastScrollY < 0)
+    {
+      //往上滚动，显示导航栏
+      header.classList.remove('is-hidden');
+    }
+    lastScrollY = window.scrollY;
+  }
+
 });

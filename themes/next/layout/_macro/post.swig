@@ -57,10 +57,10 @@
         <div class="post-meta">
           <span class="post-time">
             {% if theme.post_meta.created_at %}
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
+              <span class="post-meta-item-icon icon-calendar-o">
+                <!-- <i class="icon-calendar-o" style="vertical-align: middle;"></i> -->
               </span>
-              <time title="{{ __('post.created') }}" itemprop="dateCreated datePublished" datetime="{{ moment(post.date).format() }}" style="color:#222;">
+              <time title="{{ __('post.created') }}" itemprop="dateCreated datePublished" datetime="{{ moment(post.date).format() }}" style="color:#222;vertical-align: middle;"">
                 {{ date(post.date, config.date_format) }}
               </time>
             {% endif %}
@@ -71,7 +71,7 @@
 
             {% if theme.post_meta.updated_at %}
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
+                <i class="icon-calendar-o"></i>
               </span>
               {% if theme.post_meta.item_text %}
                 <span class="post-meta-item-text">{{ __('post.modified') }}</span>
@@ -84,17 +84,20 @@
 
 
           {% if post.categories and post.categories.length and theme.post_meta.categories %}
-            <span class="post-category" >
+            <span class="post-category">
             {% if theme.post_meta.created_at or theme.post_meta.updated_at %}
               <span class="post-meta-divider">|</span>
             {% endif %}
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
+              <!-- <span class="post-meta-item-icon">
+                <i class="icon-classify"></i>
+              </span> -->
+
               {% for cat in post.categories %}
+              <span class="icon-classify"> </span>
                 <span itemprop="about">
-                  <a href="{{ url_for(cat.path) }}" itemprop="url" rel="index">
-                    <span itemprop="name">{{ cat.name }}</span>
+                  <a href="{{ url_for(cat.path) }}" itemprop="url" rel="index" style="vertical-align: middle;">
+                    <!-- <span itemprop="name">{{ cat.name }}</span> -->
+                    {{ cat.name }}
                   </a>
                 </span>
 
@@ -105,8 +108,8 @@
               {% endfor %}
             </span>
           {% endif %}
-          <span class="post-meta-divider">|</span><span class="fa fa-user-o"> </span><span  style="color:#222;"> {{ post.author }}</span>
-          <!-- 增加作者 -->
+          <span class="post-meta-divider">|</span><span class="icon-user"> </span><span  style="color:#222;vertical-align: middle;"> {{ post.author }}</span>
+          <!-- 增加作者<span class="fa fa-user-o"> </span> -->
           {% if post.comments %}
             {% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %}
               <span class="post-comments-count">
@@ -319,7 +322,7 @@
       {% if post.tags and post.tags.length and not is_index %}
         <div class="post-tags">
           {% for tag in post.tags %}
-            <a href="{{ url_for(tag.path) }}" rel="tag" class="fa fa-tag"> {{ tag.name }}</a>
+            <a href="{{ url_for(tag.path) }}" rel="tag" class="icon-tag"> {{ tag.name }}</a>
           {% endfor %}
         </div>
       {% endif %}
@@ -357,7 +360,7 @@
           <div class="post-nav-next post-nav-item">
             {% if post.next %}
               <a href="{{ url_for(post.next.path) }}" rel="next" title="{{ post.next.title }}">
-                <i class="fa fa-chevron-left"></i> {{ post.next.title }}
+                <i class="icon-left"></i> {{ post.next.title }}
               </a>
             {% endif %}
           </div>
@@ -367,7 +370,7 @@
           <div class="post-nav-prev post-nav-item">
             {% if post.prev %}
               <a href="{{ url_for(post.prev.path) }}" rel="prev" title="{{ post.prev.title }}">
-                {{ post.prev.title }} <i class="fa fa-chevron-right"></i>
+                {{ post.prev.title }} <i class="icon-right"></i>
               </a>
             {% endif %}
           </div>

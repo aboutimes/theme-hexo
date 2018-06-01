@@ -403,8 +403,8 @@ a.gitment-editor-footer-tip:hover {
 
 .gitment-editor-submit,
 .gitment-comments-init-btn {
-  color: #fff;
-  background-color: #00BCD4;
+  /*color: #fff;*/
+  background-color: #fbd76b;
 
   position: relative;
   display: inline-block;

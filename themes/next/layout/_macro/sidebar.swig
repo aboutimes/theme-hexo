@@ -29,7 +29,7 @@
       {% endif %}
       {% if theme.sidebar.b2t %}
         <div class="back-to-top">
-          <i class="fa fa-angle-up"></i>
+          <i class="icon-up"></i>
           {% if theme.sidebar.scrollpercent %}
             <span id="scrollpercent"><span>0</span>%</span>
           {% endif %}

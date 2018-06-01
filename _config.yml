@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 无事种芭蕉
+title: 舊時光
 subtitle:
-description: 这个人很懒，什么都没有留下
+description: 
 author: Couh
 language: zh-CN
 timezone:
@@ -16,14 +16,14 @@ gitment_id: Couh
 #github id
 gitment_owner: aboutimes
 #github 博客仓库名
-gitment_repo: blog
+gitment_repo: theme-hexo
 client_id: 785bfb02d2fb125b3e5c
 client_secret: 09edea55bc18062120c3f157bb64e1ee4b378985
 
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://couh.me
+url: http://aboutimes.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -84,5 +84,5 @@ plugins:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:aboutimes/blog.git
+  repo: git@github.com:aboutimes/theme-hexo.git
   branch: master
