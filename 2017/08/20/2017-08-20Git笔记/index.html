@@ -1,0 +1,804 @@
+<!doctype html>
+
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="google" content="notranslate">
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Hiragino Sans GB:300,300italic,400,400italic,700,700italic|Hiragino Sans GB:300,300italic,400,400italic,700,700italic|Hiragino Sans GB:300,300italic,400,400italic,700,700italic|Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="aboutimes.com/2017/08/20/2017-08-20Git笔记/"/>
+
+
+
+
+
+  <title>Git 笔记 | 舊時光</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <!-- <div class="headband"></div> -->
+
+    <header id="header" class="header">
+      <div class="header-inner">
+<div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+      <div class="site-meta-headline">
+        <a href="/">
+          <img class="custom-logo-image" src="/images/logo.png"
+               alt="舊時光"/>
+        </a>
+      </div>
+    
+    <span class="description"></span>
+    <!-- 
+      <p class="site-subtitle"></p>
+     -->
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          
+            <a href="/" rel="section">
+              
+              首页
+            </a>
+          
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          
+            <a href="/archives/" rel="section">
+              
+              文章列表
+            </a>
+          
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          
+            <a href="/tags/" rel="section">
+              
+              标签列表
+            </a>
+          
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          
+            <a href="/categories/">
+              
+              分类
+              <span class="arrow"></span>
+              <ul class="submenu">
+              <!-- 分类链接 -->
+                
+                  <li><a href="/categories/见闻/" class="nav-link">见闻</a></li>
+                
+                  <li><a href="/categories/技术/" class="nav-link">技术</a></li>
+                
+              </ul>
+            </a>
+            
+          
+        </li>
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+
+ 
+      </div>
+      
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner" id="maininner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " ">
+    <link itemprop="mainEntityOfPage" href="aboutimes.com/2017/08/20/2017-08-20Git笔记/">
+
+    <span hidden itemprop="author">
+      <meta itemprop="name" content="Couh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher">
+      <meta itemprop="name" content="舊時光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Git 笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon icon-calendar-o">
+                <!-- <i class="icon-calendar-o" style="vertical-align: middle;"></i> -->
+              </span>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-20T00:00:00+08:00" style="color:#222;vertical-align: middle;"">
+                2017-08-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <!-- <span class="post-meta-item-icon">
+                <i class="icon-classify"></i>
+              </span> -->
+
+              
+              <span class="icon-classify"> </span>
+                <span itemprop="about">
+                  <a href="/categories/技术/" itemprop="url" rel="index" style="vertical-align: middle;">
+                    <!-- <span itemprop="name">技术</span> -->
+                    技术
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+          <span class="post-meta-divider">|</span><span class="icon-user"> </span><span  style="color:#222;vertical-align: middle;"> Couh</span>
+          <!-- 增加作者<span class="fa fa-user-o"> </span> -->
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/images/git-1.png" alt=""><br>　　Git 是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。说白了就是一个版本控制工具，帮助大家管理自己的代码。Git 最初是 Linus 为了帮助管理 Linux 内核开发而编写，取得良好效果，之后向社区开源，于是就有免费而超级好用的 Git 。<a id="more"></a></p>
+<h2 id="1、工作原理"><a href="#1、工作原理" class="headerlink" title="1、工作原理"></a>1、工作原理</h2><p><img src="/images/git-2.png" alt=""></p>
+<ul>
+<li>Remote:远程仓库，就是类似 github，coding 等网站所提供的仓库</li>
+<li>Repository:本地仓库，执行 <code>git push origin master</code> 提交到远程仓库，执行 <code>git clone</code> 地址将克隆远程仓库到本地</li>
+<li>Workspace:工作区，执行 <code>git add *</code> 命令就把改动提交到了暂存区，执行 <code>git pull</code> 命令将远程仓库的数据拉到当前分支并合并，执行 <code>git checkout branch-name</code> 切换分支</li>
+<li>Index:暂存区，执行 <code>git commit -m &quot;修改说明&quot;</code> 命令就把改动提交到了仓库区（当前分支）<br>注：实际操作命令和上述命令会有所不同，这里是解释清楚命令和仓库的关系。</li>
+</ul>
+<h2 id="2、版本控制方法"><a href="#2、版本控制方法" class="headerlink" title="2、版本控制方法"></a>2、版本控制方法</h2><ul>
+<li>当文件变更提交时，Git 底层文件系统存储的则为文件快照，即整个文件内容，并保存指向快照的索引，考虑到性能因素，如果文件内容没有发生任何变化，该文件系统则不会重复保存文件，只是简单地保存文件的链接。</li>
+</ul>
+<p><img src="/images/git-3.png" alt=""></p>
+<ul>
+<li>Git 之所以选择这样的底层存储数据结构，主要是为了提高 git 分支的使用效率。实际上，Git 分支本质上是一个指向索引对象的可变指针，而每一个索引对象又指向文件快照，这样一来，创建分支可以瞬间完成。<br><img src="/images/git-4.png" alt=""></li>
+<li>Git 可以没有中心服务器的，每个人机器上都是一个完整的库，自带备份效果，我们平时开发代码时的中央服务器其实和我们自己机器上的库内容是完全一样的（格式有点不同，是bare的）。虽然平时大家都是将代码提交到中央服务器上再统一 pull 别人的代码，但实际情况你可以总是 pull 张三的库，然后 push 给李四等等操作。去中心化设计思想所带来的另外一大好处是支持离线工作，在 Git 中的绝大多数操作都只需要访问本地文件和资源。</li>
+</ul>
+<h2 id="3、基本操作"><a href="#3、基本操作" class="headerlink" title="3、基本操作"></a>3、基本操作</h2><h3 id="3-1、安装"><a href="#3-1、安装" class="headerlink" title="3.1、安装"></a>3.1、安装</h3><ul>
+<li>下载：<a href="https://git-scm.com" title="Git下载" target="_blank" rel="noopener">Git 下载</a> 可下载 GUI 版本，也可以安装命令版本。</li>
+<li>mac 下如果有安装 Xcode ，Xcode 自带 Git ，如果没有安装 Xcode ，可以通过 Homebrew 安装 Git :</li>
+<li><code>brew install git</code></li>
+</ul>
+<h3 id="3-2、初始化仓库"><a href="#3-2、初始化仓库" class="headerlink" title="3.2、初始化仓库"></a>3.2、初始化仓库</h3><ul>
+<li>仓库文件夹目录下打开终端运行命令完成初始化：</li>
+<li><code>git int</code></li>
+<li>如果从远端仓库开始项目，先要克隆远程仓库：</li>
+<li><code>git clone url</code>  url 为仓库地址。</li>
+</ul>
+<h3 id="3-3、配置跟踪文件"><a href="#3-3、配置跟踪文件" class="headerlink" title="3.3、配置跟踪文件"></a>3.3、配置跟踪文件</h3><ul>
+<li>编辑 .gitignore 设置不需要跟踪的文件夹一夹文件。</li>
+</ul>
+<h3 id="3-4、工作流"><a href="#3-4、工作流" class="headerlink" title="3.4、工作流"></a>3.4、工作流</h3><p><img src="/images/git-5.png" alt=""></p>
+<ul>
+<li>git diff 查看文件变化<ul>
+<li><code>git diff file_addr</code> 查看某个文件变化；</li>
+<li><code>git diff</code> 查看所有文件变化。</li>
+</ul>
+</li>
+<li>git add 暂存<ul>
+<li><code>git add file_addr</code> 暂存某个文件；</li>
+<li><code>git add -u</code> 暂存所有已追踪文件，不包含新增文件；</li>
+<li><code>git add .</code> 暂存工作区所有变化文件，不包含删除文件；</li>
+<li><code>git add -A</code> 暂存工作区所有文件，包含增加 / 删除文件。</li>
+</ul>
+</li>
+<li>git commit 提交<ul>
+<li><code>git commit -m &quot;本次提交说明&quot;</code> 建议多次分类提交，便于管理。</li>
+</ul>
+</li>
+<li>git push 推送<ul>
+<li><code>git push origin branch_name</code> 如：master 或 dev_xx，origin 为主机名。</li>
+</ul>
+</li>
+<li>git pull 拉取合并<ul>
+<li><code>git pull origin branch_name</code> pull 包含拉取( fetch )和合并( merge )两个操作；</li>
+<li>可分开执行：</li>
+<li><code>git fetch origin branch_name</code>；</li>
+<li><code>git merge branch_name</code> 合并 branch_name 分支到当前分支。</li>
+</ul>
+</li>
+<li>分支操作<ul>
+<li><code>git checkout dev_xx</code> 切换到 dev_xx 分支；</li>
+<li><code>git stash</code> 当需要切换到其他分支又不想提交保存时用于暂存，切换回来之后 <code>git stash pop</code> 恢复即可；</li>
+<li><code>git checkout -b dev_xx</code> 创建并且换到dev_xx分支；</li>
+<li><code>git checkout -d dev_xx</code> 删除 dev_xx 分支。 </li>
+</ul>
+</li>
+<li>git log 查看日志<ul>
+<li><code>git log</code>。</li>
+</ul>
+</li>
+<li>撤销 add 文件<ul>
+<li><code>git reset HEAD .</code>撤销所有 add 文件；</li>
+<li><code>git reset HEAD filename</code>撤销指定名字的 add 文件。</li>
+</ul>
+</li>
+<li>撤销 commit 文件<ul>
+<li><code>git reset HEAD commit_id</code>完整撤销到某个 commit 状态，不保留修改的代码，无法恢复，危险操作；</li>
+<li><code>git reset --mixed commit_id</code>撤销到某个commit状态，修改的代码保留，且代码未添加到暂存区，需要重新 add；</li>
+<li><code>git reset --soft commit_id</code>撤销到某个commit状态，修改的代码保留且，代码保留在暂存区，可以直接 commit。</li>
+</ul>
+</li>
+<li><p>git rebase 与 git merge 两者产生不同的历史记录</p>
+<p><img src="/images/git-6.png" alt=""></p>
+<center>变基 git rebase 历史</center>
+
+<p><img src="/images/git-7.png" alt=""> </p>
+<center>合并 git merge 历史</center>
+
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Git/" rel="tag" class="icon-tag"> Git</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/06/2017-08-06Markdown基本语法/" rel="next" title="Markdown 基本语法">
+                <i class="icon-left"></i> Markdown 基本语法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/27/2017-08-27修正笔记本内建显示器连接类型/" rel="prev" title="修正笔记本内建显示器连接类型">
+                修正笔记本内建显示器连接类型 <i class="icon-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    <!-- 评论 -->
+    <div id="container"></div>
+    <link rel="stylesheet" href="/css/gitment.css">
+    <script src="/js/gitment.js"></script>
+    <script>
+    var gitment = new Gitment({
+      id: 'Couh', 
+      owner: 'aboutimes',
+      repo: 'theme-hexo',
+        oauth: {
+          client_id: 'a4658b7937231833073e',
+          client_secret: 'ee0e478222be08062f68c03d1f6ca433c05e5209',
+      },
+    });
+    gitment.render('container');
+    </script>
+    <!-- 评论 -->
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner" id="sidebarinner">
+        
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+        </ul>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+              
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、工作原理"><span class="nav-text">1、工作原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、版本控制方法"><span class="nav-text">2、版本控制方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、基本操作"><span class="nav-text">3、基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1、安装"><span class="nav-text">3.1、安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2、初始化仓库"><span class="nav-text">3.2、初始化仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3、配置跟踪文件"><span class="nav-text">3.3、配置跟踪文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4、工作流"><span class="nav-text">3.4、工作流</span></a></li></ol></li></ol></div>
+          </div>
+        </section>
+      <!--/noindex-->
+      
+      
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="me" style="font-weight:lighter;">
+  
+    
+      <span class="links-of-author-item">
+        
+        <a href="https://github.com/aboutimes" target="_blank" title="GitHub" class="icon-github">
+          
+            <!-- <i class="icon-github"> </i> -->
+          
+          GitHub
+        </a>
+        
+       </span>
+    
+      <span class="links-of-author-item">
+        
+        <a href="mailto:aboutime2012@gmail.com" target="_blank" title="Email" class="icon-envelope-o">
+          
+            <!-- <i class="icon-envelope-o"> </i> -->
+          
+          Email
+        </a>
+        
+       </span>
+    
+  
+</div>
+<ul class="links-of-blogroll-list" style="font-weight:200;">
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://isujin.com" title="素錦" target="_blank">素錦</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://sometime.me" title="寒塘渡月" target="_blank">寒塘渡月</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://shisanyue.com" title="拾叁月" target="_blank">拾叁月</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://www.lyh2.com" title="青筑" target="_blank">青筑</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://mir.no/work" title="MIR." target="_blank">MIR.</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://modelo.io" title="MODELO" target="_blank">MODELO</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="https://leonax.net" title="LEONA+" target="_blank">LEONA+</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://1416.me" title="1416教室" target="_blank">1416教室</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="https://www.fieldevo.com/" title="Fieldevo" target="_blank">Fieldevo</a>
+    </li>
+  
+</ul>
+<div class="copyright" style="top:50px;font-weight:lighter;">
+  
+  &copy;  2012 - 
+  <span itemprop="copyrightYear">2018</span>  
+  <span class="author" itemprop="copyrightHolder">Couh</span>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <span class="icon-up"></span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

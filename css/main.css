@@ -1111,7 +1111,7 @@ pre .javascript .function {
 }
 @media (max-width: 767px) {
   .post-body {
-    word-break: break-all;
+    word-break: normal;
   }
 }
 .post-body .fancybox img {
@@ -1691,7 +1691,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #bb6538;
+  background: #1b740f;
 }
 .links-of-blogroll {
   font-size: 13px;

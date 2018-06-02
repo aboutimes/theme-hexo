@@ -1,0 +1,738 @@
+<!doctype html>
+
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="google" content="notranslate">
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Hiragino Sans GB:300,300italic,400,400italic,700,700italic|Hiragino Sans GB:300,300italic,400,400italic,700,700italic|Hiragino Sans GB:300,300italic,400,400italic,700,700italic|Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="aboutimes.com/2017/07/20/2017-07-20PHP笔记/"/>
+
+
+
+
+
+  <title>PHP 笔记 | 舊時光</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <!-- <div class="headband"></div> -->
+
+    <header id="header" class="header">
+      <div class="header-inner">
+<div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+      <div class="site-meta-headline">
+        <a href="/">
+          <img class="custom-logo-image" src="/images/logo.png"
+               alt="舊時光"/>
+        </a>
+      </div>
+    
+    <span class="description"></span>
+    <!-- 
+      <p class="site-subtitle"></p>
+     -->
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          
+            <a href="/" rel="section">
+              
+              首页
+            </a>
+          
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          
+            <a href="/archives/" rel="section">
+              
+              文章列表
+            </a>
+          
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          
+            <a href="/tags/" rel="section">
+              
+              标签列表
+            </a>
+          
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          
+            <a href="/categories/">
+              
+              分类
+              <span class="arrow"></span>
+              <ul class="submenu">
+              <!-- 分类链接 -->
+                
+                  <li><a href="/categories/见闻/" class="nav-link">见闻</a></li>
+                
+                  <li><a href="/categories/技术/" class="nav-link">技术</a></li>
+                
+              </ul>
+            </a>
+            
+          
+        </li>
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+
+ 
+      </div>
+      
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner" id="maininner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " ">
+    <link itemprop="mainEntityOfPage" href="aboutimes.com/2017/07/20/2017-07-20PHP笔记/">
+
+    <span hidden itemprop="author">
+      <meta itemprop="name" content="Couh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher">
+      <meta itemprop="name" content="舊時光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">PHP 笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon icon-calendar-o">
+                <!-- <i class="icon-calendar-o" style="vertical-align: middle;"></i> -->
+              </span>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-20T00:00:00+08:00" style="color:#222;vertical-align: middle;"">
+                2017-07-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <!-- <span class="post-meta-item-icon">
+                <i class="icon-classify"></i>
+              </span> -->
+
+              
+              <span class="icon-classify"> </span>
+                <span itemprop="about">
+                  <a href="/categories/技术/" itemprop="url" rel="index" style="vertical-align: middle;">
+                    <!-- <span itemprop="name">技术</span> -->
+                    技术
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+          <span class="post-meta-divider">|</span><span class="icon-user"> </span><span  style="color:#222;vertical-align: middle;"> Couh</span>
+          <!-- 增加作者<span class="fa fa-user-o"> </span> -->
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/images/2017-07-20-01.png" alt=""><br>　　PHP（“PHP: Hypertext Preprocessor”，超文本预处理器的字母缩写）是一种开源多用途弱类型动态脚本语言，具有免费，快速，灵活和实用等特点，它可嵌入到 HTML中，尤其适合 web 开发。<a id="more"></a></p>
+<h2 id="1、PHP代码解析过程"><a href="#1、PHP代码解析过程" class="headerlink" title="1、PHP代码解析过程"></a>1、PHP代码解析过程</h2><blockquote>
+<p><em>1、词法分析 Scanning（ Lexing ），将 PHP 代码转换为语言片段（ Tokens ）。</em><br><em>2、解析 Parsing， 将 Tokens 转换成简单而有意义的表达式。</em><br><em>3、编译 Compilation，将表达式编译成 Opcode 。</em><br><em>4、执行 Execution，顺序执行 Opcode，每次一条，以实现PHP代码所表达的功能。</em></p>
+</blockquote>
+<h2 id="2、数组操作"><a href="#2、数组操作" class="headerlink" title="2、数组操作"></a>2、数组操作</h2><h3 id="2-1、键名改为小写或大写"><a href="#2-1、键名改为小写或大写" class="headerlink" title="2.1、键名改为小写或大写"></a>2.1、键名改为小写或大写</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array_change_key_case(<span class="keyword">array</span>, <span class="keyword">case</span>);    <span class="comment">//CASE_UPPER：改键值为大写，CASE_LOWER：改键值为小大写。</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-2、数组分块"><a href="#2-2、数组分块" class="headerlink" title="2.2、数组分块"></a>2.2、数组分块</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array_chunk(<span class="keyword">array</span>, size, preserve_key);   <span class="comment">//size：整数，preserve_key：可选，true 保留原始键名，false使用从零开始的数字键名。</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-3、返回键值"><a href="#2-3、返回键值" class="headerlink" title="2.3、返回键值"></a>2.3、返回键值</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">array_values(<span class="keyword">array</span>);   <span class="comment">//所有键值，不保留键名，使用从零开始的数字键名。</span></span><br><span class="line">array_slice(<span class="keyword">array</span>, start, length, preserve)    <span class="comment">//返回指定键值。</span></span><br><span class="line"><span class="comment">//start 必填，开始位置，0 = 第一个元素，-2 意味着从数组的倒数第二个元素开始。</span></span><br><span class="line"><span class="comment">//length  可选，规定被返回数组的长度。</span></span><br><span class="line"><span class="comment">//如果该值设置为整数，则返回该数量的元素。</span></span><br><span class="line"><span class="comment">//如果该值设置为负数，则函数将在举例数组末端这么远的地方终止取出。</span></span><br><span class="line"><span class="comment">//如果该值未设置，则返回从 start 参数设置的位置开始直到数组末端的所有元素。</span></span><br><span class="line"><span class="comment">//preserve  </span></span><br><span class="line"><span class="comment">//可选。规定函数是保留键名还是重置键名。可能的值：</span></span><br><span class="line"><span class="comment">//true - 保留键名</span></span><br><span class="line"><span class="comment">//false - 默认。重置键名</span></span><br><span class="line"></span><br><span class="line">array_column(<span class="keyword">array</span>, column_key, index_key);   <span class="comment">//取单列值，column_key：要返回列的键名，index_key：新数组的键名。</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-4、键值去重"><a href="#2-4、键值去重" class="headerlink" title="2.4、键值去重"></a>2.4、键值去重</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">array_unique(<span class="keyword">array</span>, sortingtype);   <span class="comment">//适用一维数组，sortingtype 规定如何比较数组元素/项目。</span></span><br><span class="line"><span class="comment">//SORT_STRING - 默认。把项目作为字符串来比较。</span></span><br><span class="line"><span class="comment">//SORT_REGULAR - 把每一项按常规顺序排列（ Standard ASCII，不改变类型 ）。</span></span><br><span class="line"><span class="comment">//SORT_NUMERIC - 把每一项作为数字来处理。</span></span><br><span class="line"><span class="comment">//SORT_LOCALE_STRING - 把每一项作为字符串来处理，基于当前区域设置（ 可通过 setlocale() 进行更改 ）。</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-5、返回键名"><a href="#2-5、返回键名" class="headerlink" title="2.5、返回键名"></a>2.5、返回键名</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">key(<span class="keyword">array</span>);   <span class="comment">//返回当前键名。</span></span><br><span class="line"></span><br><span class="line">array_keys(<span class="keyword">array</span>, value, strict);   <span class="comment">//返回所有键名</span></span><br><span class="line"><span class="comment">//value 可选，指定只有该键值对应的键名会被返回。</span></span><br><span class="line"><span class="comment">//strict  可选，与 value 参数一起使用。可能的值：</span></span><br><span class="line"><span class="comment">//true - 返回带有指定键值的键名。依赖类型，数字 5 与字符串 "5" 是不同的，</span></span><br><span class="line"><span class="comment">//false - 默认值。不依赖类型，数字 5 与字符串 "5" 是相同的。</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-6、合并数组"><a href="#2-6、合并数组" class="headerlink" title="2.6、合并数组"></a>2.6、合并数组</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array_merge(array1, array2, array3...);   <span class="comment">//键名相同的将会被合并，取靠后的键值。</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-7、数组增删"><a href="#2-7、数组增删" class="headerlink" title="2.7、数组增删"></a>2.7、数组增删</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">array_pop(<span class="keyword">array</span>);    <span class="comment">//删除数组末位值（ 出栈 ）。</span></span><br><span class="line">array_push(<span class="keyword">array</span>,value1,value2...);      <span class="comment">//向第一个参数的数组尾部添加一个或多个元素（ 入栈 ），然后返回新数组的长度。</span></span><br><span class="line">array_shift(<span class="keyword">array</span>);   <span class="comment">//删除数组中第一个元素，并返回被删除元素的值。</span></span><br><span class="line">array_unshift(<span class="keyword">array</span>, value1, value2, value3...);   在数组开头插入一个或多个元素。</span><br><span class="line"></span><br><span class="line">array_splice(<span class="keyword">array</span>, start, length, newarray);   <span class="comment">//移除选定的元素，并用新元素取代它。该函数也将返回包含被移除元素的数组。</span></span><br><span class="line"><span class="comment">//start 必填，开始位置，0 = 第一个元素，-2 意味着从数组的倒数第二个元素开始。</span></span><br><span class="line"><span class="comment">//length  可选，规定被移除的元素个数，也是被返回数组的长度。</span></span><br><span class="line"><span class="comment">//如果该值设置为正数，则移除该数量的元素。</span></span><br><span class="line"><span class="comment">//如果该值设置为负数，则移除从 start 到数组末端倒数 length 为止中间所有的元素。</span></span><br><span class="line"><span class="comment">//如果该值未设置，则移除从 start 参数设置的位置开始直到数组末端的所有元素。</span></span><br><span class="line"><span class="comment">//array 可选，规定带有要插入原始数组中元素的数组。</span></span><br><span class="line"><span class="comment">//如果只有一个元素，则可以设置为字符串，不需要设置为数组。</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-8、排序"><a href="#2-8、排序" class="headerlink" title="2.8、排序"></a>2.8、排序</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">sort(<span class="keyword">array</span>, sortingtype);    <span class="comment">//正向，去除键名</span></span><br><span class="line">rsort(<span class="keyword">array</span>, sortingtype);   <span class="comment">//逆向，去除键名</span></span><br><span class="line"></span><br><span class="line">asort(<span class="keyword">array</span>, sortingtype);    <span class="comment">//键值正向，保留键名</span></span><br><span class="line">arsort(<span class="keyword">array</span>, sortingtype);   <span class="comment">//键值逆向，保留键名</span></span><br><span class="line"></span><br><span class="line">ksort(<span class="keyword">array</span>, sortingtype);    <span class="comment">//键名正向，保留键名</span></span><br><span class="line">krsort(<span class="keyword">array</span>, sortingtype);   <span class="comment">//键名逆向，保留键名</span></span><br><span class="line"></span><br><span class="line">uasort(<span class="keyword">array</span>, myfunction);     <span class="comment">//自定义函数键值排序，保留键名</span></span><br><span class="line">uksort(<span class="keyword">array</span>, myfunction);    <span class="comment">//自定义函数键名排序，保留键名</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//自然排序中 2 小于 10 ，计算机排序中 10 小于 2 。</span></span><br><span class="line">natsort();             <span class="comment">//区分大小写，保留键名。</span></span><br><span class="line">natcasesort(<span class="keyword">array</span>);   <span class="comment">//不区分大小写，保留键名。</span></span><br><span class="line"></span><br><span class="line">array_multisort(array1, sortingorder, sortingtype , array2, array3...)   <span class="comment">//多个或多维数组排序</span></span><br><span class="line"><span class="comment">//sortingorder 可选，SORT_ASC - 默认。按升序排列 (A-Z)，SORT_DESC - 按降序排列 (Z-A)。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//sortingtype</span></span><br><span class="line"><span class="comment">//按字母进行升序排序，原有的键名将被删除，成功则返回 TRUE，否则返回 FALSE。</span></span><br><span class="line"><span class="comment">//0 = SORT_REGULAR - 默认，把每一项按常规顺序排列（Standard ASCII，不改变类型）。</span></span><br><span class="line"><span class="comment">//1 = SORT_NUMERIC - 把每一项作为数字来处理。</span></span><br><span class="line"><span class="comment">//2 = SORT_STRING - 把每一项作为字符串来处理。</span></span><br><span class="line"><span class="comment">//3 = SORT_LOCALE_STRING - 把每一项作为字符串来处理，基于当前区域设置（可通过 setlocale() 进行更改）。</span></span><br><span class="line"><span class="comment">//4 = SORT_NATURAL - 把每一项作为字符串来处理，使用类似 natsort() 的自然排序。</span></span><br><span class="line"><span class="comment">//5 = SORT_FLAG_CASE - 可以结合（按位或）SORT_STRING 或 SORT_NATURAL 对字符串进行排序，不区分大小写。</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-9、数组计算"><a href="#2-9、数组计算" class="headerlink" title="2.9、数组计算"></a>2.9、数组计算</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">array_sum(<span class="keyword">array</span>);   <span class="comment">//返回数组中所有值的和，如果所有值都是整数，则返回一个整数值。如果其中有一个或多个值是浮点数，则返回浮点数。</span></span><br><span class="line">array_product(<span class="keyword">array</span>);   <span class="comment">//计算并返回数组的乘积。</span></span><br><span class="line">count(<span class="keyword">array</span>,mode);    <span class="comment">//mode可选。规定模式。可能的值：</span></span><br><span class="line"><span class="comment">//0 - 默认。不对多维数组中的所有元素进行计数。</span></span><br><span class="line"><span class="comment">//1 - 递归地计数数组中元素的数目（计算多维数组中的所有元素）。</span></span><br><span class="line"></span><br><span class="line">array_count_values(<span class="keyword">array</span>);   <span class="comment">//返回一个数组，其元素的键名是原数组的值，键值是该值在原数组中出现的次数。</span></span><br></pre></td></tr></table></figure>
+<h2 id="3、字符串操作"><a href="#3、字符串操作" class="headerlink" title="3、字符串操作"></a>3、字符串操作</h2><h3 id="3-1、字符串长度"><a href="#3-1、字符串长度" class="headerlink" title="3.1、字符串长度"></a>3.1、字符串长度</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strlen(string);    <span class="comment">//返回字符串长度。</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-2、字符定位"><a href="#3-2、字符定位" class="headerlink" title="3.2、字符定位"></a>3.2、字符定位</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strpos(string, <span class="string">'a'</span>);    <span class="comment">//返回字符位置。</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-3v大小写转换"><a href="#3-3v大小写转换" class="headerlink" title="3.3v大小写转换"></a>3.3v大小写转换</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lcfirst(string);   <span class="comment">//把字符串中的首字符转换为小写</span></span><br><span class="line">ucfirst(string);   <span class="comment">//把字符串中的首字符转换为大写</span></span><br><span class="line">strtolower(string);    <span class="comment">//把字符串转换为小写</span></span><br><span class="line">strtoupper(string);    <span class="comment">//把字符串转换为大写</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-4、字符串分割为数组"><a href="#3-4、字符串分割为数组" class="headerlink" title="3.4、字符串分割为数组"></a>3.4、字符串分割为数组</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">explode(separator, string, limit);</span><br><span class="line"><span class="comment">//separator 必需，规定在哪里分割字符串。</span></span><br><span class="line"><span class="comment">//string  必需，要分割的字符串。</span></span><br><span class="line"><span class="comment">//limit 可选，规定所返回的数组元素的数目。</span></span><br><span class="line"><span class="comment">//大于 0 - 返回包含最多 limit 个元素的数组</span></span><br><span class="line"><span class="comment">//小于 0 - 返回包含除了最后的 -limit 个元素以外的所有元素的数组</span></span><br><span class="line"><span class="comment">//0 - 返回包含一个元素的数组</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-5、散列"><a href="#3-5、散列" class="headerlink" title="3.5、散列"></a>3.5、散列</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">md5(string, raw);    <span class="comment">//计算字符串的 MD5 散列。</span></span><br><span class="line">md5_file(file, raw);     <span class="comment">//计算文件的 MD5 散列。</span></span><br><span class="line">raw 可选，规定十六进制或二进制输出格式：</span><br><span class="line"><span class="comment">//TRUE - 原始 16 字符二进制格式</span></span><br><span class="line"><span class="comment">//FALSE - 默认。32 字符十六进制数。</span></span><br></pre></td></tr></table></figure>
+<h2 id="4、Math-函数"><a href="#4、Math-函数" class="headerlink" title="4、Math 函数"></a>4、Math 函数</h2><h3 id="4-1、取绝对值"><a href="#4-1、取绝对值" class="headerlink" title="4.1、取绝对值"></a>4.1、取绝对值</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">abs(x);</span><br></pre></td></tr></table></figure>
+<h3 id="4-2、小数点精度"><a href="#4-2、小数点精度" class="headerlink" title="4.2、小数点精度"></a>4.2、小数点精度</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">round(x, prec);   <span class="comment">//prec 定义小数点位数</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-3、随机整数"><a href="#4-3、随机整数" class="headerlink" title="4.3、随机整数"></a>4.3、随机整数</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rand(min, max);</span><br></pre></td></tr></table></figure>
+<h3 id="4-4、返回最大最小值"><a href="#4-4、返回最大最小值" class="headerlink" title="4.4、返回最大最小值"></a>4.4、返回最大最小值</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">min(x, y);</span><br><span class="line">max(x, y);</span><br></pre></td></tr></table></figure>
+<h3 id="4-5、返回余数"><a href="#4-5、返回余数" class="headerlink" title="4.5、返回余数"></a>4.5、返回余数</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fmod(x, y);   <span class="comment">// 5 除 2 余 1。</span></span><br></pre></td></tr></table></figure>
+<h2 id="4、正则"><a href="#4、正则" class="headerlink" title="4、正则"></a>4、正则</h2><p>//todo</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PHP/" rel="tag" class="icon-tag"> PHP</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/30/2017-05-30碧海蓝天/" rel="next" title="碧海蓝天">
+                <i class="icon-left"></i> 碧海蓝天
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/06/2017-08-06Markdown基本语法/" rel="prev" title="Markdown 基本语法">
+                Markdown 基本语法 <i class="icon-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    <!-- 评论 -->
+    <div id="container"></div>
+    <link rel="stylesheet" href="/css/gitment.css">
+    <script src="/js/gitment.js"></script>
+    <script>
+    var gitment = new Gitment({
+      id: 'Couh', 
+      owner: 'aboutimes',
+      repo: 'theme-hexo',
+        oauth: {
+          client_id: 'a4658b7937231833073e',
+          client_secret: 'ee0e478222be08062f68c03d1f6ca433c05e5209',
+      },
+    });
+    gitment.render('container');
+    </script>
+    <!-- 评论 -->
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner" id="sidebarinner">
+        
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+        </ul>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+              
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、PHP代码解析过程"><span class="nav-text">1、PHP代码解析过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、数组操作"><span class="nav-text">2、数组操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1、键名改为小写或大写"><span class="nav-text">2.1、键名改为小写或大写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2、数组分块"><span class="nav-text">2.2、数组分块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3、返回键值"><span class="nav-text">2.3、返回键值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4、键值去重"><span class="nav-text">2.4、键值去重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5、返回键名"><span class="nav-text">2.5、返回键名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6、合并数组"><span class="nav-text">2.6、合并数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-7、数组增删"><span class="nav-text">2.7、数组增删</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-8、排序"><span class="nav-text">2.8、排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-9、数组计算"><span class="nav-text">2.9、数组计算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、字符串操作"><span class="nav-text">3、字符串操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1、字符串长度"><span class="nav-text">3.1、字符串长度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2、字符定位"><span class="nav-text">3.2、字符定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3v大小写转换"><span class="nav-text">3.3v大小写转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4、字符串分割为数组"><span class="nav-text">3.4、字符串分割为数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5、散列"><span class="nav-text">3.5、散列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、Math-函数"><span class="nav-text">4、Math 函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1、取绝对值"><span class="nav-text">4.1、取绝对值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2、小数点精度"><span class="nav-text">4.2、小数点精度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3、随机整数"><span class="nav-text">4.3、随机整数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4、返回最大最小值"><span class="nav-text">4.4、返回最大最小值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5、返回余数"><span class="nav-text">4.5、返回余数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、正则"><span class="nav-text">4、正则</span></a></li></ol></div>
+          </div>
+        </section>
+      <!--/noindex-->
+      
+      
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="me" style="font-weight:lighter;">
+  
+    
+      <span class="links-of-author-item">
+        
+        <a href="https://github.com/aboutimes" target="_blank" title="GitHub" class="icon-github">
+          
+            <!-- <i class="icon-github"> </i> -->
+          
+          GitHub
+        </a>
+        
+       </span>
+    
+      <span class="links-of-author-item">
+        
+        <a href="mailto:aboutime2012@gmail.com" target="_blank" title="Email" class="icon-envelope-o">
+          
+            <!-- <i class="icon-envelope-o"> </i> -->
+          
+          Email
+        </a>
+        
+       </span>
+    
+  
+</div>
+<ul class="links-of-blogroll-list" style="font-weight:200;">
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://isujin.com" title="素錦" target="_blank">素錦</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://sometime.me" title="寒塘渡月" target="_blank">寒塘渡月</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://shisanyue.com" title="拾叁月" target="_blank">拾叁月</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://www.lyh2.com" title="青筑" target="_blank">青筑</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://mir.no/work" title="MIR." target="_blank">MIR.</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://modelo.io" title="MODELO" target="_blank">MODELO</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="https://leonax.net" title="LEONA+" target="_blank">LEONA+</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://1416.me" title="1416教室" target="_blank">1416教室</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="https://www.fieldevo.com/" title="Fieldevo" target="_blank">Fieldevo</a>
+    </li>
+  
+</ul>
+<div class="copyright" style="top:50px;font-weight:lighter;">
+  
+  &copy;  2012 - 
+  <span itemprop="copyrightYear">2018</span>  
+  <span class="author" itemprop="copyrightHolder">Couh</span>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <span class="icon-up"></span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

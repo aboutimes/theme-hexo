@@ -1,0 +1,793 @@
+<!doctype html>
+
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="google" content="notranslate">
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Hiragino Sans GB:300,300italic,400,400italic,700,700italic|Hiragino Sans GB:300,300italic,400,400italic,700,700italic|Hiragino Sans GB:300,300italic,400,400italic,700,700italic|Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="aboutimes.com/2017/10/29/2017-10-29Nginx笔记/"/>
+
+
+
+
+
+  <title>Nginx 笔记 | 舊時光</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <!-- <div class="headband"></div> -->
+
+    <header id="header" class="header">
+      <div class="header-inner">
+<div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+      <div class="site-meta-headline">
+        <a href="/">
+          <img class="custom-logo-image" src="/images/logo.png"
+               alt="舊時光"/>
+        </a>
+      </div>
+    
+    <span class="description"></span>
+    <!-- 
+      <p class="site-subtitle"></p>
+     -->
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          
+            <a href="/" rel="section">
+              
+              首页
+            </a>
+          
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          
+            <a href="/archives/" rel="section">
+              
+              文章列表
+            </a>
+          
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          
+            <a href="/tags/" rel="section">
+              
+              标签列表
+            </a>
+          
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          
+            <a href="/categories/">
+              
+              分类
+              <span class="arrow"></span>
+              <ul class="submenu">
+              <!-- 分类链接 -->
+                
+                  <li><a href="/categories/见闻/" class="nav-link">见闻</a></li>
+                
+                  <li><a href="/categories/技术/" class="nav-link">技术</a></li>
+                
+              </ul>
+            </a>
+            
+          
+        </li>
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+
+ 
+      </div>
+      
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner" id="maininner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " ">
+    <link itemprop="mainEntityOfPage" href="aboutimes.com/2017/10/29/2017-10-29Nginx笔记/">
+
+    <span hidden itemprop="author">
+      <meta itemprop="name" content="Couh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher">
+      <meta itemprop="name" content="舊時光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Nginx 笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon icon-calendar-o">
+                <!-- <i class="icon-calendar-o" style="vertical-align: middle;"></i> -->
+              </span>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-29T00:00:00+08:00" style="color:#222;vertical-align: middle;"">
+                2017-10-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <!-- <span class="post-meta-item-icon">
+                <i class="icon-classify"></i>
+              </span> -->
+
+              
+              <span class="icon-classify"> </span>
+                <span itemprop="about">
+                  <a href="/categories/技术/" itemprop="url" rel="index" style="vertical-align: middle;">
+                    <!-- <span itemprop="name">技术</span> -->
+                    技术
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+          <span class="post-meta-divider">|</span><span class="icon-user"> </span><span  style="color:#222;vertical-align: middle;"> Couh</span>
+          <!-- 增加作者<span class="fa fa-user-o"> </span> -->
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/images/2017-10-29-01.png" alt=""><br>　　前段时间做 Laravel 项目一直用 Apache 做 web 服务，没什么特别原因，一是就因为是系统自带，懒得折腾其他的，二是刚接触编程没多久，并不太了解其他的 web 服务器。近来开始接触到 Nginx 服务器，相对于 Apache 的稳定，Nginx 以性能见长。作为 Web 服务器：Nginx 使用更少的资源，处理请求是异步非阻塞的，支持更多的并发连接；作为反向代理服务器完成负载均衡: Nginx 既可以在内部直接支持 Rails 和 PHP 程序对外进行服务, 也可以支持作为 HTTP 代理服务器对外进行服务。<a id="more"></a></p>
+<h2 id="1、Nginx-功能"><a href="#1、Nginx-功能" class="headerlink" title="1、Nginx 功能"></a>1、Nginx 功能</h2><p>Nginx 是一个高性能的 HTTP 和反向代理服务器，也是一个 IMAP / POP3 / SMTP 服务器。</p>
+<h3 id="1-1、HTTP-基础功能："><a href="#1-1、HTTP-基础功能：" class="headerlink" title="1.1、HTTP 基础功能："></a>1.1、HTTP 基础功能：</h3><ul>
+<li>处理静态文件，索引文件以及自动索引；</li>
+<li>反向代理加速(无缓存)，简单的负载均衡和容错；</li>
+<li>FastCGI，简单的负载均衡和容错；</li>
+<li>模块化的结构。过滤器包括 gzipping, byte ranges, chunked responses, 以及 SSI-filter ，在 SSI 过滤器中，到同一个 proxy 或者 FastCGI 的多个子请求并发处理；</li>
+<li>SSL 和 TLS SNI 支持。</li>
+</ul>
+<h3 id="1-2、IMAP-POP3-代理服务功能："><a href="#1-2、IMAP-POP3-代理服务功能：" class="headerlink" title="1.2、IMAP/POP3 代理服务功能："></a>1.2、IMAP/POP3 代理服务功能：</h3><ul>
+<li>使用外部 HTTP 认证服务器重定向用户到 IMAP/POP3 后端；</li>
+<li>使用外部 HTTP 认证服务器认证用户后连接重定向到内部的 SMTP 后端；</li>
+<li>认证方法：</li>
+<li>POP3: POP3 USER/PASS, APOP, AUTH LOGIN PLAIN CRAM-MD5 ；</li>
+<li>IMAP: IMAP LOGIN ；</li>
+<li>SMTP: AUTH LOGIN PLAIN CRAM-MD5 ；</li>
+<li>SSL 支持 ；</li>
+<li>在 IMAP 和 POP3 模式下的 STARTTLS 和 STLS 支持。</li>
+</ul>
+<h3 id="1-3、支持的操作系统："><a href="#1-3、支持的操作系统：" class="headerlink" title="1.3、支持的操作系统："></a>1.3、支持的操作系统：</h3><ul>
+<li>FreeBSD 3.x, 4.x, 5.x, 6.x i386; FreeBSD 5.x, 6.x amd64 ；</li>
+<li>Linux 2.2, 2.4, 2.6 i386; Linux 2.6 amd64 ；</li>
+<li>Solaris 8 i386; Solaris 9 i386 and sun4u; Solaris 10 i386 ；</li>
+<li>MacOS X (10.4) PPC。</li>
+</ul>
+<h3 id="1-4、结构与扩展："><a href="#1-4、结构与扩展：" class="headerlink" title="1.4、结构与扩展："></a>1.4、结构与扩展：</h3><p>一个主进程和多个工作进程。工作进程是单线程的，且不需要特殊授权即可运行；</p>
+<ul>
+<li>kqueue (FreeBSD 4.1+), epoll (Linux 2.6+), rt signals (Linux 2.2.19+), /dev/poll (Solaris 7 11/99+), select, 以及 poll 支持；</li>
+<li>kqueue支持的不同功能包括 EV_CLEAR, EV_DISABLE （临时禁止事件）， NOTE_LOWAT, EV_EOF, 有效数据的数目，错误代码；</li>
+<li>sendfile (FreeBSD 3.1+), sendfile (Linux 2.2+), sendfile64 (Linux 2.4.21+), 和 sendfilev (Solaris 8 7/01+) 支持；</li>
+<li>输入过滤 (FreeBSD 4.1+) 以及 TCP_DEFER_ACCEPT (Linux 2.4+) 支持；</li>
+<li>10,000 非活动的 HTTP keep-alive 连接仅需要 2.5M 内存；</li>
+<li>最小化的数据拷贝操作。</li>
+</ul>
+<h3 id="1-5、其他HTTP功能："><a href="#1-5、其他HTTP功能：" class="headerlink" title="1.5、其他HTTP功能："></a>1.5、其他HTTP功能：</h3><ul>
+<li>基于IP 和名称的虚拟主机服务；</li>
+<li>Memcached 的 GET 接口；</li>
+<li>支持 keep-alive 和管道连接；</li>
+<li>灵活简单的配置；</li>
+<li>重新配置和在线升级而无须中断客户的工作进程；</li>
+<li>可定制的访问日志，日志写入缓存，以及快捷的日志回卷；</li>
+<li>4xx-5xx 错误代码重定向；</li>
+<li>基于 PCRE 的 rewrite 重写模块；</li>
+<li>基于客户端 IP 地址和 HTTP 基本认证的访问控制；</li>
+<li>PUT, DELETE, 和 MKCOL 方法；</li>
+<li>支持 FLV （Flash 视频）；</li>
+<li>带宽限制。</li>
+</ul>
+<h2 id="2、反向代理"><a href="#2、反向代理" class="headerlink" title="2、反向代理"></a>2、反向代理</h2><p>　　正向代理服务器，只用于代理内部网络对 Internet 的连接请求，客户机必须指定代理服务器,并将本来要直接发送到 Web 服务器上的 http 请求发送到代理服务器中。当一个代理服务器能够代理外部网络上的主机，访问内部网络时，这种代理服务的方式称为反向代理服务。</p>
+<h3 id="2-1、正向代理"><a href="#2-1、正向代理" class="headerlink" title="2.1、正向代理"></a>2.1、正向代理</h3><p>　　通常来说，对于人来说可以感知到，但服务器感知不到的服务器，我们叫他正向代理服务器。比如访问 google.com 时我们需要 vpn 翻墙才能访问。<code>vpn</code> 对于<code>客户</code>来说，是可以感知到的（客户连接 vpn），<code>vpn</code> 对于<code>google 服务器</code>来说，是不可感知的(google 只知道有 http 请求过来）。<br><img src="/images/2017-10-29-02.png" alt=""></p>
+<h3 id="2-2、反向代理"><a href="#2-2、反向代理" class="headerlink" title="2.2、反向代理"></a>2.2、反向代理</h3><p>　　通常来说，对于人来说不可感知，但对于服务器来说是可以感知的，我们叫他反向代理服务器，通过反向代理实现负载均衡。比如访问 baidu.com 的时候，baidu 有一个代理服务器，通过这个代理服务器，可以做负载均衡，路由到不同的 server。<code>客户</code>感知不到<code>反向代理server</code>，<code>server1 server2 server3</code>则可以感知到<code>反向代理server</code>。<br><img src="/images/2017-10-29-03.png" alt=""></p>
+<h2 id="3、PHP-FPM"><a href="#3、PHP-FPM" class="headerlink" title="3、PHP-FPM"></a>3、PHP-FPM</h2><p>PHP-FPM(FastCGI Process Manager：FastCGI进程管理器)是一个PHPFastCGI管理器</p>
+<h3 id="3-1、cgi、fast-cgi-协议"><a href="#3-1、cgi、fast-cgi-协议" class="headerlink" title="3.1、cgi、fast-cgi 协议"></a>3.1、cgi、fast-cgi 协议</h3><ul>
+<li>cgi：为了解决不同的语言解释器(如 php、python 解释器)与 webserver 的通信，于是出现了 cgi 协议。只要你按照 cgi 协议去编写程序，就能实现语言解释器与 webwerver 的通信。如 php-cgi 程序。有了 cgi 协议，解决了 php 解释器与 webserver 通信的问题，webserver 终于可以处理动态语言了。但是，webserver每收到一个请求，都会去 fork 一个 cgi 进程，请求结束再 kill 掉这个进程。这样有 10000 个请求，就需要 fork、kill php-cgi 进程 10000 次。</li>
+<li>fast-cgi：cgi 资源浪费严重，于是出现了 cgi 的改良版本，fast-cgi 。fast-cgi 每次处理完请求后，不会 kill 掉这个进程，而是保留这个进程，使这个进程可以一次处理多个请求。这样每次就不用重新 fork 一个进程了，大大提高了效率。</li>
+</ul>
+<h3 id="3-2、php-fpm-即-php-Fastcgi-Process-Manager"><a href="#3-2、php-fpm-即-php-Fastcgi-Process-Manager" class="headerlink" title="3.2、php-fpm 即 php-Fastcgi Process Manager"></a>3.2、php-fpm 即 php-Fastcgi Process Manager</h3><ul>
+<li>php-fpm 是 FastCGI 的实现，并提供了进程管理的功能。进程包含 master 进程和 worker 进程两种进程。 </li>
+<li>master 进程只有一个，负责监听端口，接收来自 Web Server 的请求，</li>
+<li>worker 进程则一般有多个(具体数量根据实际需要配置)，每个进程内部都嵌入了一个 PHP 解释器，是 PHP 代码真正执行的地方。</li>
+</ul>
+<h2 id="4、Nginx-安装与配置"><a href="#4、Nginx-安装与配置" class="headerlink" title="4、Nginx 安装与配置"></a>4、Nginx 安装与配置</h2><h3 id="4-1、nginx-安装"><a href="#4-1、nginx-安装" class="headerlink" title="4.1、nginx 安装"></a>4.1、nginx 安装</h3><p><code>brew install nginx</code></p>
+<h3 id="4-2、nginx-配置-nginx-conf"><a href="#4-2、nginx-配置-nginx-conf" class="headerlink" title="4.2、nginx 配置 nginx.conf"></a>4.2、nginx 配置 nginx.conf</h3><p>　　默认位置<code>/usr/local/etc/nginx/nginx.conf</code>，作为初级配置 <code>nginx.conf</code> 不需要更改。配置文件末尾语句<code>include servers/*</code>，包含 <code>servers</code> 文件下的子配置文件，可以对不同的项目建立不同的子配置文件。</p>
+<ul>
+<li><p>例如 larave.conf ，访问 <code>http://localhost/</code> 即可访问项目。</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">    <span class="attribute">listen</span> <span class="number">80</span>;</span><br><span class="line">    <span class="attribute">server_name</span> localhost;</span><br><span class="line">    <span class="attribute">root</span> /对应项目目录;</span><br><span class="line">    <span class="attribute">add_header</span> X-Frame-Options <span class="string">"SAMEORIGIN"</span>;   </span><br><span class="line">    <span class="attribute">add_header</span> X-XSS-Protection <span class="string">"1; mode=block"</span>; </span><br><span class="line">    <span class="attribute">add_header</span> X-Content-Type-Options <span class="string">"nosniff"</span>; </span><br><span class="line"></span><br><span class="line">    <span class="attribute">index</span> index.html index.htm index.php;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">charset</span> utf-<span class="number">8</span>;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">location</span> / &#123;</span><br><span class="line">        <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.php?<span class="variable">$query_string</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">location</span> = /favicon.ico &#123; <span class="attribute">access_log</span> <span class="literal">off</span>; <span class="attribute">log_not_found</span> <span class="literal">off</span>; &#125;  </span><br><span class="line">    <span class="attribute">location</span> = /robots.txt  &#123; <span class="attribute">access_log</span> <span class="literal">off</span>; <span class="attribute">log_not_found</span> <span class="literal">off</span>; &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="comment">#error_page 404 /index.php;</span></span><br><span class="line"></span><br><span class="line">    <span class="attribute">location</span> <span class="regexp">~ \.php$</span> &#123;</span><br><span class="line">        <span class="attribute">fastcgi_split_path_info</span><span class="regexp"> ^(.+\.php)(/.+)$</span>;</span><br><span class="line">        <span class="attribute">fastcgi_pass</span> <span class="number">127.0.0.1:9000</span>;</span><br><span class="line">        <span class="attribute">fastcgi_index</span> index.php;</span><br><span class="line">        <span class="attribute">fastcgi_intercept_errors</span> <span class="literal">on</span>;</span><br><span class="line">        <span class="attribute">include</span> fastcgi_params;</span><br><span class="line">        <span class="attribute">include</span> fastcgi.conf;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">location</span> <span class="regexp">~ /\.(?!well-known).*</span> &#123;</span><br><span class="line">        <span class="attribute">deny</span> all;</span><br><span class="line">    &#125;    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>再如 phpMyAdmin.conf ，host 文件添加 <code>127.0.0.0 phpmyadmin</code>，访问 <code>http://phpmyadmin/</code> 即可访问项目。</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">    <span class="attribute">listen</span> <span class="number">80</span>;</span><br><span class="line">    <span class="attribute">server_name</span> phpmyadmin;</span><br><span class="line">    <span class="attribute">root</span> /目录路径/phpMyAdmin;</span><br><span class="line">    <span class="attribute">add_header</span> X-Frame-Options <span class="string">"SAMEORIGIN"</span>;   </span><br><span class="line">    <span class="attribute">add_header</span> X-XSS-Protection <span class="string">"1; mode=block"</span>; </span><br><span class="line">    <span class="attribute">add_header</span> X-Content-Type-Options <span class="string">"nosniff"</span>; </span><br><span class="line"></span><br><span class="line">    <span class="attribute">index</span> index.php;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">charset</span> utf-<span class="number">8</span>;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">location</span> / &#123;</span><br><span class="line">        <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.php?<span class="variable">$query_string</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">location</span> = /favicon.ico &#123; <span class="attribute">access_log</span> <span class="literal">off</span>; <span class="attribute">log_not_found</span> <span class="literal">off</span>; &#125;  </span><br><span class="line">    <span class="attribute">location</span> = /robots.txt  &#123; <span class="attribute">access_log</span> <span class="literal">off</span>; <span class="attribute">log_not_found</span> <span class="literal">off</span>; &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="comment">#error_page 404 /index.php;</span></span><br><span class="line"></span><br><span class="line">    <span class="attribute">location</span> <span class="regexp">~ \.php$</span> &#123;</span><br><span class="line">        <span class="attribute">fastcgi_split_path_info</span><span class="regexp"> ^(.+\.php)(/.+)$</span>;</span><br><span class="line">        <span class="attribute">fastcgi_pass</span> <span class="number">127.0.0.1:9000</span>;</span><br><span class="line">        <span class="attribute">fastcgi_index</span> index.php;</span><br><span class="line">        <span class="attribute">fastcgi_intercept_errors</span> <span class="literal">on</span>;</span><br><span class="line">        <span class="attribute">include</span> fastcgi_params;</span><br><span class="line">        <span class="attribute">include</span> fastcgi.conf;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">location</span> <span class="regexp">~ /\.(?!well-known).*</span> &#123;</span><br><span class="line">        <span class="attribute">deny</span> all;</span><br><span class="line">    &#125;      </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="4-3、php-fpm-配置-php-fpm-conf"><a href="#4-3、php-fpm-配置-php-fpm-conf" class="headerlink" title="4.3、php-fpm 配置 php-fpm.conf"></a>4.3、php-fpm 配置 php-fpm.conf</h3><ul>
+<li><p>默认位置<code>/private/etc/php-fpm.conf</code>，默认没有配置文件，需要将 <code>php-fpm.conf.</code> 重命名为 <code>php-fpm.conf</code> 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">;去掉 pid 和 erro 的注释，修改文件位置到 local 目录，避免权限问题。</span><br><span class="line">[global]</span><br><span class="line">; Pid file</span><br><span class="line">; Note: the default prefix is /usr/var</span><br><span class="line">; Default Value: none</span><br><span class="line"> pid = /usr/local/var/run/php-fpm.pid</span><br><span class="line"></span><br><span class="line">; Error log file</span><br><span class="line">; If it&apos;s set to &quot;syslog&quot;, log is sent to syslogd instead of being written</span><br><span class="line">; into a local file.</span><br><span class="line">; Note: the default prefix is /usr/var</span><br><span class="line">; Default Value: log/php-fpm.log</span><br><span class="line"> error_log = /usr/local/var/run/php-fpm.log</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>/private/etc/php-fpm.d/www.conf.default</code> 重命名为 <code>www.conf</code></p>
+</li>
+</ul>
+<p>　　至此配置完成，访问 <code>http://localhost:8098</code> 即可访问数据库。nginx 的优势是处理静态请求，cpu内存使用率低，可以反向代理隐藏主机 IP，apache 适合处理动态请求，所以现在一般前端用 nginx 作为反向代理抗住压力，apache 作为后端处理动态请求。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Nginx/" rel="tag" class="icon-tag"> Nginx</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/12/2017-10-12RESTfulAPI/" rel="next" title="RESTful API">
+                <i class="icon-left"></i> RESTful API
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/31/2017-12-31Apace虚拟主机配置/" rel="prev" title="Apace 虚拟主机配置">
+                Apace 虚拟主机配置 <i class="icon-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    <!-- 评论 -->
+    <div id="container"></div>
+    <link rel="stylesheet" href="/css/gitment.css">
+    <script src="/js/gitment.js"></script>
+    <script>
+    var gitment = new Gitment({
+      id: 'Couh', 
+      owner: 'aboutimes',
+      repo: 'theme-hexo',
+        oauth: {
+          client_id: 'a4658b7937231833073e',
+          client_secret: 'ee0e478222be08062f68c03d1f6ca433c05e5209',
+      },
+    });
+    gitment.render('container');
+    </script>
+    <!-- 评论 -->
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner" id="sidebarinner">
+        
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+        </ul>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+              
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、Nginx-功能"><span class="nav-text">1、Nginx 功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1、HTTP-基础功能："><span class="nav-text">1.1、HTTP 基础功能：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2、IMAP-POP3-代理服务功能："><span class="nav-text">1.2、IMAP/POP3 代理服务功能：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3、支持的操作系统："><span class="nav-text">1.3、支持的操作系统：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4、结构与扩展："><span class="nav-text">1.4、结构与扩展：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5、其他HTTP功能："><span class="nav-text">1.5、其他HTTP功能：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、反向代理"><span class="nav-text">2、反向代理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1、正向代理"><span class="nav-text">2.1、正向代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2、反向代理"><span class="nav-text">2.2、反向代理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、PHP-FPM"><span class="nav-text">3、PHP-FPM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1、cgi、fast-cgi-协议"><span class="nav-text">3.1、cgi、fast-cgi 协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2、php-fpm-即-php-Fastcgi-Process-Manager"><span class="nav-text">3.2、php-fpm 即 php-Fastcgi Process Manager</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、Nginx-安装与配置"><span class="nav-text">4、Nginx 安装与配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1、nginx-安装"><span class="nav-text">4.1、nginx 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2、nginx-配置-nginx-conf"><span class="nav-text">4.2、nginx 配置 nginx.conf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3、php-fpm-配置-php-fpm-conf"><span class="nav-text">4.3、php-fpm 配置 php-fpm.conf</span></a></li></ol></li></ol></div>
+          </div>
+        </section>
+      <!--/noindex-->
+      
+      
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="me" style="font-weight:lighter;">
+  
+    
+      <span class="links-of-author-item">
+        
+        <a href="https://github.com/aboutimes" target="_blank" title="GitHub" class="icon-github">
+          
+            <!-- <i class="icon-github"> </i> -->
+          
+          GitHub
+        </a>
+        
+       </span>
+    
+      <span class="links-of-author-item">
+        
+        <a href="mailto:aboutime2012@gmail.com" target="_blank" title="Email" class="icon-envelope-o">
+          
+            <!-- <i class="icon-envelope-o"> </i> -->
+          
+          Email
+        </a>
+        
+       </span>
+    
+  
+</div>
+<ul class="links-of-blogroll-list" style="font-weight:200;">
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://isujin.com" title="素錦" target="_blank">素錦</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://sometime.me" title="寒塘渡月" target="_blank">寒塘渡月</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://shisanyue.com" title="拾叁月" target="_blank">拾叁月</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://www.lyh2.com" title="青筑" target="_blank">青筑</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://mir.no/work" title="MIR." target="_blank">MIR.</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://modelo.io" title="MODELO" target="_blank">MODELO</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="https://leonax.net" title="LEONA+" target="_blank">LEONA+</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://1416.me" title="1416教室" target="_blank">1416教室</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="https://www.fieldevo.com/" title="Fieldevo" target="_blank">Fieldevo</a>
+    </li>
+  
+</ul>
+<div class="copyright" style="top:50px;font-weight:lighter;">
+  
+  &copy;  2012 - 
+  <span itemprop="copyrightYear">2018</span>  
+  <span class="author" itemprop="copyrightHolder">Couh</span>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <span class="icon-up"></span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
