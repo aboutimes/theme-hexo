@@ -17,13 +17,13 @@ gitment_id: Couh
 gitment_owner: aboutimes
 #github 博客仓库名
 gitment_repo: theme-hexo
-client_id: 785bfb02d2fb125b3e5c
-client_secret: 09edea55bc18062120c3f157bb64e1ee4b378985
+client_id: a4658b7937231833073e
+client_secret: ee0e478222be08062f68c03d1f6ca433c05e5209
 
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://aboutimes.com
+url: aboutimes.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -74,7 +74,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: loft
 
 #注脚
 plugins:
