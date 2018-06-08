@@ -7,6 +7,7 @@
 /.deploy_git
 /.git
 db.json
+_config.yml
 
 # Editor directories and files
 .idea

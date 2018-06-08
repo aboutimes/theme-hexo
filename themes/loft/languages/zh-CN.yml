@@ -41,7 +41,7 @@ post:
       <a href="%s" rel="external nofollow" target="_blank">%s</a> 许可协议。转载请注明出处！'
 
 page:
-  totally: 共有
+  totally: 共
   tags: 标签列表
 
 footer:
@@ -51,18 +51,18 @@ footer:
 counter:
   tag_cloud:
     zero: 暂无标签
-    one: 共计 1 个标签
-    other: "共计 %d 个标签"
+    one: 共 1 个标签
+    other: "共 %d 个标签"
 
   categories:
     zero: 暂无分类
-    one: 共计 1 个分类
-    other: "共计 %d 个分类"
+    one: 共 1 个分类
+    other: "共 %d 个分类"
 
   archive_posts:
     zero: 暂无日志。
-    one: 共计 1 篇日志。
-    other: "共计 %d 篇日志。"
+    one: 共 1 篇日志。
+    other: "共 %d 篇日志。"
 
 state:
   posts: 日志
