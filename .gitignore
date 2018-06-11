@@ -1,6 +1,6 @@
 /node_modules
 /public
-/themes/loft/source/images
+# /themes/loft/source/images
 /source/_posts
 .DS_Store
 */.DS_Store
