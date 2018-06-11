@@ -1,0 +1,743 @@
+<!doctype html>
+
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="google" content="notranslate">
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Hiragino Sans GB:300,300italic,400,400italic,700,700italic|Hiragino Sans GB:300,300italic,400,400italic,700,700italic|Hiragino Sans GB:300,300italic,400,400italic,700,700italic|Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="aboutimes.com/2017/07/28/2017-07-28MySQL笔记/"/>
+
+
+
+  <title>MySQL 笔记 | 舊時光</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <!-- <div class="headband"></div> -->
+
+    <header id="header" class="header">
+      <div class="header-inner">
+<div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+      <div class="site-meta-headline">
+        <a href="/">
+          <img class="custom-logo-image" src="/images/logo.png"
+               alt="舊時光"/>
+        </a>
+      </div>
+    
+    <span class="description"></span>
+    <!-- 
+      <p class="site-subtitle"></p>
+     -->
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          
+            <a href="/" rel="section">
+              
+              首页
+            </a>
+          
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          
+            <a href="/archives/" rel="section">
+              
+              文章列表
+            </a>
+          
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          
+            <a href="/tags/" rel="section">
+              
+              标签列表
+            </a>
+          
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          
+            <a href="/categories/">
+              
+              分类
+              <span class="arrow"></span>
+              <ul class="submenu">
+              <!-- 分类链接 -->
+                
+                  <li><a href="/categories/见闻/" class="nav-link">见闻</a></li>
+                
+                  <li><a href="/categories/笔记/" class="nav-link">笔记</a></li>
+                
+              </ul>
+            </a>
+            
+          
+        </li>
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+ 
+      </div>
+      
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner" id="maininner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " ">
+    <link itemprop="mainEntityOfPage" href="aboutimes.com/2017/07/28/2017-07-28MySQL笔记/">
+
+    <span hidden itemprop="author">
+      <meta itemprop="name" content="Couh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher">
+      <meta itemprop="name" content="舊時光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">MySQL 笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon icon-calendar-o">
+                <!-- <i class="icon-calendar-o" style="vertical-align: middle;"></i> -->
+              </span>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T00:00:00+08:00" style="color:#222;vertical-align: middle;"">
+                2017-07-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <!-- <span class="post-meta-item-icon">
+                <i class="icon-classify"></i>
+              </span> -->
+
+              
+              <span class="icon-classify"> </span>
+                <span itemprop="about">
+                  <a href="/categories/笔记/" itemprop="url" rel="index" style="vertical-align: middle;">
+                    <!-- <span itemprop="name">笔记</span> -->
+                    笔记
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+          <span class="post-meta-divider">|</span><span class="icon-user"> </span><span  style="color:#222;vertical-align: middle;"> Couh</span>
+          <!-- 增加作者<span class="fa fa-user-o"> </span> -->
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/images/2017-07-28-01.png" alt=""><br>　　MySQL 是一个关系型数据库管理系统，原本是一个开放源代码的关系数据库管理系统，原开发者为瑞典的 MySQL AB 公司，该公司于 2008 年被昇阳微系统（Sun Microsystems）收购。2009 年，甲骨文公司（Oracle）收购昇阳微系统公司，MySQL 成为 Oracle 旗下产品，是当前最流行的关系型数据库管理系统之一。<a id="more"></a></p>
+<h2 id="1、术语"><a href="#1、术语" class="headerlink" title="1、术语"></a>1、术语</h2><ul>
+<li><strong>数据库</strong>：数据库是一些关联表的集合；</li>
+<li><strong>数据表</strong>：表是数据的矩阵。在一个数据库中的表看起来像一个简单的电子表格；</li>
+<li><strong>列</strong>：一列(数据元素) 包含了相同的数据, 例如邮政编码的数据；</li>
+<li><strong>行</strong>：一行（=元组，或记录）是一组相关的数据，例如一条用户订阅的数据；</li>
+<li><strong>冗余</strong>：存储两倍数据，冗余降低了性能，但提高了数据的安全性；</li>
+<li><strong>主键</strong>：主键是唯一的。一个数据表中只能包含一个主键。你可以使用主键来查询数据；</li>
+<li><strong>外键</strong>：外键用于关联两个表，web 设计通常不使用数据库外键约束，而使用 Eloquen orm ，写逻辑约束；</li>
+<li><strong>复合键</strong>：复合键（组合键）将多个列作为一个索引键，一般用于复合索引；</li>
+<li><strong>索引</strong>：使用索引可快速访问数据库表中的特定信息。索引是对数据库表中一列或多列的值进行排序的一种结构。类似于书籍的目录；</li>
+<li><strong>参照完整性</strong>: 参照的完整性要求关系中不允许引用不存在的实体。与实体完整性是关系模型必须满足的完整性约束条件，目的是保证数据的一致性。</li>
+</ul>
+<h2 id="2、安装"><a href="#2、安装" class="headerlink" title="2、安装"></a>2、安装</h2><p>　　Mac 下 MySQL 安装方法有多种，不过始终觉得直接下载 <a href="https://dev.mysql.com/downloads/mysql/" title="下载" target="_blank" rel="noopener">dmg</a> 安装比较方便，直接按引导一路下一步即可完成，记得保存最后弹出框中的密码（它是你 mysql root 账号的密码），安装完成后<code>设置</code>中会有 MySQL 选项，可以设置开机启动、启动/停止等。后续设置也比较简单，只需要设置当前用户的的环境变量即可（为了方便终端输入命令方便，设置后可直接使用 <code>mysql</code> 命令，不设置的话命令需要加上路径 <code>/usr/local/mysql/bin/mysql</code>），设置方法如下：</p>
+<ul>
+<li>显示隐藏文件 <code>command+shift+.</code> ，找到用户文件夹下 <code>.bash_profile</code> 文件</li>
+<li>加入一行 <code>PATH=$PATH:/usr/local/mysql/bin</code> 即可</li>
+<li>或直接命令修改 <code>echo &#39;PATH=$PATH:/usr/local/mysql/bin&#39; &gt;&gt;~/.bash_profile</code></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># .bash_profile 文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># mysql 环境变量</span></span><br><span class="line">PATH=<span class="variable">$PATH</span>:/usr/<span class="built_in">local</span>/mysql/bin</span><br><span class="line"></span><br><span class="line"><span class="comment"># composer 环境变量</span></span><br><span class="line">PATH=<span class="variable">$PATH</span>:~/.composer/vendor/bin/</span><br></pre></td></tr></table></figure>
+<h2 id="3、升级"><a href="#3、升级" class="headerlink" title="3、升级"></a>3、升级</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1、下载 dmg 安装</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2、把新版本 data 重命名为 dataold</span></span><br><span class="line">sudo mv /usr/<span class="built_in">local</span>/mysql-5.7.20-macos10.13-x86_64/data /usr/<span class="built_in">local</span>/mysql-5.7.20-macos10.13-x86_64/dataold</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3、把旧版本数据复制到新版本位置</span></span><br><span class="line">sudo cp -rf /usr/<span class="built_in">local</span>/mysql-5.5.20-macos10.13-x86_64/data /usr/<span class="built_in">local</span>/mysql-5.7.20-macos10.13-x86_64/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4、设置权限，正确为 ower _mysql 读写 wheel 只读 everyone 无权</span></span><br><span class="line">sudo chown -R _mysql /usr/<span class="built_in">local</span>/mysql-5.7.20-macos10.13-x86_64/data</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5、升级</span></span><br><span class="line">sudo /usr/<span class="built_in">local</span>/mysql/bin/mysql_upgrade</span><br><span class="line"></span><br><span class="line"><span class="comment"># 6、重启服务 </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 7、删除 dataold 及老版本</span></span><br><span class="line">sudo rm -rf /usr/<span class="built_in">local</span>/mysql-5.7.20-macos10.13-x86_64/dataold</span><br><span class="line">sudo rm -rf /usr/<span class="built_in">local</span>/mysql-5.5.20-macos10.13-x86_64</span><br></pre></td></tr></table></figure>
+<h2 id="4、登录管理"><a href="#4、登录管理" class="headerlink" title="4、登录管理"></a>4、登录管理</h2><h3 id="4-1、登录"><a href="#4-1、登录" class="headerlink" title="4.1、登录"></a>4.1、登录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -u 用户名 -p 密码登录</span></span><br><span class="line">mysql -u root -p    <span class="comment">#然后输入密码回车即可</span></span><br><span class="line"><span class="comment"># 其他登录选项 -h 指定访问的是 ip 地址主机上的数据库，默认 localhost；-P 指定端口，默认3306</span></span><br><span class="line">mysql -h 192.32.2.9 -u username -p -P 3308</span><br></pre></td></tr></table></figure>
+<h3 id="4-2、设置"><a href="#4-2、设置" class="headerlink" title="4.2、设置"></a>4.2、设置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置密码</span></span><br><span class="line"><span class="comment"># 方法 1</span></span><br><span class="line">SET PASSWORD FOR <span class="string">'root'</span>@<span class="string">'localhost'</span> = PASSWORD(<span class="string">'newpass'</span>);</span><br><span class="line"><span class="comment"># 方法 2，IDENTIFIED WITH mysql_native_password 指定密码模式为 mysql_native_password</span></span><br><span class="line">ALTER USER ‘root’@‘localhost’ IDENTIFIED WITH mysql_native_password BY ‘newpass’;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 授权 GRANT privileges on databasename.tablename to 'test’@‘host’;</span></span><br><span class="line"><span class="comment"># 1、允许 test 用户从任何（% 为所有）主机访问 databasename 的任何（* 为所有）数据表，允许操作为 all</span></span><br><span class="line">GRANT all on databasename.* to <span class="string">'test'</span>@<span class="string">'%'</span>;</span><br><span class="line"><span class="comment"># 2、只允许 test 用户从 IP 为 192.32.2.9 主机访问 databasename 的 user 数据表，允许操作为 select</span></span><br><span class="line">GRANT select on databasename.user to <span class="string">'test'</span>@<span class="string">'192.32.2.9'</span>;</span><br><span class="line"><span class="comment"># select, insert, update, delete, create, drop,</span></span><br><span class="line"><span class="comment"># index, alter, grant, references, reload, shutdown, process, file等14个权限。</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-3、常用操作"><a href="#4-3、常用操作" class="headerlink" title="4.3、常用操作"></a>4.3、常用操作</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 命令包含分号</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示数据库</span></span><br><span class="line">SHOW DATABASES;</span><br><span class="line"><span class="comment"># 创建数据库</span></span><br><span class="line">CREATE DATABASE dbName;</span><br><span class="line"><span class="comment"># 删除数据库</span></span><br><span class="line">DROP DATABASE dbName;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 选择数据库</span></span><br><span class="line">USE dbName;</span><br><span class="line"><span class="comment"># 显示数据表</span></span><br><span class="line">SHOW TABLES;</span><br><span class="line"><span class="comment"># 创建数据表 字段名-类型-属性-空-默认值-主键</span></span><br><span class="line">CREATE TABLE `tableName` (`id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, `sex` CHAR(1) NOT NULL DEFAULT <span class="string">'F'</span>);</span><br><span class="line"><span class="comment"># 数据表插值</span></span><br><span class="line">INSERT INTO `tableName` (name, sex) VALUES (<span class="string">'hyq'</span>,<span class="string">'M'</span>);</span><br><span class="line"><span class="comment"># 在某个字段后面添加字段</span></span><br><span class="line">ALTER TABLE `tableName` Add COLUMN `new_filed` int(10) NOT NULL DEFAULT 0 AFTER `someone_filed`;</span><br><span class="line"><span class="comment"># 删除字段</span></span><br><span class="line">ALTER TABLE `tableName` DROP COLUMN `someone_filed`;</span><br><span class="line"><span class="comment"># 更新表中数据</span></span><br><span class="line">UPDATE `tableName` SET sex=<span class="string">'F'</span> WHERE id=<span class="string">'1'</span>;</span><br><span class="line"><span class="comment"># 删除数据表</span></span><br><span class="line">DROP TABLE `tableName`;</span><br><span class="line"><span class="comment"># 显示表结构</span></span><br><span class="line">DESCRIBE `tableName`;</span><br><span class="line"><span class="comment"># 显示表中的记录</span></span><br><span class="line">SELECT * FROM `tableName`;</span><br><span class="line"><span class="comment"># 清空表中记录</span></span><br><span class="line">DELETE FROM `tableName`;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 退出</span></span><br><span class="line"><span class="built_in">exit</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 导入 .sql 数据</span></span><br><span class="line"><span class="comment"># 方法一</span></span><br><span class="line">mysql -u root -p</span><br><span class="line">USE dbName;</span><br><span class="line"><span class="built_in">source</span> ~/data.sql;</span><br><span class="line"><span class="comment"># 方法二</span></span><br><span class="line"><span class="comment"># mysql -u用户名 -p密码 数据库名 &lt; 数据库名.sql</span></span><br><span class="line">mysql -u root -p dbName &lt; ~/data.sql</span><br><span class="line"><span class="comment"># 导出 .sql 文件</span></span><br><span class="line">mysqldump -u root -p dbName &gt; ~/dbName.sql</span><br></pre></td></tr></table></figure>
+<h2 id="5、PHP-操作-MySQL"><a href="#5、PHP-操作-MySQL" class="headerlink" title="5、PHP 操作 MySQL"></a>5、PHP 操作 MySQL</h2><ul>
+<li>mysqli 连接相关的</li>
+<li>mysqli_result 处理结果集</li>
+<li>mysqli_stmt 预处理类</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 基于 PHP7</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 连接数据库</span></span><br><span class="line">$host = $dbHost . <span class="string">':'</span> . $dbPort;</span><br><span class="line">$mysqli = <span class="keyword">new</span> mysqli($host, $dbUser, $dbPassword, $dbName);</span><br><span class="line"><span class="comment">// 持久连接</span></span><br><span class="line">$host = <span class="string">'p:'</span> . $dbHost . <span class="string">':'</span> . $dbPort;</span><br><span class="line">$mysqli = <span class="keyword">new</span> mysqli($host, $dbUser, $dbPassword, $dbName);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 抛出连接错误</span></span><br><span class="line"><span class="keyword">if</span>(mysqli_connect_error())&#123;</span><br><span class="line">    <span class="keyword">echo</span> mysqli_connect_error();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 关闭</span></span><br><span class="line">$mysqli-&gt;close();</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 数据库列表</span></span><br><span class="line">$host = $dbHost . <span class="string">':'</span> . $dbPort;</span><br><span class="line">$mysqli = <span class="keyword">new</span> mysqli($host, $dbUser, $dbPassword);</span><br><span class="line">$result=$mysqli-&gt;query(<span class="string">'SHOW DATABASES'</span>);</span><br><span class="line">$filter_dbs = <span class="keyword">array</span>(<span class="string">'information_schema'</span>, <span class="string">'mysql'</span>, <span class="string">'sys'</span>, <span class="string">'performance_schema'</span>, <span class="string">'tableviewdemo'</span>);</span><br><span class="line">$databases = <span class="keyword">array</span>();</span><br><span class="line"><span class="keyword">while</span>($row = $result-&gt;fetch_assoc())&#123;</span><br><span class="line">    <span class="keyword">if</span> (in_array($row[<span class="string">'Database'</span>], $filter_dbs)) &#123;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    $databases[] = $row[<span class="string">'Database'</span>]; <span class="comment">//遍历查询结果</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 关闭</span></span><br><span class="line">$mysqli-&gt;close();</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 插入数据</span></span><br><span class="line">$host = $dbHost . <span class="string">':'</span> . $dbPort;</span><br><span class="line">$mysqli = <span class="keyword">new</span> mysqli($host, $dbUser, $dbPassword, $dbName);</span><br><span class="line">$sql = <span class="string">"insert into table_name (`name`, `address`) values ('xiaoming', 'adddddrrreess')"</span>;</span><br><span class="line">$result = $mysqli-&gt;query($sql);</span><br><span class="line"><span class="keyword">if</span>($result === <span class="keyword">false</span>)&#123;<span class="comment">//执行失败</span></span><br><span class="line">    <span class="keyword">echo</span> $mysqli-&gt;error;</span><br><span class="line">    <span class="keyword">echo</span> $mysqli-&gt;errno;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 关闭</span></span><br><span class="line">$mysqli-&gt;close();</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 预处理</span></span><br><span class="line"><span class="comment">//获得预处理对象</span></span><br><span class="line">$host = $dbHost . <span class="string">':'</span> . $dbPort;</span><br><span class="line">$mysqli = <span class="keyword">new</span> mysqli($host, $dbUser, $dbPassword, $dbName);</span><br><span class="line">$stmt = $mysqli-&gt;prepare($sql);</span><br><span class="line"><span class="comment">//绑定参数 第一个参数为绑定的数据类型</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">i:integer 整型</span></span><br><span class="line"><span class="comment">d:double 浮点型</span></span><br><span class="line"><span class="comment">s:string 字符串</span></span><br><span class="line"><span class="comment">b:a blob packets blob数据包</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">$name = <span class="string">"xiaoming"</span>;</span><br><span class="line">$address = <span class="string">"adddressss"</span>;</span><br><span class="line">$stmt-&gt;bind_param(<span class="string">"ss"</span>, $name, $address);<span class="comment">//绑定时使用变量绑定</span></span><br><span class="line"><span class="comment">//执行预处理</span></span><br><span class="line">$stmt-&gt;execute();</span><br><span class="line"><span class="comment">//错误号</span></span><br><span class="line"><span class="keyword">echo</span> $stmt-&gt;errno;</span><br><span class="line"><span class="comment">//错误信息</span></span><br><span class="line"><span class="keyword">echo</span> $stmt-&gt;error;</span><br><span class="line"><span class="comment">//关闭</span></span><br><span class="line">$stmt-&gt;close();</span><br><span class="line"><span class="comment">// 关闭</span></span><br><span class="line">$mysqli-&gt;close();</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MySQL/" rel="tag" class="icon-tag"> MySQL</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/20/2017-07-20PHP笔记/" rel="next" title="PHP 笔记">
+                <i class="icon-left"></i> PHP 笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/06/2017-08-06Markdown基本语法/" rel="prev" title="Markdown 基本语法">
+                Markdown 基本语法 <i class="icon-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    <!-- 评论 -->
+    <div id="container"></div>
+    <link rel="stylesheet" href="/css/gitment.css">
+    <script src="/js/gitment.js"></script>
+    <script>
+    var gitment = new Gitment({
+      id: 'Couh', 
+      owner: 'aboutimes',
+      repo: 'theme-hexo',
+        oauth: {
+          client_id: 'a4658b7937231833073e',
+          client_secret: 'ee0e478222be08062f68c03d1f6ca433c05e5209',
+      },
+    });
+    gitment.render('container');
+    </script>
+    <!-- 评论 -->
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner" id="sidebarinner">
+        
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+        </ul>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+              
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、术语"><span class="nav-text">1、术语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、安装"><span class="nav-text">2、安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、升级"><span class="nav-text">3、升级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、登录管理"><span class="nav-text">4、登录管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1、登录"><span class="nav-text">4.1、登录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2、设置"><span class="nav-text">4.2、设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3、常用操作"><span class="nav-text">4.3、常用操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、PHP-操作-MySQL"><span class="nav-text">5、PHP 操作 MySQL</span></a></li></ol></div>
+          </div>
+        </section>
+      <!--/noindex-->
+      
+      
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="me" style="font-weight:lighter;">
+  
+    
+      <span class="links-of-author-item">
+        
+        <a href="https://github.com/aboutimes" target="_blank" title="GitHub" class="icon-github">
+          
+            <!-- <i class="icon-github"> </i> -->
+          
+          GitHub
+        </a>
+        
+       </span>
+    
+      <span class="links-of-author-item">
+        
+        <a href="mailto:aboutime2012@gmail.com" target="_blank" title="Email" class="icon-envelope-o">
+          
+            <!-- <i class="icon-envelope-o"> </i> -->
+          
+          Email
+        </a>
+        
+       </span>
+    
+  
+</div>
+<ul class="links-of-blogroll-list" style="font-weight:200;">
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://isujin.com" title="素錦" target="_blank">素錦</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://sometime.me" title="寒塘渡月" target="_blank">寒塘渡月</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://shisanyue.com" title="拾叁月" target="_blank">拾叁月</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://www.lyh2.com" title="青筑" target="_blank">青筑</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://mir.no/work" title="MIR." target="_blank">MIR.</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://modelo.io" title="MODELO" target="_blank">MODELO</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="https://leonax.net" title="LEONA+" target="_blank">LEONA+</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://1416.me" title="1416教室" target="_blank">1416教室</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="https://www.fieldevo.com/" title="Fieldevo" target="_blank">Fieldevo</a>
+    </li>
+  
+</ul>
+<div class="copyright" style="top:50px;font-weight:lighter;">
+  
+  &copy;  2012 - 
+  <span itemprop="copyrightYear">2018</span>  
+  <span class="author" itemprop="copyrightHolder">Couh</span>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <span class="icon-up"></span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
