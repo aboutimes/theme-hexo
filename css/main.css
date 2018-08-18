@@ -1444,6 +1444,12 @@ pre .javascript .function {
   display: inline-block;
   margin-right: 10px;
   font-size: 13px;
+  padding: 10px;
+  background-color: rgba(102,128,153,0.075);
+  color: rgba(44,63,81,0.5);
+}
+.posts-expand .post-tags a:hover {
+  color: #1abc9c;
 }
 .post-nav {
   display: table;
@@ -1692,7 +1698,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a612ff;
+  background: #2ee4ff;
 }
 .links-of-blogroll {
   font-size: 13px;
