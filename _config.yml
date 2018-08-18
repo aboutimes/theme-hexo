@@ -12,7 +12,7 @@ timezone:
 
 #评论
 #评论id，根据自己喜好
-gitment_id: Couh
+gitment_id: location.href
 #github id
 gitment_owner: aboutimes
 #github 博客仓库名
@@ -74,6 +74,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
+#theme: diaspora
 theme: loft
 
 #注脚

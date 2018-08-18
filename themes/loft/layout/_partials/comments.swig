@@ -1,20 +1,34 @@
 {% if page.comments %}
   <div class="comments" id="comments">
     <!-- 评论 -->
+    <div id="showtalk">查看评论</div>
     <div id="container"></div>
     <link rel="stylesheet" href="/css/gitment.css">
     <script src="/js/gitment.js"></script>
     <script>
-    var gitment = new Gitment({
-      id: '{{ config.gitment_id }}', 
-      owner: '{{ config.gitment_owner }}',
-      repo: '{{ config.gitment_repo }}',
-        oauth: {
-          client_id: '{{ config.client_id }}',
-          client_secret: '{{ config.client_secret }}',
-      },
-    });
-    gitment.render('container');
+      var gitment = new Gitment({
+        id: '{{ config.gitment_id }}', 
+        owner: '{{ config.gitment_owner }}',
+        repo: '{{ config.gitment_repo }}',
+          oauth: {
+            client_id: '{{ config.client_id }}',
+            client_secret: '{{ config.client_secret }}',
+        },
+      });
+      var showtalk = document.getElementById("showtalk");
+      var container = document.getElementById("container");
+      var status = true;
+      showtalk.onclick=function(){
+        if (status == 'true') {
+          status = false;
+          gitment.render('container');
+          showtalk.innerHTML = '收起评论'
+        }else {
+          status = true;
+          container.innerHTML = '';
+          showtalk.innerHTML = '查看评论';
+        }
+      };
     </script>
     <!-- 评论 -->
     {% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %}
