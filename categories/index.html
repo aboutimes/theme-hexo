@@ -282,7 +282,7 @@
             共 2 个分类
         </div>
         <div class="category-all" style="font-style:italic;">
-          <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">笔记</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/见闻/">见闻</a><span class="category-list-count">23</span></li></ul>
+          <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">笔记</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/见闻/">见闻</a><span class="category-list-count">24</span></li></ul>
         </div>
       </div>
     
@@ -293,20 +293,34 @@
           
   <div class="comments" id="comments">
     <!-- 评论 -->
+    <div id="showtalk">查看评论</div>
     <div id="container"></div>
     <link rel="stylesheet" href="/css/gitment.css">
     <script src="/js/gitment.js"></script>
     <script>
-    var gitment = new Gitment({
-      id: 'Couh', 
-      owner: 'aboutimes',
-      repo: 'theme-hexo',
-        oauth: {
-          client_id: 'a4658b7937231833073e',
-          client_secret: 'ee0e478222be08062f68c03d1f6ca433c05e5209',
-      },
-    });
-    gitment.render('container');
+      var gitment = new Gitment({
+        id: 'location.href', 
+        owner: 'aboutimes',
+        repo: 'theme-hexo',
+          oauth: {
+            client_id: 'a4658b7937231833073e',
+            client_secret: 'ee0e478222be08062f68c03d1f6ca433c05e5209',
+        },
+      });
+      var showtalk = document.getElementById("showtalk");
+      var container = document.getElementById("container");
+      var status = true;
+      showtalk.onclick=function(){
+        if (status == 'true') {
+          status = false;
+          gitment.render('container');
+          showtalk.innerHTML = '收起评论'
+        }else {
+          status = true;
+          container.innerHTML = '';
+          showtalk.innerHTML = '查看评论';
+        }
+      };
     </script>
     <!-- 评论 -->
     

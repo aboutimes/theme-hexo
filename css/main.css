@@ -425,7 +425,7 @@ body {
 }
 @media (min-width: 1600px) {
   .container .header-inner {
-    width: 70%;
+    width: 90%;
   }
 }
 .main {
@@ -437,7 +437,7 @@ body {
 }
 @media (min-width: 1600px) {
   .container .main-inner {
-    width: 70%;
+    width: 90%;
   }
 }
 .footer {
@@ -454,7 +454,7 @@ body {
 }
 @media (min-width: 1600px) {
   .container .footer-inner {
-    width: 70%;
+    width: 90%;
   }
 }
 pre,
@@ -809,7 +809,7 @@ pre .javascript .function {
   transition-property: background-color;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
-  transition-delay: 0s;
+  transition-delay: 0.2s;
 }
 .btn:hover,
 .post-button .btn:hover {
@@ -862,7 +862,7 @@ pre .javascript .function {
   transition-property: border-color;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
-  transition-delay: 0s;
+  transition-delay: 0.2s;
 }
 .pagination .prev:hover,
 .pagination .next:hover,
@@ -933,7 +933,7 @@ pre .javascript .function {
   transition-property: bottom;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
-  transition-delay: 0s;
+  transition-delay: 0.2s;
 }
 @media (max-width: 767px) {
   .back-to-top {
@@ -1091,7 +1091,7 @@ pre .javascript .function {
   transition-property: border-color;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
-  transition-delay: 0s;
+  transition-delay: 0.2s;
 }
 .menu .menu-item a:hover {
   border-bottom-color: #222;
@@ -1265,7 +1265,7 @@ pre .javascript .function {
   position: relative;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
-  transition-delay: 0s;
+  transition-delay: 0.2s;
   transition-property: border;
   border-bottom: 0px dashed #ccc;
 }
@@ -1282,7 +1282,7 @@ pre .javascript .function {
   border: 1px solid #fff;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
-  transition-delay: 0s;
+  transition-delay: 0.2s;
   transition-property: background;
 }
 .posts-collapse .post-header:hover {
@@ -1355,7 +1355,7 @@ pre .javascript .function {
   transform: scaleX(0);
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
-  transition-delay: 0s;
+  transition-delay: 0.2s;
 }
 .posts-expand .post-title-link:hover::before {
   visibility: visible;
@@ -1692,7 +1692,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffffac;
+  background: #a612ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -1770,7 +1770,7 @@ pre .javascript .function {
 .post-toc ol a {
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
-  transition-delay: 0s;
+  transition-delay: 0.2s;
   transition-property: all;
   color: #999;
   border-bottom-color: #555;

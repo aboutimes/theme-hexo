@@ -78,7 +78,8 @@ $(document).ready(function () {
   sidebarToggleLines.push(sidebarToggleLine3rd);
 
   var SIDEBAR_WIDTH = '220px';
-  var SIDEBAR_DISPLAY_DURATION = 60;
+  // 目录显示过度时间
+  var SIDEBAR_DISPLAY_DURATION = 200;
 
   var sidebarToggleMotion = {
     toggleEl: $('.sidebar-toggle'),
