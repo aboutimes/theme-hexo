@@ -124,8 +124,8 @@ font:
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
-  GitHub: https://github.com/aboutimes
-  Email: mailto:aboutime2012@gmail.com
+  GitHub: https://github.com/your github
+  Email: mailto:your email address
 # Social Links Icons
 # Icon Mapping:
 #   Map a menu item to a specific FontAwesome icon name.
@@ -189,15 +189,7 @@ sidebar:
   #Title: http://example.com/
 links_title: 友情链接
 links:
-  素錦: http://isujin.com  
-  寒塘渡月: http://sometime.me
-  拾叁月: http://shisanyue.com
-  青筑: http://www.lyh2.com
-  MIR.: http://mir.no/work
-  MODELO: http://modelo.io
-  LEONA+: https://leonax.net
-  1416教室: http://1416.me
-  Fieldevo: https://www.fieldevo.com/
+  谷歌: https://google.com
 
 # ---------------------------------------------------------------
 # Post Settings

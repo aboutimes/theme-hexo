@@ -7,7 +7,7 @@
     <script src="/js/gitment.js"></script>
     <script>
       var gitment = new Gitment({
-        id: '{{ config.gitment_id }}', 
+        id: location.title, 
         owner: '{{ config.gitment_owner }}',
         repo: '{{ config.gitment_repo }}',
           oauth: {
