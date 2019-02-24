@@ -187,7 +187,7 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", "SimSun", "宋体", sans-serif;
+  font-family: 'Sans-serif', "Sans-serif", sans-serif;
   font-size: 16px;
   line-height: 2;
   color: #555;
@@ -228,7 +228,7 @@ h6 {
   padding: 0;
   font-weight: bold;
   line-height: 1.5;
-  font-family: 'Hiragino Sans GB', 'Lato', "PingFang SC", "Microsoft YaHei", "SimSun", "宋体", sans-serif;
+  font-family: 'Sans-serif', 'Sans-serif', "Sans-serif", sans-serif;
 }
 h2,
 h3,
@@ -469,7 +469,7 @@ pre,
 }
 pre,
 code {
-  font-family: 'Mono', consolas, Menlo, "PingFang SC", "Microsoft YaHei", "SimSun", "宋体", monospace;
+  font-family: 'Mono', consolas, Menlo, "Sans-serif", monospace;
 }
 code {
   padding: 2px 4px;
@@ -806,7 +806,7 @@ pre .javascript .function {
   border: 1px solid #222;
   text-decoration: none;
   border-radius: 0;
-  transition-property: background-color;
+/*transition-property: background-color;*/
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   transition-delay: 0.2s;
@@ -830,8 +830,15 @@ pre .javascript .function {
 }
 .pagination {
   margin: 120px 0 40px;
+  padding-top: 5px;
   text-align: center;
   border-top: 1px solid #eee;
+}
+.pagination a {
+  font-weight: 300;
+}
+.pagination a:hover {
+  color: #222;
 }
 .page-number-basic,
 .pagination .prev,
@@ -858,7 +865,7 @@ pre .javascript .function {
 .pagination .next,
 .pagination .page-number {
   border-bottom: 0;
-  border-top: 1px solid #eee;
+/*border-top: 1px solid $pagination-link-border;*/
   transition-property: border-color;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
@@ -867,7 +874,9 @@ pre .javascript .function {
 .pagination .prev:hover,
 .pagination .next:hover,
 .pagination .page-number:hover {
-  border-top-color: #222;
+/*border-top-color: $pagination-link-hover-border;*/
+  background: rgba(255,193,7,0.3);
+  border-radius: 50%;
 }
 .pagination .space {
   padding: 0;
@@ -875,15 +884,22 @@ pre .javascript .function {
 }
 .pagination .prev {
   margin-left: 0;
+  padding: 0 7px;
 }
 .pagination .next {
   margin-right: 0;
+  padding: 0 7px;
+}
+.pagination .page-number {
+  width: 10px;
+  height: 30px;
 }
 .pagination .page-number.current {
 /*color: $pagination-active-color;*/
 /*background: $pagination-active-bg;*/
-  background: #fbd76b;
-  border-top-color: #ccc;
+  background: rgba(255,193,7,0.58);
+  border-radius: 50%;
+/*border-top-color: $pagination-active-border;*/
 }
 @media (max-width: 767px) {
   .pagination {
@@ -1010,7 +1026,7 @@ pre .javascript .function {
   line-height: 36px;
   font-size: 20px;
   font-weight: normal;
-  font-family: 'Hiragino Sans GB', 'Lato', "PingFang SC", "Microsoft YaHei", "SimSun", "宋体", sans-serif;
+  font-family: 'Sans-serif', 'Sans-serif', "Sans-serif", sans-serif;
 }
 .site-subtitle {
   margin-top: 10px;
@@ -1103,7 +1119,10 @@ pre .javascript .function {
   opacity: 0;
 }
 .post-body {
-  font-family: 'Hiragino Sans GB', 'Lato', "PingFang SC", "Microsoft YaHei", "SimSun", "宋体", sans-serif;
+  font-family: 'Sans-serif', 'Sans-serif', "Sans-serif", sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  color: #000;
 /*段落对齐*/
   word-break: break-all;
   text-align: justify;
@@ -1371,7 +1390,7 @@ pre .javascript .function {
 .posts-expand .post-meta {
   margin: 3px 0 30px 0;
   color: #999;
-  font-family: 'Hiragino Sans GB', 'Lato', "PingFang SC", "Microsoft YaHei", "SimSun", "宋体", sans-serif;
+  font-family: 'Sans-serif', 'Sans-serif', "Sans-serif", sans-serif;
   font-size: 12px;
   text-align: center;
 }
@@ -1422,15 +1441,24 @@ pre .javascript .function {
   }
 }
 .post-button {
-  margin-top: 50px;
+  margin-right: 20px;
+  margin-top: 0px;
+  text-align: right;
+}
+@media (max-width: 767px) {
+  .post-button {
+    text-align: center;
+    margin: 0;
+  }
 }
 .post-button .btn {
-  color: #222;
-  font-size: 14px;
-  background: #fff;
+  color: #325d72;
+  font-size: 16px;
+  background: transparent;
   border-radius: 0;
   line-height: 2;
   margin: 0;
+  border: 0;
 }
 .post-button .fa-fw {
   width: 1.285714285714286em;
@@ -1698,7 +1726,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff9fbe;
+  background: #ffe7ff;
 }
 .links-of-blogroll {
   font-size: 13px;
