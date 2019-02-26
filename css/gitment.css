@@ -143,12 +143,19 @@ a.gitment-header-issue-link:hover {
 .gitment-editor-avatar svg {
   width: 44px;
   height: 44px;
-  border-radius: 3px;
+  border-radius: 50%;
 }
 
 .gitment-editor-avatar .gitment-github-icon {
   fill: #fff;
   background-color: #333;
+}
+.gitment-container a {
+  color: #aaa;
+}
+.gitment-container a:hover {
+  text-decoration: none;
+  color: #888;
 }
 
 .gitment-comment-main,
@@ -192,6 +199,7 @@ a.gitment-header-issue-link:hover {
   margin: 12px 15px;
   color: #666;
   border-radius: 3px;
+  font-weight: 300;
 }
 
 .gitment-editor-header {
@@ -202,7 +210,7 @@ a.gitment-header-issue-link:hover {
 
 a.gitment-comment-name,
 a.gitment-comment-name:visited {
-  font-weight: 600;
+  font-weight: 400;
   color: #666;
 }
 
@@ -404,13 +412,13 @@ a.gitment-editor-footer-tip:hover {
 .gitment-editor-submit,
 .gitment-comments-init-btn {
   color: #fff;
-  background-color: #fbd76b;
+  background-color: #325d72;
 
   position: relative;
   display: inline-block;
   padding: 7px 13px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 20px;
   white-space: nowrap;
   vertical-align: middle;
@@ -428,7 +436,7 @@ a.gitment-editor-footer-tip:hover {
 
 .gitment-editor-submit:hover,
 .gitment-comments-init-btn:hover {
-  background-color: #fbd76b;
+  background-color: #4683a1;
 }
 
 .gitment-comments-init-btn:disabled,
@@ -682,7 +690,7 @@ a.gitment-editor-footer-tip:hover {
 }
 
 .gitment-markdown strong {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .gitment-markdown hr {
@@ -727,32 +735,32 @@ a.gitment-editor-footer-tip:hover {
 
 .gitment-markdown h1 {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .gitment-markdown h2 {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .gitment-markdown h3 {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .gitment-markdown h4 {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .gitment-markdown h5 {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .gitment-markdown h6 {
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .gitment-markdown p {
@@ -774,6 +782,10 @@ a.gitment-editor-footer-tip:hover {
 .gitment-markdown ol ol,
 .gitment-markdown ul ol {
   list-style-type: lower-roman;
+}
+.gitment-markdown ul li {
+  /*无序列表实心圆*/
+  list-style-type: disc;
 }
 
 .gitment-markdown ul ul ol,
@@ -920,7 +932,7 @@ a.gitment-editor-footer-tip:hover {
 .gitment-markdown h6 {
   margin-top: 24px;
   margin-bottom: 16px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.25;
 }
 
@@ -1012,7 +1024,7 @@ a.gitment-editor-footer-tip:hover {
   margin-top: 16px;
   font-size: 1em;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .gitment-markdown dl dd {
@@ -1027,7 +1039,7 @@ a.gitment-editor-footer-tip:hover {
 }
 
 .gitment-markdown table th {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .gitment-markdown table th,
