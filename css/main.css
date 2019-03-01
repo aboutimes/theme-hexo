@@ -425,7 +425,7 @@ body {
 }
 @media (min-width: 1600px) {
   .container .header-inner {
-    width: 90%;
+    width: 1280px;
   }
 }
 .main {
@@ -437,7 +437,7 @@ body {
 }
 @media (min-width: 1600px) {
   .container .main-inner {
-    width: 90%;
+    width: 1280px;
   }
 }
 .footer {
@@ -454,7 +454,7 @@ body {
 }
 @media (min-width: 1600px) {
   .container .footer-inner {
-    width: 90%;
+    width: 1280px;
   }
 }
 pre,
@@ -1726,7 +1726,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #66b57d;
+  background: #5b3371;
 }
 .links-of-blogroll {
   font-size: 13px;
