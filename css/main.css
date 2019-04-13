@@ -891,8 +891,11 @@ pre .javascript .function {
   padding: 0 7px;
 }
 .pagination .page-number {
-  width: 10px;
+  width: 20px;
   height: 30px;
+/*防止页码超过十之后换行*/
+  white-space: nowrap;
+  padding: 0 5px;
 }
 .pagination .page-number.current {
 /*color: $pagination-active-color;*/
@@ -1726,7 +1729,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff463e;
+  background: #884988;
 }
 .links-of-blogroll {
   font-size: 13px;
