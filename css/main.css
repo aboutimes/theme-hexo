@@ -1729,7 +1729,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #1365f5;
+  background: #126617;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2540,7 +2540,7 @@ embed {
     padding: 0;
     border-bottom: 1px solid transparent;
     z-index: 1030;
-    background-color: #ccc;
+    background-color: #fde69f;
   }
 }
 .site-nav ul li:last-child {
@@ -2554,7 +2554,7 @@ embed {
 }
 @media (max-width: 767px) {
   .menu .menu-item {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #325d72;
     display: block;
     margin: 0 10px;
     vertical-align: top;

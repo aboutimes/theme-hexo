@@ -408,15 +408,7 @@
       var status = true;
       showtalk.onclick=function(){
         if (status == 'true') {
-          //动态加载 js css
-          var gitment_css = document.createElement('link');
-          gitment_css.href = '/css/gitment.css';
-          gitment_css.rel = 'stylesheet';
-          gitment_css.type = 'text/css';
-          document.getElementsByTagName('HEAD').item(0).appendChild(gitment_css);
-          $.holdReady(true);    //hold住，等待 js 加载，后续代码不能执行
-          $.getScript('/js/gitment.js',function(){
-            $.holdReady(false);     //释放，js加载完成，继续执行后续代码
+          if (typeof Gitment=='function') {// 如果已经缓存，不必再次加载
             var gitment = new Gitment({
               id: document.title, 
               owner: 'aboutimes',
@@ -429,7 +421,35 @@
             status = false;
             gitment.render('container');
             showtalk.innerHTML = '收起评论';
-          });
+          }else {// 如果未加载，则先加载 js
+            //动态加载 css
+            $("head").append("<link>");
+            var css = $("head").children(":last");
+            css.attr({
+              rel:  "stylesheet",
+              type: "text/css",
+              href: "/css/gitment.css"
+            });
+            //动态加载 js
+            $.holdReady(true);    //hold住，等待 js 加载，后续代码不能执行
+            $.getScript('/js/gitment.js',function(){
+              $.holdReady(false);     //释放，js加载完成，继续执行后续代码
+              // 渲染
+              var gitment = new Gitment({
+                id: document.title, 
+                owner: 'aboutimes',
+                repo: 'theme-hexo',
+                oauth: {
+                  client_id: 'a4658b7937231833073e',
+                  client_secret: 'ee0e478222be08062f68c03d1f6ca433c05e5209',
+                },
+              });
+              status = false;
+              gitment.render('container');
+              showtalk.innerHTML = '收起评论';
+            });
+          }
+          
         }else {
           status = true;
           container.innerHTML = '';
@@ -541,8 +561,7 @@
 
 
 
-<!-- 懒加载 -->
-<!--  -->
+
 
 
 
@@ -562,9 +581,6 @@
 
   
   <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
   <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
