@@ -38,12 +38,13 @@ NexT.utils = NexT.$u = {
     });
   },
 
+  // 懒加载
   lazyLoadPostsImages: function () {
-    $('#posts').find('img').lazyload({
-      //placeholder: '/images/loading.gif',
-      effect: 'fadeIn',
-      threshold : 0
-    });
+    // $('#posts').find('img').lazyload({
+    //   //placeholder: '/images/loading.gif',
+    //   effect: 'fadeIn',
+    //   threshold : 0
+    // });
   },
 
   registerESCKeyEvent: function () {

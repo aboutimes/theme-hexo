@@ -1729,7 +1729,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff5ba2;
+  background: #1365f5;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2694,4 +2694,28 @@ li:hover>ul.submenu {
   .arrow {
     display: none;
   }
+}
+#showtalk {
+  cursor: pointer;
+  letter-spacing: 5px;
+  border: 1px solid #dadada;
+  width: 170px;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  padding: 5px 0;
+  margin: 0 auto;
+}
+.gitment-container {
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  word-wrap: break-word;
+}
+.gitment-container * {
+  box-sizing: border-box;
+}
+.gitment-container *:disabled {
+  cursor: not-allowed;
 }
