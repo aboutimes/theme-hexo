@@ -181,7 +181,8 @@ th {
 }
 ::selection {
   background: #fefefe;
-  color: #000;
+/*color: $selection-color;*/
+  color: #1abc9c;
 }
 body {
   margin: 0;
@@ -1311,7 +1312,8 @@ pre .javascript .function {
   border-bottom-color: #666;
 }
 .posts-collapse .post-header:hover::before {
-  background: #222;
+/*background: $black-deep; */
+  background: #1abc9c;
 }
 .posts-collapse .post-meta {
   position: absolute;
@@ -1333,8 +1335,12 @@ pre .javascript .function {
   opacity: 0.6;
 }
 .posts-collapse .post-title a {
-  color: #666;
+/*color: $grey-dim;*/
+  color: #325d72;
   border-bottom: none;
+}
+.posts-collapse .post-title a:hover {
+  color: #1abc9c;
 }
 .page-home .post-type-quote .post-header,
 .page-post-detail .post-type-quote .post-header,
@@ -1729,7 +1735,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6969f4;
+  background: #1444ff;
 }
 .links-of-blogroll {
   font-size: 13px;

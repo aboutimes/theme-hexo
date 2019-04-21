@@ -60,7 +60,8 @@
 
 
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
-<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<link rel="preload" as="style" href="/css/style.css" onload="this.rel='stylesheet'">
+
 
 
 
@@ -165,21 +166,11 @@
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          
-            <a href="/" rel="section">
-              
-              首页
-            </a>
-          
-        </li>
-      
-        
         <li class="menu-item menu-item-archives">
           
             <a href="/archives/" rel="section">
               
-              文章列表
+              时光回顾
             </a>
           
         </li>
@@ -189,7 +180,7 @@
           
             <a href="/tags/" rel="section">
               
-              标签列表
+              印记
             </a>
           
         </li>
