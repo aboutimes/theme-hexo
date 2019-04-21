@@ -68,8 +68,7 @@
   {% set font_awesome_uri = theme.vendors.fontawesome %}
 {% endif %}
 
-<link href="{{ url_for(theme.css) }}/main.css?v={{ theme.version }}" rel="stylesheet" type="text/css" />
-<link href="{{ url_for(theme.css) }}/style.css" rel="stylesheet" type="text/css" />
+<link href="{{ url_for(theme.css) }}/main.css" rel="stylesheet" type="text/css" />
 
 
 {% if theme.rss === '' and config.feed and config.feed.path %}

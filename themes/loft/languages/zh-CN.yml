@@ -1,21 +1,21 @@
 title:
-  archive: 文章列表
+  archive: 时光回顾
   category: 分类
-  tag: 标签列表
+  tag: 印记
   schedule: 日程表
 
 author: 博主
 
 menu:
   home: 首页
-  archives: 文章列表
+  archives: 时光回顾
   categories: 分类
-  tags: 标签列表
+  tags: 印记
   about: 关于
   search: 搜索
   schedule: 日程表
   sitemap: 站点地图
-  commonweal: 公益404
+  commonweal: 404
 
 sidebar:
   overview: 站点概览
@@ -42,7 +42,7 @@ post:
 
 page:
   totally: 共
-  tags: 标签列表
+  tags: 印记
 
 footer:
   powered: "Powered by %s"
@@ -50,29 +50,29 @@ footer:
 
 counter:
   tag_cloud:
-    zero: 暂无标签
-    one: 共 1 个标签
-    other: "共 %d 个标签"
+    zero: 暂无印记
+    one: 1 个印记
+    other: "%d 个印记"
 
   categories:
     zero: 暂无分类
-    one: 共 1 个分类
-    other: "共 %d 个分类"
+    one: 1 个分类
+    other: "%d 个分类"
 
   archive_posts:
-    zero: 暂无日志
-    one: 共 1 篇
-    other: "共 %d 篇"
+    zero: 暂无瞬间
+    one: 1 个瞬间
+    other: "%d 个瞬间"
 
   category_posts:
-    zero: 暂无日志
-    one: 1 篇
-    other: "( 共 %d 篇 )"
+    zero: 暂无瞬间
+    one: 1 个 瞬间
+    other: "( %d 个瞬间 )"
 
 state:
   posts: 日志
   pages: 页面
-  tags: 标签列表
+  tags: 印记
   categories: 分类
 
 search:

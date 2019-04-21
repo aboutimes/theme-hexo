@@ -80,7 +80,10 @@
   .post-header:hover {
     border-bottom-color: $grey-dim;
 
-    &::before { background: $black-deep; }
+    &::before { 
+      /*background: $black-deep; */
+      background: #1abc9c; 
+    }
   }
 
   .post-meta {
@@ -104,8 +107,12 @@
     }
 
     a {
-      color: $grey-dim;
+      /*color: $grey-dim;*/
+      color: #325d72;
       border-bottom: none;
+    }
+    a:hover {
+      color: #1abc9c;
     }
   }
 }
