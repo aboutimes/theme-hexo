@@ -1403,6 +1403,12 @@ pre .javascript .function {
   font-size: 12px;
   text-align: center;
 }
+.posts-expand .post-meta .post-category:hover svg {
+  fill: #1abc9c;
+}
+.posts-expand .post-meta .post-category:hover a {
+  color: #1abc9c;
+}
 .posts-expand .post-meta .post-category-list {
   display: inline-block;
   margin: 0;
@@ -1488,6 +1494,9 @@ pre .javascript .function {
 .posts-expand .post-tags a:hover {
   color: #1abc9c;
 }
+.posts-expand .post-tags a:hover svg {
+  fill: #1abc9c;
+}
 .post-nav {
   display: table;
   margin-top: 15px;
@@ -1515,6 +1524,9 @@ pre .javascript .function {
 .post-nav-item a:hover {
   color: #1abc9c;
   border-bottom: none;
+}
+.post-nav-item a:hover svg {
+  fill: #1abc9c;
 }
 .post-nav-item a:active {
   top: 2px;
@@ -1735,7 +1747,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #7487ff;
+  background: #55a2ff;
 }
 .links-of-blogroll {
   font-size: 13px;
