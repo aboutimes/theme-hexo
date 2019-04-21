@@ -1487,7 +1487,7 @@ pre .javascript .function {
   display: inline-block;
   margin-right: 10px;
   font-size: 13px;
-  padding: 10px;
+  padding: 10px 15px 10px 10px;
   background-color: rgba(102,128,153,0.075);
   color: rgba(44,63,81,0.5);
 }
@@ -1747,7 +1747,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #55a2ff;
+  background: #85a65e;
 }
 .links-of-blogroll {
   font-size: 13px;
