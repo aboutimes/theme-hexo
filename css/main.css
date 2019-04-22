@@ -1747,7 +1747,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #85a65e;
+  background: #5eff2d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2723,6 +2723,10 @@ li:hover>ul.submenu {
   font-size: 14px;
   padding: 5px 0;
   margin: 0 auto;
+  font-weight: 300;
+}
+#showtalk:hover {
+  color: #1abc9c;
 }
 .gitment-container {
   font-family: sans-serif;
