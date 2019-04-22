@@ -45,6 +45,7 @@
 .gitment-header-like-btn,
 .gitment-comment-like-btn {
   cursor: pointer;
+  font-weight: 300;
 }
 
 .gitment-comment-like-btn {
@@ -55,14 +56,24 @@
   color: #F44336;
 }
 
+.gitment-header-like-btn:hover svg {
+  fill: red;
+}
 .gitment-header-like-btn svg {
   vertical-align: middle;
   height: 30px;
+  color: #999;
 }
+.gitment-header-like-btn svg:hover {
+    fill: red;
+  }
 
 .gitment-comment-like-btn svg {
   vertical-align: middle;
   height: 20px;
+}
+.gitment-comment-like-btn svg:hover {
+  fill: red;
 }
 
 .gitment-header-like-btn.liked svg,
