@@ -7,50 +7,32 @@
       var showtalk = document.getElementById("showtalk");
       var container = document.getElementById("container");
       var status = true;
+      window.onload=function (){
+        if (typeof Gitment!='function') {// 如果未缓存，加载 js 和 css
+          $("head").append("<link>");
+          var css = $("head").children(":last");
+          css.attr({
+            rel:  "stylesheet",
+            type: "text/css",
+            href: "/css/gitment.css"
+          });
+          $.getScript('/js/gitment.js');
+        }
+      }
       showtalk.onclick=function(){
         if (status == 'true') {
-          if (typeof Gitment=='function') {// 如果已经缓存，不必再次加载
-            var gitment = new Gitment({
-              id: document.title, 
-              owner: '{{ config.gitment_owner }}',
-              repo: '{{ config.gitment_repo }}',
-              oauth: {
-                client_id: '{{ config.client_id }}',
-                client_secret: '{{ config.client_secret }}',
-              },
-            });
-            status = false;
-            gitment.render('container');
-            showtalk.innerHTML = '收起评论';
-          }else {// 如果未加载，则先加载 js
-            //动态加载 css
-            $("head").append("<link>");
-            var css = $("head").children(":last");
-            css.attr({
-              rel:  "stylesheet",
-              type: "text/css",
-              href: "/css/gitment.css"
-            });
-            //动态加载 js
-            $.holdReady(true);    //hold住，等待 js 加载，后续代码不能执行
-            $.getScript('/js/gitment.js',function(){
-              $.holdReady(false);     //释放，js加载完成，继续执行后续代码
-              // 渲染
-              var gitment = new Gitment({
-                id: document.title, 
-                owner: '{{ config.gitment_owner }}',
-                repo: '{{ config.gitment_repo }}',
-                oauth: {
-                  client_id: '{{ config.client_id }}',
-                  client_secret: '{{ config.client_secret }}',
-                },
-              });
-              status = false;
-              gitment.render('container');
-              showtalk.innerHTML = '收起评论';
-            });
-          }
-          
+          var gitment = new Gitment({
+            id: document.title, 
+            owner: '{{ config.gitment_owner }}',
+            repo: '{{ config.gitment_repo }}',
+            oauth: {
+              client_id: '{{ config.client_id }}',
+              client_secret: '{{ config.client_secret }}',
+            },
+          });
+          status = false;
+          gitment.render('container');
+          showtalk.innerHTML = '收起评论';
         }else {
           status = true;
           container.innerHTML = '';
