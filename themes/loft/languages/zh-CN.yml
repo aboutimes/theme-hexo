@@ -1,16 +1,16 @@
 title:
-  archive: 时光回顾
-  category: 分类
+  archive: 流年
+  category: 巷弄
   tag: 印记
   schedule: 日程表
 
 author: 博主
 
 menu:
-  home: 首页
-  archives: 时光回顾
-  categories: 分类
-  tags: 印记
+  home: 回首
+  archives: 流年
+  categories: 巷弄
+  tags: 时光印记
   about: 关于
   search: 搜索
   schedule: 日程表
@@ -26,7 +26,7 @@ post:
   modified: 更新于
   sticky: 置顶
   posted: 发表于 
-  in: 分类
+  in: 巷弄
   read_more: 阅读全文
   untitled: 未命名
   toc_empty: 文章未包含目录
@@ -55,9 +55,9 @@ counter:
     other: "%d 个印记"
 
   categories:
-    zero: 暂无分类
-    one: 1 个分类
-    other: "%d 个分类"
+    zero: 暂无巷弄
+    one: 1 条巷弄
+    other: "%d 条巷弄"
 
   archive_posts:
     zero: 暂无瞬间
@@ -73,7 +73,7 @@ state:
   posts: 日志
   pages: 页面
   tags: 印记
-  categories: 分类
+  categories: 巷弄
 
 search:
   placeholder: 搜索...
