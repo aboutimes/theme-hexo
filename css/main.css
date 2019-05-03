@@ -182,7 +182,7 @@ th {
 ::selection {
   background: #fefefe;
 /*color: $selection-color;*/
-  color: #1abc9c;
+  color: #009688;
 }
 body {
   margin: 0;
@@ -1747,7 +1747,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b671df;
+  background: #c1063e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2666,10 +2666,8 @@ ul.submenu {
   position: absolute;
   padding: 0;
   margin: 0;
-  top: 65px;
+  top: 60px;
   right: 0;
-  left: -12px;
-/*width: 100px;*/
   line-height: 2rem;
   text-align: center;
   visibility: hidden;
@@ -2680,10 +2678,9 @@ ul.submenu li {
   list-style-type: none;
   width: 50px;
   background-color: #fbd76b;
-/*padding-left: 10px;*/
-  margin: 0 10px;
+  margin: 5px 10px;
   line-height: 1.6rem;
-  display: inline-block;
+  display: block;
 }
 li:hover>ul.submenu {
 /*display: block;*/

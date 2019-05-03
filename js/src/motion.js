@@ -241,14 +241,17 @@ $(document).ready(function () {
       }
     },
 
+    
     menu: function (integrator) {
-      $('.menu-item').velocity('transition.slideDownIn', {
-        display: null,
-        duration: 200,
-        complete: function () {
-          integrator.next();
-        }
-      });
+      //取消菜单动画
+      // $('.menu-item').velocity('transition.slideDownIn', {
+      //   display: null,
+      //   duration: 200,
+      //   complete: function () {
+      //     integrator.next();
+      //   }
+      // });
+      integrator.next();
     },
 
     postList: function (integrator) {
@@ -262,11 +265,12 @@ $(document).ready(function () {
             stagger: 100,
             drag: true
           };
-        postMotionOptions.complete = function () {
-          integrator.next();
-        };
+        // postMotionOptions.complete = function () {
+        //   integrator.next();
+        // };
 
-        $post.velocity('transition.slideDownIn', postMotionOptions);
+        // $post.velocity('transition.slideDownIn', postMotionOptions);
+        integrator.next();
       }
     },
 
@@ -279,25 +283,41 @@ $(document).ready(function () {
   };
 
   // 菜单滚动隐藏
-  let lastScrollY = 0;
-  //绑定滚动事件
-  window.onscroll = function() {
-    headerScroll();
-  };
-  function headerScroll() {
-    //获取导航栏元素
-    const header = document.getElementById('header');
-    if (window.scrollY - lastScrollY > 0 && window.scrollY > 165)
-    {
-      //往下滚动，隐藏导航栏
-      header.classList.add('is-hidden');
-    }
-    else if (window.scrollY - lastScrollY < 0)
-    {
-      //往上滚动，显示导航栏
-      header.classList.remove('is-hidden');
-    }
-    lastScrollY = window.scrollY;
-  }
+  // let lastScrollY = 0;
+  // //绑定滚动事件
+  // window.onscroll = function() {
+  //   headerScroll();
+  //   console.log('yes');
+  // };
+  // function headerScroll() {
+  //   //获取导航栏元素
+  //   const header = document.getElementById('header');
+  //   if (window.scrollY - lastScrollY > 0 && window.scrollY > 165)
+  //   {
+  //     //往下滚动，隐藏导航栏
+  //     header.classList.add('is-hidden');
+  //   }
+  //   else if (window.scrollY - lastScrollY < 0)
+  //   {
+  //     //往上滚动，显示导航栏
+  //     header.classList.remove('is-hidden');
+  //   }
+  //   lastScrollY = window.scrollY;
+  // }
 
+  //导航栏高亮
+  function highlight_menu(){
+    var current_path = window.location.pathname;
+    // /tags/php/php笔记.html => tags 获取一级路由
+    current_path = current_path.replace("/",'').split("/")[0];
+    if(current_path) {
+      current_path = '#menu-' + current_path;
+    }else {
+      current_path = '#menu-home';
+    }
+    if($(current_path).children()) {
+      $(current_path).children().css("font-weight",'400');
+    }
+  }
+  highlight_menu();
 });
