@@ -33,7 +33,7 @@
     <ul id="menu" class="menu">
       {% for name, path in theme.menu %}
         {% set itemName = name.toLowerCase() %}
-        <li class="menu-item menu-item-{{ itemName }}">
+        <li class="menu-item menu-item-{{ itemName }}" id="menu-{{ itemName }}">
           {% if name=='categories' %}
             <a href="{{ url_for(path) }}">
               {% if theme.menu_icons.enable %}

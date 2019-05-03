@@ -49,7 +49,7 @@
                 <a class="post-title-link" href="{{ url_for(post.path) }}" >{#
                 #}{{ post.title | default(__('post.untitled'))}}{#
               #}</a>{#
-            #}{% else %}{{ post.title }}{% endif %}{#
+            #}{% else %}<a class="post-title-link post-title-link-external" itemprop="url">{{ post.title }}</a>{% endif %}{#
           #}{% endif %}{#
         #}</{% if theme.seo %}h2{% else %}h1{% endif %}>
         {% endif %}
