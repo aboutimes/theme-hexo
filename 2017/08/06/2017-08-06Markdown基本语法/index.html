@@ -67,9 +67,10 @@
 
 
 
+
   <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
 
-
+<link href="/css/prism.css" rel="stylesheet" type="text/css" />
 
 
 
@@ -336,22 +337,37 @@
         <p>　　Markdown 是一种轻量级标记语言，创始人为约翰·格鲁伯（ John Gruber ），在语法上有很大一部分是跟亚伦·斯沃茨（ Aaron Swartz ）共同合作的。这个语言的目的是希望大家使用易读易写的纯文本格式编写文档，然后转换成有效的 XHTML（ 或者 HTML ）文档。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。<a id="more"></a></p>
 <h2 id="1、标题"><a href="#1、标题" class="headerlink" title="1、标题"></a>1、标题</h2><p>　　用 Markdown 书写时，只需要在文本前面加上「#」即可创建一级标题。同理，创建二级标题、三级标题等只需要增加「#」个数即可，Markdown 共支持六级标题。</p>
 <ul>
-<li><p>语法</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"><span class="section">#### 四级标题</span></span><br><span class="line"><span class="section">##### 五级标题</span></span><br><span class="line"><span class="section">###### 六级标题</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>效果</p>
-<blockquote>
+<li>语法</li>
+</ul>
+<pre><code class="line-numbers language-markdown"># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
+</code></pre>
+<ul>
+<li>效果<blockquote>
 <p><span style="font-size: 24px; font-weight: bold;">一级标题</span><br><span style="font-size: 20px; font-weight: bold;">二级标题</span><br><span style="font-size: 18px; font-weight: bold;">三级标题</span><br><span style="font-size: 16px; font-weight: bold;">四级标题</span><br><span style="font-size: 14px; font-weight: bold;">五级标题</span><br><span style="font-size: 12px; font-weight: bold;">六级标题</span></p>
 </blockquote>
 </li>
 </ul>
 <h2 id="2、段落和换行"><a href="#2、段落和换行" class="headerlink" title="2、段落和换行"></a>2、段落和换行</h2><p>　　在 Markdown 中段落由一行或者多行文本组成，相邻的两行文字会被视为同一段落，如果存在空行则被视为不同段落( Markdown 对空行的定义是看起来是空行就是空行，即使空行中存在 空格 TAB 回车 等不可见字符，同样会被视为空行 )。Markdown支持段内换行，如果你想进行段落内换行可以在上一行结尾插入两个以上的空格后再回车。</p>
 <ul>
-<li><p>语法</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">第一行</span><br><span class="line">相邻被视为同一段落。  </span><br><span class="line"></span><br><span class="line">第一行[<span class="string">空格</span>][<span class="symbol">空格</span>]</span><br><span class="line">上一行结尾存在两个空格，段内换行  </span><br><span class="line"></span><br><span class="line">第一行</span><br><span class="line"></span><br><span class="line">两行之间存在空行，视为不同段落。</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>效果</p>
-<blockquote>
+<li>语法</li>
+</ul>
+<pre><code class="line-numbers language-markdown">第一行
+相邻被视为同一段落。  
+
+第一行[空格][空格]
+上一行结尾存在两个空格，段内换行  
+
+第一行
+
+两行之间存在空行，视为不同段落。
+</code></pre>
+<ul>
+<li>效果<blockquote>
 <p>第一行相邻被视为同一段落。  </p>
 <p>第一行<br>上一行结尾存在两个空格，段内换行  </p>
 <p>第一行</p>
@@ -360,11 +376,27 @@
 </li>
 </ul>
 <h2 id="3、引用-强调-斜体-删除线-注脚"><a href="#3、引用-强调-斜体-删除线-注脚" class="headerlink" title="3、引用 / 强调 / 斜体 / 删除线 / 注脚"></a>3、引用 / 强调 / 斜体 / 删除线 / 注脚</h2><ul>
-<li><p>语法</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt;引用</span><br><span class="line">&gt;一级引用</span><br><span class="line">&gt;</span><br><span class="line">&gt;强调</span><br><span class="line">&gt;<span class="strong">**强调**</span> </span><br><span class="line">&gt;</span><br><span class="line">&gt;斜体</span><br><span class="line">&gt;<span class="emphasis">*斜体*</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;删除线</span><br><span class="line">&gt;~~删除线~~</span><br><span class="line">&gt;</span><br><span class="line">&gt;注脚</span><br><span class="line">&gt;文献注脚 [ ^ 1 ] </span><br><span class="line">&gt;</span><br><span class="line">&gt;&gt;二级引用</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>效果</p>
-<blockquote>
+<li>语法</li>
+</ul>
+<pre><code class="line-numbers language-markdown">&gt;引用
+&gt;一级引用
+&gt;
+&gt;强调
+&gt;**强调** 
+&gt;
+&gt;斜体
+&gt;*斜体*
+&gt;
+&gt;删除线
+&gt;~~删除线~~
+&gt;
+&gt;注脚
+&gt;文献注脚 [ ^ 1 ] 
+&gt;
+&gt;&gt;二级引用
+</code></pre>
+<ul>
+<li>效果<blockquote>
 <p>一级引用<br><strong>强调</strong><br><em>斜体</em><br><del>删除线</del><br>文献注脚<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
 <blockquote>
 <p>二级引用</p>
@@ -373,11 +405,18 @@
 </li>
 </ul>
 <h2 id="4、列表"><a href="#4、列表" class="headerlink" title="4、列表"></a>4、列表</h2><ul>
-<li><p>语法</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1. </span>有序列表</span><br><span class="line"><span class="bullet">2. </span>有序列表</span><br><span class="line"><span class="bullet">3. </span>有序列表</span><br><span class="line"></span><br><span class="line"><span class="bullet">-  </span>无序列表</span><br><span class="line"><span class="bullet">-  </span>无序列表</span><br><span class="line"><span class="bullet">-  </span>无序列表</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>效果</p>
-</li>
+<li>语法</li>
+</ul>
+<pre><code class="line-numbers language-markdown">1. 有序列表
+2. 有序列表
+3. 有序列表
+
+-  无序列表
+-  无序列表
+-  无序列表
+</code></pre>
+<ul>
+<li>效果</li>
 </ul>
 <ol>
 <li>有序列表</li>
@@ -390,42 +429,59 @@
 <li>无序列表</li>
 </ul>
 <h2 id="5、代码"><a href="#5、代码" class="headerlink" title="5、代码"></a>5、代码</h2><ul>
-<li><p>语法</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">代码块</span><br><span class="line">"<span class="code">``两点包裹，不含引号`</span>`"</span><br><span class="line">代码段</span><br><span class="line">"<span class="code">```"</span></span><br><span class="line"><span class="code">三点包裹，不含引号</span></span><br><span class="line"><span class="code">"```"</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>效果<br><code>代码块</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码段</span><br></pre></td></tr></table></figure>
-</li>
+<li>语法</li>
 </ul>
+<pre><code class="line-numbers language-markdown">代码块
+&quot;``两点包裹，不含引号``&quot;
+代码段
+&quot;```&quot;
+三点包裹，不含引号
+&quot;```&quot;
+</code></pre>
+<ul>
+<li>效果<br><code>代码块</code></li>
+</ul>
+<pre><code class="line-numbers language-bash">代码段
+</code></pre>
 <h2 id="6、链接"><a href="#6、链接" class="headerlink" title="6、链接"></a>6、链接</h2><ul>
-<li><p>语法</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">无事种芭蕉</span>][<span class="symbol">a</span>]</span><br><span class="line">[<span class="symbol">a</span>]: <span class="link">http://couh.me "无事种芭蕉"</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>效果<br><a href="https://aboutimes.com" title="无事种芭蕉">无事种芭蕉</a></p>
-</li>
+<li>语法</li>
+</ul>
+<pre><code class="line-numbers language-markdown">[无事种芭蕉][a]
+[a]: http://couh.me &quot;无事种芭蕉&quot; 
+</code></pre>
+<ul>
+<li>效果<br><a href="https://aboutimes.com" title="无事种芭蕉">无事种芭蕉</a></li>
 </ul>
 <h2 id="7、分割线"><a href="#7、分割线" class="headerlink" title="7、分割线"></a>7、分割线</h2><ul>
-<li><p>语法</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这是分隔线上部分内容</span><br><span class="line">---</span><br><span class="line">这是分隔线上部分内容</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>效果<br>这是分隔线上部分内容</p>
-</li>
+<li>语法</li>
+</ul>
+<pre><code class="line-numbers language-markdown">这是分隔线上部分内容
+---
+这是分隔线上部分内容
+</code></pre>
+<ul>
+<li>效果<br>这是分隔线上部分内容</li>
 </ul>
 <hr>
 <p>　　这是分隔线下部分内容</p>
 <h2 id="8、图片"><a href="#8、图片" class="headerlink" title="8、图片"></a>8、图片</h2><ul>
-<li><p>语法</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">图片说明</span>](<span class="link">/path/to/img.jpg</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>效果<br><img src="/images/git-1.png" alt="图片说明"></p>
-</li>
+<li>语法</li>
+</ul>
+<pre><code class="line-numbers language-markdown">![图片说明](/path/to/img.jpg)
+</code></pre>
+<ul>
+<li>效果<br><img src="/images/git-1.png" alt="图片说明"></li>
 </ul>
 <h2 id="9、表格"><a href="#9、表格" class="headerlink" title="9、表格"></a>9、表格</h2><ul>
-<li><p>语法</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| 名称 | 条目 1 | 条目 2 |</span><br><span class="line">| - | :- | :- |</span><br><span class="line">| 名称 1 | 条目 1.1 | 条目 2.1 |</span><br><span class="line">| 名称 2 | 条目 1.2 | 条目 2.2 |</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>效果</p>
-</li>
+<li>语法</li>
+</ul>
+<pre><code class="line-numbers language-markdown">| 名称 | 条目 1 | 条目 2 |
+| - | :- | :- |
+| 名称 1 | 条目 1.1 | 条目 2.1 |
+| 名称 2 | 条目 1.2 | 条目 2.2 |
+</code></pre>
+<ul>
+<li>效果</li>
 </ul>
 <table>
 <thead>
@@ -721,6 +777,7 @@
 
 
 
+
   
   <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
@@ -732,6 +789,9 @@
 
   
   <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/prism/prism.js"></script>
 
 
   

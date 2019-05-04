@@ -67,9 +67,10 @@
 
 
 
+
   <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
 
-
+<link href="/css/prism.css" rel="stylesheet" type="text/css" />
 
 
 
@@ -334,10 +335,16 @@
 
       
         <p>　　RESTful API 是指符合 REST 架构设计的 API 。REST（英文：Representational State Transfer，简称 REST ）翻译是「表示层有状态传输」，具体为 URL 定位资源，用 HTTP 方法（ GET, POST, DELETE, DETC ）描述操作。是 Roy Thomas Fielding 博士于 2000 年在他的博士论文<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> 中提出来的一种万维网软件架构风格，目的是便于不同软件/程序在网络中互相传递信息。<a id="more"></a></p>
-<h2 id="1、使用-HTTPs-协议"><a href="#1、使用-HTTPs-协议" class="headerlink" title="1、使用 HTTPs 协议"></a>1、使用 HTTPs 协议</h2><h2 id="2、OAuth-2-0-授权框架或-JWT-协议"><a href="#2、OAuth-2-0-授权框架或-JWT-协议" class="headerlink" title="2、OAuth 2.0 授权框架或 JWT 协议"></a>2、OAuth 2.0 授权框架或 JWT 协议</h2><h2 id="3、尽量将-API-部署在专用域名之下"><a href="#3、尽量将-API-部署在专用域名之下" class="headerlink" title="3、尽量将 API 部署在专用域名之下"></a>3、尽量将 API 部署在专用域名之下</h2><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">https://api.example.com</span></span><br></pre></td></tr></table></figure>
-<p>如果确定API很简单，不会有进一步扩展，可以考虑放在主域名下。<br><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">https://example.com/api/</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="4、应该将-API-的版本号放入-URL"><a href="#4、应该将-API-的版本号放入-URL" class="headerlink" title="4、应该将 API 的版本号放入 URL"></a>4、应该将 API 的版本号放入 URL</h2><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">https://api.example.com/v1/</span></span><br></pre></td></tr></table></figure>
-<h2 id="5、路径"><a href="#5、路径" class="headerlink" title="5、路径"></a>5、路径</h2><p>　　在 RESTful 架构中，每个网址代表一种资源（ resource ），所以网址中不能有动词，只能有名词，而且所用的名词往往与数据库的表格名对应。一般来说，数据库中的表都是同种记录的「集合」（ collection ），所以API中的名词也应该使用复数。<br><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">https://api.example.com/v1/users</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="1、使用-HTTPs-协议"><a href="#1、使用-HTTPs-协议" class="headerlink" title="1、使用 HTTPs 协议"></a>1、使用 HTTPs 协议</h2><h2 id="2、OAuth-2-0-授权框架或-JWT-协议"><a href="#2、OAuth-2-0-授权框架或-JWT-协议" class="headerlink" title="2、OAuth 2.0 授权框架或 JWT 协议"></a>2、OAuth 2.0 授权框架或 JWT 协议</h2><h2 id="3、尽量将-API-部署在专用域名之下"><a href="#3、尽量将-API-部署在专用域名之下" class="headerlink" title="3、尽量将 API 部署在专用域名之下"></a>3、尽量将 API 部署在专用域名之下</h2><pre><code class="line-numbers language-http">https://api.example.com
+</code></pre>
+<p>如果确定API很简单，不会有进一步扩展，可以考虑放在主域名下。</p>
+<pre><code class="line-numbers language-http">https://example.com/api/
+</code></pre>
+<h2 id="4、应该将-API-的版本号放入-URL"><a href="#4、应该将-API-的版本号放入-URL" class="headerlink" title="4、应该将 API 的版本号放入 URL"></a>4、应该将 API 的版本号放入 URL</h2><pre><code class="line-numbers language-http">https://api.example.com/v1/
+</code></pre>
+<h2 id="5、路径"><a href="#5、路径" class="headerlink" title="5、路径"></a>5、路径</h2><p>　　在 RESTful 架构中，每个网址代表一种资源（ resource ），所以网址中不能有动词，只能有名词，而且所用的名词往往与数据库的表格名对应。一般来说，数据库中的表都是同种记录的「集合」（ collection ），所以API中的名词也应该使用复数。</p>
+<pre><code class="line-numbers language-http">https://api.example.com/v1/users
+</code></pre>
 <h2 id="6、HTTP-方法"><a href="#6、HTTP-方法" class="headerlink" title="6、HTTP 方法"></a>6、HTTP 方法</h2><ul>
 <li>GET　　　　从服务器取出资源（ 一项或多项 ）</li>
 <li>POST　　　在服务器新建一个资源</li>
@@ -361,8 +368,25 @@
 <li>500 INTERNAL SERVER ERROR - [*]：服务器发生错误，用户将无法判断发出的请求是否成功。</li>
 </ul>
 <p>完整<a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html" target="_blank" rel="noopener">状态码</a></p>
-<h2 id="9、错误信息"><a href="#9、错误信息" class="headerlink" title="9、错误信息"></a>9、错误信息</h2><p>　　如果状态码是4xx，就应该向用户返回出错信息。一般来说，返回的信息中将 error 作为键名，出错信息作为键值即可。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    error: "Invalid API key"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="10、返回结果"><a href="#10、返回结果" class="headerlink" title="10、返回结果"></a>10、返回结果</h2><p>　　返回结果中提供链接，连向其他API方法，使得用户不查文档，也知道下一步应该做什么，例如当用户向 api.example.com 的根目录发出请求，会得到相应提示。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">GET /collection：返回资源对象的列表（ 数组 ）</span><br><span class="line">GET /collection/resource：返回单个资源对象</span><br><span class="line">POST /collection：返回新生成的资源对象</span><br><span class="line">PUT /collection/resource：返回完整的资源对象</span><br><span class="line">PATCH /collection/resource：返回完整的资源对象</span><br><span class="line">DELETE /collection/resource：返回一个空文档</span><br><span class="line"></span><br><span class="line">//json</span><br><span class="line">&#123;</span><br><span class="line">    "current_user_url": "https://api.github.com/user",</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="9、错误信息"><a href="#9、错误信息" class="headerlink" title="9、错误信息"></a>9、错误信息</h2><p>　　如果状态码是4xx，就应该向用户返回出错信息。一般来说，返回的信息中将 error 作为键名，出错信息作为键值即可。</p>
+<pre><code class="line-numbers language-json">{
+    error: &quot;Invalid API key&quot;
+}
+</code></pre>
+<h2 id="10、返回结果"><a href="#10、返回结果" class="headerlink" title="10、返回结果"></a>10、返回结果</h2><p>　　返回结果中提供链接，连向其他API方法，使得用户不查文档，也知道下一步应该做什么，例如当用户向 api.example.com 的根目录发出请求，会得到相应提示。</p>
+<pre><code class="line-numbers language-http">GET /collection：返回资源对象的列表（ 数组 ）
+GET /collection/resource：返回单个资源对象
+POST /collection：返回新生成的资源对象
+PUT /collection/resource：返回完整的资源对象
+PATCH /collection/resource：返回完整的资源对象
+DELETE /collection/resource：返回一个空文档
+
+//json
+{
+    &quot;current_user_url&quot;: &quot;https://api.github.com/user&quot;,
+    ...
+}
+</code></pre>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:0"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">0.</span><span style="display: inline-block; vertical-align: top;">参考</span><a href="#fnref:0" rev="footnote"> ↩</a></li><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">Roy Thomas Fielding <a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm" target="_blank" rel="noopener">《Architectural Styles and the Design of Network-based Software Architectures》</a></span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;">本文参考 阮一峰 <a href="http://www.ruanyifeng.com/blog/2014/05/restful_api.html" target="_blank" rel="noopener">《RESTful API 设计指南》</a></span><a href="#fnref:2" rev="footnote"> ↩</a></li></ol></div></div>
       
     </div>
@@ -636,6 +660,7 @@
 
 
 
+
   
   <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
@@ -647,6 +672,9 @@
 
   
   <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/prism/prism.js"></script>
 
 
   

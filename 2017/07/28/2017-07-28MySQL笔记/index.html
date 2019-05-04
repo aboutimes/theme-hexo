@@ -67,9 +67,10 @@
 
 
 
+
   <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
 
-
+<link href="/css/prism.css" rel="stylesheet" type="text/css" />
 
 
 
@@ -352,20 +353,175 @@
 <li>加入一行 <code>PATH=$PATH:/usr/local/mysql/bin</code> 即可</li>
 <li>或直接命令修改 <code>echo &#39;PATH=$PATH:/usr/local/mysql/bin&#39; &gt;&gt;~/.bash_profile</code></li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># .bash_profile 文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># mysql 环境变量</span></span><br><span class="line">PATH=<span class="variable">$PATH</span>:/usr/<span class="built_in">local</span>/mysql/bin</span><br><span class="line"></span><br><span class="line"><span class="comment"># composer 环境变量</span></span><br><span class="line">PATH=<span class="variable">$PATH</span>:~/.composer/vendor/bin/</span><br></pre></td></tr></table></figure>
-<h2 id="3、升级"><a href="#3、升级" class="headerlink" title="3、升级"></a>3、升级</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1、下载 dmg 安装</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2、把新版本 data 重命名为 dataold</span></span><br><span class="line">sudo mv /usr/<span class="built_in">local</span>/mysql-5.7.20-macos10.13-x86_64/data /usr/<span class="built_in">local</span>/mysql-5.7.20-macos10.13-x86_64/dataold</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3、把旧版本数据复制到新版本位置</span></span><br><span class="line">sudo cp -rf /usr/<span class="built_in">local</span>/mysql-5.5.20-macos10.13-x86_64/data /usr/<span class="built_in">local</span>/mysql-5.7.20-macos10.13-x86_64/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4、设置权限，正确为 ower _mysql 读写 wheel 只读 everyone 无权</span></span><br><span class="line">sudo chown -R _mysql /usr/<span class="built_in">local</span>/mysql-5.7.20-macos10.13-x86_64/data</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5、升级</span></span><br><span class="line">sudo /usr/<span class="built_in">local</span>/mysql/bin/mysql_upgrade</span><br><span class="line"></span><br><span class="line"><span class="comment"># 6、重启服务 </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 7、删除 dataold 及老版本</span></span><br><span class="line">sudo rm -rf /usr/<span class="built_in">local</span>/mysql-5.7.20-macos10.13-x86_64/dataold</span><br><span class="line">sudo rm -rf /usr/<span class="built_in">local</span>/mysql-5.5.20-macos10.13-x86_64</span><br></pre></td></tr></table></figure>
-<h2 id="4、登录管理"><a href="#4、登录管理" class="headerlink" title="4、登录管理"></a>4、登录管理</h2><h3 id="4-1、登录"><a href="#4-1、登录" class="headerlink" title="4.1、登录"></a>4.1、登录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -u 用户名 -p 密码登录</span></span><br><span class="line">mysql -u root -p    <span class="comment">#然后输入密码回车即可</span></span><br><span class="line"><span class="comment"># 其他登录选项 -h 指定访问的是 ip 地址主机上的数据库，默认 localhost；-P 指定端口，默认3306</span></span><br><span class="line">mysql -h 192.32.2.9 -u username -p -P 3308</span><br></pre></td></tr></table></figure>
-<h3 id="4-2、设置"><a href="#4-2、设置" class="headerlink" title="4.2、设置"></a>4.2、设置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置密码</span></span><br><span class="line"><span class="comment"># 方法 1</span></span><br><span class="line">SET PASSWORD FOR <span class="string">'root'</span>@<span class="string">'localhost'</span> = PASSWORD(<span class="string">'newpass'</span>);</span><br><span class="line"><span class="comment"># 方法 2，IDENTIFIED WITH mysql_native_password 指定密码模式为 mysql_native_password</span></span><br><span class="line">ALTER USER ‘root’@‘localhost’ IDENTIFIED WITH mysql_native_password BY ‘newpass’;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 授权 GRANT privileges on databasename.tablename to 'test’@‘host’;</span></span><br><span class="line"><span class="comment"># 1、允许 test 用户从任何（% 为所有）主机访问 databasename 的任何（* 为所有）数据表，允许操作为 all</span></span><br><span class="line">GRANT all on databasename.* to <span class="string">'test'</span>@<span class="string">'%'</span>;</span><br><span class="line"><span class="comment"># 2、只允许 test 用户从 IP 为 192.32.2.9 主机访问 databasename 的 user 数据表，允许操作为 select</span></span><br><span class="line">GRANT select on databasename.user to <span class="string">'test'</span>@<span class="string">'192.32.2.9'</span>;</span><br><span class="line"><span class="comment"># select, insert, update, delete, create, drop,</span></span><br><span class="line"><span class="comment"># index, alter, grant, references, reload, shutdown, process, file等14个权限。</span></span><br></pre></td></tr></table></figure>
-<h3 id="4-3、常用操作"><a href="#4-3、常用操作" class="headerlink" title="4.3、常用操作"></a>4.3、常用操作</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 命令包含分号</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示数据库</span></span><br><span class="line">SHOW DATABASES;</span><br><span class="line"><span class="comment"># 创建数据库</span></span><br><span class="line">CREATE DATABASE dbName;</span><br><span class="line"><span class="comment"># 删除数据库</span></span><br><span class="line">DROP DATABASE dbName;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 选择数据库</span></span><br><span class="line">USE dbName;</span><br><span class="line"><span class="comment"># 显示数据表</span></span><br><span class="line">SHOW TABLES;</span><br><span class="line"><span class="comment"># 创建数据表 字段名-类型-属性-空-默认值-主键</span></span><br><span class="line">CREATE TABLE `tableName` (`id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, `sex` CHAR(1) NOT NULL DEFAULT <span class="string">'F'</span>);</span><br><span class="line"><span class="comment"># 数据表插值</span></span><br><span class="line">INSERT INTO `tableName` (name, sex) VALUES (<span class="string">'hyq'</span>,<span class="string">'M'</span>);</span><br><span class="line"><span class="comment"># 在某个字段后面添加字段</span></span><br><span class="line">ALTER TABLE `tableName` Add COLUMN `new_filed` int(10) NOT NULL DEFAULT 0 AFTER `someone_filed`;</span><br><span class="line"><span class="comment"># 删除字段</span></span><br><span class="line">ALTER TABLE `tableName` DROP COLUMN `someone_filed`;</span><br><span class="line"><span class="comment"># 更新表中数据</span></span><br><span class="line">UPDATE `tableName` SET sex=<span class="string">'F'</span> WHERE id=<span class="string">'1'</span>;</span><br><span class="line"><span class="comment"># 删除数据表</span></span><br><span class="line">DROP TABLE `tableName`;</span><br><span class="line"><span class="comment"># 显示表结构</span></span><br><span class="line">DESCRIBE `tableName`;</span><br><span class="line"><span class="comment"># 显示表中的记录</span></span><br><span class="line">SELECT * FROM `tableName`;</span><br><span class="line"><span class="comment"># 清空表中记录</span></span><br><span class="line">DELETE FROM `tableName`;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 退出</span></span><br><span class="line"><span class="built_in">exit</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 导入 .sql 数据</span></span><br><span class="line"><span class="comment"># 方法一</span></span><br><span class="line">mysql -u root -p</span><br><span class="line">USE dbName;</span><br><span class="line"><span class="built_in">source</span> ~/data.sql;</span><br><span class="line"><span class="comment"># 方法二</span></span><br><span class="line"><span class="comment"># mysql -u用户名 -p密码 数据库名 &lt; 数据库名.sql</span></span><br><span class="line">mysql -u root -p dbName &lt; ~/data.sql</span><br><span class="line"><span class="comment"># 导出 .sql 文件</span></span><br><span class="line">mysqldump -u root -p dbName &gt; ~/dbName.sql</span><br></pre></td></tr></table></figure>
+<pre><code class="line-numbers language-bash"># .bash_profile 文件
+
+# mysql 环境变量
+PATH=$PATH:/usr/local/mysql/bin
+
+# composer 环境变量
+PATH=$PATH:~/.composer/vendor/bin/
+</code></pre>
+<h2 id="3、升级"><a href="#3、升级" class="headerlink" title="3、升级"></a>3、升级</h2><pre><code class="line-numbers language-bash"># 1、下载 dmg 安装
+
+# 2、把新版本 data 重命名为 dataold
+sudo mv /usr/local/mysql-5.7.20-macos10.13-x86_64/data /usr/local/mysql-5.7.20-macos10.13-x86_64/dataold
+
+# 3、把旧版本数据复制到新版本位置
+sudo cp -rf /usr/local/mysql-5.5.20-macos10.13-x86_64/data /usr/local/mysql-5.7.20-macos10.13-x86_64/
+
+# 4、设置权限，正确为 ower _mysql 读写 wheel 只读 everyone 无权
+sudo chown -R _mysql /usr/local/mysql-5.7.20-macos10.13-x86_64/data
+
+# 5、升级
+sudo /usr/local/mysql/bin/mysql_upgrade
+
+# 6、重启服务 
+
+# 7、删除 dataold 及老版本
+sudo rm -rf /usr/local/mysql-5.7.20-macos10.13-x86_64/dataold
+sudo rm -rf /usr/local/mysql-5.5.20-macos10.13-x86_64
+</code></pre>
+<h2 id="4、登录管理"><a href="#4、登录管理" class="headerlink" title="4、登录管理"></a>4、登录管理</h2><h3 id="4-1、登录"><a href="#4-1、登录" class="headerlink" title="4.1、登录"></a>4.1、登录</h3><pre><code class="line-numbers language-bash"># -u 用户名 -p 密码登录
+mysql -u root -p    #然后输入密码回车即可
+# 其他登录选项 -h 指定访问的是 ip 地址主机上的数据库，默认 localhost；-P 指定端口，默认3306
+mysql -h 192.32.2.9 -u username -p -P 3308
+</code></pre>
+<h3 id="4-2、设置"><a href="#4-2、设置" class="headerlink" title="4.2、设置"></a>4.2、设置</h3><pre><code class="line-numbers language-sql"># 设置密码
+# 方法 1
+SET PASSWORD FOR &#39;root&#39;@&#39;localhost&#39; = PASSWORD(&#39;newpass&#39;);
+# 方法 2，IDENTIFIED WITH mysql_native_password 指定密码模式为 mysql_native_password
+ALTER USER ‘root’@‘localhost’ IDENTIFIED WITH mysql_native_password BY ‘newpass’;
+
+# 授权 GRANT privileges on databasename.tablename to &#39;test’@‘host’;
+# 1、允许 test 用户从任何（% 为所有）主机访问 databasename 的任何（* 为所有）数据表，允许操作为 all
+GRANT all on databasename.* to &#39;test&#39;@&#39;%&#39;;
+# 2、只允许 test 用户从 IP 为 192.32.2.9 主机访问 databasename 的 user 数据表，允许操作为 select
+GRANT select on databasename.user to &#39;test&#39;@&#39;192.32.2.9&#39;;
+# select, insert, update, delete, create, drop,
+# index, alter, grant, references, reload, shutdown, process, file等14个权限。
+</code></pre>
+<h3 id="4-3、常用操作"><a href="#4-3、常用操作" class="headerlink" title="4.3、常用操作"></a>4.3、常用操作</h3><pre><code class="line-numbers language-sql"># 命令包含分号
+
+# 显示数据库
+SHOW DATABASES;
+# 创建数据库
+CREATE DATABASE dbName;
+# 删除数据库
+DROP DATABASE dbName;
+
+# 选择数据库
+USE dbName;
+# 显示数据表
+SHOW TABLES;
+# 创建数据表 字段名-类型-属性-空-默认值-主键
+CREATE TABLE `tableName` (`id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, `sex` CHAR(1) NOT NULL DEFAULT &#39;F&#39;);
+# 数据表插值
+INSERT INTO `tableName` (name, sex) VALUES (&#39;hyq&#39;,&#39;M&#39;);
+# 在某个字段后面添加字段
+ALTER TABLE `tableName` Add COLUMN `new_filed` int(10) NOT NULL DEFAULT 0 AFTER `someone_filed`;
+# 删除字段
+ALTER TABLE `tableName` DROP COLUMN `someone_filed`;
+# 更新表中数据
+UPDATE `tableName` SET sex=&#39;F&#39; WHERE id=&#39;1&#39;;
+# 删除数据表
+DROP TABLE `tableName`;
+# 显示表结构
+DESCRIBE `tableName`;
+# 显示表中的记录
+SELECT * FROM `tableName`;
+# 清空表中记录
+DELETE FROM `tableName`;
+
+# 退出
+exit;
+
+# 导入 .sql 数据
+# 方法一
+mysql -u root -p
+USE dbName;
+source ~/data.sql;
+# 方法二
+# mysql -u用户名 -p密码 数据库名 &lt; 数据库名.sql
+mysql -u root -p dbName &lt; ~/data.sql
+# 导出 .sql 文件
+mysqldump -u root -p dbName &gt; ~/dbName.sql
+
+
+</code></pre>
 <h2 id="5、PHP-操作-MySQL"><a href="#5、PHP-操作-MySQL" class="headerlink" title="5、PHP 操作 MySQL"></a>5、PHP 操作 MySQL</h2><ul>
 <li>mysqli 连接相关的</li>
 <li>mysqli_result 处理结果集</li>
 <li>mysqli_stmt 预处理类</li>
 </ul>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 基于 PHP7</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 连接数据库</span></span><br><span class="line">$host = $dbHost . <span class="string">':'</span> . $dbPort;</span><br><span class="line">$mysqli = <span class="keyword">new</span> mysqli($host, $dbUser, $dbPassword, $dbName);</span><br><span class="line"><span class="comment">// 持久连接</span></span><br><span class="line">$host = <span class="string">'p:'</span> . $dbHost . <span class="string">':'</span> . $dbPort;</span><br><span class="line">$mysqli = <span class="keyword">new</span> mysqli($host, $dbUser, $dbPassword, $dbName);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 抛出连接错误</span></span><br><span class="line"><span class="keyword">if</span>(mysqli_connect_error())&#123;</span><br><span class="line">    <span class="keyword">echo</span> mysqli_connect_error();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 关闭</span></span><br><span class="line">$mysqli-&gt;close();</span><br></pre></td></tr></table></figure>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 数据库列表</span></span><br><span class="line">$host = $dbHost . <span class="string">':'</span> . $dbPort;</span><br><span class="line">$mysqli = <span class="keyword">new</span> mysqli($host, $dbUser, $dbPassword);</span><br><span class="line">$result=$mysqli-&gt;query(<span class="string">'SHOW DATABASES'</span>);</span><br><span class="line">$filter_dbs = <span class="keyword">array</span>(<span class="string">'information_schema'</span>, <span class="string">'mysql'</span>, <span class="string">'sys'</span>, <span class="string">'performance_schema'</span>, <span class="string">'tableviewdemo'</span>);</span><br><span class="line">$databases = <span class="keyword">array</span>();</span><br><span class="line"><span class="keyword">while</span>($row = $result-&gt;fetch_assoc())&#123;</span><br><span class="line">    <span class="keyword">if</span> (in_array($row[<span class="string">'Database'</span>], $filter_dbs)) &#123;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    $databases[] = $row[<span class="string">'Database'</span>]; <span class="comment">//遍历查询结果</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 关闭</span></span><br><span class="line">$mysqli-&gt;close();</span><br></pre></td></tr></table></figure>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 插入数据</span></span><br><span class="line">$host = $dbHost . <span class="string">':'</span> . $dbPort;</span><br><span class="line">$mysqli = <span class="keyword">new</span> mysqli($host, $dbUser, $dbPassword, $dbName);</span><br><span class="line">$sql = <span class="string">"insert into table_name (`name`, `address`) values ('xiaoming', 'adddddrrreess')"</span>;</span><br><span class="line">$result = $mysqli-&gt;query($sql);</span><br><span class="line"><span class="keyword">if</span>($result === <span class="keyword">false</span>)&#123;<span class="comment">//执行失败</span></span><br><span class="line">    <span class="keyword">echo</span> $mysqli-&gt;error;</span><br><span class="line">    <span class="keyword">echo</span> $mysqli-&gt;errno;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 关闭</span></span><br><span class="line">$mysqli-&gt;close();</span><br></pre></td></tr></table></figure>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 预处理</span></span><br><span class="line"><span class="comment">//获得预处理对象</span></span><br><span class="line">$host = $dbHost . <span class="string">':'</span> . $dbPort;</span><br><span class="line">$mysqli = <span class="keyword">new</span> mysqli($host, $dbUser, $dbPassword, $dbName);</span><br><span class="line">$stmt = $mysqli-&gt;prepare($sql);</span><br><span class="line"><span class="comment">//绑定参数 第一个参数为绑定的数据类型</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">i:integer 整型</span></span><br><span class="line"><span class="comment">d:double 浮点型</span></span><br><span class="line"><span class="comment">s:string 字符串</span></span><br><span class="line"><span class="comment">b:a blob packets blob数据包</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">$name = <span class="string">"xiaoming"</span>;</span><br><span class="line">$address = <span class="string">"adddressss"</span>;</span><br><span class="line">$stmt-&gt;bind_param(<span class="string">"ss"</span>, $name, $address);<span class="comment">//绑定时使用变量绑定</span></span><br><span class="line"><span class="comment">//执行预处理</span></span><br><span class="line">$stmt-&gt;execute();</span><br><span class="line"><span class="comment">//错误号</span></span><br><span class="line"><span class="keyword">echo</span> $stmt-&gt;errno;</span><br><span class="line"><span class="comment">//错误信息</span></span><br><span class="line"><span class="keyword">echo</span> $stmt-&gt;error;</span><br><span class="line"><span class="comment">//关闭</span></span><br><span class="line">$stmt-&gt;close();</span><br><span class="line"><span class="comment">// 关闭</span></span><br><span class="line">$mysqli-&gt;close();</span><br></pre></td></tr></table></figure>
+<pre><code class="line-numbers language-php">// 基于 PHP7
+
+// 连接数据库
+$host = $dbHost . &#39;:&#39; . $dbPort;
+$mysqli = new mysqli($host, $dbUser, $dbPassword, $dbName);
+// 持久连接
+$host = &#39;p:&#39; . $dbHost . &#39;:&#39; . $dbPort;
+$mysqli = new mysqli($host, $dbUser, $dbPassword, $dbName);
+
+// 抛出连接错误
+if(mysqli_connect_error()){
+    echo mysqli_connect_error();
+}
+// 关闭
+$mysqli-&gt;close();
+</code></pre>
+<pre><code class="line-numbers language-php">// 数据库列表
+$host = $dbHost . &#39;:&#39; . $dbPort;
+$mysqli = new mysqli($host, $dbUser, $dbPassword);
+$result=$mysqli-&gt;query(&#39;SHOW DATABASES&#39;);
+$filter_dbs = array(&#39;information_schema&#39;, &#39;mysql&#39;, &#39;sys&#39;, &#39;performance_schema&#39;, &#39;tableviewdemo&#39;);
+$databases = array();
+while($row = $result-&gt;fetch_assoc()){
+    if (in_array($row[&#39;Database&#39;], $filter_dbs)) {
+        continue;
+    }
+    $databases[] = $row[&#39;Database&#39;]; //遍历查询结果
+}
+// 关闭
+$mysqli-&gt;close();
+</code></pre>
+<pre><code class="line-numbers language-php">// 插入数据
+$host = $dbHost . &#39;:&#39; . $dbPort;
+$mysqli = new mysqli($host, $dbUser, $dbPassword, $dbName);
+$sql = &quot;insert into table_name (`name`, `address`) values (&#39;xiaoming&#39;, &#39;adddddrrreess&#39;)&quot;;
+$result = $mysqli-&gt;query($sql);
+if($result === false){//执行失败
+    echo $mysqli-&gt;error;
+    echo $mysqli-&gt;errno;
+}
+// 关闭
+$mysqli-&gt;close();
+</code></pre>
+<pre><code class="line-numbers language-php">// 预处理
+//获得预处理对象
+$host = $dbHost . &#39;:&#39; . $dbPort;
+$mysqli = new mysqli($host, $dbUser, $dbPassword, $dbName);
+$stmt = $mysqli-&gt;prepare($sql);
+//绑定参数 第一个参数为绑定的数据类型
+/*
+i:integer 整型
+d:double 浮点型
+s:string 字符串
+b:a blob packets blob数据包
+*/
+$name = &quot;xiaoming&quot;;
+$address = &quot;adddressss&quot;;
+$stmt-&gt;bind_param(&quot;ss&quot;, $name, $address);//绑定时使用变量绑定
+//执行预处理
+$stmt-&gt;execute();
+//错误号
+echo $stmt-&gt;errno;
+//错误信息
+echo $stmt-&gt;error;
+//关闭
+$stmt-&gt;close();
+// 关闭
+$mysqli-&gt;close();
+</code></pre>
 
       
     </div>
@@ -639,6 +795,7 @@
 
 
 
+
   
   <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
@@ -650,6 +807,9 @@
 
   
   <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/prism/prism.js"></script>
 
 
   

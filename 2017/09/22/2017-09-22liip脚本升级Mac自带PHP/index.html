@@ -67,9 +67,10 @@
 
 
 
+
   <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
 
-
+<link href="/css/prism.css" rel="stylesheet" type="text/css" />
 
 
 
@@ -333,25 +334,215 @@
       
 
       
-        <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s https://php-osx.liip.ch/install.sh | bash -s 7.1</span><br></pre></td></tr></table></figure>
+        <pre><code class="line-numbers language-bash">curl -s https://php-osx.liip.ch/install.sh | bash -s 7.1
+</code></pre>
 <a id="more"></a>
 <h2 id="1、安装脚本"><a href="#1、安装脚本" class="headerlink" title="1、安装脚本"></a>1、安装脚本</h2><h3 id="1-1、终端执行命令，7-1-为-PHP-安装的版本。"><a href="#1-1、终端执行命令，7-1-为-PHP-安装的版本。" class="headerlink" title="1.1、终端执行命令，7.1 为 PHP 安装的版本。"></a>1.1、终端执行命令，7.1 为 PHP 安装的版本。</h3><p><code>curl -s https://php-osx.liip.ch/install.sh | bash -s 7.1</code></p>
-<h3 id="1-2、脚本完整代码"><a href="#1-2、脚本完整代码" class="headerlink" title="1.2、脚本完整代码"></a>1.2、脚本完整代码</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># package type (subfolder in packager)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># default version to install</span></span><br><span class="line">DEFAULT=5.6</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="variable">$1</span> ]; <span class="keyword">then</span></span><br><span class="line">  TYPE=<span class="variable">$DEFAULT</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">  TYPE=<span class="variable">$1</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [[ <span class="variable">$TYPE</span> != <span class="string">"force"</span> ]]; <span class="keyword">then</span></span><br><span class="line">  OS_VERSION=`sw_vers -productVersion | egrep --color=never -o <span class="string">'10\.[0-9]+'</span>`</span><br><span class="line">  <span class="keyword">if</span> [[ <span class="variable">$OS_VERSION</span> == <span class="string">"10.13"</span> ]]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"****"</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"[WARNING]"</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"Detected macOS High Sierra 10.13. As this is quite new, there may be issues still. Your mileage may vary."</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"****"</span></span><br><span class="line">    sleep 2</span><br><span class="line">  <span class="keyword">elif</span> [[ <span class="variable">$OS_VERSION</span> == <span class="string">"10.12"</span> ]]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"Detected macOS Sierra 10.12. All ok."</span></span><br><span class="line">  <span class="keyword">elif</span> [[ <span class="variable">$OS_VERSION</span> == <span class="string">"10.11"</span> ]]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"Detected OS X El Capitan 10.11. All ok."</span></span><br><span class="line">  <span class="keyword">elif</span> [[ <span class="variable">$OS_VERSION</span> == <span class="string">"10.10"</span> ]]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"Detected OS X Yosemite 10.10. All ok."</span></span><br><span class="line">  <span class="keyword">elif</span> [[ <span class="variable">$OS_VERSION</span> == <span class="string">"10.9"</span> ]]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"Detected OS X Mavericks 10.9 All ok."</span></span><br><span class="line">  <span class="keyword">elif</span> [[ <span class="variable">$OS_VERSION</span> == <span class="string">"10.8"</span> ]]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"Detected OS X Mountain Lion 10.8 All ok."</span></span><br><span class="line">  <span class="keyword">elif</span> [[ <span class="variable">$OS_VERSION</span> == <span class="string">"10.7"</span> ]]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"Detected OS X Lion 10.7. All ok."</span></span><br><span class="line">  <span class="keyword">elif</span> [[ <span class="variable">$OS_VERSION</span> == <span class="string">"10.6"</span> ]]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"Detected OS X Snow Leopard 10.6 All ok."</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"****"</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"Your version of OS X (<span class="variable">$OS_VERSION</span>) is not supported, you need at least 10.6"</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"Stopping installation..."</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"If you think that's wrong, try"</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"****"</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"curl -o install.sh -s https://php-osx.liip.ch/install.sh | bash install.sh force"</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"****"</span></span><br><span class="line">    <span class="built_in">exit</span> 2</span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line">  <span class="keyword">if</span> [[ -f /usr/sbin/sysctl ]]; <span class="keyword">then</span></span><br><span class="line">      SYSCTL=<span class="string">"/usr/sbin/sysctl"</span></span><br><span class="line">  <span class="keyword">elif</span> [[ -f /sbin/sysctl ]]; <span class="keyword">then</span></span><br><span class="line">      SYSCTL=<span class="string">"/sbin/sysctl"</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">      SYSCTL=<span class="string">"sysctl"</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">  HAS64BIT=`<span class="variable">$SYSCTL</span> -n hw.cpu64bit_capable 2&gt; /dev/null`</span><br><span class="line">  <span class="keyword">if</span> [[ <span class="variable">$HAS64BIT</span> != 1 ]]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"****"</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"ERROR! 32 BIT NOT SUPPORTED!"</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"****"</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"No 64bit capable system found. Your hardware is too old."</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"We don't support that (yet). Patches are welcome ;)"</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"If you think that's wrong, try"</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"****"</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"curl -o install.sh -s https://php-osx.liip.ch/install.sh | bash install.sh force"</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"****"</span></span><br><span class="line">    <span class="built_in">exit</span> 1</span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [[ <span class="variable">$TYPE</span> = <span class="string">"force"</span> ]]; <span class="keyword">then</span></span><br><span class="line">  <span class="keyword">if</span> [ -z <span class="variable">$2</span> ]; <span class="keyword">then</span></span><br><span class="line">    TYPE=<span class="variable">$DEFAULT</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    TYPE=<span class="variable">$2</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [[ <span class="variable">$OS_VERSION</span> = <span class="string">"10.8"</span> ]] || [[ <span class="variable">$OS_VERSION</span> = <span class="string">"10.9"</span> ]]; <span class="keyword">then</span></span><br><span class="line">  <span class="keyword">if</span> [[ <span class="variable">$TYPE</span> = <span class="string">"5.4"</span> ]]; <span class="keyword">then</span></span><br><span class="line">    TYPE=5.4-10.8</span><br><span class="line">  <span class="keyword">elif</span> [[ <span class="variable">$TYPE</span> = <span class="string">"5.5"</span> ]]; <span class="keyword">then</span></span><br><span class="line">    TYPE=5.5-10.8</span><br><span class="line">  <span class="keyword">elif</span> [[ <span class="variable">$TYPE</span> = <span class="string">"5.6"</span> ]]; <span class="keyword">then</span></span><br><span class="line">    TYPE=5.6-10.8</span><br><span class="line">  <span class="keyword">elif</span> [[ <span class="variable">$TYPE</span> = <span class="string">"5.3"</span> ]]; <span class="keyword">then</span></span><br><span class="line">     TYPE=5.3-10.8</span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 10.11 &amp; 10.12 should be compatible with 10.10 versions for now.</span></span><br><span class="line"><span class="comment"># See https://github.com/liip/build-entropy-php/issues/16 for more</span></span><br><span class="line"><span class="keyword">if</span> [[ <span class="variable">$OS_VERSION</span> = <span class="string">"10.11"</span> ]] || [[ <span class="variable">$OS_VERSION</span> = <span class="string">"10.12"</span> ]] || [[ <span class="variable">$OS_VERSION</span> = <span class="string">"10.13"</span> ]] || [[ <span class="variable">$OS_VERSION</span> = <span class="string">"10.10"</span> ]]; <span class="keyword">then</span></span><br><span class="line">  <span class="keyword">if</span> [[ <span class="variable">$TYPE</span> = <span class="string">"5.4"</span> ]]; <span class="keyword">then</span></span><br><span class="line">    TYPE=5.4-10.10</span><br><span class="line">  <span class="keyword">elif</span> [[ <span class="variable">$TYPE</span> = <span class="string">"5.5"</span> ]]; <span class="keyword">then</span></span><br><span class="line">    TYPE=5.5-10.10</span><br><span class="line">  <span class="keyword">elif</span> [[ <span class="variable">$TYPE</span> = <span class="string">"5.6"</span> ]]; <span class="keyword">then</span></span><br><span class="line">    TYPE=5.6-10.10</span><br><span class="line">  <span class="keyword">elif</span> [[ <span class="variable">$TYPE</span> = <span class="string">"7.0"</span> ]]; <span class="keyword">then</span></span><br><span class="line">    TYPE=7.0-10.10</span><br><span class="line">  <span class="keyword">elif</span> [[ <span class="variable">$TYPE</span> = <span class="string">"7.1"</span> ]]; <span class="keyword">then</span></span><br><span class="line">    TYPE=7.1-10.10</span><br><span class="line">  <span class="keyword">elif</span> [[ <span class="variable">$TYPE</span> = <span class="string">"7.2"</span> ]]; <span class="keyword">then</span></span><br><span class="line">    TYPE=7.2-10.10</span><br><span class="line">  <span class="keyword">elif</span> [[ <span class="variable">$TYPE</span> = <span class="string">"5.3"</span> ]]; <span class="keyword">then</span></span><br><span class="line">    TYPE=5.3-10.10</span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [[ <span class="variable">$TYPE</span> = <span class="string">"5.6"</span> ]]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"PHP 5.6 is not available for OS X &lt; 10.8"</span></span><br><span class="line">  <span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">elif</span> [[ <span class="variable">$TYPE</span> = <span class="string">"7.2"</span> ]]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"PHP 7.2 is not available for OS X &lt; 10.10"</span></span><br><span class="line">  <span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">elif</span> [[ <span class="variable">$TYPE</span> = <span class="string">"7.1"</span> ]]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"PHP 7.1 is not available for OS X &lt; 10.10"</span></span><br><span class="line">  <span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">elif</span> [[ <span class="variable">$TYPE</span> = <span class="string">"7.0"</span> ]]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"PHP 7.0 is not available for OS X &lt; 10.10"</span></span><br><span class="line">  <span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Get packager.tgz"</span>;</span><br><span class="line">curl -s -o /tmp/packager.tgz https://s3-eu-west-1.amazonaws.com/php-osx.liip.ch/packager/packager.tgz</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Unpack packager.tgz"</span>;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Please type in your password, as we want to install this into /usr/local"</span></span><br><span class="line"><span class="keyword">if</span> [ !  -d /usr/<span class="built_in">local</span> ] ; <span class="keyword">then</span> sudo mkdir /usr/<span class="built_in">local</span>; <span class="keyword">fi</span></span><br><span class="line">sudo  tar -C /usr/<span class="built_in">local</span> -xzf /tmp/packager.tgz</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [[ -f /usr/bin/python2.7 ]]; <span class="keyword">then</span></span><br><span class="line">   PYTHONPATH=/usr/bin/python2.7</span><br><span class="line"><span class="keyword">elif</span> [[ -f /usr/bin/python2.6 ]]; <span class="keyword">then</span></span><br><span class="line">   PYTHONPATH=/usr/bin/python2.6</span><br><span class="line"><span class="keyword">elif</span> [[ -f /usr/bin/python ]]; <span class="keyword">then</span></span><br><span class="line">   PYTHONPATH=/usr/bin/python</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">   PYTHONPATH=$(<span class="built_in">which</span> python)</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Start packager (may take some time) using <span class="variable">$PYTHONPATH</span>"</span>;</span><br><span class="line"></span><br><span class="line">sudo <span class="variable">$PYTHONPATH</span> /usr/<span class="built_in">local</span>/packager/packager.py install <span class="variable">$TYPE</span>-frontenddev</span><br><span class="line"><span class="built_in">cd</span> <span class="variable">$ORIPWD</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Finished."</span></span><br></pre></td></tr></table></figure>
+<h3 id="1-2、脚本完整代码"><a href="#1-2、脚本完整代码" class="headerlink" title="1.2、脚本完整代码"></a>1.2、脚本完整代码</h3><pre><code class="line-numbers language-bash">#!/bin/bash
+
+# package type (subfolder in packager)
+
+# default version to install
+DEFAULT=5.6
+
+if [ -z $1 ]; then
+  TYPE=$DEFAULT
+else
+  TYPE=$1
+fi
+
+if [[ $TYPE != &quot;force&quot; ]]; then
+  OS_VERSION=`sw_vers -productVersion | egrep --color=never -o &#39;10\.[0-9]+&#39;`
+  if [[ $OS_VERSION == &quot;10.13&quot; ]]; then
+    echo &quot;****&quot;
+    echo &quot;[WARNING]&quot;
+    echo &quot;Detected macOS High Sierra 10.13. As this is quite new, there may be issues still. Your mileage may vary.&quot;
+    echo &quot;****&quot;
+    sleep 2
+  elif [[ $OS_VERSION == &quot;10.12&quot; ]]; then
+    echo &quot;Detected macOS Sierra 10.12. All ok.&quot;
+  elif [[ $OS_VERSION == &quot;10.11&quot; ]]; then
+    echo &quot;Detected OS X El Capitan 10.11. All ok.&quot;
+  elif [[ $OS_VERSION == &quot;10.10&quot; ]]; then
+    echo &quot;Detected OS X Yosemite 10.10. All ok.&quot;
+  elif [[ $OS_VERSION == &quot;10.9&quot; ]]; then
+    echo &quot;Detected OS X Mavericks 10.9 All ok.&quot;
+  elif [[ $OS_VERSION == &quot;10.8&quot; ]]; then
+    echo &quot;Detected OS X Mountain Lion 10.8 All ok.&quot;
+  elif [[ $OS_VERSION == &quot;10.7&quot; ]]; then
+    echo &quot;Detected OS X Lion 10.7. All ok.&quot;
+  elif [[ $OS_VERSION == &quot;10.6&quot; ]]; then
+    echo &quot;Detected OS X Snow Leopard 10.6 All ok.&quot;
+  else
+    echo &quot;****&quot;
+    echo &quot;Your version of OS X ($OS_VERSION) is not supported, you need at least 10.6&quot;
+    echo &quot;Stopping installation...&quot;
+    echo &quot;If you think that&#39;s wrong, try&quot;
+    echo &quot;****&quot;
+    echo &quot;curl -o install.sh -s https://php-osx.liip.ch/install.sh | bash install.sh force&quot;
+    echo &quot;****&quot;
+    exit 2
+  fi
+  if [[ -f /usr/sbin/sysctl ]]; then
+      SYSCTL=&quot;/usr/sbin/sysctl&quot;
+  elif [[ -f /sbin/sysctl ]]; then
+      SYSCTL=&quot;/sbin/sysctl&quot;
+  else
+      SYSCTL=&quot;sysctl&quot;
+  fi
+
+  HAS64BIT=`$SYSCTL -n hw.cpu64bit_capable 2&gt; /dev/null`
+  if [[ $HAS64BIT != 1 ]]; then
+    echo &quot;****&quot;
+    echo &quot;ERROR! 32 BIT NOT SUPPORTED!&quot;
+    echo &quot;****&quot;
+    echo &quot;No 64bit capable system found. Your hardware is too old.&quot;
+    echo &quot;We don&#39;t support that (yet). Patches are welcome ;)&quot;
+    echo &quot;If you think that&#39;s wrong, try&quot;
+    echo &quot;****&quot;
+    echo &quot;curl -o install.sh -s https://php-osx.liip.ch/install.sh | bash install.sh force&quot;
+    echo &quot;****&quot;
+    exit 1
+  fi
+fi
+
+if [[ $TYPE = &quot;force&quot; ]]; then
+  if [ -z $2 ]; then
+    TYPE=$DEFAULT
+  else
+    TYPE=$2
+  fi
+fi
+
+if [[ $OS_VERSION = &quot;10.8&quot; ]] || [[ $OS_VERSION = &quot;10.9&quot; ]]; then
+  if [[ $TYPE = &quot;5.4&quot; ]]; then
+    TYPE=5.4-10.8
+  elif [[ $TYPE = &quot;5.5&quot; ]]; then
+    TYPE=5.5-10.8
+  elif [[ $TYPE = &quot;5.6&quot; ]]; then
+    TYPE=5.6-10.8
+  elif [[ $TYPE = &quot;5.3&quot; ]]; then
+     TYPE=5.3-10.8
+  fi
+fi
+
+# 10.11 &amp; 10.12 should be compatible with 10.10 versions for now.
+# See https://github.com/liip/build-entropy-php/issues/16 for more
+if [[ $OS_VERSION = &quot;10.11&quot; ]] || [[ $OS_VERSION = &quot;10.12&quot; ]] || [[ $OS_VERSION = &quot;10.13&quot; ]] || [[ $OS_VERSION = &quot;10.10&quot; ]]; then
+  if [[ $TYPE = &quot;5.4&quot; ]]; then
+    TYPE=5.4-10.10
+  elif [[ $TYPE = &quot;5.5&quot; ]]; then
+    TYPE=5.5-10.10
+  elif [[ $TYPE = &quot;5.6&quot; ]]; then
+    TYPE=5.6-10.10
+  elif [[ $TYPE = &quot;7.0&quot; ]]; then
+    TYPE=7.0-10.10
+  elif [[ $TYPE = &quot;7.1&quot; ]]; then
+    TYPE=7.1-10.10
+  elif [[ $TYPE = &quot;7.2&quot; ]]; then
+    TYPE=7.2-10.10
+  elif [[ $TYPE = &quot;5.3&quot; ]]; then
+    TYPE=5.3-10.10
+  fi
+fi
+
+if [[ $TYPE = &quot;5.6&quot; ]]; then
+  echo &quot;PHP 5.6 is not available for OS X &lt; 10.8&quot;
+  exit 1
+elif [[ $TYPE = &quot;7.2&quot; ]]; then
+  echo &quot;PHP 7.2 is not available for OS X &lt; 10.10&quot;
+  exit 1
+elif [[ $TYPE = &quot;7.1&quot; ]]; then
+  echo &quot;PHP 7.1 is not available for OS X &lt; 10.10&quot;
+  exit 1
+elif [[ $TYPE = &quot;7.0&quot; ]]; then
+  echo &quot;PHP 7.0 is not available for OS X &lt; 10.10&quot;
+  exit 1
+fi
+
+
+
+echo &quot;Get packager.tgz&quot;;
+curl -s -o /tmp/packager.tgz https://s3-eu-west-1.amazonaws.com/php-osx.liip.ch/packager/packager.tgz
+
+echo &quot;Unpack packager.tgz&quot;;
+echo &quot;Please type in your password, as we want to install this into /usr/local&quot;
+if [ !  -d /usr/local ] ; then sudo mkdir /usr/local; fi
+sudo  tar -C /usr/local -xzf /tmp/packager.tgz
+
+if [[ -f /usr/bin/python2.7 ]]; then
+   PYTHONPATH=/usr/bin/python2.7
+elif [[ -f /usr/bin/python2.6 ]]; then
+   PYTHONPATH=/usr/bin/python2.6
+elif [[ -f /usr/bin/python ]]; then
+   PYTHONPATH=/usr/bin/python
+else
+   PYTHONPATH=$(which python)
+fi
+
+echo &quot;Start packager (may take some time) using $PYTHONPATH&quot;;
+
+sudo $PYTHONPATH /usr/local/packager/packager.py install $TYPE-frontenddev
+cd $ORIPWD
+echo &quot;Finished.&quot;
+</code></pre>
 <h2 id="2、脚本执行顺序"><a href="#2、脚本执行顺序" class="headerlink" title="2、脚本执行顺序"></a>2、脚本执行顺序</h2><ul>
 <li>监测环境</li>
 <li>下载 packager.tgz </li>
 <li>解压 packager.tgz ，运行其中 pythony 脚本</li>
 </ul>
-<p>　　到此之前一切顺利，到了python脚本的时候，要下载一个更新包，就卡住了,第一行是获取最新的更新包url，第二行是下载并保存这个更新包，浏览器打开这个 URL ，发现速度很慢，尝试复制地址到迅雷，速度很快。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">downloading https://s3-eu-west-1.amazonaws.com/php-osx.liip.ch/install/7.1-10.10-frontenddev-latest.dat</span><br><span class="line">downloading https://s3-eu-west-1.amazonaws.com/php-osx.liip.ch/install/7.1-10.10/frontenddev/7.1-10.10-frontenddev-7.1.29-20170114-210819.tar.bz2</span><br></pre></td></tr></table></figure></p>
+<p>　　到此之前一切顺利，到了python脚本的时候，要下载一个更新包，就卡住了,第一行是获取最新的更新包url，第二行是下载并保存这个更新包，浏览器打开这个 URL ，发现速度很慢，尝试复制地址到迅雷，速度很快。</p>
+<pre><code class="line-numbers language-bash">downloading https://s3-eu-west-1.amazonaws.com/php-osx.liip.ch/install/7.1-10.10-frontenddev-latest.dat
+downloading https://s3-eu-west-1.amazonaws.com/php-osx.liip.ch/install/7.1-10.10/frontenddev/7.1-10.10-frontenddev-7.1.29-20170114-210819.tar.bz2
+</code></pre>
 <h2 id="3、修改-pythony-代码"><a href="#3、修改-pythony-代码" class="headerlink" title="3、修改 pythony 代码"></a>3、修改 pythony 代码</h2><p>修改代码直接执行本地下载好的包</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 修改前</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__fetchIndividual</span><span class="params">(self, url)</span>:</span></span><br><span class="line">  <span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"downloading %s"</span> % url</span><br><span class="line">    filename, headers = urllib.urlretrieve(url)</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"filename: %s"</span> % filename</span><br><span class="line">    self.__filename = filename</span><br><span class="line">    self.__file = tarfile.open(self.__filename, <span class="string">'r'</span>)</span><br><span class="line">    self.__file.errorlevel = <span class="number">2</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line">  <span class="keyword">except</span> IOError:</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">  <span class="keyword">except</span> tarfile.ReadError:</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">False</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 修改后</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__fetchIndividual</span><span class="params">(self, url)</span>:</span></span><br><span class="line">  <span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"downloading %s"</span> % url</span><br><span class="line">    <span class="comment"># 修改开始，修改为本地地址</span></span><br><span class="line">    <span class="keyword">if</span> url.find(<span class="string">'7.1-10.10-frontenddev-7.1.29-20170114-210819.tar.bz2'</span>):</span><br><span class="line">        filename = <span class="string">"/usr/local/packager/tmp/7.1-10.10-frontenddev-7.1.29-20170114-210819.tar.bz2"</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        filename, headers = urllib.urlretrieve(url)</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"filename: %s"</span> % filename</span><br><span class="line">    <span class="comment"># 修改结束</span></span><br><span class="line">    self.__filename = filename</span><br><span class="line">    self.__file = tarfile.open(self.__filename, <span class="string">'r'</span>)</span><br><span class="line">    self.__file.errorlevel = <span class="number">2</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line">  <span class="keyword">except</span> IOError:</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">  <span class="keyword">except</span> tarfile.ReadError:</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">False</span></span><br></pre></td></tr></table></figure>
+<pre><code class="line-numbers language-python"># 修改前
+def __fetchIndividual(self, url):
+  try:
+    print &quot;downloading %s&quot; % url
+    filename, headers = urllib.urlretrieve(url)
+    print &quot;filename: %s&quot; % filename
+    self.__filename = filename
+    self.__file = tarfile.open(self.__filename, &#39;r&#39;)
+    self.__file.errorlevel = 2
+    return True
+  except IOError:
+    return False
+  except tarfile.ReadError:
+    return False
+</code></pre>
+<pre><code class="line-numbers language-python"># 修改后
+def __fetchIndividual(self, url):
+  try:
+    print &quot;downloading %s&quot; % url
+    # 修改开始，修改为本地地址
+    if url.find(&#39;7.1-10.10-frontenddev-7.1.29-20170114-210819.tar.bz2&#39;):
+        filename = &quot;/usr/local/packager/tmp/7.1-10.10-frontenddev-7.1.29-20170114-210819.tar.bz2&quot;
+    else:
+        filename, headers = urllib.urlretrieve(url)
+    print &quot;filename: %s&quot; % filename
+    # 修改结束
+    self.__filename = filename
+    self.__file = tarfile.open(self.__filename, &#39;r&#39;)
+    self.__file.errorlevel = 2
+    return True
+  except IOError:
+    return False
+  except tarfile.ReadError:
+    return False
+</code></pre>
 <h2 id="4、执行-pythony-代码"><a href="#4、执行-pythony-代码" class="headerlink" title="4、执行 pythony 代码"></a>4、执行 pythony 代码</h2><p> <code>sudo /usr/local/packager/packager.py install 7.1-10.10-frontenddev</code></p>
 <h2 id="5、调整系统变量路径"><a href="#5、调整系统变量路径" class="headerlink" title="5、调整系统变量路径"></a>5、调整系统变量路径</h2><h3 id="5-1、把php7加入环境变量"><a href="#5-1、把php7加入环境变量" class="headerlink" title="5.1、把php7加入环境变量"></a>5.1、把php7加入环境变量</h3><ul>
 <li>打开变量文件 <code>sudo vim ~/.bash_profile</code></li>
 <li>加入 <code>export PATH=/usr/local/php5/bin:$PATH</code></li>
 </ul>
-<h3 id="5-2、安装完成之后，php-m，发现连xdebug-、-Zend-OPcache-也一起安装好了。"><a href="#5-2、安装完成之后，php-m，发现连xdebug-、-Zend-OPcache-也一起安装好了。" class="headerlink" title="5.2、安装完成之后，php -m，发现连xdebug 、 Zend OPcache 也一起安装好了。"></a>5.2、安装完成之后，<code>php -m</code>，发现连xdebug 、 Zend OPcache 也一起安装好了。</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ php -v</span><br><span class="line">PHP 7.1.4 (cli) (built: May  6 2017 10:02:00) ( NTS )</span><br><span class="line">Copyright (c) 1997-2017 The PHP Group</span><br><span class="line">Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies</span><br><span class="line">  with Zend OPcache v7.1.4, Copyright (c) 1999-2017, by Zend Technologies</span><br><span class="line">  with Xdebug v2.5.3, Copyright (c) 2002-2017, by Derick Rethans</span><br></pre></td></tr></table></figure>
+<h3 id="5-2、安装完成之后，php-m，发现连xdebug-、-Zend-OPcache-也一起安装好了。"><a href="#5-2、安装完成之后，php-m，发现连xdebug-、-Zend-OPcache-也一起安装好了。" class="headerlink" title="5.2、安装完成之后，php -m，发现连xdebug 、 Zend OPcache 也一起安装好了。"></a>5.2、安装完成之后，<code>php -m</code>，发现连xdebug 、 Zend OPcache 也一起安装好了。</h3><pre><code class="line-numbers language-bash">$ php -v
+PHP 7.1.4 (cli) (built: May  6 2017 10:02:00) ( NTS )
+Copyright (c) 1997-2017 The PHP Group
+Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies
+  with Zend OPcache v7.1.4, Copyright (c) 1999-2017, by Zend Technologies
+  with Xdebug v2.5.3, Copyright (c) 2002-2017, by Derick Rethans
+</code></pre>
 
       
     </div>
@@ -625,6 +816,7 @@
 
 
 
+
   
   <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
@@ -636,6 +828,9 @@
 
   
   <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/prism/prism.js"></script>
 
 
   
