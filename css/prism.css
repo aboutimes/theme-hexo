@@ -70,14 +70,14 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 
 /* Code blocks */
 pre[class*="language-"] {
-	padding: 1em;
+	padding: .5em;
 	margin: .5em 0;
 	overflow: auto;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: rgba(207,216,220,0.09);
+	background: #f5f2f0;
 }
 
 /* Inline code */
@@ -127,7 +127,7 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string {
 	color: #9a6e3a;
-	background: hsla(0, 0%, 100%, .5);
+	/*background: hsla(0, 0%, 100%, .5);*/
 }
 
 .token.atrule,
@@ -173,13 +173,16 @@ pre[class*="language-"].line-numbers > code {
 .line-numbers .line-numbers-rows {
 	position: absolute;
 	pointer-events: none;
-	top: 0;
+	top: -.5em;
+	bottom: -.5em;
+
 	font-size: 100%;
 	left: -3.8em;
-	width: 3em; /* works for line-numbers below 1000 lines */
+	min-width: 2em; /* works for line-numbers below 1000 lines */
+	/*padding: 0 3px;*/
 	letter-spacing: -1px;
 	border-right: 1px solid #999;
-
+	background: #e7e5e3;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -191,6 +194,8 @@ pre[class*="language-"].line-numbers > code {
 		pointer-events: none;
 		display: block;
 		counter-increment: linenumber;
+		text-align: right;
+		transform: translateX(calc(50% - .8em)) translateY(calc(50% - .15em));
 	}
 
 		.line-numbers-rows > span:before {
@@ -207,7 +212,7 @@ div.code-toolbar {
 
 div.code-toolbar > .toolbar {
 	position: absolute;
-	top: .3em;
+	top: 0;
 	right: .2em;
 	transition: opacity 0.3s ease-in-out;
 	opacity: 0;
