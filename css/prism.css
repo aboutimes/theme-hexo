@@ -161,7 +161,7 @@ pre[class*="language-"] {
 
 pre[class*="language-"].line-numbers {
 	position: relative;
-	padding-left: 3.8em;
+	padding-left: 3.2em;
 	counter-reset: linenumber;
 }
 
@@ -177,7 +177,7 @@ pre[class*="language-"].line-numbers > code {
 	bottom: -.5em;
 
 	font-size: 100%;
-	left: -3.8em;
+	left: -3.2em;
 	min-width: 2em; /* works for line-numbers below 1000 lines */
 	/*padding: 0 3px;*/
 	letter-spacing: -1px;
