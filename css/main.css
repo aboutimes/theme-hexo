@@ -435,6 +435,7 @@ body {
 .main-inner {
   margin: 0 auto;
   width: 80%;
+  max-width: 860px;
 }
 @media (min-width: 1600px) {
   .container .main-inner {
@@ -1590,7 +1591,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9800ff;
+  background: #ff866a;
 }
 .links-of-blogroll {
   font-size: 13px;

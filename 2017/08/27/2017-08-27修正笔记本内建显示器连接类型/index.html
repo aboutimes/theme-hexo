@@ -438,7 +438,7 @@ HDMI-1 disconnected (normal left inverted right x axis y axis)
 <ul>
 <li>通过 IORegistryExplorer 软件查看显卡( IGPU )下 <code>AppleIntelFramebuffer@0</code> 的 <code>connector-type</code></li>
 </ul>
-<p><img src="/images/2017-08-27-03.png" alt=""></p>
+<p><img src="/images/2017-08-27-03.jpg" alt=""></p>
 <ul>
 <li>接口类型及数值参考，如果与 ubuntu 下显示类型相同则无须更改，如有差异可通过如下方法修正。</li>
 </ul>
@@ -473,14 +473,14 @@ HDMI-1 disconnected (normal left inverted right x axis y axis)
 </tbody>
 </table>
 <h2 id="4、确认加载的显卡驱动"><a href="#4、确认加载的显卡驱动" class="headerlink" title="4、确认加载的显卡驱动"></a>4、确认加载的显卡驱动</h2><h3 id="4-1、查看显卡驱动"><a href="#4-1、查看显卡驱动" class="headerlink" title="4.1、查看显卡驱动"></a>4.1、查看显卡驱动</h3><p>打开<code>系统信息－&gt;功能扩展</code>查看自己笔记本加载的显 AppleIntelFramebuffer 驱动,如图记住 <code>AppleIntelFramebufferAzul</code></p>
-<p><img src="/images/2017-08-27-05.png" alt=""></p>
+<p><img src="/images/2017-08-27-05.jpg" alt=""></p>
 <h3 id="4-2、查看显卡驱动-id"><a href="#4-2、查看显卡驱动-id" class="headerlink" title="4.2、查看显卡驱动 id"></a>4.2、查看显卡驱动 id</h3><p>通过 IORegistryExplorer 软件查看显卡( IGPU )下 <code>IGPU@</code> 的 <code>ig-platform-id</code> ，记录 <code>08 00 2e 0a</code></p>
-<p><img src="/images/2017-08-27-04.png" alt=""></p>
+<p><img src="/images/2017-08-27-04.jpg" alt=""></p>
 <h2 id="5、修正接口类型-connector-type"><a href="#5、修正接口类型-connector-type" class="headerlink" title="5、修正接口类型 connector type"></a>5、修正接口类型 connector type</h2><h3 id="5-1、查看驱动源码"><a href="#5-1、查看驱动源码" class="headerlink" title="5.1、查看驱动源码"></a>5.1、查看驱动源码</h3><p>在 mac 终端，通过以下命令查看 AppleIntelFramebufferAzul 二进制代码，命令路径根据实际更改</p>
 <pre><code class="line-numbers language-bash">hexdump -C /System/Library/Extensions/AppleIntelFramebufferAzul.kext/Contents/MacOS/AppleIntelFramebufferAzul
 </code></pre>
 <h3 id="5-2、获取驱动-id"><a href="#5-2、获取驱动-id" class="headerlink" title="5.2、获取驱动 id"></a>5.2、获取驱动 id</h3><p>得到如下二进制表，<code>Command＋F</code> 查找前面找到的 <code>ig-platform-id</code> 值 <code>08 00 2e 0a</code></p>
-<p><img src="/images/2017-08-27-06.png" alt=""></p>
+<p><img src="/images/2017-08-27-06.jpg" alt=""></p>
 <h3 id="5-3、驱动-id-解释"><a href="#5-3、驱动-id-解释" class="headerlink" title="5.3、驱动 id 解释"></a>5.3、驱动 id 解释</h3><pre><code class="line-numbers language-bash">08 00 2e 0a 01 03 03 03  00 00 00 04 00 00 20 02
 00 00 50 01 00 00 00 60  6c 05 00 00 6c 05 00 00
 00 00 00 00 00 00 00 00  00 00 08 00 
