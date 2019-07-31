@@ -310,9 +310,9 @@ const COLOR_DATA = {
       },        
       "洋红": {
         class: "black",
-        title: "洋红：色橘红。",
-        rgb: "rgb(255, 0, 151)",
-        color16: "#ff0097",
+        title: "洋红：色橘红，用以画花卉。",
+        rgb: "rgb(255, 71, 119)",
+        color16: "#ff4777",
       },        
       "枣红": {
         class: "white",
