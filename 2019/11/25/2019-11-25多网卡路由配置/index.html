@@ -1,0 +1,785 @@
+<!doctype html>
+
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="google" content="notranslate">
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+<link href="/css/main.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/prism.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: false,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="aboutimes.com/2019/11/25/2019-11-25多网卡路由配置/"/>
+
+
+
+  <title>多网卡路由配置 | 舊時光</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <!-- <div class="headband"></div> -->
+
+    <header id="header" class="header">
+      <div class="header-inner">
+<div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+      <div class="site-meta-headline">
+        <a href="/">
+          <img class="custom-logo-image" src="/images/logo.png"
+               alt="舊時光"/>
+        </a>
+      </div>
+    
+    <span class="description"></span>
+    <!-- 
+      <p class="site-subtitle"></p>
+     -->
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home" id="menu-home">
+          
+            <a href="/" rel="section">
+              
+              回首
+            </a>
+          
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives" id="menu-archives">
+          
+            <a href="/archives/" rel="section">
+              
+              流年
+            </a>
+          
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags" id="menu-tags">
+          
+            <a href="/tags/" rel="section">
+              
+              时光印记
+            </a>
+          
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories" id="menu-categories">
+          
+            <a href="/categories/">
+              
+              分类
+              <span class="arrow"></span>
+              <ul class="submenu">
+              <!-- 分类链接 -->
+                
+                  <li><a href="/categories/见闻/" class="nav-link">见闻</a></li>
+                
+                  <li><a href="/categories/笔记/" class="nav-link">笔记</a></li>
+                
+              </ul>
+            </a>
+            
+          
+        </li>
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+ 
+      </div>
+      
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner" id="maininner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " ">
+    <link itemprop="mainEntityOfPage" href="aboutimes.com/2019/11/25/2019-11-25多网卡路由配置/">
+
+    <span hidden itemprop="author">
+      <meta itemprop="name" content="Couh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher">
+      <meta itemprop="name" content="舊時光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"><a class="post-title-link post-title-link-external" itemprop="url">多网卡路由配置</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <svg style="vertical-align: middle;" class="icon" fill='#999' width="1em" height="1em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <path d="M744.571429 550.857143l-292.571429 292.571428q-5.714286 5.142857-13.142857 5.142858t-13.142857-5.142858l-164.571429-164.571428q-5.142857-5.714286-5.142857-13.142857t5.142857-12.571429l26.285714-26.285714q5.142857-5.142857 12.571429-5.142857t13.142857 5.142857l125.714286 125.714286 253.714286-253.714286q5.714286-5.142857 13.142857-5.142857t12.571428 5.142857l26.285715 26.285714q5.142857 5.142857 5.142857 12.571429t-5.142857 13.142857zM73.142857 950.857143h804.571429V365.714286H73.142857v585.142857zM292.571429 256V91.428571q0-8-5.142858-13.142857t-13.142857-5.142857h-36.571428q-8 0-13.142857 5.142857t-5.142858 13.142857v164.571429q0 8 5.142858 13.142857t13.142857 5.142857h36.571428q8 0 13.142857-5.142857t5.142858-13.142857z m438.857142 0V91.428571q0-8-5.142857-13.142857t-13.142857-5.142857h-36.571428q-8 0-13.142858 5.142857t-5.142857 13.142857v164.571429q0 8 5.142857 13.142857t13.142858 5.142857h36.571428q8 0 13.142857-5.142857t5.142857-13.142857z m219.428572-36.571429v731.428572q0 29.714286-21.714286 51.428571t-51.428571 21.714286H73.142857q-29.714286 0-51.428571-21.714286t-21.714286-51.428571V219.428571q0-29.714286 21.714286-51.428571t51.428571-21.714286h73.142857v-54.857143q0-37.714286 26.857143-64.571428T237.714286 0h36.571428q37.714286 0 64.571429 26.857143t26.857143 64.571428v54.857143h219.428571v-54.857143q0-37.714286 26.857143-64.571428t64.571429-26.857143h36.571428q37.714286 0 64.571429 26.857143t26.857143 64.571428v54.857143h73.142857q29.714286 0 51.428571 21.714286t21.714286 51.428571z" />
+              </svg>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-25T00:00:00+08:00" style="color:#222;vertical-align: middle;">
+                2019-11-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <!-- <span class="post-meta-item-icon">
+                <i class="icon-classify"></i>
+              </span> -->
+
+              
+                
+                
+                <svg style="vertical-align: middle;" class="icon" fill='#999' width="1.2em" height="1.2em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M840.268442 529.277502l0 259.159458c0 28.579919-23.251563 51.831482-51.831482 51.831482L235.56304 840.268442c-28.579919 0-51.831482-23.252587-51.831482-51.831482L183.731558 235.56304c0-28.580942 23.252587-51.831482 51.831482-51.831482l276.43696 0 0-34.555004c-141.105738 0-276.43696 0-276.43696 0-47.709605 0-86.386486 38.674834-86.386486 86.386486l0 552.873919c0 47.709605 38.676881 86.386486 86.386486 86.386486l552.873919 0c47.710628 0 86.386486-38.676881 86.386486-86.386486 0 0 0-123.322723 0-259.159458l-0.343831-0.360204L840.268442 529.277502zM846.646626 237.488512l-354.401433 354.401433-60.607769-60.607769 354.401433-354.401433 60.607769 60.607769ZM379.594411 643.927705 479.007585 605.123934 418.399205 544.515554ZM862.172311 161.827689c-16.868179-16.868179-44.216038-16.868179-61.084217 0l61.084217 61.084217C879.040491 206.043726 879.040491 178.695868 862.172311 161.827689z" /></svg>
+                
+                
+                <span itemprop="about">
+                  <a href="/categories/笔记/" itemprop="url" rel="index" style="vertical-align: middle;">
+                    <!-- <span itemprop="name">笔记</span> -->
+                    笔记
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+          <span class="post-meta-divider">|</span>
+          <svg style="vertical-align: middle;" class="icon" fill='#999' width="1em" height="1em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <path d="M501.434368 0c-141.385728 0-256 114.614272-256 256s114.614272 256 256 256 256-114.614272 256-256S642.818048 0 501.434368 0zM503.228416 460.8c-113.106944 0-204.8-91.693056-204.8-204.8 0-113.108992 91.693056-204.8 204.8-204.8s204.8 91.691008 204.8 204.8C708.028416 369.106944 616.33536 460.8 503.228416 460.8z"  /><path d="M76.818432 950.798336C77.428736 710.965248 272.0256 516.73088 512 516.73088s434.571264 194.236416 435.181568 434.067456l52.789248 0C999.360512 681.811968 781.129728 463.941632 512 463.941632S24.639488 681.811968 24.029184 950.798336L76.818432 950.798336z"  />
+          </svg>
+          <span style="color:#222;vertical-align: middle;"> Couh</span>
+          <!-- 增加作者<span class="fa fa-user-o"> </span> -->
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/images/2019-11-25-01.jpg" alt=""><br>　　由于工作需要，平时会用到内网和外网，奈何电脑公司不给力，敷衍装了个切换器，每次切换网络都要先切换网线再切换 IP 地址，起初也觉得可以接受，时间久了感觉太影响效率，而且不能同时使用内外网，家里刚好有个不用的 USB 网卡，与其放着浪费，就来拿办公室用了。想着应该接上网卡，分别设置 IP 就可以内外网同时使用了，然而并没有这么简单，设置好之后总是只能连接上一个网络。百思不解，于是向谷歌发问，结果一致指向路由配置。<a id="more"></a><br>　　<strong>路由</strong>是选择一条数据包传输路径的过程，是主机向目的地发送数据的过程。当 TCP/IP 主机发送 IP 数据包时，便出现了路由，且当到达 IP 路由器时还会再次出现。<strong>路由器</strong>是从一个物理网向另一个物理网发送数据包的装置，路由器通常也被称为<strong>网关</strong>，它承但着分发数据包的任务。过程如下：</p>
+<blockquote>
+<p>1.当一个主机试图与另一个主机通信时，IP 首先确定目的主机是一个内网还是外网；<br>2.如果在同一内网，那就是直接发送；<br>3.如果不在同一个内网，比如外网，IP 将查询路由表来为外网主机或外网选择一个路由；<br>4.如果未找到明确的路由，IP 用路由表中默认网关地址将一个数据传送给下一个指定的路由器；<br>5.在该路由器收到数据后，它再次为远程主机或网络查询路由，若还未找到路由，重复上一步。</p>
+</blockquote>
+<p>　　传输过程中需要经过多个网络，每个被经过的网络设备点（有能力路由的）叫做一个跃点，地址就是它的 ip。跃点数是经过了多少个跃点的累加器，为了防止无用的数据包在网上流散。为路由指定所需跃点数的整数值（范围是 1 ~ 9999），它用来在路由表里的多个路由中选择与转发包中的目标地址最为匹配的路由。所选的路由具有最少的跃点数。跃点数能够反映跃点的数量、路径的速度、路径可靠性、路径吞吐量以及管理属性。<br>　　Windows 系统中默认网关通常只有一个，这就导致了默认网关冲突，无法同时连接内外网，所以需要进行额外的路由设置。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th style="text-align:left">外网</th>
+<th style="text-align:left">内网</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IP地址</td>
+<td style="text-align:left">192.168.97.24</td>
+<td style="text-align:left">10.42.29.24</td>
+</tr>
+<tr>
+<td>子网掩码</td>
+<td style="text-align:left">255.255.255.0</td>
+<td style="text-align:left">255.255.255.0</td>
+</tr>
+<tr>
+<td>网关</td>
+<td style="text-align:left">192.168.97.1</td>
+<td style="text-align:left">10.42.29.12</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1、设置参数"><a href="#1、设置参数" class="headerlink" title="1、设置参数"></a>1、设置参数</h2><p>按参数分别设置好两个网卡的 IP 、子网掩码和网关。</p>
+<h2 id="2、查看默认路由"><a href="#2、查看默认路由" class="headerlink" title="2、查看默认路由"></a>2、查看默认路由</h2><p>打开<strong>命令提示符（CMD）</strong>或者是 <strong>PowerShell</strong>，输入：<code>route print</code> 查看路由如下：</p>
+<pre><code class="line-numbers language-bash">IPv4 路由表
+======================================================================
+活动路由:
+网络目标          网络掩码           网关           接口             跃点数
+0.0.0.0          0.0.0.0          192.168.97.1   192.168.97.24   10
+192.168.97.0     255.255.255.0    在链路上        192.168.97.24   266
+192.168.97.21    255.255.255.255  在链路上        192.168.97.24   266
+192.168.97.255   255.255.255.255  在链路上        192.168.97.24   266
+127.0.0.0        255.0.0.0        在链路上        127.0.0.1       306
+127.0.0.1        255.255.255.255  在链路上        127.0.0.1       306
+127.255.255.255  255.255.255.255  在链路上        127.0.0.1       306
+224.0.0.0        240.0.0.0        在链路上        127.0.0.1       306
+224.0.0.0        240.0.0.0        在链路上        192.168.97.24   266
+255.255.255.255  255.255.255.255  在链路上        127.0.0.1       306
+255.255.255.255  255.255.255.255  在链路上        192.168.97.24   266
+======================================================================
+永久路由:
+  无
+</code></pre>
+<p>可以看到没有永久路由，默认路由如下：</p>
+<pre><code class="line-numbers language-bash">网络目标          网络掩码           网关           接口            跃点数
+0.0.0.0          0.0.0.0          192.168.1.1   192.168.1.21    10
+</code></pre>
+<h2 id="3、设置路由"><a href="#3、设置路由" class="headerlink" title="3、设置路由"></a>3、设置路由</h2><h3 id="3-1、删除默认路由"><a href="#3-1、删除默认路由" class="headerlink" title="3.1、删除默认路由"></a>3.1、删除默认路由</h3><pre><code class="line-numbers language-bash"># 删除所有的 0.0.0.0 的路由
+route delete 0.0.0.0
+</code></pre>
+<h3 id="3-2、设置外网路由"><a href="#3-2、设置外网路由" class="headerlink" title="3.2、设置外网路由"></a>3.2、设置外网路由</h3><pre><code class="line-numbers language-bash"># 添加 0.0.0.0 网络路由，这个是缺省时路由用 192.168.1.1, 加上 -p 的目的是设为静态（永久）路由，防止下次重起时配置消失。
+route add 0.0.0.0 mask 0.0.0.0 192.168.97.1 -p
+</code></pre>
+<h3 id="3-3、设置内网路由"><a href="#3-3、设置内网路由" class="headerlink" title="3.3、设置内网路由"></a>3.3、设置内网路由</h3><pre><code class="line-numbers language-bash"># 如果内网要访问多个网段 10.128.x.x，后两位留空
+route add 10.42.0.0 mask 255.255.0.0 10.42.29.12 -p
+</code></pre>
+<p>可以看到多了两个永久路由：</p>
+<pre><code class="line-numbers language-bash">IPv4 路由表
+======================================================================
+活动路由:
+网络目标          网络掩码           网关           接口             跃点数
+0.0.0.0          0.0.0.0          192.168.97.1   192.168.97.24   20
+10.42.0.0        255.255.0.0      10.128.42.12   10.42.29.24     10
+192.168.97.0     255.255.255.0    在链路上        192.168.97.24   266
+192.168.97.21    255.255.255.255  在链路上        192.168.97.24   266
+192.168.97.255   255.255.255.255  在链路上        192.168.97.24   266
+127.0.0.0        255.0.0.0        在链路上        127.0.0.1       306
+127.0.0.1        255.255.255.255  在链路上        127.0.0.1       306
+127.255.255.255  255.255.255.255  在链路上        127.0.0.1       306
+224.0.0.0        240.0.0.0        在链路上        127.0.0.1       306
+224.0.0.0        240.0.0.0        在链路上        192.168.97.24   266
+255.255.255.255  255.255.255.255  在链路上        127.0.0.1       306
+255.255.255.255  255.255.255.255  在链路上        192.168.97.24   266
+======================================================================
+永久路由:
+网络地址          网络掩码           网关地址       跃点数
+0.0.0.0          0.0.0.0          192.168.97.1  20
+10.42.0.0        255.255.0.0      10.42.29.12   10
+</code></pre>
+<h2 id="4、路由表重制"><a href="#4、路由表重制" class="headerlink" title="4、路由表重制"></a>4、路由表重制</h2><pre><code class="line-numbers language-bash"># 如果设置错误或想恢复，可以输入命令重制路由表，然后重启
+netsh int ipv4  reset
+</code></pre>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/路由/" rel="tag" class="icon-tag-backup">
+              <svg style="vertical-align: middle;" fill="#999" class="icon" width="1em" height="1em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <path d="M329.142857 256q0-30.281143-21.430857-51.712t-51.712-21.430857-51.712 21.430857-21.430857 51.712 21.430857 51.712 51.712 21.430857 51.712-21.430857 21.430857-51.712zM938.861714 585.142857q0 30.281143-21.138286 51.419429l-280.576 281.161143q-22.308571 21.138286-52.004571 21.138286-30.281143 0-51.419429-21.138286l-408.576-409.161143q-21.723429-21.138286-36.864-57.709714t-15.140571-66.852571l0-237.714286q0-29.696 21.723429-51.419429t51.419429-21.723429l237.714286 0q30.281143 0 66.852571 15.140571t58.294857 36.864l408.576 407.990857q21.138286 22.308571 21.138286 52.004571z" />
+              </svg>
+             路由
+           </a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/07/2019-10-07离子推进器/" rel="next" title="离子推进器">
+                <svg style="transform: translateX(calc(50% - .55em)) translateY(calc(50% - .35em));" class="icon" fill="#222" width="1em" height="1em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M359.261 495.219q85.098-85.098 341.118-341.118 5.091-5.819 5.091-10.91 0-5.091-5.091-10.183-5.091-5.091-10.183-5.091-5.091 0-10.91 5.091-119.282 118.555-357.119 356.392-5.091 5.091-5.091 10.183 0 5.819 5.091 10.91 0.727 0 1.455 0.727 88.734 89.462 355.665 356.392 5.819 5.091 10.91 5.091 5.091 0 10.183-5.091 5.091-4.364 5.091-10.183 0-5.819-5.091-10.91-113.464-113.464-341.118-341.118-1.455-2.182-1.455-5.091 0-2.909 1.455-5.091z" /></svg>
+                 离子推进器
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    <!-- 评论 -->
+    <div id="showtalk">查看评论</div>
+    <div id="container"></div>
+    <script>
+      var showtalk = document.getElementById("showtalk");
+      var container = document.getElementById("container");
+      var status = true;
+      window.onload=function (){
+        if (typeof Gitment!='function') {// 如果未缓存，加载 js 和 css
+          $("head").append("<link>");
+          var css = $("head").children(":last");
+          css.attr({
+            rel:  "stylesheet",
+            type: "text/css",
+            href: "/css/gitment.css"
+          });
+          $.getScript('/js/gitment.js');
+        }
+      }
+      showtalk.onclick=function(){
+        if (status == 'true') {
+          var gitment = new Gitment({
+            id: document.title, 
+            owner: 'aboutimes',
+            repo: 'theme-hexo',
+            oauth: {
+              client_id: 'a4658b7937231833073e',
+              client_secret: 'ee0e478222be08062f68c03d1f6ca433c05e5209',
+            },
+          });
+          status = false;
+          gitment.render('container');
+          showtalk.innerHTML = '收起评论';
+        }else {
+          status = true;
+          container.innerHTML = '';
+          showtalk.innerHTML = '查看评论';
+        }
+      };
+    </script>
+    <!-- 评论 -->
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner" id="sidebarinner">
+        
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+        </ul>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+              
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、设置参数"><span class="nav-text">1、设置参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、查看默认路由"><span class="nav-text">2、查看默认路由</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、设置路由"><span class="nav-text">3、设置路由</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1、删除默认路由"><span class="nav-text">3.1、删除默认路由</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2、设置外网路由"><span class="nav-text">3.2、设置外网路由</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3、设置内网路由"><span class="nav-text">3.3、设置内网路由</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、路由表重制"><span class="nav-text">4、路由表重制</span></a></li></ol></div>
+          </div>
+        </section>
+      <!--/noindex-->
+      
+      
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="me" style="font-weight:lighter;">
+  
+    
+      <span class="links-of-author-item">
+        
+       </span>
+    
+      <span class="links-of-author-item">
+        
+       </span>
+    
+  
+</div>
+<ul class="links-of-blogroll-list" style="font-weight:200;">
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://isujin.com" title="素錦" target="_blank">素錦</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://sometime.me" title="寒塘渡月" target="_blank">寒塘渡月</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="https://www.inoodle.net" title="伤心凉面" target="_blank">伤心凉面</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://www.lyh2.com" title="青筑" target="_blank">青筑</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://mir.no/work" title="MIR." target="_blank">MIR.</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://modelo.io" title="MODELO" target="_blank">MODELO</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://scz.617.cn" title="青衣十三楼" target="_blank">青衣十三楼</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="http://1416.me" title="1416教室" target="_blank">1416教室</a>
+    </li>
+  
+    <li class="links-of-blogroll-item"  style="display: inline-block;">
+      <a href="https://www.fieldevo.com/" title="Fieldevo" target="_blank">Fieldevo</a>
+    </li>
+  
+</ul>
+<div class="copyright" style="top:50px;font-weight:lighter;">
+  
+  &copy;  2012 - 
+  <span itemprop="copyrightYear">2020</span>  
+  <span class="author" itemprop="copyrightHolder">Couh. All rights reserved</span>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <svg style="vertical-align: middle;" class="icon" width="1em" height="1em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <path d="M504.962 328.269q-102.937 102.937-412.627 412.627-6.159 6.159-13.197 6.159-7.038 0-12.317-6.159-6.159-6.159-6.159-12.317 0-6.159 6.159-13.197 144.287-144.287 431.983-431.983 6.159-6.159 13.197-6.159 6.159 0 12.317 6.159 0.88 0.88 1.76 1.76 107.336 107.336 431.103 430.223 6.159 6.159 6.159 12.317 0 7.038-6.159 13.197-6.159 6.159-13.197 6.159-6.159 0-12.317-6.159-138.129-137.249-414.387-412.627-6.159-6.159-12.317 0z" />
+        </svg>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/prism/prism.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

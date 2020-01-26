@@ -7,7 +7,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  */
 code {
 	font-family: Menlo;
-  padding: 2px 4px;
+  padding: 2px 0px;
   word-wrap: break-word;
   color: #fc6423;
   background: #eee;
