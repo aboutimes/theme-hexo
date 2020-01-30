@@ -1591,7 +1591,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f2134e;
+  background: #0affe5;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2581,4 +2581,31 @@ li:hover>ul.submenu {
 }
 .gitment-container *:disabled {
   cursor: not-allowed;
+}
+@media (max-width: 767px) {
+  .gitment-comment-avatar,
+  .gitment-comment-avatar-img,
+  .gitment-editor-avatar-img,
+  .gitment-editor-avatar svg {
+    width: 30px !important;
+    height: 30px !important;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 767px) {
+  .gitment-comment,
+  .gitment-editor-container {
+    padding-left: 42px !important;
+  }
+}
+@media (max-width: 767px) {
+  .gitment-comment-avatar,
+  .gitment-editor-avatar {
+    margin-left: -42px !important;
+  }
+}
+@media (max-width: 767px) {
+  .gitment-footer-container {
+    margin-left: 42px !important;
+  }
 }
