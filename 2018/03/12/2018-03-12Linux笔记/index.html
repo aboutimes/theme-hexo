@@ -1,363 +1,164 @@
-<!doctype html>
+
 
 <html lang="zh-CN">
-<head>
+  <head>
   <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="google" content="notranslate">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
 
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <meta name="theme-color" content="#42dbbc" />
+  <meta name="msapplication-navbutton-color" content="#f8f5ec" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec" />
 
   
   
   
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
   
 
-  
+  <title>舊時光</title>
 
-  
-
-  
-
-  
 
   
 
+  <link rel="stylesheet" href="/css/atom-one-light.css">
+
+  <link rel="stylesheet" href="/css/style.css">
+
   
 
-
-
-
-
-
-
-<link href="/css/main.css" rel="stylesheet" type="text/css" />
-
-<link href="/css/prism.css" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
-    fancybox: false,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: "",
-      labels: ""
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="aboutimes.com/2018/03/12/2018-03-12Linux笔记/"/>
-
-
-
-  <title>Linux 笔记 | 舊時光</title>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <script>
+    window.config = {"title":"舊時光","subtitle":"About Me","description":null,"author":"COUH","language":"zh-CN","timezone":null,"url":"aboutimes.com","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":"README.md","new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":"atom-one-light","default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":3,"pagination_dir":"page","theme":"finemoon","deploy":{"type":"git","repo":"git@github.com:aboutimes/theme-hexo.git","branch":"master"},"ignore":[],"gitalk":"enable","gitment_id":null,"gitment_owner":"aboutimes","gitment_repo":"theme-hexo","client_id":"a4658b7937231833073e","client_secret":"ee0e478222be08062f68c03d1f6ca433c05e5209","archive":1,"category":1,"archive_generator":{"per_page":0,"yearly":true,"monthly":true,"daily":false},"category_generator":{"per_page":0},"tag_generator":{"per_page":0},"plugins":"hexo-footnotes","marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"index_generator":{"per_page":3,"order_by":"-date"},"server":{"port":4000,"log":false,"ip":"0.0.0.0","compress":false,"header":true},"favicon":"/images/favicon.ico","menu":{"archives":"/archives","categories":"/categories","tags":"/tags"},"show_tag":true,"excerpt_link":"Read More","fancybox":false,"disqus_shortname":null,"comment":{"enable":true},"rss":"default","social":{"enable":false,"email":"dasd","instagram":"dasd","douban":"das","linkedin":"dsa","weibo":null,"stackoverflow":null,"facebook":null,"twitter":null,"github":null,"google":null,"zhihu":null,"pocket":null},"friends":{"老爹的铁铺":"https://www.26fe.cn","素錦":"http://isujin.com","寒塘渡月":"http://sometime.me","伤心凉面":"https://www.inoodle.net","MIR.":"http://mir.no/work","MODELO":"http://modelo.io","青衣十三楼":"http://scz.617.cn","1416教室":"http://1416.me","Fieldevo":"https://www.fieldevo.com/"},"since":2012,"google_analytics":null,"portfolio":null,"about":null,"poem":false};
+  </script>
 </head>
-
-<body>
-
-  
-  
+  <body>
     
-  
 
-  <div class="container sidebar-position-left page-post-detail ">
-    <!-- <div class="headband"></div> -->
-
-    <header id="header" class="header">
-      <div class="header-inner">
-<div class="site-brand-wrapper">
-  <div class="site-meta custom-logo">
-    
-      <div class="site-meta-headline">
+<header class="blog-slide">
+  <nav class="blog-header">
+    <a class="mobile toggle-button">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.2em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1536 1280"><path d="M1536 1088v128q0 26-19 45t-45 19H64q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19H64q-26 0-45-19T0 704V576q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19H64q-26 0-45-19T0 192V64q0-26 19-45T64 0h1408q26 0 45 19t19 45z" fill="#626262"/><rect x="0" y="0" width="1536" height="1280" fill="rgba(0, 0, 0, 0)" /></svg>
+    </a>
+    <ul>
+      <li class="title">
         <a href="/">
-          <img class="custom-logo-image" src="/images/logo.png"
-               alt="舊時光"/>
+          <!-- 舊時光 -->
+          <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+           width="128" height="40" style="margin-top: -10px;" viewBox="0 0 128 40"
+           preserveAspectRatio="xMidYMid meet">
+            <g transform="translate(0.000000,40.000000) scale(0.100000,-0.100000)" fill="#f5f5f5" stroke="none">
+              <path d="M177 360 c3 -11 10 -23 15 -26 5 -3 1 -12 -9 -20 -17 -14 -16 -15 7
+              -8 46 12 69 44 31 44 -10 0 -21 7 -25 15 -8 23 -25 18 -19 -5z"/>
+              <path d="M680 335 c0 -15 -6 -25 -14 -25 -8 0 -17 -4 -21 -9 -3 -6 3 -8 15 -6
+              48 9 33 -38 -23 -66 l-40 -21 7 26 c3 14 2 26 -3 26 -5 0 -9 12 -8 26 2 19 -4
+              29 -22 35 -20 8 -22 7 -16 -8 18 -45 17 -52 -8 -58 -17 -5 -29 -18 -36 -37
+              -16 -46 -13 -66 13 -92 12 -13 26 -31 29 -40 4 -9 13 -16 22 -16 11 0 15 12
+              17 50 2 72 2 74 13 82 6 4 22 8 37 8 15 0 30 5 33 10 3 6 11 10 18 10 6 0 -7
+              -18 -28 -40 -33 -34 -37 -42 -25 -51 8 -5 20 -13 26 -17 5 -4 20 -24 33 -45
+              12 -20 27 -35 32 -31 5 3 9 33 9 68 0 36 5 67 12 74 10 10 10 15 -2 23 -13 8
+              -12 11 4 24 29 22 6 43 -29 27 -34 -16 -33 2 3 35 18 17 23 27 14 30 -7 3 -19
+              11 -26 19 -22 21 -36 17 -36 -11z m-134 -152 c-11 -11 -19 6 -11 24 8 17 8 17
+              12 0 3 -10 2 -21 -1 -24z m173 -50 c0 -37 0 -38 -16 -15 -8 12 -23 22 -32 22
+              -13 1 -13 3 3 15 33 25 46 18 45 -22z"/>
+              <path d="M1038 313 c-3 -25 -7 -28 -39 -26 -32 2 -36 0 -32 -18 8 -29 19 -32
+              48 -13 24 16 25 16 25 -9 0 -14 -11 -39 -25 -55 -35 -42 -31 -46 18 -21 l42
+              21 -47 -45 c-64 -60 -63 -80 0 -23 l24 21 31 -38 c24 -28 40 -37 62 -37 31 0
+              75 24 75 41 0 14 -20 11 -36 -6 -24 -24 -58 -18 -90 16 l-29 31 50 44 c45 40
+              47 44 25 44 -14 0 -36 -9 -50 -20 -53 -41 -46 -17 11 37 32 31 59 60 59 65 0
+              11 -37 10 -60 -2 -13 -7 -21 -6 -30 5 -18 22 -28 18 -32 -12z m62 -24 c-7 -11
+              -14 -18 -17 -15 -8 8 5 36 17 36 7 0 7 -6 0 -21z"/>
+              <path d="M266 302 c-3 -6 8 -12 24 -14 19 -3 29 -1 27 6 -5 14 -43 20 -51 8z"/>
+              <path d="M210 276 c-6 -8 -26 -16 -43 -18 -27 -3 -29 -5 -13 -13 12 -5 26 -4
+              38 4 11 7 22 10 24 8 9 -8 -8 -36 -25 -42 -10 -3 -28 -17 -41 -30 -23 -24 -23
+              -26 -5 -39 17 -12 17 -14 -5 -44 -13 -18 -20 -37 -16 -47 8 -21 30 -15 34 10
+              3 10 0 15 -7 11 -15 -10 -14 17 1 32 17 17 41 15 34 -3 -14 -39 35 -93 73 -80
+              28 9 46 60 33 90 -13 29 -28 31 -54 8 -17 -15 -18 -15 -18 6 0 13 10 26 26 33
+              24 11 24 13 8 25 -14 10 -15 15 -4 28 10 12 9 16 -5 21 -12 5 -15 14 -11 30 7
+              27 -5 32 -24 10z m-9 -80 c-6 -7 -9 -20 -6 -28 7 -19 -24 -33 -39 -18 -6 6 -2
+              18 14 35 24 26 51 36 31 11z m73 -92 c4 -9 4 -19 1 -22 -7 -8 -35 19 -29 29 8
+              14 21 11 28 -7z m-19 -34 c3 -6 -1 -13 -10 -16 -19 -8 -30 0 -20 15 8 14 22
+              14 30 1z"/>
+              <path d="M50 242 c0 -5 7 -15 16 -22 12 -11 18 -10 32 5 16 17 16 17 -2 11
+              -10 -3 -25 -1 -32 5 -8 7 -14 7 -14 1z"/>
+            </g>
+          </svg>
         </a>
-      </div>
-    
-    <span class="description"></span>
-    <!-- 
-      <p class="site-subtitle"></p>
-     -->
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
+      </li>
       
         
-        <li class="menu-item menu-item-home" id="menu-home">
-          
-            <a href="/" rel="section">
-              
-              回首
-            </a>
-          
+        <li class="nav-item">
+          <a href="/archives" >往事</a>
         </li>
+           
       
         
-        <li class="menu-item menu-item-archives" id="menu-archives">
-          
-            <a href="/archives/" rel="section">
-              
-              流年
-            </a>
-          
+        <li class="nav-item">
+          <a href="/categories" >记闻</a>
         </li>
+           
       
         
-        <li class="menu-item menu-item-tags" id="menu-tags">
-          
-            <a href="/tags/" rel="section">
-              
-              时光印记
-            </a>
-          
+        <li class="nav-item">
+          <a href="/tags" >印象</a>
         </li>
-      
-        
-        <li class="menu-item menu-item-categories" id="menu-categories">
-          
-            <a href="/categories/">
-              
-              分类
-              <span class="arrow"></span>
-              <ul class="submenu">
-              <!-- 分类链接 -->
-                
-                  <li><a href="/categories/见闻/" class="nav-link">见闻</a></li>
-                
-                  <li><a href="/categories/笔记/" class="nav-link">笔记</a></li>
-                
-              </ul>
-            </a>
-            
-          
-        </li>
-      
+           
       
     </ul>
+  </nav>
+</header>
+    
+<nav id="menu">
   
-
+    
+      <a href="/archives" >往事</a>
+       
+  
+    
+      <a href="/categories" >记闻</a>
+       
+  
+    
+      <a href="/tags" >印象</a>
+       
   
 </nav>
+    
+    <main class="blog-main">
+      <article class="blog-post">
+  
 
-
- 
-      </div>
+  <div class="post-content">
+    <div class="post-header">
       
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner" id="maininner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " ">
-    <link itemprop="mainEntityOfPage" href="aboutimes.com/2018/03/12/2018-03-12Linux笔记/">
-
-    <span hidden itemprop="author">
-      <meta itemprop="name" content="Couh">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher">
-      <meta itemprop="name" content="舊時光">
-    </span>
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline"><a class="post-title-link post-title-link-external" itemprop="url">Linux 笔记</a></h1>
-        
+  
+    <h1 class="post-title">
+      <a href="/2018/03/12/2018-03-12Linux笔记/">
+        Linux 笔记
+      </a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <svg style="vertical-align: middle;" class="icon" fill='#999' width="1em" height="1em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <path d="M744.571429 550.857143l-292.571429 292.571428q-5.714286 5.142857-13.142857 5.142858t-13.142857-5.142858l-164.571429-164.571428q-5.142857-5.714286-5.142857-13.142857t5.142857-12.571429l26.285714-26.285714q5.142857-5.142857 12.571429-5.142857t13.142857 5.142857l125.714286 125.714286 253.714286-253.714286q5.714286-5.142857 13.142857-5.142857t12.571428 5.142857l26.285715 26.285714q5.142857 5.142857 5.142857 12.571429t-5.142857 13.142857zM73.142857 950.857143h804.571429V365.714286H73.142857v585.142857zM292.571429 256V91.428571q0-8-5.142858-13.142857t-13.142857-5.142857h-36.571428q-8 0-13.142857 5.142857t-5.142858 13.142857v164.571429q0 8 5.142858 13.142857t13.142857 5.142857h36.571428q8 0 13.142857-5.142857t5.142858-13.142857z m438.857142 0V91.428571q0-8-5.142857-13.142857t-13.142857-5.142857h-36.571428q-8 0-13.142858 5.142857t-5.142857 13.142857v164.571429q0 8 5.142857 13.142857t13.142858 5.142857h36.571428q8 0 13.142857-5.142857t5.142857-13.142857z m219.428572-36.571429v731.428572q0 29.714286-21.714286 51.428571t-51.428571 21.714286H73.142857q-29.714286 0-51.428571-21.714286t-21.714286-51.428571V219.428571q0-29.714286 21.714286-51.428571t51.428571-21.714286h73.142857v-54.857143q0-37.714286 26.857143-64.571428T237.714286 0h36.571428q37.714286 0 64.571429 26.857143t26.857143 64.571428v54.857143h219.428571v-54.857143q0-37.714286 26.857143-64.571428t64.571429-26.857143h36.571428q37.714286 0 64.571429 26.857143t26.857143 64.571428v54.857143h73.142857q29.714286 0 51.428571 21.714286t21.714286 51.428571z" />
-              </svg>
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-12T00:00:00+08:00" style="color:#222;vertical-align: middle;">
-                2018-03-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <!-- <span class="post-meta-item-icon">
-                <i class="icon-classify"></i>
-              </span> -->
-
-              
-                
-                
-                <svg style="vertical-align: middle;" class="icon" fill='#999' width="1.2em" height="1.2em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M840.268442 529.277502l0 259.159458c0 28.579919-23.251563 51.831482-51.831482 51.831482L235.56304 840.268442c-28.579919 0-51.831482-23.252587-51.831482-51.831482L183.731558 235.56304c0-28.580942 23.252587-51.831482 51.831482-51.831482l276.43696 0 0-34.555004c-141.105738 0-276.43696 0-276.43696 0-47.709605 0-86.386486 38.674834-86.386486 86.386486l0 552.873919c0 47.709605 38.676881 86.386486 86.386486 86.386486l552.873919 0c47.710628 0 86.386486-38.676881 86.386486-86.386486 0 0 0-123.322723 0-259.159458l-0.343831-0.360204L840.268442 529.277502zM846.646626 237.488512l-354.401433 354.401433-60.607769-60.607769 354.401433-354.401433 60.607769 60.607769ZM379.594411 643.927705 479.007585 605.123934 418.399205 544.515554ZM862.172311 161.827689c-16.868179-16.868179-44.216038-16.868179-61.084217 0l61.084217 61.084217C879.040491 206.043726 879.040491 178.695868 862.172311 161.827689z" /></svg>
-                
-                
-                <span itemprop="about">
-                  <a href="/categories/笔记/" itemprop="url" rel="index" style="vertical-align: middle;">
-                    <!-- <span itemprop="name">笔记</span> -->
-                    笔记
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-          <span class="post-meta-divider">|</span>
-          <svg style="vertical-align: middle;" class="icon" fill='#999' width="1em" height="1em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <path d="M501.434368 0c-141.385728 0-256 114.614272-256 256s114.614272 256 256 256 256-114.614272 256-256S642.818048 0 501.434368 0zM503.228416 460.8c-113.106944 0-204.8-91.693056-204.8-204.8 0-113.108992 91.693056-204.8 204.8-204.8s204.8 91.691008 204.8 204.8C708.028416 369.106944 616.33536 460.8 503.228416 460.8z"  /><path d="M76.818432 950.798336C77.428736 710.965248 272.0256 516.73088 512 516.73088s434.571264 194.236416 435.181568 434.067456l52.789248 0C999.360512 681.811968 781.129728 463.941632 512 463.941632S24.639488 681.811968 24.029184 950.798336L76.818432 950.798336z"  />
-          </svg>
-          <span style="color:#222;vertical-align: middle;"> Couh</span>
-          <!-- 增加作者<span class="fa fa-user-o"> </span> -->
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
+<div class="post-meta">
+  2018-03-12
+  <!-- 三月 12, 2018 -->
+  
+     | by COUH
+  
+  
+</div>
 
       
-      
-
+    </div>
+    <div class="post-detail">
       
         <p>　　说起来接触 Linux 也算很久了，准确来说是 Ubuntu ，开始只是尝鲜体验桌面版，感觉并不是很方便，遂放弃了。之后是再次用到是因为做 Procast 模拟运算，听说 Linux 运算效率高，试着安装 Linux 版本，来回安装了五六遍，重复输入些看不明白的的指令，可算是装上了软件，奈何执行运算总是出错，当时用 Linux 版本的 Procast 的人很少，社区也查不到什么有效的资料，最后也放弃了。再后来决定转行做开发又一次接触到了 Lunix ，熟悉命令操作便是第一道坎，虽说环境搭建，服务器运行都实践过好几遍，常规的命令也都熟悉，不过前两天面试问到文件权限命令却答不出来，知道大概，但又记不住细节，甚是尴尬。所以抽时间对 Linux 的常用命令做一次梳理、查、汇总，一是加强记忆，二是方便查询。<a id="more"></a></p>
-<h2 id="1、文件操作"><a href="#1、文件操作" class="headerlink" title="1、文件操作"></a>1、文件操作</h2><h3 id="1-1、目录-文件列表"><a href="#1-1、目录-文件列表" class="headerlink" title="1.1、目录/文件列表"></a>1.1、目录/文件列表</h3><pre><code class="line-numbers language-bash">ls          # 列出目录
-ls -l       # 列出长数据串，包含文件的属性与权限数据等  
-ls -a       # 列出全部的文件，连同隐藏文件（开头为.的文件）一起列出来（常用）  
-ls -d       # 仅列出目录本身，而不是列出目录的文件数据  
-ls -h       # 将文件容量以较易读的方式（GB，kB等）列出来  
-ls -R       # 连同子目录的内容一起列出（递归列出），等于该目录下的所有文件都会显示出来  
-
-stat -L index.html       # 列出文件详细信息
-
-# -L：支持符号连接；
-# -f：显示文件系统状态而非文件状态；
-# -t：以简洁方式输出信息；
-# --help：显示指令的帮助信息；
-# --version：显示指令的版本信息。
-</code></pre>
-<h3 id="1-2、访问目录"><a href="#1-2、访问目录" class="headerlink" title="1.2、访问目录"></a>1.2、访问目录</h3><pre><code class="line-numbers language-bash">cd /root/Docements      # 切换到目录 /root/Docements
-cd ./path               # 切换到当前目录下的 path 目录中，“.”表示当前目录
-cd ../path              # 切换到上层目录的 path 目录中，“..”表示上一层目录  
-cd ..                   # 返回上层目录
-cd ../..                # 返回上上层目录
-cd ~                    # 前往 home目录
-</code></pre>
+<h2 id="1、文件操作"><a href="#1、文件操作" class="headerlink" title="1、文件操作"></a>1、文件操作</h2><h3 id="1-1、目录-文件列表"><a href="#1-1、目录-文件列表" class="headerlink" title="1.1、目录/文件列表"></a>1.1、目录/文件列表</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ls          <span class="comment"># 列出目录</span></span><br><span class="line">ls -l       <span class="comment"># 列出长数据串，包含文件的属性与权限数据等  </span></span><br><span class="line">ls -a       <span class="comment"># 列出全部的文件，连同隐藏文件（开头为.的文件）一起列出来（常用）  </span></span><br><span class="line">ls -d       <span class="comment"># 仅列出目录本身，而不是列出目录的文件数据  </span></span><br><span class="line">ls -h       <span class="comment"># 将文件容量以较易读的方式（GB，kB等）列出来  </span></span><br><span class="line">ls -R       <span class="comment"># 连同子目录的内容一起列出（递归列出），等于该目录下的所有文件都会显示出来  </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">stat</span> -L index.html       <span class="comment"># 列出文件详细信息</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># -L：支持符号连接；</span></span><br><span class="line"><span class="comment"># -f：显示文件系统状态而非文件状态；</span></span><br><span class="line"><span class="comment"># -t：以简洁方式输出信息；</span></span><br><span class="line"><span class="comment"># --help：显示指令的帮助信息；</span></span><br><span class="line"><span class="comment"># --version：显示指令的版本信息。</span></span><br></pre></td></tr></table></figure>
+<h3 id="1-2、访问目录"><a href="#1-2、访问目录" class="headerlink" title="1.2、访问目录"></a>1.2、访问目录</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /root/Docements      <span class="comment"># 切换到目录 /root/Docements</span></span><br><span class="line"><span class="built_in">cd</span> ./path               <span class="comment"># 切换到当前目录下的 path 目录中，“.”表示当前目录</span></span><br><span class="line"><span class="built_in">cd</span> ../path              <span class="comment"># 切换到上层目录的 path 目录中，“..”表示上一层目录  </span></span><br><span class="line"><span class="built_in">cd</span> ..                   <span class="comment"># 返回上层目录</span></span><br><span class="line"><span class="built_in">cd</span> ../..                <span class="comment"># 返回上上层目录</span></span><br><span class="line"><span class="built_in">cd</span> ~                    <span class="comment"># 前往 home目录</span></span><br></pre></td></tr></table></figure>
 <h3 id="1-3、通配符"><a href="#1-3、通配符" class="headerlink" title="1.3、通配符"></a>1.3、通配符</h3><table>
 <thead>
 <tr>
@@ -456,185 +257,10 @@ cd ~                    # 前往 home目录
 </tr>
 </tbody>
 </table>
-<h3 id="1-4、编辑目录-文件"><a href="#1-4、编辑目录-文件" class="headerlink" title="1.4、编辑目录/文件"></a>1.4、编辑目录/文件</h3><pre><code class="line-numbers language-bash">cp 参数     #复制文件和目录
-mv 参数     #移动文件和目录
-rm 参数     #删除文件和目录
-
-cp file /path/ab  # 将当前目录文件 file 复制到目录 /path下，并改名为 ab
-cp -R test path
-# 将当前目录中 test 目录复制到 path 目录中，
-# 若 path 目录存在则把 test 目录复制到 path 目录中
-# 若 path 目录不存在则创建 path 目录，并把 test 目录中所有文件复制到 path 目录中
-
-# -a：此参数的效果和同时指定 -dpR 参数相同；
-# -d：当复制符号连接时，把目标文件或目录也建立为符号连接，并指向与源文件或目录连接的原始文件或目录；
-# -f：强行复制文件或目录，不论目标文件或目录是否已存在；
-# -i：覆盖既有文件之前先询问用户；
-# -l：对源文件建立硬连接，而非复制文件；
-# -p：保留源文件或目录的属性；
-# -R/r：递归处理，将指定目录下的所有文件与子目录一并处理；
-# -s：对源文件建立符号连接，而非复制文件；
-# -u：使用这项参数后只会在源文件的更改时间较目标文件更新时或是名称相互对应的目标文件并不存在时，才复制文件；
-# -S：在备份文件时，用指定的后缀 SUFFIX 代替文件的默认后缀；
-# -b：覆盖已存在的文件目标前将目标文件备份；
-# -v：详细显示命令执行的操作。
-</code></pre>
-<h3 id="1-5、新建目录-文件"><a href="#1-5、新建目录-文件" class="headerlink" title="1.5、新建目录/文件"></a>1.5、新建目录/文件</h3><pre><code class="line-numbers language-bash">mkdir (选项)(参数)      #新建目录
-
-mkdir -p-m 750 test/ab
-#在当前目录中建立 test 和 test 下的 ab 目录，权限设置为文件主可读、写、执行，同组用户可读和执行，其他用户无权访问
-
-# -Z：设置安全上下文，当使用 SELinux 时有效；
-# -m&lt;目标属性&gt;或--mode&lt;目标属性&gt;建立目录的同时设置目录的权限；
-# -p或--parents 若所要建立目录的上层目录目前尚未建立，则会一并建立上层目录；
-# --version 显示版本信息。
-
-rmdir (选项)(参数)      #删除空目录
-
-# -p或--parents：删除指定目录后，若该目录的上层目录已变成空目录，则将其一并删除；
-# --ignore-fail-on-non-empty：此选项使rmdir命令忽略由于删除非空目录时导致的错误信息；
-# -v或-verboes：显示命令的详细执行过程；
-# --help：显示命令的帮助信息；
-# --version：显示命令的版本信息。
-
-touch (选项)(参数)      #新建文件
-
-# -a：或--time=atime或--time=access或--time=use  只更改存取时间；
-# -c：或--no-create  不建立任何文件；
-# -d：&lt;时间日期&gt; 使用指定的日期时间，而非现在的时间；
-# -f：此参数将忽略不予处理，仅负责解决 BSD 版本 touch 指令的兼容性问题；
-# -m：或--time=mtime或--time=modify  只更该变动时间；
-# -r：&lt;参考文件或目录&gt;  把指定文件或目录的日期时间，统统设成和参考文件或目录的日期时间相同；
-# -t：&lt;日期时间&gt;  使用指定的日期时间，而非现在的时间；
-# --help：在线帮助；
-# --version：显示版本信息。
-
-vi (选项)(参数)      #新建文件并进入 vim 编辑器
-
-# +&lt;行号&gt;：从指定行号的行开始先是文本内容；
-# -b：以二进制模式打开文件，用于编辑二进制文件和可执行文件；
-# -c&lt;指令&gt;：在完成对第一个文件编辑任务后，执行给出的指令；
-# -d：以diff模式打开文件，当多个文件编辑时，显示文件差异部分；
-# -l：使用lisp模式，打开 lisp 和 showmatch ；
-# -m：取消写文件功能，重设 write 选项；
-# -M：关闭修改功能；
-# -n：不实用缓存功能；
-# -o&lt;文件数目&gt;：指定同时打开指定数目的文件；
-# -R：以只读方式打开文件；
-# -s：安静模式，不现实指令的任何错误信息。
-
-</code></pre>
-<h3 id="1-6、目录-文件属性-权限"><a href="#1-6、目录-文件属性-权限" class="headerlink" title="1.6、目录/文件属性/权限"></a>1.6、目录/文件属性/权限</h3><pre><code class="line-numbers language-bash">chown (选项)(参数)
-# 更改文件用户
-# 只有文件主和超级用户才可以便用该命令。
-
-chown -R user_name:staff /test
-# 将目录 /test 及其下面的所有文件、子目录的所属用户改成 user_name ，所属组改成 staff 
-# 可单独更改用户或组
-# chown -R :staff /test
-# chown -R user_name: /test
-
-# -c或——changes：效果类似“-v”参数，但仅回报更改的部分；
-# -f或--quite或——silent：不显示错误信息；
-# -h或--no-dereference：只对符号连接的文件作修改，而不更改其他任何相关文件；
-# -R或——recursive：递归处理，将指定目录下的所有文件及子目录一并处理；
-# -v或——version：显示指令执行过程；
-# --dereference：效果和“-h”参数相同；
-# --help：在线帮助；
-# --reference=&lt;参考文件或目录&gt;：把指定文件或目录的拥有者与所属群组全部设成和参考文件或目录的拥有者与所属群组相同；
-# --version：显示版本信息。
-
-chmod -R -rwx-rwx-rwx file
-# 全部用户全部权限
-# -rwx    -rwx      -rwx
-# 文件主 u  用户组 g    其他 o  全部 a
-
-chmod u+rw file
-# 文件主增加读写权限
-
-# 更改文件权限
-# r=读取属性　　//值＝4
-# w=写入属性　　//值＝2
-# x=执行属性　　//值＝1
-# rwx=7，rw=6，rx=5, wx=3
-
-# -c或——changes：效果类似“-v”参数，但仅回报更改的部分；
-# -f或--quiet或——silent：不显示错误信息；
-# -R或——recursive：递归处理，将指令目录下的所有文件及子目录一并处理；
-# -v或——verbose：显示指令执行过程；
-# --reference=&lt;参考文件或目录&gt;：把指定文件或目录的所属群组全部设成和参考文件或目录的所属群组相同；
-</code></pre>
-<h3 id="1-7、文件查找"><a href="#1-7、文件查找" class="headerlink" title="1.7、文件查找"></a>1.7、文件查找</h3><pre><code class="line-numbers language-bash">locate (选项)(参数)
-locate ~/.html
-# 搜索用户主目录下，所有 html 的文件：
-
-# find -name的另一种写法，但是要比后者快得多，原因在于它不搜索具体目录，而是搜索一个数据库 /var/lib/locatedb，这个数据库中含有本地所有文件信息。Linux系统自动创建这个数据库，并且每天自动更新一次，所以使用locate命令查不到最新变动过的文件。为了避免这种情况，可以在使用 locate 之前，先使用 updatedb 命令，手动更新数据库。
-# -d&lt;目录&gt;或--database=&lt;目录&gt;：指定数据库所在的目录；
-# -u：更新slocate数据库；
-# --help：显示帮助；
-# --version：显示版本信息。
-
-find (选项)(参数)
-
-find /home -name &quot;*.txt&quot;
-# 在/home目录下查找以.txt结尾的文件名
-
-# -amin&lt;分钟&gt;：查找在指定时间曾被存取过的文件或目录，单位以分钟计算；
-# -anewer&lt;参考文件或目录&gt;：查找其存取时间较指定文件或目录的存取时间更接近现在的文件或目录；
-# -atime&lt;24小时数&gt;：查找在指定时间曾被存取过的文件或目录，单位以24小时计算；
-# -cmin&lt;分钟&gt;：查找在指定时间之时被更改过的文件或目录；
-# -cnewer&lt;参考文件或目录&gt;查找其更改时间较指定文件或目录的更改时间更接近现在的文件或目录；
-# -ctime&lt;24小时数&gt;：查找在指定时间之时被更改的文件或目录，单位以24小时计算；
-# -daystart：从本日开始计算时间；
-# -depth：从指定目录下最深层的子目录开始查找；
-# -expty：寻找文件大小为0 Byte的文件，或目录下没有任何子目录或文件的空目录；
-# -exec&lt;执行指令&gt;：假设find指令的回传值为True，就执行该指令；
-# -false：将find指令的回传值皆设为False；
-# -fls&lt;列表文件&gt;：此参数的效果和指定“-ls”参数类似，但会把结果保存为指定的列表文件；
-# -follow：排除符号连接；
-# -fprint&lt;列表文件&gt;：此参数的效果和指定“-print”参数类似，但会把结果保存成指定的列表文件；
-# -fprint0&lt;列表文件&gt;：此参数的效果和指定“-print0”参数类似，但会把结果保存成指定的列表文件；
-# -fprintf&lt;列表文件&gt;&lt;输出格式&gt;：此参数的效果和指定“-printf”参数类似，但会把结果保存成指定的列表文件；
-# -fstype&lt;文件系统类型&gt;：只寻找该文件系统类型下的文件或目录；
-# -gid&lt;群组识别码&gt;：查找符合指定之群组识别码的文件或目录；
-# -group&lt;群组名称&gt;：查找符合指定之群组名称的文件或目录；
-# -help或——help：在线帮助；
-# -ilname&lt;范本样式&gt;：此参数的效果和指定“-lname”参数类似，但忽略字符大小写的差别；
-# -iname&lt;范本样式&gt;：此参数的效果和指定“-name”参数类似，但忽略字符大小写的差别；
-# -inum&lt;inode编号&gt;：查找符合指定的inode编号的文件或目录；
-# -ipath&lt;范本样式&gt;：此参数的效果和指定“-path”参数类似，但忽略字符大小写的差别；
-# -iregex&lt;范本样式&gt;：此参数的效果和指定“-regexe”参数类似，但忽略字符大小写的差别；
-# -links&lt;连接数目&gt;：查找符合指定的硬连接数目的文件或目录；
-# -iname&lt;范本样式&gt;：指定字符串作为寻找符号连接的范本样式；
-# -ls：假设find指令的回传值为Ture，就将文件或目录名称列出到标准输出；
-# -maxdepth&lt;目录层级&gt;：设置最大目录层级；
-# -mindepth&lt;目录层级&gt;：设置最小目录层级；
-# -mmin&lt;分钟&gt;：查找在指定时间曾被更改过的文件或目录，单位以分钟计算；
-# -mount：此参数的效果和指定“-xdev”相同；
-# -mtime&lt;24小时数&gt;：查找在指定时间曾被更改过的文件或目录，单位以24小时计算；
-# -name&lt;范本样式&gt;：指定字符串作为寻找文件或目录的范本样式；
-# -newer&lt;参考文件或目录&gt;：查找其更改时间较指定文件或目录的更改时间更接近现在的文件或目录；
-# -nogroup：找出不属于本地主机群组识别码的文件或目录；
-# -noleaf：不去考虑目录至少需拥有两个硬连接存在；
-# -nouser：找出不属于本地主机用户识别码的文件或目录；
-# -ok&lt;执行指令&gt;：此参数的效果和指定“-exec”类似，但在执行指令之前会先询问用户，若回答“y”或“Y”，则放弃执行命令；
-# -path&lt;范本样式&gt;：指定字符串作为寻找目录的范本样式；
-# -perm&lt;权限数值&gt;：查找符合指定的权限数值的文件或目录；
-# -print：假设find指令的回传值为Ture，就将文件或目录名称列出到标准输出。格式为每列一个名称，每个名称前皆有“./”字符串；
-# -print0：假设find指令的回传值为Ture，就将文件或目录名称列出到标准输出。格式为全部的名称皆在同一行；
-# -printf&lt;输出格式&gt;：假设find指令的回传值为Ture，就将文件或目录名称列出到标准输出。格式可以自行指定；
-# -prune：不寻找字符串作为寻找文件或目录的范本样式;
-# -regex&lt;范本样式&gt;：指定字符串作为寻找文件或目录的范本样式；
-# -size&lt;文件大小&gt;：查找符合指定的文件大小的文件；
-# -true：将find指令的回传值皆设为True；
-# -typ&lt;文件类型&gt;：只寻找符合指定的文件类型的文件；
-# -uid&lt;用户识别码&gt;：查找符合指定的用户识别码的文件或目录；
-# -used&lt;日数&gt;：查找文件或目录被更改之后在指定时间曾被存取过的文件或目录，单位以日计算；
-# -user&lt;拥有者名称&gt;：查找符和指定的拥有者名称的文件或目录；
-# -version或——version：显示版本信息；
-# -xdev：将范围局限在先行的文件系统中；
-# -xtype&lt;文件类型&gt;：此参数的效果和指定“-type”参数类似，差别在于它针对符号连接检查。
-</code></pre>
+<h3 id="1-4、编辑目录-文件"><a href="#1-4、编辑目录-文件" class="headerlink" title="1.4、编辑目录/文件"></a>1.4、编辑目录/文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cp 参数     <span class="comment">#复制文件和目录</span></span><br><span class="line">mv 参数     <span class="comment">#移动文件和目录</span></span><br><span class="line">rm 参数     <span class="comment">#删除文件和目录</span></span><br><span class="line"></span><br><span class="line">cp file /path/ab  <span class="comment"># 将当前目录文件 file 复制到目录 /path下，并改名为 ab</span></span><br><span class="line">cp -R <span class="built_in">test</span> path</span><br><span class="line"><span class="comment"># 将当前目录中 test 目录复制到 path 目录中，</span></span><br><span class="line"><span class="comment"># 若 path 目录存在则把 test 目录复制到 path 目录中</span></span><br><span class="line"><span class="comment"># 若 path 目录不存在则创建 path 目录，并把 test 目录中所有文件复制到 path 目录中</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># -a：此参数的效果和同时指定 -dpR 参数相同；</span></span><br><span class="line"><span class="comment"># -d：当复制符号连接时，把目标文件或目录也建立为符号连接，并指向与源文件或目录连接的原始文件或目录；</span></span><br><span class="line"><span class="comment"># -f：强行复制文件或目录，不论目标文件或目录是否已存在；</span></span><br><span class="line"><span class="comment"># -i：覆盖既有文件之前先询问用户；</span></span><br><span class="line"><span class="comment"># -l：对源文件建立硬连接，而非复制文件；</span></span><br><span class="line"><span class="comment"># -p：保留源文件或目录的属性；</span></span><br><span class="line"><span class="comment"># -R/r：递归处理，将指定目录下的所有文件与子目录一并处理；</span></span><br><span class="line"><span class="comment"># -s：对源文件建立符号连接，而非复制文件；</span></span><br><span class="line"><span class="comment"># -u：使用这项参数后只会在源文件的更改时间较目标文件更新时或是名称相互对应的目标文件并不存在时，才复制文件；</span></span><br><span class="line"><span class="comment"># -S：在备份文件时，用指定的后缀 SUFFIX 代替文件的默认后缀；</span></span><br><span class="line"><span class="comment"># -b：覆盖已存在的文件目标前将目标文件备份；</span></span><br><span class="line"><span class="comment"># -v：详细显示命令执行的操作。</span></span><br></pre></td></tr></table></figure>
+<h3 id="1-5、新建目录-文件"><a href="#1-5、新建目录-文件" class="headerlink" title="1.5、新建目录/文件"></a>1.5、新建目录/文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir (选项)(参数)      <span class="comment">#新建目录</span></span><br><span class="line"></span><br><span class="line">mkdir -p-m 750 <span class="built_in">test</span>/ab</span><br><span class="line"><span class="comment">#在当前目录中建立 test 和 test 下的 ab 目录，权限设置为文件主可读、写、执行，同组用户可读和执行，其他用户无权访问</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># -Z：设置安全上下文，当使用 SELinux 时有效；</span></span><br><span class="line"><span class="comment"># -m&lt;目标属性&gt;或--mode&lt;目标属性&gt;建立目录的同时设置目录的权限；</span></span><br><span class="line"><span class="comment"># -p或--parents 若所要建立目录的上层目录目前尚未建立，则会一并建立上层目录；</span></span><br><span class="line"><span class="comment"># --version 显示版本信息。</span></span><br><span class="line"></span><br><span class="line">rmdir (选项)(参数)      <span class="comment">#删除空目录</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># -p或--parents：删除指定目录后，若该目录的上层目录已变成空目录，则将其一并删除；</span></span><br><span class="line"><span class="comment"># --ignore-fail-on-non-empty：此选项使rmdir命令忽略由于删除非空目录时导致的错误信息；</span></span><br><span class="line"><span class="comment"># -v或-verboes：显示命令的详细执行过程；</span></span><br><span class="line"><span class="comment"># --help：显示命令的帮助信息；</span></span><br><span class="line"><span class="comment"># --version：显示命令的版本信息。</span></span><br><span class="line"></span><br><span class="line">touch (选项)(参数)      <span class="comment">#新建文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># -a：或--time=atime或--time=access或--time=use  只更改存取时间；</span></span><br><span class="line"><span class="comment"># -c：或--no-create  不建立任何文件；</span></span><br><span class="line"><span class="comment"># -d：&lt;时间日期&gt; 使用指定的日期时间，而非现在的时间；</span></span><br><span class="line"><span class="comment"># -f：此参数将忽略不予处理，仅负责解决 BSD 版本 touch 指令的兼容性问题；</span></span><br><span class="line"><span class="comment"># -m：或--time=mtime或--time=modify  只更该变动时间；</span></span><br><span class="line"><span class="comment"># -r：&lt;参考文件或目录&gt;  把指定文件或目录的日期时间，统统设成和参考文件或目录的日期时间相同；</span></span><br><span class="line"><span class="comment"># -t：&lt;日期时间&gt;  使用指定的日期时间，而非现在的时间；</span></span><br><span class="line"><span class="comment"># --help：在线帮助；</span></span><br><span class="line"><span class="comment"># --version：显示版本信息。</span></span><br><span class="line"></span><br><span class="line">vi (选项)(参数)      <span class="comment">#新建文件并进入 vim 编辑器</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># +&lt;行号&gt;：从指定行号的行开始先是文本内容；</span></span><br><span class="line"><span class="comment"># -b：以二进制模式打开文件，用于编辑二进制文件和可执行文件；</span></span><br><span class="line"><span class="comment"># -c&lt;指令&gt;：在完成对第一个文件编辑任务后，执行给出的指令；</span></span><br><span class="line"><span class="comment"># -d：以diff模式打开文件，当多个文件编辑时，显示文件差异部分；</span></span><br><span class="line"><span class="comment"># -l：使用lisp模式，打开 lisp 和 showmatch ；</span></span><br><span class="line"><span class="comment"># -m：取消写文件功能，重设 write 选项；</span></span><br><span class="line"><span class="comment"># -M：关闭修改功能；</span></span><br><span class="line"><span class="comment"># -n：不实用缓存功能；</span></span><br><span class="line"><span class="comment"># -o&lt;文件数目&gt;：指定同时打开指定数目的文件；</span></span><br><span class="line"><span class="comment"># -R：以只读方式打开文件；</span></span><br><span class="line"><span class="comment"># -s：安静模式，不现实指令的任何错误信息。</span></span><br></pre></td></tr></table></figure>
+<h3 id="1-6、目录-文件属性-权限"><a href="#1-6、目录-文件属性-权限" class="headerlink" title="1.6、目录/文件属性/权限"></a>1.6、目录/文件属性/权限</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chown (选项)(参数)</span><br><span class="line"><span class="comment"># 更改文件用户</span></span><br><span class="line"><span class="comment"># 只有文件主和超级用户才可以便用该命令。</span></span><br><span class="line"></span><br><span class="line">chown -R user_name:staff /<span class="built_in">test</span></span><br><span class="line"><span class="comment"># 将目录 /test 及其下面的所有文件、子目录的所属用户改成 user_name ，所属组改成 staff </span></span><br><span class="line"><span class="comment"># 可单独更改用户或组</span></span><br><span class="line"><span class="comment"># chown -R :staff /test</span></span><br><span class="line"><span class="comment"># chown -R user_name: /test</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># -c或——changes：效果类似“-v”参数，但仅回报更改的部分；</span></span><br><span class="line"><span class="comment"># -f或--quite或——silent：不显示错误信息；</span></span><br><span class="line"><span class="comment"># -h或--no-dereference：只对符号连接的文件作修改，而不更改其他任何相关文件；</span></span><br><span class="line"><span class="comment"># -R或——recursive：递归处理，将指定目录下的所有文件及子目录一并处理；</span></span><br><span class="line"><span class="comment"># -v或——version：显示指令执行过程；</span></span><br><span class="line"><span class="comment"># --dereference：效果和“-h”参数相同；</span></span><br><span class="line"><span class="comment"># --help：在线帮助；</span></span><br><span class="line"><span class="comment"># --reference=&lt;参考文件或目录&gt;：把指定文件或目录的拥有者与所属群组全部设成和参考文件或目录的拥有者与所属群组相同；</span></span><br><span class="line"><span class="comment"># --version：显示版本信息。</span></span><br><span class="line"></span><br><span class="line">chmod -R -rwx-rwx-rwx file</span><br><span class="line"><span class="comment"># 全部用户全部权限</span></span><br><span class="line"><span class="comment"># -rwx    -rwx      -rwx</span></span><br><span class="line"><span class="comment"># 文件主 u  用户组 g    其他 o  全部 a</span></span><br><span class="line"></span><br><span class="line">chmod u+rw file</span><br><span class="line"><span class="comment"># 文件主增加读写权限</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 更改文件权限</span></span><br><span class="line"><span class="comment"># r=读取属性　　//值＝4</span></span><br><span class="line"><span class="comment"># w=写入属性　　//值＝2</span></span><br><span class="line"><span class="comment"># x=执行属性　　//值＝1</span></span><br><span class="line"><span class="comment"># rwx=7，rw=6，rx=5, wx=3</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># -c或——changes：效果类似“-v”参数，但仅回报更改的部分；</span></span><br><span class="line"><span class="comment"># -f或--quiet或——silent：不显示错误信息；</span></span><br><span class="line"><span class="comment"># -R或——recursive：递归处理，将指令目录下的所有文件及子目录一并处理；</span></span><br><span class="line"><span class="comment"># -v或——verbose：显示指令执行过程；</span></span><br><span class="line"><span class="comment"># --reference=&lt;参考文件或目录&gt;：把指定文件或目录的所属群组全部设成和参考文件或目录的所属群组相同；</span></span><br></pre></td></tr></table></figure>
+<h3 id="1-7、文件查找"><a href="#1-7、文件查找" class="headerlink" title="1.7、文件查找"></a>1.7、文件查找</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">locate (选项)(参数)</span><br><span class="line">locate ~/.html</span><br><span class="line"><span class="comment"># 搜索用户主目录下，所有 html 的文件：</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># find -name的另一种写法，但是要比后者快得多，原因在于它不搜索具体目录，而是搜索一个数据库 /var/lib/locatedb，这个数据库中含有本地所有文件信息。Linux系统自动创建这个数据库，并且每天自动更新一次，所以使用locate命令查不到最新变动过的文件。为了避免这种情况，可以在使用 locate 之前，先使用 updatedb 命令，手动更新数据库。</span></span><br><span class="line"><span class="comment"># -d&lt;目录&gt;或--database=&lt;目录&gt;：指定数据库所在的目录；</span></span><br><span class="line"><span class="comment"># -u：更新slocate数据库；</span></span><br><span class="line"><span class="comment"># --help：显示帮助；</span></span><br><span class="line"><span class="comment"># --version：显示版本信息。</span></span><br><span class="line"></span><br><span class="line">find (选项)(参数)</span><br><span class="line"></span><br><span class="line">find /home -name <span class="string">"*.txt"</span></span><br><span class="line"><span class="comment"># 在/home目录下查找以.txt结尾的文件名</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># -amin&lt;分钟&gt;：查找在指定时间曾被存取过的文件或目录，单位以分钟计算；</span></span><br><span class="line"><span class="comment"># -anewer&lt;参考文件或目录&gt;：查找其存取时间较指定文件或目录的存取时间更接近现在的文件或目录；</span></span><br><span class="line"><span class="comment"># -atime&lt;24小时数&gt;：查找在指定时间曾被存取过的文件或目录，单位以24小时计算；</span></span><br><span class="line"><span class="comment"># -cmin&lt;分钟&gt;：查找在指定时间之时被更改过的文件或目录；</span></span><br><span class="line"><span class="comment"># -cnewer&lt;参考文件或目录&gt;查找其更改时间较指定文件或目录的更改时间更接近现在的文件或目录；</span></span><br><span class="line"><span class="comment"># -ctime&lt;24小时数&gt;：查找在指定时间之时被更改的文件或目录，单位以24小时计算；</span></span><br><span class="line"><span class="comment"># -daystart：从本日开始计算时间；</span></span><br><span class="line"><span class="comment"># -depth：从指定目录下最深层的子目录开始查找；</span></span><br><span class="line"><span class="comment"># -expty：寻找文件大小为0 Byte的文件，或目录下没有任何子目录或文件的空目录；</span></span><br><span class="line"><span class="comment"># -exec&lt;执行指令&gt;：假设find指令的回传值为True，就执行该指令；</span></span><br><span class="line"><span class="comment"># -false：将find指令的回传值皆设为False；</span></span><br><span class="line"><span class="comment"># -fls&lt;列表文件&gt;：此参数的效果和指定“-ls”参数类似，但会把结果保存为指定的列表文件；</span></span><br><span class="line"><span class="comment"># -follow：排除符号连接；</span></span><br><span class="line"><span class="comment"># -fprint&lt;列表文件&gt;：此参数的效果和指定“-print”参数类似，但会把结果保存成指定的列表文件；</span></span><br><span class="line"><span class="comment"># -fprint0&lt;列表文件&gt;：此参数的效果和指定“-print0”参数类似，但会把结果保存成指定的列表文件；</span></span><br><span class="line"><span class="comment"># -fprintf&lt;列表文件&gt;&lt;输出格式&gt;：此参数的效果和指定“-printf”参数类似，但会把结果保存成指定的列表文件；</span></span><br><span class="line"><span class="comment"># -fstype&lt;文件系统类型&gt;：只寻找该文件系统类型下的文件或目录；</span></span><br><span class="line"><span class="comment"># -gid&lt;群组识别码&gt;：查找符合指定之群组识别码的文件或目录；</span></span><br><span class="line"><span class="comment"># -group&lt;群组名称&gt;：查找符合指定之群组名称的文件或目录；</span></span><br><span class="line"><span class="comment"># -help或——help：在线帮助；</span></span><br><span class="line"><span class="comment"># -ilname&lt;范本样式&gt;：此参数的效果和指定“-lname”参数类似，但忽略字符大小写的差别；</span></span><br><span class="line"><span class="comment"># -iname&lt;范本样式&gt;：此参数的效果和指定“-name”参数类似，但忽略字符大小写的差别；</span></span><br><span class="line"><span class="comment"># -inum&lt;inode编号&gt;：查找符合指定的inode编号的文件或目录；</span></span><br><span class="line"><span class="comment"># -ipath&lt;范本样式&gt;：此参数的效果和指定“-path”参数类似，但忽略字符大小写的差别；</span></span><br><span class="line"><span class="comment"># -iregex&lt;范本样式&gt;：此参数的效果和指定“-regexe”参数类似，但忽略字符大小写的差别；</span></span><br><span class="line"><span class="comment"># -links&lt;连接数目&gt;：查找符合指定的硬连接数目的文件或目录；</span></span><br><span class="line"><span class="comment"># -iname&lt;范本样式&gt;：指定字符串作为寻找符号连接的范本样式；</span></span><br><span class="line"><span class="comment"># -ls：假设find指令的回传值为Ture，就将文件或目录名称列出到标准输出；</span></span><br><span class="line"><span class="comment"># -maxdepth&lt;目录层级&gt;：设置最大目录层级；</span></span><br><span class="line"><span class="comment"># -mindepth&lt;目录层级&gt;：设置最小目录层级；</span></span><br><span class="line"><span class="comment"># -mmin&lt;分钟&gt;：查找在指定时间曾被更改过的文件或目录，单位以分钟计算；</span></span><br><span class="line"><span class="comment"># -mount：此参数的效果和指定“-xdev”相同；</span></span><br><span class="line"><span class="comment"># -mtime&lt;24小时数&gt;：查找在指定时间曾被更改过的文件或目录，单位以24小时计算；</span></span><br><span class="line"><span class="comment"># -name&lt;范本样式&gt;：指定字符串作为寻找文件或目录的范本样式；</span></span><br><span class="line"><span class="comment"># -newer&lt;参考文件或目录&gt;：查找其更改时间较指定文件或目录的更改时间更接近现在的文件或目录；</span></span><br><span class="line"><span class="comment"># -nogroup：找出不属于本地主机群组识别码的文件或目录；</span></span><br><span class="line"><span class="comment"># -noleaf：不去考虑目录至少需拥有两个硬连接存在；</span></span><br><span class="line"><span class="comment"># -nouser：找出不属于本地主机用户识别码的文件或目录；</span></span><br><span class="line"><span class="comment"># -ok&lt;执行指令&gt;：此参数的效果和指定“-exec”类似，但在执行指令之前会先询问用户，若回答“y”或“Y”，则放弃执行命令；</span></span><br><span class="line"><span class="comment"># -path&lt;范本样式&gt;：指定字符串作为寻找目录的范本样式；</span></span><br><span class="line"><span class="comment"># -perm&lt;权限数值&gt;：查找符合指定的权限数值的文件或目录；</span></span><br><span class="line"><span class="comment"># -print：假设find指令的回传值为Ture，就将文件或目录名称列出到标准输出。格式为每列一个名称，每个名称前皆有“./”字符串；</span></span><br><span class="line"><span class="comment"># -print0：假设find指令的回传值为Ture，就将文件或目录名称列出到标准输出。格式为全部的名称皆在同一行；</span></span><br><span class="line"><span class="comment"># -printf&lt;输出格式&gt;：假设find指令的回传值为Ture，就将文件或目录名称列出到标准输出。格式可以自行指定；</span></span><br><span class="line"><span class="comment"># -prune：不寻找字符串作为寻找文件或目录的范本样式;</span></span><br><span class="line"><span class="comment"># -regex&lt;范本样式&gt;：指定字符串作为寻找文件或目录的范本样式；</span></span><br><span class="line"><span class="comment"># -size&lt;文件大小&gt;：查找符合指定的文件大小的文件；</span></span><br><span class="line"><span class="comment"># -true：将find指令的回传值皆设为True；</span></span><br><span class="line"><span class="comment"># -typ&lt;文件类型&gt;：只寻找符合指定的文件类型的文件；</span></span><br><span class="line"><span class="comment"># -uid&lt;用户识别码&gt;：查找符合指定的用户识别码的文件或目录；</span></span><br><span class="line"><span class="comment"># -used&lt;日数&gt;：查找文件或目录被更改之后在指定时间曾被存取过的文件或目录，单位以日计算；</span></span><br><span class="line"><span class="comment"># -user&lt;拥有者名称&gt;：查找符和指定的拥有者名称的文件或目录；</span></span><br><span class="line"><span class="comment"># -version或——version：显示版本信息；</span></span><br><span class="line"><span class="comment"># -xdev：将范围局限在先行的文件系统中；</span></span><br><span class="line"><span class="comment"># -xtype&lt;文件类型&gt;：此参数的效果和指定“-type”参数类似，差别在于它针对符号连接检查。</span></span><br></pre></td></tr></table></figure>
 <h2 id="2、编译安装"><a href="#2、编译安装" class="headerlink" title="2、编译安装"></a>2、编译安装</h2><p>Linux 平台下，软件安装主要包括：源码包、二进制包和包管理器安装。</p>
 <ul>
 <li>源码包：即程序软件的源代码（一般也叫 Tarball ，即将软件的源码以 tar 打包后再压缩的资源包）；</li>
@@ -647,275 +273,47 @@ find /home -name &quot;*.txt&quot;
 </ol>
 </li>
 </ul>
-<h3 id="2-1、源码包编译安装"><a href="#2-1、源码包编译安装" class="headerlink" title="2.1、源码包编译安装"></a>2.1、源码包编译安装</h3><p>常用过的 Tarball 封装格式有 <code>.tar.gz</code> 和 <code>.tar.bz2</code></p>
-<pre><code class="line-numbers language-bash"># 1、下载，略...；
-
-# 2、md5sum校验
-# 2.1、输出 md5 ，并与官方提供的值相比较，判断是否一致
-md5sum filename.tar.gz
-# bcda6cb5c704664f989703ac5a88f112 filename.tar.gz
-# 2.2、生成 md5 文件 filename.md5
-md5sum filename.tar.gz &gt; falename.md5
-# 2.3对比 md5
-md5sum filename.tar.gz -c filename.md5
-# filename.tar.gz: OK
-# filename.tar.gz: FAILED
-# md5sum: WARNING: 1 computed checksum did NOT match
-
-# 3、解包
-# .tar.gz 格式
-tar –zxf
-# .tar.bz2 格式
-tar -jxf
-# tar 参数详解
-# -A或--catenate：新增文件到以存在的备份文件；
-# -B：设置区块大小；
-# -c或--create：建立新的备份文件；
-# -C &lt;目录&gt;：这个选项用在解压缩，若要在特定目录解压缩，可以使用这个选项。
-# -d：记录文件的差别；
-# -x或--extract或--get：从备份文件中还原文件；
-# -t或--list：列出备份文件的内容；
-# -z或--gzip或--ungzip：通过gzip指令处理备份文件；
-# -Z或--compress或--uncompress：通过compress指令处理备份文件；
-# -f&lt;备份文件&gt;或--file=&lt;备份文件&gt;：指定备份文件；
-# -v或--verbose：显示指令执行过程；
-# -r：添加文件到已经压缩的文件；
-# -u：添加改变了和现有的文件到已经存在的压缩文件；
-# -j：支持bzip2解压文件；
-# -v：显示操作过程；
-# -l：文件系统边界设置；
-# -k：保留原有文件不覆盖；
-# -m：保留文件不被覆盖；
-# -w：确认压缩文件的正确性；
-# -p或--same-permissions：用原来的文件权限还原文件；
-# -P或--absolute-names：文件名使用绝对名称，不移除文件名称前的“/”号；
-# -N &lt;日期格式&gt; 或 --newer=&lt;日期时间&gt;：只将较指定日期更新的文件保存到备份文件里；
-# --exclude=&lt;范本样式&gt;：排除符合范本样式的文件。
-
-# 4、配置 ./configure
-# 配置安装目录，便于卸载，直接删除 folder 文件夹即可
-./configure --prefix=/usr/local/folder
-
-# 5、编译/检查
-# 指定目录 make
-make -f /download/filename
-# make test 或 make check ，一般需要你有 root 权限，结果必须全 ok， error 0
-make test
-make check
-
-# 6、安装
-make install
-
-</code></pre>
-<h2 id="3、进程操作"><a href="#3、进程操作" class="headerlink" title="3、进程操作"></a>3、进程操作</h2><h3 id="3-1、用户-用户组"><a href="#3-1、用户-用户组" class="headerlink" title="3.1、用户/用户组"></a>3.1、用户/用户组</h3><pre><code class="line-numbers language-bash"># 查
-cat /etc/passwd # 查看所有用户
-cat /etc/group # 查看所有组
-groups # 查看当前用户所属组
-groups user_name # 查看指定用户所属组
-id -a user_name # 查看用户所属组的详细信息
-whoami # 查看当前用户
-
-# 增
-useradd (选项) user_name
-useradd –d /usr/user_name -m user_name
-# 命令创建了一个用户 user_name ，
-# 其中 -d 和 -m 选项用来为登录名 user_name 产生一个主目录 /usr/user_name（ /usr 为默认的用户主目录所在的父目录）。
-useradd -s /bin/sh -g group –G adm,root user_name
-# 命令新建了一个用户 user_name，该用户的登录 Shell 是 /bin/sh，
-# 它属于 group 用户组，同时又属于 adm 和 root 用户组，其中 group 用户组是其主组。
-
-# -c&lt;备注&gt;：加上备注文字。备注文字会保存在passwd的备注栏位中；
-# -d&lt;登入目录&gt;：指定用户登入时的启始目录；
-# -D：变更预设值；
-# -e&lt;有效期限&gt;：指定帐号的有效期限；
-# -f&lt;缓冲天数&gt;：指定在密码过期后多少天即关闭该帐号；
-# -g&lt;群组&gt;：指定用户所属的群组；
-# -G&lt;群组&gt;：指定用户所属的附加群组；
-# -m：自动建立用户的登入目录；
-# -M：不要自动建立用户的登入目录；
-# -n：取消建立以用户名称为名的群组；
-# -r：建立系统帐号；
-# -s&lt;shell&gt;：指定用户登入后所使用的shell；
-# -u&lt;uid&gt;：指定用户id，默认用户的缺省UID从500向后顺序增加，500以下作为系统保留账号。
-
-# 删
-userdel (选项) user_name
-# -f：强制删除用户，即使用户当前已登录；
-# -r：删除用户的同时，删除与用户相关的所有文件。
-
-# 改
-usermod (选项) user_name
-# -c&lt;备注&gt;：修改用户帐号的备注文字；
-# -d&lt;登入目录&gt;：修改用户登入时的目录；
-# -e&lt;有效期限&gt;：修改帐号的有效期限；
-# -f&lt;缓冲天数&gt;：修改在密码过期后多少天即关闭该帐号；
-# -g&lt;群组&gt;：修改用户所属的群组；
-# -G&lt;群组&gt;；修改用户所属的附加群组；
-# -l&lt;帐号名称&gt;：修改用户帐号名称；
-# -L：锁定用户密码，使密码无效；
-# -s&lt;shell&gt;：修改用户登入后所使用的shell；
-# -u&lt;uid&gt;：修改用户ID；
-# -U:解除密码锁定。
-</code></pre>
-<h3 id="3-2、查看进程"><a href="#3-2、查看进程" class="headerlink" title="3.2、查看进程"></a>3.2、查看进程</h3><pre><code class="line-numbers language-bash"># 常用组合
-ps aux|grep php-fpm
-
-prep (选项) # 队列中查找进程
-# -o：仅显示找到的最小（起始）进程号；
-# -n：仅显示找到的最大（结束）进程号；
-# -l：显示进程名称；
-# -P：指定父进程号；
-# -g：指定进程组；
-# -t：指定开启进程的终端；
-# -u：指定进程的有效用户ID。
-
-ps (选项) # 报告系统进程
-# -a：显示所有终端机下执行的程序，除了阶段作业领导者之外。
-# a：显示现行终端机下的所有程序，包括其他用户的程序。
-# -A：显示所有程序。
-# -c：显示CLS和PRI栏位。
-# c：列出程序时，显示每个程序真正的指令名称，而不包含路径，选项或常驻服务的标示。
-# -C&lt;指令名称&gt;：指定执行指令的名称，并列出该指令的程序的状况。
-# -d：显示所有程序，但不包括阶段作业领导者的程序。
-# -e：此选项的效果和指定&quot;A&quot;选项相同。
-# e：列出程序时，显示每个程序所使用的环境变量。
-# -f：显示UID,PPIP,C与STIME栏位。
-# f：用ASCII字符显示树状结构，表达程序间的相互关系。
-# -g&lt;群组名称&gt;：此选项的效果和指定&quot;-G&quot;选项相同，当亦能使用阶段作业领导者的名称来指定。
-# g：显示现行终端机下的所有程序，包括群组领导者的程序。
-# -G&lt;群组识别码&gt;：列出属于该群组的程序的状况，也可使用群组名称来指定。
-# h：不显示标题列。
-# -H：显示树状结构，表示程序间的相互关系。
-# -j或j：采用工作控制的格式显示程序状况。
-# -l或l：采用详细的格式来显示程序状况。
-# L：列出栏位的相关信息。
-# -m或m：显示所有的执行绪。
-# n：以数字来表示USER和WCHAN栏位。
-# -N：显示所有的程序，除了执行ps指令终端机下的程序之外。
-# -p&lt;程序识别码&gt;：指定程序识别码，并列出该程序的状况。
-# p&lt;程序识别码&gt;：此选项的效果和指定&quot;-p&quot;选项相同，只在列表格式方面稍有差异。
-# r：只列出现行终端机正在执行中的程序。
-# -s&lt;阶段作业&gt;：指定阶段作业的程序识别码，并列出隶属该阶段作业的程序的状况。
-# s：采用程序信号的格式显示程序状况。
-# S：列出程序时，包括已中断的子程序资料。
-# -t&lt;终端机编号&gt;：指定终端机编号，并列出属于该终端机的程序的状况。
-# t&lt;终端机编号&gt;：此选项的效果和指定&quot;-t&quot;选项相同，只在列表格式方面稍有差异。
-# -T：显示现行终端机下的所有程序。
-# -u&lt;用户识别码&gt;：此选项的效果和指定&quot;-U&quot;选项相同。
-# u：以用户为主的格式来显示程序状况。
-# -U&lt;用户识别码&gt;：列出属于该用户的程序的状况，也可使用用户名称来指定。
-# U&lt;用户名称&gt;：列出属于该用户的程序的状况。
-# v：采用虚拟内存的格式显示程序状况。
-# -V或V：显示版本信息。
-# -w或w：采用宽阔的格式来显示程序状况。　
-# x：显示所有程序，不以终端机来区分。
-# X：采用旧式的Linux i386登陆格式显示程序状况。
-# -y：配合选项&quot;-l&quot;使用时，不显示F(flag)栏位，并以RSS栏位取代ADDR栏位　。
-# -&lt;程序识别码&gt;：此选项的效果和指定&quot;p&quot;选项相同。
-# --cols&lt;每列字符数&gt;：设置每列的最大字符数。
-# --columns&lt;每列字符数&gt;：此选项的效果和指定&quot;--cols&quot;选项相同。
-# --cumulative：此选项的效果和指定&quot;S&quot;选项相同。
-# --deselect：此选项的效果和指定&quot;-N&quot;选项相同。
-# --forest：此选项的效果和指定&quot;f&quot;选项相同。
-# --headers：重复显示标题列。
-# --help：在线帮助。
-# --info：显示排错信息。
-# --lines&lt;显示列数&gt;：设置显示画面的列数。
-# --no-headers：此选项的效果和指定&quot;h&quot;选项相同，只在列表格式方面稍有差异。
-# --group&lt;群组名称&gt;：此选项的效果和指定&quot;-G&quot;选项相同。
-# --Group&lt;群组识别码&gt;：此选项的效果和指定&quot;-G&quot;选项相同。
-# --pid&lt;程序识别码&gt;：此选项的效果和指定&quot;-p&quot;选项相同。
-# --rows&lt;显示列数&gt;：此选项的效果和指定&quot;--lines&quot;选项相同。
-# --sid&lt;阶段作业&gt;：此选项的效果和指定&quot;-s&quot;选项相同。
-# --tty&lt;终端机编号&gt;：此选项的效果和指定&quot;-t&quot;选项相同。
-# --user&lt;用户名称&gt;：此选项的效果和指定&quot;-U&quot;选项相同。
-# --User&lt;用户识别码&gt;：此选项的效果和指定&quot;-U&quot;选项相同。
-# --version：此选项的效果和指定&quot;-V&quot;选项相同。
-# --widty&lt;每列字符数&gt;：此选项的效果和指定&quot;-cols&quot;选项相同。
-</code></pre>
+<h3 id="2-1、源码包编译安装"><a href="#2-1、源码包编译安装" class="headerlink" title="2.1、源码包编译安装"></a>2.1、源码包编译安装</h3><p>常用过的 Tarball 封装格式有 <code>.tar.gz</code> 和 <code>.tar.bz2</code><br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1、下载，略...；</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2、md5sum校验</span></span><br><span class="line"><span class="comment"># 2.1、输出 md5 ，并与官方提供的值相比较，判断是否一致</span></span><br><span class="line">md5sum filename.tar.gz</span><br><span class="line"><span class="comment"># bcda6cb5c704664f989703ac5a88f112 filename.tar.gz</span></span><br><span class="line"><span class="comment"># 2.2、生成 md5 文件 filename.md5</span></span><br><span class="line">md5sum filename.tar.gz &gt; falename.md5</span><br><span class="line"><span class="comment"># 2.3对比 md5</span></span><br><span class="line">md5sum filename.tar.gz -c filename.md5</span><br><span class="line"><span class="comment"># filename.tar.gz: OK</span></span><br><span class="line"><span class="comment"># filename.tar.gz: FAILED</span></span><br><span class="line"><span class="comment"># md5sum: WARNING: 1 computed checksum did NOT match</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 3、解包</span></span><br><span class="line"><span class="comment"># .tar.gz 格式</span></span><br><span class="line">tar –zxf</span><br><span class="line"><span class="comment"># .tar.bz2 格式</span></span><br><span class="line">tar -jxf</span><br><span class="line"><span class="comment"># tar 参数详解</span></span><br><span class="line"><span class="comment"># -A或--catenate：新增文件到以存在的备份文件；</span></span><br><span class="line"><span class="comment"># -B：设置区块大小；</span></span><br><span class="line"><span class="comment"># -c或--create：建立新的备份文件；</span></span><br><span class="line"><span class="comment"># -C &lt;目录&gt;：这个选项用在解压缩，若要在特定目录解压缩，可以使用这个选项。</span></span><br><span class="line"><span class="comment"># -d：记录文件的差别；</span></span><br><span class="line"><span class="comment"># -x或--extract或--get：从备份文件中还原文件；</span></span><br><span class="line"><span class="comment"># -t或--list：列出备份文件的内容；</span></span><br><span class="line"><span class="comment"># -z或--gzip或--ungzip：通过gzip指令处理备份文件；</span></span><br><span class="line"><span class="comment"># -Z或--compress或--uncompress：通过compress指令处理备份文件；</span></span><br><span class="line"><span class="comment"># -f&lt;备份文件&gt;或--file=&lt;备份文件&gt;：指定备份文件；</span></span><br><span class="line"><span class="comment"># -v或--verbose：显示指令执行过程；</span></span><br><span class="line"><span class="comment"># -r：添加文件到已经压缩的文件；</span></span><br><span class="line"><span class="comment"># -u：添加改变了和现有的文件到已经存在的压缩文件；</span></span><br><span class="line"><span class="comment"># -j：支持bzip2解压文件；</span></span><br><span class="line"><span class="comment"># -v：显示操作过程；</span></span><br><span class="line"><span class="comment"># -l：文件系统边界设置；</span></span><br><span class="line"><span class="comment"># -k：保留原有文件不覆盖；</span></span><br><span class="line"><span class="comment"># -m：保留文件不被覆盖；</span></span><br><span class="line"><span class="comment"># -w：确认压缩文件的正确性；</span></span><br><span class="line"><span class="comment"># -p或--same-permissions：用原来的文件权限还原文件；</span></span><br><span class="line"><span class="comment"># -P或--absolute-names：文件名使用绝对名称，不移除文件名称前的“/”号；</span></span><br><span class="line"><span class="comment"># -N &lt;日期格式&gt; 或 --newer=&lt;日期时间&gt;：只将较指定日期更新的文件保存到备份文件里；</span></span><br><span class="line"><span class="comment"># --exclude=&lt;范本样式&gt;：排除符合范本样式的文件。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 4、配置 ./configure</span></span><br><span class="line"><span class="comment"># 配置安装目录，便于卸载，直接删除 folder 文件夹即可</span></span><br><span class="line">./configure --prefix=/usr/<span class="built_in">local</span>/folder</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5、编译/检查</span></span><br><span class="line"><span class="comment"># 指定目录 make</span></span><br><span class="line">make -f /download/filename</span><br><span class="line"><span class="comment"># make test 或 make check ，一般需要你有 root 权限，结果必须全 ok， error 0</span></span><br><span class="line">make <span class="built_in">test</span></span><br><span class="line">make check</span><br><span class="line"></span><br><span class="line"><span class="comment"># 6、安装</span></span><br><span class="line">make install</span><br></pre></td></tr></table></figure></p>
+<h2 id="3、进程操作"><a href="#3、进程操作" class="headerlink" title="3、进程操作"></a>3、进程操作</h2><h3 id="3-1、用户-用户组"><a href="#3-1、用户-用户组" class="headerlink" title="3.1、用户/用户组"></a>3.1、用户/用户组</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查</span></span><br><span class="line">cat /etc/passwd <span class="comment"># 查看所有用户</span></span><br><span class="line">cat /etc/group <span class="comment"># 查看所有组</span></span><br><span class="line">groups <span class="comment"># 查看当前用户所属组</span></span><br><span class="line">groups user_name <span class="comment"># 查看指定用户所属组</span></span><br><span class="line">id -a user_name <span class="comment"># 查看用户所属组的详细信息</span></span><br><span class="line">whoami <span class="comment"># 查看当前用户</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 增</span></span><br><span class="line">useradd (选项) user_name</span><br><span class="line">useradd –d /usr/user_name -m user_name</span><br><span class="line"><span class="comment"># 命令创建了一个用户 user_name ，</span></span><br><span class="line"><span class="comment"># 其中 -d 和 -m 选项用来为登录名 user_name 产生一个主目录 /usr/user_name（ /usr 为默认的用户主目录所在的父目录）。</span></span><br><span class="line">useradd -s /bin/sh -g group –G adm,root user_name</span><br><span class="line"><span class="comment"># 命令新建了一个用户 user_name，该用户的登录 Shell 是 /bin/sh，</span></span><br><span class="line"><span class="comment"># 它属于 group 用户组，同时又属于 adm 和 root 用户组，其中 group 用户组是其主组。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># -c&lt;备注&gt;：加上备注文字。备注文字会保存在passwd的备注栏位中；</span></span><br><span class="line"><span class="comment"># -d&lt;登入目录&gt;：指定用户登入时的启始目录；</span></span><br><span class="line"><span class="comment"># -D：变更预设值；</span></span><br><span class="line"><span class="comment"># -e&lt;有效期限&gt;：指定帐号的有效期限；</span></span><br><span class="line"><span class="comment"># -f&lt;缓冲天数&gt;：指定在密码过期后多少天即关闭该帐号；</span></span><br><span class="line"><span class="comment"># -g&lt;群组&gt;：指定用户所属的群组；</span></span><br><span class="line"><span class="comment"># -G&lt;群组&gt;：指定用户所属的附加群组；</span></span><br><span class="line"><span class="comment"># -m：自动建立用户的登入目录；</span></span><br><span class="line"><span class="comment"># -M：不要自动建立用户的登入目录；</span></span><br><span class="line"><span class="comment"># -n：取消建立以用户名称为名的群组；</span></span><br><span class="line"><span class="comment"># -r：建立系统帐号；</span></span><br><span class="line"><span class="comment"># -s&lt;shell&gt;：指定用户登入后所使用的shell；</span></span><br><span class="line"><span class="comment"># -u&lt;uid&gt;：指定用户id，默认用户的缺省UID从500向后顺序增加，500以下作为系统保留账号。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删</span></span><br><span class="line">userdel (选项) user_name</span><br><span class="line"><span class="comment"># -f：强制删除用户，即使用户当前已登录；</span></span><br><span class="line"><span class="comment"># -r：删除用户的同时，删除与用户相关的所有文件。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 改</span></span><br><span class="line">usermod (选项) user_name</span><br><span class="line"><span class="comment"># -c&lt;备注&gt;：修改用户帐号的备注文字；</span></span><br><span class="line"><span class="comment"># -d&lt;登入目录&gt;：修改用户登入时的目录；</span></span><br><span class="line"><span class="comment"># -e&lt;有效期限&gt;：修改帐号的有效期限；</span></span><br><span class="line"><span class="comment"># -f&lt;缓冲天数&gt;：修改在密码过期后多少天即关闭该帐号；</span></span><br><span class="line"><span class="comment"># -g&lt;群组&gt;：修改用户所属的群组；</span></span><br><span class="line"><span class="comment"># -G&lt;群组&gt;；修改用户所属的附加群组；</span></span><br><span class="line"><span class="comment"># -l&lt;帐号名称&gt;：修改用户帐号名称；</span></span><br><span class="line"><span class="comment"># -L：锁定用户密码，使密码无效；</span></span><br><span class="line"><span class="comment"># -s&lt;shell&gt;：修改用户登入后所使用的shell；</span></span><br><span class="line"><span class="comment"># -u&lt;uid&gt;：修改用户ID；</span></span><br><span class="line"><span class="comment"># -U:解除密码锁定。</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-2、查看进程"><a href="#3-2、查看进程" class="headerlink" title="3.2、查看进程"></a>3.2、查看进程</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 常用组合</span></span><br><span class="line">ps aux|grep php-fpm</span><br><span class="line"></span><br><span class="line">prep (选项) <span class="comment"># 队列中查找进程</span></span><br><span class="line"><span class="comment"># -o：仅显示找到的最小（起始）进程号；</span></span><br><span class="line"><span class="comment"># -n：仅显示找到的最大（结束）进程号；</span></span><br><span class="line"><span class="comment"># -l：显示进程名称；</span></span><br><span class="line"><span class="comment"># -P：指定父进程号；</span></span><br><span class="line"><span class="comment"># -g：指定进程组；</span></span><br><span class="line"><span class="comment"># -t：指定开启进程的终端；</span></span><br><span class="line"><span class="comment"># -u：指定进程的有效用户ID。</span></span><br><span class="line"></span><br><span class="line">ps (选项) <span class="comment"># 报告系统进程</span></span><br><span class="line"><span class="comment"># -a：显示所有终端机下执行的程序，除了阶段作业领导者之外。</span></span><br><span class="line"><span class="comment"># a：显示现行终端机下的所有程序，包括其他用户的程序。</span></span><br><span class="line"><span class="comment"># -A：显示所有程序。</span></span><br><span class="line"><span class="comment"># -c：显示CLS和PRI栏位。</span></span><br><span class="line"><span class="comment"># c：列出程序时，显示每个程序真正的指令名称，而不包含路径，选项或常驻服务的标示。</span></span><br><span class="line"><span class="comment"># -C&lt;指令名称&gt;：指定执行指令的名称，并列出该指令的程序的状况。</span></span><br><span class="line"><span class="comment"># -d：显示所有程序，但不包括阶段作业领导者的程序。</span></span><br><span class="line"><span class="comment"># -e：此选项的效果和指定"A"选项相同。</span></span><br><span class="line"><span class="comment"># e：列出程序时，显示每个程序所使用的环境变量。</span></span><br><span class="line"><span class="comment"># -f：显示UID,PPIP,C与STIME栏位。</span></span><br><span class="line"><span class="comment"># f：用ASCII字符显示树状结构，表达程序间的相互关系。</span></span><br><span class="line"><span class="comment"># -g&lt;群组名称&gt;：此选项的效果和指定"-G"选项相同，当亦能使用阶段作业领导者的名称来指定。</span></span><br><span class="line"><span class="comment"># g：显示现行终端机下的所有程序，包括群组领导者的程序。</span></span><br><span class="line"><span class="comment"># -G&lt;群组识别码&gt;：列出属于该群组的程序的状况，也可使用群组名称来指定。</span></span><br><span class="line"><span class="comment"># h：不显示标题列。</span></span><br><span class="line"><span class="comment"># -H：显示树状结构，表示程序间的相互关系。</span></span><br><span class="line"><span class="comment"># -j或j：采用工作控制的格式显示程序状况。</span></span><br><span class="line"><span class="comment"># -l或l：采用详细的格式来显示程序状况。</span></span><br><span class="line"><span class="comment"># L：列出栏位的相关信息。</span></span><br><span class="line"><span class="comment"># -m或m：显示所有的执行绪。</span></span><br><span class="line"><span class="comment"># n：以数字来表示USER和WCHAN栏位。</span></span><br><span class="line"><span class="comment"># -N：显示所有的程序，除了执行ps指令终端机下的程序之外。</span></span><br><span class="line"><span class="comment"># -p&lt;程序识别码&gt;：指定程序识别码，并列出该程序的状况。</span></span><br><span class="line"><span class="comment"># p&lt;程序识别码&gt;：此选项的效果和指定"-p"选项相同，只在列表格式方面稍有差异。</span></span><br><span class="line"><span class="comment"># r：只列出现行终端机正在执行中的程序。</span></span><br><span class="line"><span class="comment"># -s&lt;阶段作业&gt;：指定阶段作业的程序识别码，并列出隶属该阶段作业的程序的状况。</span></span><br><span class="line"><span class="comment"># s：采用程序信号的格式显示程序状况。</span></span><br><span class="line"><span class="comment"># S：列出程序时，包括已中断的子程序资料。</span></span><br><span class="line"><span class="comment"># -t&lt;终端机编号&gt;：指定终端机编号，并列出属于该终端机的程序的状况。</span></span><br><span class="line"><span class="comment"># t&lt;终端机编号&gt;：此选项的效果和指定"-t"选项相同，只在列表格式方面稍有差异。</span></span><br><span class="line"><span class="comment"># -T：显示现行终端机下的所有程序。</span></span><br><span class="line"><span class="comment"># -u&lt;用户识别码&gt;：此选项的效果和指定"-U"选项相同。</span></span><br><span class="line"><span class="comment"># u：以用户为主的格式来显示程序状况。</span></span><br><span class="line"><span class="comment"># -U&lt;用户识别码&gt;：列出属于该用户的程序的状况，也可使用用户名称来指定。</span></span><br><span class="line"><span class="comment"># U&lt;用户名称&gt;：列出属于该用户的程序的状况。</span></span><br><span class="line"><span class="comment"># v：采用虚拟内存的格式显示程序状况。</span></span><br><span class="line"><span class="comment"># -V或V：显示版本信息。</span></span><br><span class="line"><span class="comment"># -w或w：采用宽阔的格式来显示程序状况。　</span></span><br><span class="line"><span class="comment"># x：显示所有程序，不以终端机来区分。</span></span><br><span class="line"><span class="comment"># X：采用旧式的Linux i386登陆格式显示程序状况。</span></span><br><span class="line"><span class="comment"># -y：配合选项"-l"使用时，不显示F(flag)栏位，并以RSS栏位取代ADDR栏位　。</span></span><br><span class="line"><span class="comment"># -&lt;程序识别码&gt;：此选项的效果和指定"p"选项相同。</span></span><br><span class="line"><span class="comment"># --cols&lt;每列字符数&gt;：设置每列的最大字符数。</span></span><br><span class="line"><span class="comment"># --columns&lt;每列字符数&gt;：此选项的效果和指定"--cols"选项相同。</span></span><br><span class="line"><span class="comment"># --cumulative：此选项的效果和指定"S"选项相同。</span></span><br><span class="line"><span class="comment"># --deselect：此选项的效果和指定"-N"选项相同。</span></span><br><span class="line"><span class="comment"># --forest：此选项的效果和指定"f"选项相同。</span></span><br><span class="line"><span class="comment"># --headers：重复显示标题列。</span></span><br><span class="line"><span class="comment"># --help：在线帮助。</span></span><br><span class="line"><span class="comment"># --info：显示排错信息。</span></span><br><span class="line"><span class="comment"># --lines&lt;显示列数&gt;：设置显示画面的列数。</span></span><br><span class="line"><span class="comment"># --no-headers：此选项的效果和指定"h"选项相同，只在列表格式方面稍有差异。</span></span><br><span class="line"><span class="comment"># --group&lt;群组名称&gt;：此选项的效果和指定"-G"选项相同。</span></span><br><span class="line"><span class="comment"># --Group&lt;群组识别码&gt;：此选项的效果和指定"-G"选项相同。</span></span><br><span class="line"><span class="comment"># --pid&lt;程序识别码&gt;：此选项的效果和指定"-p"选项相同。</span></span><br><span class="line"><span class="comment"># --rows&lt;显示列数&gt;：此选项的效果和指定"--lines"选项相同。</span></span><br><span class="line"><span class="comment"># --sid&lt;阶段作业&gt;：此选项的效果和指定"-s"选项相同。</span></span><br><span class="line"><span class="comment"># --tty&lt;终端机编号&gt;：此选项的效果和指定"-t"选项相同。</span></span><br><span class="line"><span class="comment"># --user&lt;用户名称&gt;：此选项的效果和指定"-U"选项相同。</span></span><br><span class="line"><span class="comment"># --User&lt;用户识别码&gt;：此选项的效果和指定"-U"选项相同。</span></span><br><span class="line"><span class="comment"># --version：此选项的效果和指定"-V"选项相同。</span></span><br><span class="line"><span class="comment"># --widty&lt;每列字符数&gt;：此选项的效果和指定"-cols"选项相同。</span></span><br></pre></td></tr></table></figure>
 <h2 id="4、网络配置todo"><a href="#4、网络配置todo" class="headerlink" title="4、网络配置todo"></a>4、网络配置todo</h2>
+        <hr>
       
     </div>
 
-    <div>
+    
       
-        
+    
 
+    
       
+    
+
+    
+      
+  
+  
+  <div class="post-tags">
+    <a href="/tags/Linux/"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" fill="#ccc" style="-ms-transform: rotate(360deg) translate(-2px, 3px); -webkit-transform: rotate(360deg) translate(-2px, 3px); transform: rotate(360deg) translate(-2px, 3px);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M18.52 30a3 3 0 0 1-2.12-.88L2.88 15.61A3 3 0 0 1 2 13.49V5a3 3 0 0 1 3-3h8.49a3 3 0 0 1 2.12.88l13.51 13.51a3 3 0 0 1 0 4.25l-8.48 8.48a3 3 0 0 1-2.12.88zM5 4a1 1 0 0 0-1 1v8.49a1 1 0 0 0 .3.71l13.51 13.51a1 1 0 0 0 1.41 0l8.49-8.49a1 1 0 0 0 0-1.41L14.2 4.3a1 1 0 0 0-.71-.3H5z" /><path d="M10 14a4 4 0 1 1 4-4a4 4 0 0 1-4 4zm0-6a2 2 0 1 0 2 2a2 2 0 0 0-2-2z" /><rect x="0" y="0" width="32" height="32" fill="rgba(0, 0, 0, 0)" /></svg>Linux</a>
+  </div>
+  <hr>
+  
+
+      <div class="post-more">
+  
+    <div class="post-pre">
+      <span>下一篇</span>
+      <a href="/2018/04/18/2018-04-18别样三月三/">别样三月三</a>
     </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Linux/" rel="tag" class="icon-tag-backup">
-              <svg style="vertical-align: middle;" fill="#999" class="icon" width="1em" height="1em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <path d="M329.142857 256q0-30.281143-21.430857-51.712t-51.712-21.430857-51.712 21.430857-21.430857 51.712 21.430857 51.712 51.712 21.430857 51.712-21.430857 21.430857-51.712zM938.861714 585.142857q0 30.281143-21.138286 51.419429l-280.576 281.161143q-22.308571 21.138286-52.004571 21.138286-30.281143 0-51.419429-21.138286l-408.576-409.161143q-21.723429-21.138286-36.864-57.709714t-15.140571-66.852571l0-237.714286q0-29.696 21.723429-51.419429t51.419429-21.723429l237.714286 0q30.281143 0 66.852571 15.140571t58.294857 36.864l408.576 407.990857q21.138286 22.308571 21.138286 52.004571z" />
-              </svg>
-             Linux
-           </a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/03/09/2018-03-09码农的第一次面试/" rel="next" title="第一次 PHP 面试">
-                <svg style="transform: translateX(calc(50% - .55em)) translateY(calc(50% - .35em));" class="icon" fill="#222" width="1em" height="1em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M359.261 495.219q85.098-85.098 341.118-341.118 5.091-5.819 5.091-10.91 0-5.091-5.091-10.183-5.091-5.091-10.183-5.091-5.091 0-10.91 5.091-119.282 118.555-357.119 356.392-5.091 5.091-5.091 10.183 0 5.819 5.091 10.91 0.727 0 1.455 0.727 88.734 89.462 355.665 356.392 5.819 5.091 10.91 5.091 5.091 0 10.183-5.091 5.091-4.364 5.091-10.183 0-5.819-5.091-10.91-113.464-113.464-341.118-341.118-1.455-2.182-1.455-5.091 0-2.909 1.455-5.091z" /></svg>
-                 第一次 PHP 面试
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/18/2018-04-18别样三月三/" rel="prev" title="别样三月三">
-                别样三月三 
-                <svg style="transform: translateX(calc(50% - .55em)) translateY(calc(50% - .35em));" class="icon" fill="#222" width="1em" height="1em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M673.714 495.219q-85.098-85.098-341.118-341.118-5.091-5.819-5.091-10.91 0-5.091 5.091-10.183 5.091-5.091 10.183-5.091 5.091 0 10.91 5.091 119.282 119.282 357.119 357.119 5.091 5.091 5.091 10.91 0 5.091-5.091 10.183-0.727 0.727-1.455 1.455-88.734 88.734-355.665 354.937-5.819 5.091-10.91 5.091-5.091 0-10.183-5.091-5.091-5.091-5.091-10.183 0-5.091 5.091-10.91 113.464-113.464 341.118-341.118 5.091-5.091 0-10.183z" /></svg>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-
-
-          </div>
-          
-  <div class="comments" id="comments">
-    <!-- 评论 -->
+  
+  
+  <div class="post-next">
+    <span>上一篇</span>
+    <a href="/2018/03/09/2018-03-09码农的第一次面试/">第一次 PHP 面试</a>
+  </div>
+  
+</div>
+      <div class="comments" id="comments">
     <div id="showtalk">查看评论</div>
     <div id="container"></div>
     <script>
@@ -938,11 +336,11 @@ ps (选项) # 报告系统进程
         if (status == 'true') {
           var gitment = new Gitment({
             id: document.title, 
-            owner: 'aboutimes',
-            repo: 'theme-hexo',
+            owner: '{{ config.gitment_owner }}',
+            repo: '{{ config.gitment_repo }}',
             oauth: {
-              client_id: 'a4658b7937231833073e',
-              client_secret: 'ee0e478222be08062f68c03d1f6ca433c05e5209',
+              client_id: '{{ config.client_id }}',
+              client_secret: '{{ config.client_secret }}',
             },
           });
           status = false;
@@ -955,243 +353,63 @@ ps (选项) # 报告系统进程
         }
       };
     </script>
-    <!-- 评论 -->
+  </div>
     
   </div>
+</article>
 
-
-        </div>
-        
-          
-  
-
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner" id="sidebarinner">
-        
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-        </ul>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-              
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、文件操作"><span class="nav-text">1、文件操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1、目录-文件列表"><span class="nav-text">1.1、目录/文件列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2、访问目录"><span class="nav-text">1.2、访问目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3、通配符"><span class="nav-text">1.3、通配符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4、编辑目录-文件"><span class="nav-text">1.4、编辑目录/文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5、新建目录-文件"><span class="nav-text">1.5、新建目录/文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6、目录-文件属性-权限"><span class="nav-text">1.6、目录/文件属性/权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7、文件查找"><span class="nav-text">1.7、文件查找</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、编译安装"><span class="nav-text">2、编译安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1、源码包编译安装"><span class="nav-text">2.1、源码包编译安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、进程操作"><span class="nav-text">3、进程操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1、用户-用户组"><span class="nav-text">3.1、用户/用户组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2、查看进程"><span class="nav-text">3.2、查看进程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、网络配置todo"><span class="nav-text">4、网络配置todo</span></a></li></ol></div>
-          </div>
-        </section>
-      <!--/noindex-->
-      
-      
-    </div>
-  </aside>
-  
-
-
-        
-      </div>
     </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="me" style="font-weight:lighter;">
-  
     
-      <span class="links-of-author-item">
-        
-       </span>
-    
-      <span class="links-of-author-item">
-        
-       </span>
-    
-  
-</div>
-<ul class="links-of-blogroll-list" style="font-weight:200;">
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="http://isujin.com" title="素錦" target="_blank">素錦</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="http://sometime.me" title="寒塘渡月" target="_blank">寒塘渡月</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="https://www.inoodle.net" title="伤心凉面" target="_blank">伤心凉面</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="http://www.lyh2.com" title="青筑" target="_blank">青筑</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="http://mir.no/work" title="MIR." target="_blank">MIR.</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="http://modelo.io" title="MODELO" target="_blank">MODELO</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="http://scz.617.cn" title="青衣十三楼" target="_blank">青衣十三楼</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="http://1416.me" title="1416教室" target="_blank">1416教室</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="https://www.fieldevo.com/" title="Fieldevo" target="_blank">Fieldevo</a>
-    </li>
-  
-</ul>
-<div class="copyright" style="top:50px;font-weight:lighter;">
-  
-  &copy;  2012 - 
-  <span itemprop="copyrightYear">2020</span>  
-  <span class="author" itemprop="copyrightHolder">Couh. All rights reserved</span>
-</div>
+    <div class="back-to-top" id="back-to-top">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="2em" height="2em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path d="M8 256C8 119 119 8 256 8s248 111 248 248s-111 248-248 248S8 393 8 256zm292 116V256h70.9c10.7 0 16.1-13 8.5-20.5L264.5 121.2c-4.7-4.7-12.2-4.7-16.9 0l-115 114.3c-7.6 7.6-2.2 20.5 8.5 20.5H212v116c0 6.6 5.4 12 12 12h64c6.6 0 12-5.4 12-12z" fill="#999"></path></svg>
+    </div>
 
-        
+    <footer class="blog-footer">
+  
 
-        
-      </div>
-    </footer>
 
-    
-      <div class="back-to-top">
-        <svg style="vertical-align: middle;" class="icon" width="1em" height="1em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <path d="M504.962 328.269q-102.937 102.937-412.627 412.627-6.159 6.159-13.197 6.159-7.038 0-12.317-6.159-6.159-6.159-6.159-12.317 0-6.159 6.159-13.197 144.287-144.287 431.983-431.983 6.159-6.159 13.197-6.159 6.159 0 12.317 6.159 0.88 0.88 1.76 1.76 107.336 107.336 431.103 430.223 6.159 6.159 6.159 12.317 0 7.038-6.159 13.197-6.159 6.159-13.197 6.159-6.159 0-12.317-6.159-138.129-137.249-414.387-412.627-6.159-6.159-12.317 0z" />
-        </svg>
-        
-      </div>
-    
-
+<!-- <hr> -->
+<div class="blog-footer-friends">
+<!--   <p class="title">FRIENDS</p> -->
+  <div class="friends">
+  
+    <a href="https://www.26fe.cn" target="_blank">老爹的铁铺</a>
+  
+    <a href="http://isujin.com" target="_blank">素錦</a>
+  
+    <a href="http://sometime.me" target="_blank">寒塘渡月</a>
+  
+    <a href="https://www.inoodle.net" target="_blank">伤心凉面</a>
+  
+    <a href="http://mir.no/work" target="_blank">MIR.</a>
+  
+    <a href="http://modelo.io" target="_blank">MODELO</a>
+  
+    <a href="http://scz.617.cn" target="_blank">青衣十三楼</a>
+  
+    <a href="http://1416.me" target="_blank">1416教室</a>
+  
+    <a href="https://www.fieldevo.com/" target="_blank">Fieldevo</a>
+  
   </div>
+</div>
 
   
+ 
+  <div class="blog-footer-copyright">
+  <p class="copyright">Copyright &#169; 2012 - 2020 COUH. All rights reserved</p>
+</div>
+</footer>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+<script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
 
 
 
+<!--  -->
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/prism/prism.js"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-</body>
+<script type="text/javascript" src="/js/main.js"></script>
+  </body>
 </html>

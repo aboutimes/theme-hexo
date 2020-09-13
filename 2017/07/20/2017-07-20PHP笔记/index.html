@@ -1,547 +1,223 @@
-<!doctype html>
+
 
 <html lang="zh-CN">
-<head>
+  <head>
   <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="google" content="notranslate">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
 
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <meta name="theme-color" content="#42dbbc" />
+  <meta name="msapplication-navbutton-color" content="#f8f5ec" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec" />
 
   
   
   
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
   
 
-  
+  <title>舊時光</title>
 
-  
-
-  
-
-  
 
   
 
+  <link rel="stylesheet" href="/css/atom-one-light.css">
+
+  <link rel="stylesheet" href="/css/style.css">
+
   
 
-
-
-
-
-
-
-<link href="/css/main.css" rel="stylesheet" type="text/css" />
-
-<link href="/css/prism.css" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
-    fancybox: false,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: "",
-      labels: ""
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="aboutimes.com/2017/07/20/2017-07-20PHP笔记/"/>
-
-
-
-  <title>PHP 笔记 | 舊時光</title>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <script>
+    window.config = {"title":"舊時光","subtitle":"About Me","description":null,"author":"COUH","language":"zh-CN","timezone":null,"url":"aboutimes.com","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":"README.md","new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":"atom-one-light","default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":3,"pagination_dir":"page","theme":"finemoon","deploy":{"type":"git","repo":"git@github.com:aboutimes/theme-hexo.git","branch":"master"},"ignore":[],"gitalk":"enable","gitment_id":null,"gitment_owner":"aboutimes","gitment_repo":"theme-hexo","client_id":"a4658b7937231833073e","client_secret":"ee0e478222be08062f68c03d1f6ca433c05e5209","archive":1,"category":1,"archive_generator":{"per_page":0,"yearly":true,"monthly":true,"daily":false},"category_generator":{"per_page":0},"tag_generator":{"per_page":0},"plugins":"hexo-footnotes","marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"index_generator":{"per_page":3,"order_by":"-date"},"server":{"port":4000,"log":false,"ip":"0.0.0.0","compress":false,"header":true},"favicon":"/images/favicon.ico","menu":{"archives":"/archives","categories":"/categories","tags":"/tags"},"show_tag":true,"excerpt_link":"Read More","fancybox":false,"disqus_shortname":null,"comment":{"enable":true},"rss":"default","social":{"enable":false,"email":"dasd","instagram":"dasd","douban":"das","linkedin":"dsa","weibo":null,"stackoverflow":null,"facebook":null,"twitter":null,"github":null,"google":null,"zhihu":null,"pocket":null},"friends":{"老爹的铁铺":"https://www.26fe.cn","素錦":"http://isujin.com","寒塘渡月":"http://sometime.me","伤心凉面":"https://www.inoodle.net","MIR.":"http://mir.no/work","MODELO":"http://modelo.io","青衣十三楼":"http://scz.617.cn","1416教室":"http://1416.me","Fieldevo":"https://www.fieldevo.com/"},"since":2012,"google_analytics":null,"portfolio":null,"about":null,"poem":false};
+  </script>
 </head>
-
-<body>
-
-  
-  
+  <body>
     
-  
 
-  <div class="container sidebar-position-left page-post-detail ">
-    <!-- <div class="headband"></div> -->
-
-    <header id="header" class="header">
-      <div class="header-inner">
-<div class="site-brand-wrapper">
-  <div class="site-meta custom-logo">
-    
-      <div class="site-meta-headline">
+<header class="blog-slide">
+  <nav class="blog-header">
+    <a class="mobile toggle-button">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.2em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1536 1280"><path d="M1536 1088v128q0 26-19 45t-45 19H64q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19H64q-26 0-45-19T0 704V576q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19H64q-26 0-45-19T0 192V64q0-26 19-45T64 0h1408q26 0 45 19t19 45z" fill="#626262"/><rect x="0" y="0" width="1536" height="1280" fill="rgba(0, 0, 0, 0)" /></svg>
+    </a>
+    <ul>
+      <li class="title">
         <a href="/">
-          <img class="custom-logo-image" src="/images/logo.png"
-               alt="舊時光"/>
+          <!-- 舊時光 -->
+          <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+           width="128" height="40" style="margin-top: -10px;" viewBox="0 0 128 40"
+           preserveAspectRatio="xMidYMid meet">
+            <g transform="translate(0.000000,40.000000) scale(0.100000,-0.100000)" fill="#f5f5f5" stroke="none">
+              <path d="M177 360 c3 -11 10 -23 15 -26 5 -3 1 -12 -9 -20 -17 -14 -16 -15 7
+              -8 46 12 69 44 31 44 -10 0 -21 7 -25 15 -8 23 -25 18 -19 -5z"/>
+              <path d="M680 335 c0 -15 -6 -25 -14 -25 -8 0 -17 -4 -21 -9 -3 -6 3 -8 15 -6
+              48 9 33 -38 -23 -66 l-40 -21 7 26 c3 14 2 26 -3 26 -5 0 -9 12 -8 26 2 19 -4
+              29 -22 35 -20 8 -22 7 -16 -8 18 -45 17 -52 -8 -58 -17 -5 -29 -18 -36 -37
+              -16 -46 -13 -66 13 -92 12 -13 26 -31 29 -40 4 -9 13 -16 22 -16 11 0 15 12
+              17 50 2 72 2 74 13 82 6 4 22 8 37 8 15 0 30 5 33 10 3 6 11 10 18 10 6 0 -7
+              -18 -28 -40 -33 -34 -37 -42 -25 -51 8 -5 20 -13 26 -17 5 -4 20 -24 33 -45
+              12 -20 27 -35 32 -31 5 3 9 33 9 68 0 36 5 67 12 74 10 10 10 15 -2 23 -13 8
+              -12 11 4 24 29 22 6 43 -29 27 -34 -16 -33 2 3 35 18 17 23 27 14 30 -7 3 -19
+              11 -26 19 -22 21 -36 17 -36 -11z m-134 -152 c-11 -11 -19 6 -11 24 8 17 8 17
+              12 0 3 -10 2 -21 -1 -24z m173 -50 c0 -37 0 -38 -16 -15 -8 12 -23 22 -32 22
+              -13 1 -13 3 3 15 33 25 46 18 45 -22z"/>
+              <path d="M1038 313 c-3 -25 -7 -28 -39 -26 -32 2 -36 0 -32 -18 8 -29 19 -32
+              48 -13 24 16 25 16 25 -9 0 -14 -11 -39 -25 -55 -35 -42 -31 -46 18 -21 l42
+              21 -47 -45 c-64 -60 -63 -80 0 -23 l24 21 31 -38 c24 -28 40 -37 62 -37 31 0
+              75 24 75 41 0 14 -20 11 -36 -6 -24 -24 -58 -18 -90 16 l-29 31 50 44 c45 40
+              47 44 25 44 -14 0 -36 -9 -50 -20 -53 -41 -46 -17 11 37 32 31 59 60 59 65 0
+              11 -37 10 -60 -2 -13 -7 -21 -6 -30 5 -18 22 -28 18 -32 -12z m62 -24 c-7 -11
+              -14 -18 -17 -15 -8 8 5 36 17 36 7 0 7 -6 0 -21z"/>
+              <path d="M266 302 c-3 -6 8 -12 24 -14 19 -3 29 -1 27 6 -5 14 -43 20 -51 8z"/>
+              <path d="M210 276 c-6 -8 -26 -16 -43 -18 -27 -3 -29 -5 -13 -13 12 -5 26 -4
+              38 4 11 7 22 10 24 8 9 -8 -8 -36 -25 -42 -10 -3 -28 -17 -41 -30 -23 -24 -23
+              -26 -5 -39 17 -12 17 -14 -5 -44 -13 -18 -20 -37 -16 -47 8 -21 30 -15 34 10
+              3 10 0 15 -7 11 -15 -10 -14 17 1 32 17 17 41 15 34 -3 -14 -39 35 -93 73 -80
+              28 9 46 60 33 90 -13 29 -28 31 -54 8 -17 -15 -18 -15 -18 6 0 13 10 26 26 33
+              24 11 24 13 8 25 -14 10 -15 15 -4 28 10 12 9 16 -5 21 -12 5 -15 14 -11 30 7
+              27 -5 32 -24 10z m-9 -80 c-6 -7 -9 -20 -6 -28 7 -19 -24 -33 -39 -18 -6 6 -2
+              18 14 35 24 26 51 36 31 11z m73 -92 c4 -9 4 -19 1 -22 -7 -8 -35 19 -29 29 8
+              14 21 11 28 -7z m-19 -34 c3 -6 -1 -13 -10 -16 -19 -8 -30 0 -20 15 8 14 22
+              14 30 1z"/>
+              <path d="M50 242 c0 -5 7 -15 16 -22 12 -11 18 -10 32 5 16 17 16 17 -2 11
+              -10 -3 -25 -1 -32 5 -8 7 -14 7 -14 1z"/>
+            </g>
+          </svg>
         </a>
-      </div>
-    
-    <span class="description"></span>
-    <!-- 
-      <p class="site-subtitle"></p>
-     -->
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
+      </li>
       
         
-        <li class="menu-item menu-item-home" id="menu-home">
-          
-            <a href="/" rel="section">
-              
-              回首
-            </a>
-          
+        <li class="nav-item">
+          <a href="/archives" >往事</a>
         </li>
+           
       
         
-        <li class="menu-item menu-item-archives" id="menu-archives">
-          
-            <a href="/archives/" rel="section">
-              
-              流年
-            </a>
-          
+        <li class="nav-item">
+          <a href="/categories" >记闻</a>
         </li>
+           
       
         
-        <li class="menu-item menu-item-tags" id="menu-tags">
-          
-            <a href="/tags/" rel="section">
-              
-              时光印记
-            </a>
-          
+        <li class="nav-item">
+          <a href="/tags" >印象</a>
         </li>
-      
-        
-        <li class="menu-item menu-item-categories" id="menu-categories">
-          
-            <a href="/categories/">
-              
-              分类
-              <span class="arrow"></span>
-              <ul class="submenu">
-              <!-- 分类链接 -->
-                
-                  <li><a href="/categories/见闻/" class="nav-link">见闻</a></li>
-                
-                  <li><a href="/categories/笔记/" class="nav-link">笔记</a></li>
-                
-              </ul>
-            </a>
-            
-          
-        </li>
-      
+           
       
     </ul>
+  </nav>
+</header>
+    
+<nav id="menu">
   
-
+    
+      <a href="/archives" >往事</a>
+       
+  
+    
+      <a href="/categories" >记闻</a>
+       
+  
+    
+      <a href="/tags" >印象</a>
+       
   
 </nav>
+    
+    <main class="blog-main">
+      <article class="blog-post">
+  
 
-
- 
-      </div>
+  <div class="post-content">
+    <div class="post-header">
       
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner" id="maininner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " ">
-    <link itemprop="mainEntityOfPage" href="aboutimes.com/2017/07/20/2017-07-20PHP笔记/">
-
-    <span hidden itemprop="author">
-      <meta itemprop="name" content="Couh">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher">
-      <meta itemprop="name" content="舊時光">
-    </span>
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline"><a class="post-title-link post-title-link-external" itemprop="url">PHP 笔记</a></h1>
-        
+  
+    <h1 class="post-title">
+      <a href="/2017/07/20/2017-07-20PHP笔记/">
+        PHP 笔记
+      </a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <svg style="vertical-align: middle;" class="icon" fill='#999' width="1em" height="1em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <path d="M744.571429 550.857143l-292.571429 292.571428q-5.714286 5.142857-13.142857 5.142858t-13.142857-5.142858l-164.571429-164.571428q-5.142857-5.714286-5.142857-13.142857t5.142857-12.571429l26.285714-26.285714q5.142857-5.142857 12.571429-5.142857t13.142857 5.142857l125.714286 125.714286 253.714286-253.714286q5.714286-5.142857 13.142857-5.142857t12.571428 5.142857l26.285715 26.285714q5.142857 5.142857 5.142857 12.571429t-5.142857 13.142857zM73.142857 950.857143h804.571429V365.714286H73.142857v585.142857zM292.571429 256V91.428571q0-8-5.142858-13.142857t-13.142857-5.142857h-36.571428q-8 0-13.142857 5.142857t-5.142858 13.142857v164.571429q0 8 5.142858 13.142857t13.142857 5.142857h36.571428q8 0 13.142857-5.142857t5.142858-13.142857z m438.857142 0V91.428571q0-8-5.142857-13.142857t-13.142857-5.142857h-36.571428q-8 0-13.142858 5.142857t-5.142857 13.142857v164.571429q0 8 5.142857 13.142857t13.142858 5.142857h36.571428q8 0 13.142857-5.142857t5.142857-13.142857z m219.428572-36.571429v731.428572q0 29.714286-21.714286 51.428571t-51.428571 21.714286H73.142857q-29.714286 0-51.428571-21.714286t-21.714286-51.428571V219.428571q0-29.714286 21.714286-51.428571t51.428571-21.714286h73.142857v-54.857143q0-37.714286 26.857143-64.571428T237.714286 0h36.571428q37.714286 0 64.571429 26.857143t26.857143 64.571428v54.857143h219.428571v-54.857143q0-37.714286 26.857143-64.571428t64.571429-26.857143h36.571428q37.714286 0 64.571429 26.857143t26.857143 64.571428v54.857143h73.142857q29.714286 0 51.428571 21.714286t21.714286 51.428571z" />
-              </svg>
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-20T00:00:00+08:00" style="color:#222;vertical-align: middle;">
-                2017-07-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <!-- <span class="post-meta-item-icon">
-                <i class="icon-classify"></i>
-              </span> -->
-
-              
-                
-                
-                <svg style="vertical-align: middle;" class="icon" fill='#999' width="1.2em" height="1.2em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M840.268442 529.277502l0 259.159458c0 28.579919-23.251563 51.831482-51.831482 51.831482L235.56304 840.268442c-28.579919 0-51.831482-23.252587-51.831482-51.831482L183.731558 235.56304c0-28.580942 23.252587-51.831482 51.831482-51.831482l276.43696 0 0-34.555004c-141.105738 0-276.43696 0-276.43696 0-47.709605 0-86.386486 38.674834-86.386486 86.386486l0 552.873919c0 47.709605 38.676881 86.386486 86.386486 86.386486l552.873919 0c47.710628 0 86.386486-38.676881 86.386486-86.386486 0 0 0-123.322723 0-259.159458l-0.343831-0.360204L840.268442 529.277502zM846.646626 237.488512l-354.401433 354.401433-60.607769-60.607769 354.401433-354.401433 60.607769 60.607769ZM379.594411 643.927705 479.007585 605.123934 418.399205 544.515554ZM862.172311 161.827689c-16.868179-16.868179-44.216038-16.868179-61.084217 0l61.084217 61.084217C879.040491 206.043726 879.040491 178.695868 862.172311 161.827689z" /></svg>
-                
-                
-                <span itemprop="about">
-                  <a href="/categories/笔记/" itemprop="url" rel="index" style="vertical-align: middle;">
-                    <!-- <span itemprop="name">笔记</span> -->
-                    笔记
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-          <span class="post-meta-divider">|</span>
-          <svg style="vertical-align: middle;" class="icon" fill='#999' width="1em" height="1em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <path d="M501.434368 0c-141.385728 0-256 114.614272-256 256s114.614272 256 256 256 256-114.614272 256-256S642.818048 0 501.434368 0zM503.228416 460.8c-113.106944 0-204.8-91.693056-204.8-204.8 0-113.108992 91.693056-204.8 204.8-204.8s204.8 91.691008 204.8 204.8C708.028416 369.106944 616.33536 460.8 503.228416 460.8z"  /><path d="M76.818432 950.798336C77.428736 710.965248 272.0256 516.73088 512 516.73088s434.571264 194.236416 435.181568 434.067456l52.789248 0C999.360512 681.811968 781.129728 463.941632 512 463.941632S24.639488 681.811968 24.029184 950.798336L76.818432 950.798336z"  />
-          </svg>
-          <span style="color:#222;vertical-align: middle;"> Couh</span>
-          <!-- 增加作者<span class="fa fa-user-o"> </span> -->
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
+<div class="post-meta">
+  2017-07-20
+  <!-- 七月 20, 2017 -->
+  
+     | by COUH
+  
+  
+</div>
 
       
-      
-
+    </div>
+    <div class="post-detail">
       
         <p><img src="/images/2017-07-20-01.png" alt=""><br>　　PHP（“PHP: Hypertext Preprocessor”，超文本预处理器的字母缩写）是一种开源多用途弱类型动态脚本语言，具有免费，快速，灵活和实用等特点，它可嵌入到 HTML中，尤其适合 web 开发。<a id="more"></a></p>
 <h2 id="1、PHP代码解析过程"><a href="#1、PHP代码解析过程" class="headerlink" title="1、PHP代码解析过程"></a>1、PHP代码解析过程</h2><blockquote>
 <p><em>1、词法分析 Scanning（ Lexing ），将 PHP 代码转换为语言片段（ Tokens ）。</em><br><em>2、解析 Parsing， 将 Tokens 转换成简单而有意义的表达式。</em><br><em>3、编译 Compilation，将表达式编译成 Opcode 。</em><br><em>4、执行 Execution，顺序执行 Opcode，每次一条，以实现PHP代码所表达的功能。</em></p>
 </blockquote>
-<h2 id="2、数组操作"><a href="#2、数组操作" class="headerlink" title="2、数组操作"></a>2、数组操作</h2><h3 id="2-1、键名改为小写或大写"><a href="#2-1、键名改为小写或大写" class="headerlink" title="2.1、键名改为小写或大写"></a>2.1、键名改为小写或大写</h3><pre><code class="line-numbers language-php">array_change_key_case(array, case);    //CASE_UPPER：改键值为大写，CASE_LOWER：改键值为小大写。
-</code></pre>
-<h3 id="2-2、数组分块"><a href="#2-2、数组分块" class="headerlink" title="2.2、数组分块"></a>2.2、数组分块</h3><pre><code class="line-numbers language-php">array_chunk(array, size, preserve_key);   //size：整数，preserve_key：可选，true 保留原始键名，false使用从零开始的数字键名。
-</code></pre>
-<h3 id="2-3、返回键值"><a href="#2-3、返回键值" class="headerlink" title="2.3、返回键值"></a>2.3、返回键值</h3><pre><code class="line-numbers language-php">array_values(array);   //所有键值，不保留键名，使用从零开始的数字键名。
-array_slice(array, start, length, preserve)    //返回指定键值。
-//start 必填，开始位置，0 = 第一个元素，-2 意味着从数组的倒数第二个元素开始。
-//length  可选，规定被返回数组的长度。
-//如果该值设置为整数，则返回该数量的元素。
-//如果该值设置为负数，则函数将在举例数组末端这么远的地方终止取出。
-//如果该值未设置，则返回从 start 参数设置的位置开始直到数组末端的所有元素。
-//preserve  
-//可选。规定函数是保留键名还是重置键名。可能的值：
-//true - 保留键名
-//false - 默认。重置键名
-
-array_column(array, column_key, index_key);   //取单列值，column_key：要返回列的键名，index_key：新数组的键名。
-</code></pre>
-<h3 id="2-4、键值去重"><a href="#2-4、键值去重" class="headerlink" title="2.4、键值去重"></a>2.4、键值去重</h3><pre><code class="line-numbers language-php">array_unique(array, sortingtype);   //适用一维数组，sortingtype 规定如何比较数组元素/项目。
-//SORT_STRING - 默认。把项目作为字符串来比较。
-//SORT_REGULAR - 把每一项按常规顺序排列（ Standard ASCII，不改变类型 ）。
-//SORT_NUMERIC - 把每一项作为数字来处理。
-//SORT_LOCALE_STRING - 把每一项作为字符串来处理，基于当前区域设置（ 可通过 setlocale() 进行更改 ）。
-</code></pre>
-<h3 id="2-5、返回键名"><a href="#2-5、返回键名" class="headerlink" title="2.5、返回键名"></a>2.5、返回键名</h3><pre><code class="line-numbers language-php">key(array);   //返回当前键名。
-
-array_keys(array, value, strict);   //返回所有键名
-//value 可选，指定只有该键值对应的键名会被返回。
-//strict  可选，与 value 参数一起使用。可能的值：
-//true - 返回带有指定键值的键名。依赖类型，数字 5 与字符串 &quot;5&quot; 是不同的，
-//false - 默认值。不依赖类型，数字 5 与字符串 &quot;5&quot; 是相同的。
-</code></pre>
-<h3 id="2-6、合并数组"><a href="#2-6、合并数组" class="headerlink" title="2.6、合并数组"></a>2.6、合并数组</h3><pre><code class="line-numbers language-php">array_merge(array1, array2, array3...);   //键名相同的将会被合并，取靠后的键值。
-</code></pre>
-<h3 id="2-7、数组增删"><a href="#2-7、数组增删" class="headerlink" title="2.7、数组增删"></a>2.7、数组增删</h3><pre><code class="line-numbers language-php">array_pop(array);    //删除数组末位值（ 出栈 ）。
-array_push(array,value1,value2...);      //向第一个参数的数组尾部添加一个或多个元素（ 入栈 ），然后返回新数组的长度。
-array_shift(array);   //删除数组中第一个元素，并返回被删除元素的值。
-array_unshift(array, value1, value2, value3...);   在数组开头插入一个或多个元素。
-
-array_splice(array, start, length, newarray);   //移除选定的元素，并用新元素取代它。该函数也将返回包含被移除元素的数组。
-//start 必填，开始位置，0 = 第一个元素，-2 意味着从数组的倒数第二个元素开始。
-//length  可选，规定被移除的元素个数，也是被返回数组的长度。
-//如果该值设置为正数，则移除该数量的元素。
-//如果该值设置为负数，则移除从 start 到数组末端倒数 length 为止中间所有的元素。
-//如果该值未设置，则移除从 start 参数设置的位置开始直到数组末端的所有元素。
-//array 可选，规定带有要插入原始数组中元素的数组。
-//如果只有一个元素，则可以设置为字符串，不需要设置为数组。
-</code></pre>
-<h3 id="2-8、排序"><a href="#2-8、排序" class="headerlink" title="2.8、排序"></a>2.8、排序</h3><pre><code class="line-numbers language-php">sort(array, sortingtype);    //正向，去除键名
-rsort(array, sortingtype);   //逆向，去除键名
-
-asort(array, sortingtype);    //键值正向，保留键名
-arsort(array, sortingtype);   //键值逆向，保留键名
-
-ksort(array, sortingtype);    //键名正向，保留键名
-krsort(array, sortingtype);   //键名逆向，保留键名
-
-uasort(array, myfunction);     //自定义函数键值排序，保留键名
-uksort(array, myfunction);    //自定义函数键名排序，保留键名
-
-//自然排序中 2 小于 10 ，计算机排序中 10 小于 2 。
-natsort();             //区分大小写，保留键名。
-natcasesort(array);   //不区分大小写，保留键名。
-
-array_multisort(array1, sortingorder, sortingtype , array2, array3...)   //多个或多维数组排序
-//sortingorder 可选，SORT_ASC - 默认。按升序排列 (A-Z)，SORT_DESC - 按降序排列 (Z-A)。
-
-//sortingtype
-//按字母进行升序排序，原有的键名将被删除，成功则返回 TRUE，否则返回 FALSE。
-//0 = SORT_REGULAR - 默认，把每一项按常规顺序排列（Standard ASCII，不改变类型）。
-//1 = SORT_NUMERIC - 把每一项作为数字来处理。
-//2 = SORT_STRING - 把每一项作为字符串来处理。
-//3 = SORT_LOCALE_STRING - 把每一项作为字符串来处理，基于当前区域设置（可通过 setlocale() 进行更改）。
-//4 = SORT_NATURAL - 把每一项作为字符串来处理，使用类似 natsort() 的自然排序。
-//5 = SORT_FLAG_CASE - 可以结合（按位或）SORT_STRING 或 SORT_NATURAL 对字符串进行排序，不区分大小写。
-</code></pre>
-<h3 id="2-9、数组计算"><a href="#2-9、数组计算" class="headerlink" title="2.9、数组计算"></a>2.9、数组计算</h3><pre><code class="line-numbers language-php">array_sum(array);   //返回数组中所有值的和，如果所有值都是整数，则返回一个整数值。如果其中有一个或多个值是浮点数，则返回浮点数。
-array_product(array);   //计算并返回数组的乘积。
-count(array,mode);    //mode可选。规定模式。可能的值：
-//0 - 默认。不对多维数组中的所有元素进行计数。
-//1 - 递归地计数数组中元素的数目（计算多维数组中的所有元素）。
-
-array_count_values(array);   //返回一个数组，其元素的键名是原数组的值，键值是该值在原数组中出现的次数。
-
-</code></pre>
-<h2 id="3、字符串操作"><a href="#3、字符串操作" class="headerlink" title="3、字符串操作"></a>3、字符串操作</h2><h3 id="3-1、字符串长度"><a href="#3-1、字符串长度" class="headerlink" title="3.1、字符串长度"></a>3.1、字符串长度</h3><pre><code class="line-numbers language-php">strlen(string);    //返回字符串长度。
-</code></pre>
-<h3 id="3-2、字符定位"><a href="#3-2、字符定位" class="headerlink" title="3.2、字符定位"></a>3.2、字符定位</h3><pre><code class="line-numbers language-php">strpos(string, &#39;a&#39;);    //返回字符位置。
-</code></pre>
-<h3 id="3-3、大小写转换"><a href="#3-3、大小写转换" class="headerlink" title="3.3、大小写转换"></a>3.3、大小写转换</h3><pre><code class="line-numbers language-php">lcfirst(string);   //把字符串中的首字符转换为小写
-ucfirst(string);   //把字符串中的首字符转换为大写
-strtolower(string);    //把字符串转换为小写
-strtoupper(string);    //把字符串转换为大写
-</code></pre>
-<h3 id="3-4、字符串分割为数组"><a href="#3-4、字符串分割为数组" class="headerlink" title="3.4、字符串分割为数组"></a>3.4、字符串分割为数组</h3><pre><code class="line-numbers language-php">explode(separator, string, limit);
-//separator 必需，规定在哪里分割字符串。
-//string  必需，要分割的字符串。
-//limit 可选，规定所返回的数组元素的数目。
-//大于 0 - 返回包含最多 limit 个元素的数组
-//小于 0 - 返回包含除了最后的 -limit 个元素以外的所有元素的数组
-//0 - 返回包含一个元素的数组
-</code></pre>
-<h3 id="3-5、散列"><a href="#3-5、散列" class="headerlink" title="3.5、散列"></a>3.5、散列</h3><pre><code class="line-numbers language-php">md5(string, raw);    //计算字符串的 MD5 散列。
-md5_file(file, raw);     //计算文件的 MD5 散列。
-raw 可选，规定十六进制或二进制输出格式：
-//TRUE - 原始 16 字符二进制格式
-//FALSE - 默认。32 字符十六进制数。
-</code></pre>
-<h2 id="4、Math-函数"><a href="#4、Math-函数" class="headerlink" title="4、Math 函数"></a>4、Math 函数</h2><h3 id="4-1、取绝对值"><a href="#4-1、取绝对值" class="headerlink" title="4.1、取绝对值"></a>4.1、取绝对值</h3><pre><code class="line-numbers language-php">abs(x);
-</code></pre>
-<h3 id="4-2、小数点精度"><a href="#4-2、小数点精度" class="headerlink" title="4.2、小数点精度"></a>4.2、小数点精度</h3><pre><code class="line-numbers language-php">round(x, prec);   //prec 定义小数点位数
-</code></pre>
-<h3 id="4-3、随机整数"><a href="#4-3、随机整数" class="headerlink" title="4.3、随机整数"></a>4.3、随机整数</h3><pre><code class="line-numbers language-php">rand(min, max);
-</code></pre>
-<h3 id="4-4、返回最大最小值"><a href="#4-4、返回最大最小值" class="headerlink" title="4.4、返回最大最小值"></a>4.4、返回最大最小值</h3><pre><code class="line-numbers language-php">min(x, y);
-max(x, y);
-</code></pre>
-<h3 id="4-5、返回余数"><a href="#4-5、返回余数" class="headerlink" title="4.5、返回余数"></a>4.5、返回余数</h3><pre><code class="line-numbers language-php">fmod(x, y);   // 5 除 2 余 1。
-</code></pre>
+<h2 id="2、数组操作"><a href="#2、数组操作" class="headerlink" title="2、数组操作"></a>2、数组操作</h2><h3 id="2-1、键名改为小写或大写"><a href="#2-1、键名改为小写或大写" class="headerlink" title="2.1、键名改为小写或大写"></a>2.1、键名改为小写或大写</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">array_change_key_case(<span class="keyword">array</span>, <span class="keyword">case</span>);</span><br><span class="line"><span class="comment">//CASE_UPPER：改键值为大写，CASE_LOWER：改键值为小大写。</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-2、数组分块"><a href="#2-2、数组分块" class="headerlink" title="2.2、数组分块"></a>2.2、数组分块</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">array_chunk(<span class="keyword">array</span>, size, preserve_key);</span><br><span class="line"><span class="comment">//size：整数，preserve_key：可选，true 保留原始键名，false使用从零开始的数字键名。</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-3、返回键值"><a href="#2-3、返回键值" class="headerlink" title="2.3、返回键值"></a>2.3、返回键值</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">array_values(<span class="keyword">array</span>);</span><br><span class="line"><span class="comment">//所有键值，不保留键名，使用从零开始的数字键名。</span></span><br><span class="line">array_slice(<span class="keyword">array</span>, start, length, preserve) </span><br><span class="line"><span class="comment">//返回指定键值。</span></span><br><span class="line"><span class="comment">//start 必填，开始位置，0 = 第一个元素，-2 意味着从数组的倒数第二个元素开始。</span></span><br><span class="line"><span class="comment">//length  可选，规定被返回数组的长度。</span></span><br><span class="line"><span class="comment">//如果该值设置为整数，则返回该数量的元素。</span></span><br><span class="line"><span class="comment">//如果该值设置为负数，则函数将在举例数组末端这么远的地方终止取出。</span></span><br><span class="line"><span class="comment">//如果该值未设置，则返回从 start 参数设置的位置开始直到数组末端的所有元素。</span></span><br><span class="line"><span class="comment">//preserve  </span></span><br><span class="line"><span class="comment">//可选。规定函数是保留键名还是重置键名。可能的值：</span></span><br><span class="line"><span class="comment">//true - 保留键名</span></span><br><span class="line"><span class="comment">//false - 默认。重置键名</span></span><br><span class="line"></span><br><span class="line">array_column(<span class="keyword">array</span>, column_key, index_key);</span><br><span class="line"><span class="comment">//取单列值，column_key：要返回列的键名，index_key：新数组的键名。</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-4、键值去重"><a href="#2-4、键值去重" class="headerlink" title="2.4、键值去重"></a>2.4、键值去重</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">array_unique(<span class="keyword">array</span>, sortingtype);</span><br><span class="line"><span class="comment">//适用一维数组，sortingtype 规定如何比较数组元素/项目。</span></span><br><span class="line"><span class="comment">//SORT_STRING - 默认。把项目作为字符串来比较。</span></span><br><span class="line"><span class="comment">//SORT_REGULAR - 把每一项按常规顺序排列（ Standard ASCII，不改变类型 ）。</span></span><br><span class="line"><span class="comment">//SORT_NUMERIC - 把每一项作为数字来处理。</span></span><br><span class="line"><span class="comment">//SORT_LOCALE_STRING - 把每一项作为字符串来处理，基于当前区域设置（ 可通过 setlocale() 进行更改 ）。</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-5、返回键名"><a href="#2-5、返回键名" class="headerlink" title="2.5、返回键名"></a>2.5、返回键名</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">key(<span class="keyword">array</span>);</span><br><span class="line"><span class="comment">//返回当前键名。</span></span><br><span class="line"></span><br><span class="line">array_keys(<span class="keyword">array</span>, value, strict);</span><br><span class="line"><span class="comment">//返回所有键名</span></span><br><span class="line"><span class="comment">//value 可选，指定只有该键值对应的键名会被返回。</span></span><br><span class="line"><span class="comment">//strict  可选，与 value 参数一起使用。可能的值：</span></span><br><span class="line"><span class="comment">//true - 返回带有指定键值的键名。依赖类型，数字 5 与字符串 "5" 是不同的，</span></span><br><span class="line"><span class="comment">//false - 默认值。不依赖类型，数字 5 与字符串 "5" 是相同的。</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-6、合并数组"><a href="#2-6、合并数组" class="headerlink" title="2.6、合并数组"></a>2.6、合并数组</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">array_merge(array1, array2, array3...);</span><br><span class="line"><span class="comment">//键名相同的将会被合并，取靠后的键值。</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-7、数组增删"><a href="#2-7、数组增删" class="headerlink" title="2.7、数组增删"></a>2.7、数组增删</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">array_pop(<span class="keyword">array</span>);</span><br><span class="line"><span class="comment">//删除数组末位值（ 出栈 ）。</span></span><br><span class="line">array_push(<span class="keyword">array</span>,value1,value2...);</span><br><span class="line"><span class="comment">//向第一个参数的数组尾部添加一个或多个元素（ 入栈 ），然后返回新数组的长度。</span></span><br><span class="line">array_shift(<span class="keyword">array</span>);</span><br><span class="line"><span class="comment">//删除数组中第一个元素，并返回被删除元素的值。</span></span><br><span class="line">array_unshift(<span class="keyword">array</span>, value1, value2, value3...);</span><br><span class="line"><span class="comment">//在数组开头插入一个或多个元素。</span></span><br><span class="line"></span><br><span class="line">array_splice(<span class="keyword">array</span>, start, length, newarray);</span><br><span class="line"><span class="comment">//移除选定的元素，并用新元素取代它。该函数也将返回包含被移除元素的数组。</span></span><br><span class="line"><span class="comment">//start 必填，开始位置，0 = 第一个元素，-2 意味着从数组的倒数第二个元素开始。</span></span><br><span class="line"><span class="comment">//length  可选，规定被移除的元素个数，也是被返回数组的长度。</span></span><br><span class="line"><span class="comment">//如果该值设置为正数，则移除该数量的元素。</span></span><br><span class="line"><span class="comment">//如果该值设置为负数，则移除从 start 到数组末端倒数 length 为止中间所有的元素。</span></span><br><span class="line"><span class="comment">//如果该值未设置，则移除从 start 参数设置的位置开始直到数组末端的所有元素。</span></span><br><span class="line"><span class="comment">//array 可选，规定带有要插入原始数组中元素的数组。</span></span><br><span class="line"><span class="comment">//如果只有一个元素，则可以设置为字符串，不需要设置为数组。</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-8、排序"><a href="#2-8、排序" class="headerlink" title="2.8、排序"></a>2.8、排序</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">sort(<span class="keyword">array</span>, sortingtype);</span><br><span class="line"><span class="comment">//正向，去除键名</span></span><br><span class="line">rsort(<span class="keyword">array</span>, sortingtype);</span><br><span class="line"><span class="comment">//逆向，去除键名</span></span><br><span class="line"></span><br><span class="line">asort(<span class="keyword">array</span>, sortingtype);</span><br><span class="line"><span class="comment">//键值正向，保留键名</span></span><br><span class="line">arsort(<span class="keyword">array</span>, sortingtype);</span><br><span class="line"><span class="comment">//键值逆向，保留键名</span></span><br><span class="line"></span><br><span class="line">ksort(<span class="keyword">array</span>, sortingtype);</span><br><span class="line"><span class="comment">//键名正向，保留键名</span></span><br><span class="line">krsort(<span class="keyword">array</span>, sortingtype);</span><br><span class="line"><span class="comment">//键名逆向，保留键名</span></span><br><span class="line"></span><br><span class="line">uasort(<span class="keyword">array</span>, myfunction);</span><br><span class="line"><span class="comment">//自定义函数键值排序，保留键名</span></span><br><span class="line">uksort(<span class="keyword">array</span>, myfunction);</span><br><span class="line"><span class="comment">//自定义函数键名排序，保留键名</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//自然排序中 2 小于 10 ，计算机排序中 10 小于 2 。</span></span><br><span class="line">natsort();</span><br><span class="line"><span class="comment">//区分大小写，保留键名。</span></span><br><span class="line">natcasesort(<span class="keyword">array</span>);</span><br><span class="line"><span class="comment">//不区分大小写，保留键名。</span></span><br><span class="line"></span><br><span class="line">array_multisort(array1, sortingorder, sortingtype , array2, array3...)</span><br><span class="line"><span class="comment">//多个或多维数组排序</span></span><br><span class="line"><span class="comment">//sortingorder 可选，SORT_ASC - 默认。按升序排列 (A-Z)，SORT_DESC - 按降序排列 (Z-A)。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//sortingtype</span></span><br><span class="line"><span class="comment">//按字母进行升序排序，原有的键名将被删除，成功则返回 TRUE，否则返回 FALSE。</span></span><br><span class="line"><span class="comment">//0 = SORT_REGULAR - 默认，把每一项按常规顺序排列（Standard ASCII，不改变类型）。</span></span><br><span class="line"><span class="comment">//1 = SORT_NUMERIC - 把每一项作为数字来处理。</span></span><br><span class="line"><span class="comment">//2 = SORT_STRING - 把每一项作为字符串来处理。</span></span><br><span class="line"><span class="comment">//3 = SORT_LOCALE_STRING - 把每一项作为字符串来处理，基于当前区域设置（可通过 setlocale() 进行更改）。</span></span><br><span class="line"><span class="comment">//4 = SORT_NATURAL - 把每一项作为字符串来处理，使用类似 natsort() 的自然排序。</span></span><br><span class="line"><span class="comment">//5 = SORT_FLAG_CASE - 可以结合（按位或）SORT_STRING 或 SORT_NATURAL 对字符串进行排序，不区分大小写。</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-9、数组计算"><a href="#2-9、数组计算" class="headerlink" title="2.9、数组计算"></a>2.9、数组计算</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">array_sum(<span class="keyword">array</span>);</span><br><span class="line"><span class="comment">//返回数组中所有值的和，如果所有值都是整数，则返回一个整数值。如果其中有一个或多个值是浮点数，则返回浮点数。</span></span><br><span class="line">array_product(<span class="keyword">array</span>);</span><br><span class="line"><span class="comment">//计算并返回数组的乘积。</span></span><br><span class="line">count(<span class="keyword">array</span>,mode);</span><br><span class="line"><span class="comment">//mode可选。规定模式。可能的值：</span></span><br><span class="line"><span class="comment">//0 - 默认。不对多维数组中的所有元素进行计数。</span></span><br><span class="line"><span class="comment">//1 - 递归地计数数组中元素的数目（计算多维数组中的所有元素）。</span></span><br><span class="line"></span><br><span class="line">array_count_values(<span class="keyword">array</span>);</span><br><span class="line"><span class="comment">//返回一个数组，其元素的键名是原数组的值，键值是该值在原数组中出现的次数。</span></span><br></pre></td></tr></table></figure>
+<h2 id="3、字符串操作"><a href="#3、字符串操作" class="headerlink" title="3、字符串操作"></a>3、字符串操作</h2><h3 id="3-1、字符串长度"><a href="#3-1、字符串长度" class="headerlink" title="3.1、字符串长度"></a>3.1、字符串长度</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">strlen(string);</span><br><span class="line"><span class="comment">//返回字符串长度。</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-2、字符定位"><a href="#3-2、字符定位" class="headerlink" title="3.2、字符定位"></a>3.2、字符定位</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">strpos(string, <span class="string">'a'</span>);</span><br><span class="line"><span class="comment">//返回字符位置。</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-3、大小写转换"><a href="#3-3、大小写转换" class="headerlink" title="3.3、大小写转换"></a>3.3、大小写转换</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">lcfirst(string);</span><br><span class="line"><span class="comment">//把字符串中的首字符转换为小写</span></span><br><span class="line">ucfirst(string);</span><br><span class="line"><span class="comment">//把字符串中的首字符转换为大写</span></span><br><span class="line">strtolower(string);</span><br><span class="line"><span class="comment">//把字符串转换为小写</span></span><br><span class="line">strtoupper(string);</span><br><span class="line"><span class="comment">//把字符串转换为大写</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-4、字符串分割为数组"><a href="#3-4、字符串分割为数组" class="headerlink" title="3.4、字符串分割为数组"></a>3.4、字符串分割为数组</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">explode(separator, string, limit);</span><br><span class="line"><span class="comment">//separator 必需，规定在哪里分割字符串。</span></span><br><span class="line"><span class="comment">//string  必需，要分割的字符串。</span></span><br><span class="line"><span class="comment">//limit 可选，规定所返回的数组元素的数目。</span></span><br><span class="line"><span class="comment">//大于 0 - 返回包含最多 limit 个元素的数组</span></span><br><span class="line"><span class="comment">//小于 0 - 返回包含除了最后的 -limit 个元素以外的所有元素的数组</span></span><br><span class="line"><span class="comment">//0 - 返回包含一个元素的数组</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-5、散列"><a href="#3-5、散列" class="headerlink" title="3.5、散列"></a>3.5、散列</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">md5(string, raw);</span><br><span class="line"><span class="comment">//计算字符串的 MD5 散列。</span></span><br><span class="line">md5_file(file, raw);</span><br><span class="line"><span class="comment">//计算文件的 MD5 散列。</span></span><br><span class="line"><span class="comment">//raw 可选，规定十六进制或二进制输出格式：</span></span><br><span class="line"><span class="comment">//TRUE - 原始 16 字符二进制格式</span></span><br><span class="line"><span class="comment">//FALSE - 默认。32 字符十六进制数。</span></span><br></pre></td></tr></table></figure>
+<h2 id="4、Math-函数"><a href="#4、Math-函数" class="headerlink" title="4、Math 函数"></a>4、Math 函数</h2><h3 id="4-1、取绝对值"><a href="#4-1、取绝对值" class="headerlink" title="4.1、取绝对值"></a>4.1、取绝对值</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">abs(x);</span><br></pre></td></tr></table></figure>
+<h3 id="4-2、小数点精度"><a href="#4-2、小数点精度" class="headerlink" title="4.2、小数点精度"></a>4.2、小数点精度</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">round(x, prec);</span><br><span class="line"><span class="comment">//prec 定义小数点位数</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-3、随机整数"><a href="#4-3、随机整数" class="headerlink" title="4.3、随机整数"></a>4.3、随机整数</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">rand(min, max);</span><br></pre></td></tr></table></figure>
+<h3 id="4-4、返回最大最小值"><a href="#4-4、返回最大最小值" class="headerlink" title="4.4、返回最大最小值"></a>4.4、返回最大最小值</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">min(x, y);</span><br><span class="line">max(x, y);</span><br></pre></td></tr></table></figure>
+<h3 id="4-5、返回余数"><a href="#4-5、返回余数" class="headerlink" title="4.5、返回余数"></a>4.5、返回余数</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">fmod(x, y);</span><br><span class="line"><span class="comment">// 5 除 2 余 1。</span></span><br></pre></td></tr></table></figure>
 <h2 id="4、正则"><a href="#4、正则" class="headerlink" title="4、正则"></a>4、正则</h2><p>//todo</p>
 
+        <hr>
       
     </div>
 
-    <div>
+    
       
-        
+    
 
+    
       
+    
+
+    
+      
+  
+  
+  <div class="post-tags">
+    <a href="/tags/PHP/"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" fill="#ccc" style="-ms-transform: rotate(360deg) translate(-2px, 3px); -webkit-transform: rotate(360deg) translate(-2px, 3px); transform: rotate(360deg) translate(-2px, 3px);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M18.52 30a3 3 0 0 1-2.12-.88L2.88 15.61A3 3 0 0 1 2 13.49V5a3 3 0 0 1 3-3h8.49a3 3 0 0 1 2.12.88l13.51 13.51a3 3 0 0 1 0 4.25l-8.48 8.48a3 3 0 0 1-2.12.88zM5 4a1 1 0 0 0-1 1v8.49a1 1 0 0 0 .3.71l13.51 13.51a1 1 0 0 0 1.41 0l8.49-8.49a1 1 0 0 0 0-1.41L14.2 4.3a1 1 0 0 0-.71-.3H5z" /><path d="M10 14a4 4 0 1 1 4-4a4 4 0 0 1-4 4zm0-6a2 2 0 1 0 2 2a2 2 0 0 0-2-2z" /><rect x="0" y="0" width="32" height="32" fill="rgba(0, 0, 0, 0)" /></svg>PHP</a>
+  </div>
+  <hr>
+  
+
+      <div class="post-more">
+  
+    <div class="post-pre">
+      <span>下一篇</span>
+      <a href="/2017/07/28/2017-07-28MySQL笔记/">MySQL 笔记</a>
     </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/PHP/" rel="tag" class="icon-tag-backup">
-              <svg style="vertical-align: middle;" fill="#999" class="icon" width="1em" height="1em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <path d="M329.142857 256q0-30.281143-21.430857-51.712t-51.712-21.430857-51.712 21.430857-21.430857 51.712 21.430857 51.712 51.712 21.430857 51.712-21.430857 21.430857-51.712zM938.861714 585.142857q0 30.281143-21.138286 51.419429l-280.576 281.161143q-22.308571 21.138286-52.004571 21.138286-30.281143 0-51.419429-21.138286l-408.576-409.161143q-21.723429-21.138286-36.864-57.709714t-15.140571-66.852571l0-237.714286q0-29.696 21.723429-51.419429t51.419429-21.723429l237.714286 0q30.281143 0 66.852571 15.140571t58.294857 36.864l408.576 407.990857q21.138286 22.308571 21.138286 52.004571z" />
-              </svg>
-             PHP
-           </a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/05/30/2017-05-30碧海蓝天/" rel="next" title="碧海蓝天">
-                <svg style="transform: translateX(calc(50% - .55em)) translateY(calc(50% - .35em));" class="icon" fill="#222" width="1em" height="1em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M359.261 495.219q85.098-85.098 341.118-341.118 5.091-5.819 5.091-10.91 0-5.091-5.091-10.183-5.091-5.091-10.183-5.091-5.091 0-10.91 5.091-119.282 118.555-357.119 356.392-5.091 5.091-5.091 10.183 0 5.819 5.091 10.91 0.727 0 1.455 0.727 88.734 89.462 355.665 356.392 5.819 5.091 10.91 5.091 5.091 0 10.183-5.091 5.091-4.364 5.091-10.183 0-5.819-5.091-10.91-113.464-113.464-341.118-341.118-1.455-2.182-1.455-5.091 0-2.909 1.455-5.091z" /></svg>
-                 碧海蓝天
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/28/2017-07-28MySQL笔记/" rel="prev" title="MySQL 笔记">
-                MySQL 笔记 
-                <svg style="transform: translateX(calc(50% - .55em)) translateY(calc(50% - .35em));" class="icon" fill="#222" width="1em" height="1em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M673.714 495.219q-85.098-85.098-341.118-341.118-5.091-5.819-5.091-10.91 0-5.091 5.091-10.183 5.091-5.091 10.183-5.091 5.091 0 10.91 5.091 119.282 119.282 357.119 357.119 5.091 5.091 5.091 10.91 0 5.091-5.091 10.183-0.727 0.727-1.455 1.455-88.734 88.734-355.665 354.937-5.819 5.091-10.91 5.091-5.091 0-10.183-5.091-5.091-5.091-5.091-10.183 0-5.091 5.091-10.91 113.464-113.464 341.118-341.118 5.091-5.091 0-10.183z" /></svg>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-
-
-          </div>
-          
-  <div class="comments" id="comments">
-    <!-- 评论 -->
+  
+  
+  <div class="post-next">
+    <span>上一篇</span>
+    <a href="/2017/05/30/2017-05-30碧海蓝天/">碧海蓝天</a>
+  </div>
+  
+</div>
+      <div class="comments" id="comments">
     <div id="showtalk">查看评论</div>
     <div id="container"></div>
     <script>
@@ -564,11 +240,11 @@ max(x, y);
         if (status == 'true') {
           var gitment = new Gitment({
             id: document.title, 
-            owner: 'aboutimes',
-            repo: 'theme-hexo',
+            owner: '{{ config.gitment_owner }}',
+            repo: '{{ config.gitment_repo }}',
             oauth: {
-              client_id: 'a4658b7937231833073e',
-              client_secret: 'ee0e478222be08062f68c03d1f6ca433c05e5209',
+              client_id: '{{ config.client_id }}',
+              client_secret: '{{ config.client_secret }}',
             },
           });
           status = false;
@@ -581,243 +257,63 @@ max(x, y);
         }
       };
     </script>
-    <!-- 评论 -->
+  </div>
     
   </div>
+</article>
 
-
-        </div>
-        
-          
-  
-
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner" id="sidebarinner">
-        
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-        </ul>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-              
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、PHP代码解析过程"><span class="nav-text">1、PHP代码解析过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、数组操作"><span class="nav-text">2、数组操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1、键名改为小写或大写"><span class="nav-text">2.1、键名改为小写或大写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2、数组分块"><span class="nav-text">2.2、数组分块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3、返回键值"><span class="nav-text">2.3、返回键值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4、键值去重"><span class="nav-text">2.4、键值去重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5、返回键名"><span class="nav-text">2.5、返回键名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6、合并数组"><span class="nav-text">2.6、合并数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-7、数组增删"><span class="nav-text">2.7、数组增删</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-8、排序"><span class="nav-text">2.8、排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-9、数组计算"><span class="nav-text">2.9、数组计算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、字符串操作"><span class="nav-text">3、字符串操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1、字符串长度"><span class="nav-text">3.1、字符串长度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2、字符定位"><span class="nav-text">3.2、字符定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3、大小写转换"><span class="nav-text">3.3、大小写转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4、字符串分割为数组"><span class="nav-text">3.4、字符串分割为数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5、散列"><span class="nav-text">3.5、散列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、Math-函数"><span class="nav-text">4、Math 函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1、取绝对值"><span class="nav-text">4.1、取绝对值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2、小数点精度"><span class="nav-text">4.2、小数点精度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3、随机整数"><span class="nav-text">4.3、随机整数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4、返回最大最小值"><span class="nav-text">4.4、返回最大最小值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5、返回余数"><span class="nav-text">4.5、返回余数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、正则"><span class="nav-text">4、正则</span></a></li></ol></div>
-          </div>
-        </section>
-      <!--/noindex-->
-      
-      
-    </div>
-  </aside>
-  
-
-
-        
-      </div>
     </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="me" style="font-weight:lighter;">
-  
     
-      <span class="links-of-author-item">
-        
-       </span>
-    
-      <span class="links-of-author-item">
-        
-       </span>
-    
-  
-</div>
-<ul class="links-of-blogroll-list" style="font-weight:200;">
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="http://isujin.com" title="素錦" target="_blank">素錦</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="http://sometime.me" title="寒塘渡月" target="_blank">寒塘渡月</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="https://www.inoodle.net" title="伤心凉面" target="_blank">伤心凉面</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="http://www.lyh2.com" title="青筑" target="_blank">青筑</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="http://mir.no/work" title="MIR." target="_blank">MIR.</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="http://modelo.io" title="MODELO" target="_blank">MODELO</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="http://scz.617.cn" title="青衣十三楼" target="_blank">青衣十三楼</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="http://1416.me" title="1416教室" target="_blank">1416教室</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="https://www.fieldevo.com/" title="Fieldevo" target="_blank">Fieldevo</a>
-    </li>
-  
-</ul>
-<div class="copyright" style="top:50px;font-weight:lighter;">
-  
-  &copy;  2012 - 
-  <span itemprop="copyrightYear">2020</span>  
-  <span class="author" itemprop="copyrightHolder">Couh. All rights reserved</span>
-</div>
+    <div class="back-to-top" id="back-to-top">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="2em" height="2em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path d="M8 256C8 119 119 8 256 8s248 111 248 248s-111 248-248 248S8 393 8 256zm292 116V256h70.9c10.7 0 16.1-13 8.5-20.5L264.5 121.2c-4.7-4.7-12.2-4.7-16.9 0l-115 114.3c-7.6 7.6-2.2 20.5 8.5 20.5H212v116c0 6.6 5.4 12 12 12h64c6.6 0 12-5.4 12-12z" fill="#999"></path></svg>
+    </div>
 
-        
+    <footer class="blog-footer">
+  
 
-        
-      </div>
-    </footer>
 
-    
-      <div class="back-to-top">
-        <svg style="vertical-align: middle;" class="icon" width="1em" height="1em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <path d="M504.962 328.269q-102.937 102.937-412.627 412.627-6.159 6.159-13.197 6.159-7.038 0-12.317-6.159-6.159-6.159-6.159-12.317 0-6.159 6.159-13.197 144.287-144.287 431.983-431.983 6.159-6.159 13.197-6.159 6.159 0 12.317 6.159 0.88 0.88 1.76 1.76 107.336 107.336 431.103 430.223 6.159 6.159 6.159 12.317 0 7.038-6.159 13.197-6.159 6.159-13.197 6.159-6.159 0-12.317-6.159-138.129-137.249-414.387-412.627-6.159-6.159-12.317 0z" />
-        </svg>
-        
-      </div>
-    
-
+<!-- <hr> -->
+<div class="blog-footer-friends">
+<!--   <p class="title">FRIENDS</p> -->
+  <div class="friends">
+  
+    <a href="https://www.26fe.cn" target="_blank">老爹的铁铺</a>
+  
+    <a href="http://isujin.com" target="_blank">素錦</a>
+  
+    <a href="http://sometime.me" target="_blank">寒塘渡月</a>
+  
+    <a href="https://www.inoodle.net" target="_blank">伤心凉面</a>
+  
+    <a href="http://mir.no/work" target="_blank">MIR.</a>
+  
+    <a href="http://modelo.io" target="_blank">MODELO</a>
+  
+    <a href="http://scz.617.cn" target="_blank">青衣十三楼</a>
+  
+    <a href="http://1416.me" target="_blank">1416教室</a>
+  
+    <a href="https://www.fieldevo.com/" target="_blank">Fieldevo</a>
+  
   </div>
+</div>
 
   
+ 
+  <div class="blog-footer-copyright">
+  <p class="copyright">Copyright &#169; 2012 - 2020 COUH. All rights reserved</p>
+</div>
+</footer>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+<script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
 
 
 
+<!--  -->
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/prism/prism.js"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-</body>
+<script type="text/javascript" src="/js/main.js"></script>
+  </body>
 </html>

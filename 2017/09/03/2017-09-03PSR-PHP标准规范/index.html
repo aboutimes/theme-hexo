@@ -1,339 +1,160 @@
-<!doctype html>
+
 
 <html lang="zh-CN">
-<head>
+  <head>
   <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="google" content="notranslate">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
 
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <meta name="theme-color" content="#42dbbc" />
+  <meta name="msapplication-navbutton-color" content="#f8f5ec" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec" />
 
   
   
   
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
   
 
-  
+  <title>舊時光</title>
 
-  
-
-  
-
-  
 
   
 
+  <link rel="stylesheet" href="/css/atom-one-light.css">
+
+  <link rel="stylesheet" href="/css/style.css">
+
   
 
-
-
-
-
-
-
-<link href="/css/main.css" rel="stylesheet" type="text/css" />
-
-<link href="/css/prism.css" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
-    fancybox: false,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: "",
-      labels: ""
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="aboutimes.com/2017/09/03/2017-09-03PSR-PHP标准规范/"/>
-
-
-
-  <title>PSR PHP 标准规范 | 舊時光</title>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <script>
+    window.config = {"title":"舊時光","subtitle":"About Me","description":null,"author":"COUH","language":"zh-CN","timezone":null,"url":"aboutimes.com","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":"README.md","new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":"atom-one-light","default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":3,"pagination_dir":"page","theme":"finemoon","deploy":{"type":"git","repo":"git@github.com:aboutimes/theme-hexo.git","branch":"master"},"ignore":[],"gitalk":"enable","gitment_id":null,"gitment_owner":"aboutimes","gitment_repo":"theme-hexo","client_id":"a4658b7937231833073e","client_secret":"ee0e478222be08062f68c03d1f6ca433c05e5209","archive":1,"category":1,"archive_generator":{"per_page":0,"yearly":true,"monthly":true,"daily":false},"category_generator":{"per_page":0},"tag_generator":{"per_page":0},"plugins":"hexo-footnotes","marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"index_generator":{"per_page":3,"order_by":"-date"},"server":{"port":4000,"log":false,"ip":"0.0.0.0","compress":false,"header":true},"favicon":"/images/favicon.ico","menu":{"archives":"/archives","categories":"/categories","tags":"/tags"},"show_tag":true,"excerpt_link":"Read More","fancybox":false,"disqus_shortname":null,"comment":{"enable":true},"rss":"default","social":{"enable":false,"email":"dasd","instagram":"dasd","douban":"das","linkedin":"dsa","weibo":null,"stackoverflow":null,"facebook":null,"twitter":null,"github":null,"google":null,"zhihu":null,"pocket":null},"friends":{"老爹的铁铺":"https://www.26fe.cn","素錦":"http://isujin.com","寒塘渡月":"http://sometime.me","伤心凉面":"https://www.inoodle.net","MIR.":"http://mir.no/work","MODELO":"http://modelo.io","青衣十三楼":"http://scz.617.cn","1416教室":"http://1416.me","Fieldevo":"https://www.fieldevo.com/"},"since":2012,"google_analytics":null,"portfolio":null,"about":null,"poem":false};
+  </script>
 </head>
-
-<body>
-
-  
-  
+  <body>
     
-  
 
-  <div class="container sidebar-position-left page-post-detail ">
-    <!-- <div class="headband"></div> -->
-
-    <header id="header" class="header">
-      <div class="header-inner">
-<div class="site-brand-wrapper">
-  <div class="site-meta custom-logo">
-    
-      <div class="site-meta-headline">
+<header class="blog-slide">
+  <nav class="blog-header">
+    <a class="mobile toggle-button">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.2em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1536 1280"><path d="M1536 1088v128q0 26-19 45t-45 19H64q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19H64q-26 0-45-19T0 704V576q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19H64q-26 0-45-19T0 192V64q0-26 19-45T64 0h1408q26 0 45 19t19 45z" fill="#626262"/><rect x="0" y="0" width="1536" height="1280" fill="rgba(0, 0, 0, 0)" /></svg>
+    </a>
+    <ul>
+      <li class="title">
         <a href="/">
-          <img class="custom-logo-image" src="/images/logo.png"
-               alt="舊時光"/>
+          <!-- 舊時光 -->
+          <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+           width="128" height="40" style="margin-top: -10px;" viewBox="0 0 128 40"
+           preserveAspectRatio="xMidYMid meet">
+            <g transform="translate(0.000000,40.000000) scale(0.100000,-0.100000)" fill="#f5f5f5" stroke="none">
+              <path d="M177 360 c3 -11 10 -23 15 -26 5 -3 1 -12 -9 -20 -17 -14 -16 -15 7
+              -8 46 12 69 44 31 44 -10 0 -21 7 -25 15 -8 23 -25 18 -19 -5z"/>
+              <path d="M680 335 c0 -15 -6 -25 -14 -25 -8 0 -17 -4 -21 -9 -3 -6 3 -8 15 -6
+              48 9 33 -38 -23 -66 l-40 -21 7 26 c3 14 2 26 -3 26 -5 0 -9 12 -8 26 2 19 -4
+              29 -22 35 -20 8 -22 7 -16 -8 18 -45 17 -52 -8 -58 -17 -5 -29 -18 -36 -37
+              -16 -46 -13 -66 13 -92 12 -13 26 -31 29 -40 4 -9 13 -16 22 -16 11 0 15 12
+              17 50 2 72 2 74 13 82 6 4 22 8 37 8 15 0 30 5 33 10 3 6 11 10 18 10 6 0 -7
+              -18 -28 -40 -33 -34 -37 -42 -25 -51 8 -5 20 -13 26 -17 5 -4 20 -24 33 -45
+              12 -20 27 -35 32 -31 5 3 9 33 9 68 0 36 5 67 12 74 10 10 10 15 -2 23 -13 8
+              -12 11 4 24 29 22 6 43 -29 27 -34 -16 -33 2 3 35 18 17 23 27 14 30 -7 3 -19
+              11 -26 19 -22 21 -36 17 -36 -11z m-134 -152 c-11 -11 -19 6 -11 24 8 17 8 17
+              12 0 3 -10 2 -21 -1 -24z m173 -50 c0 -37 0 -38 -16 -15 -8 12 -23 22 -32 22
+              -13 1 -13 3 3 15 33 25 46 18 45 -22z"/>
+              <path d="M1038 313 c-3 -25 -7 -28 -39 -26 -32 2 -36 0 -32 -18 8 -29 19 -32
+              48 -13 24 16 25 16 25 -9 0 -14 -11 -39 -25 -55 -35 -42 -31 -46 18 -21 l42
+              21 -47 -45 c-64 -60 -63 -80 0 -23 l24 21 31 -38 c24 -28 40 -37 62 -37 31 0
+              75 24 75 41 0 14 -20 11 -36 -6 -24 -24 -58 -18 -90 16 l-29 31 50 44 c45 40
+              47 44 25 44 -14 0 -36 -9 -50 -20 -53 -41 -46 -17 11 37 32 31 59 60 59 65 0
+              11 -37 10 -60 -2 -13 -7 -21 -6 -30 5 -18 22 -28 18 -32 -12z m62 -24 c-7 -11
+              -14 -18 -17 -15 -8 8 5 36 17 36 7 0 7 -6 0 -21z"/>
+              <path d="M266 302 c-3 -6 8 -12 24 -14 19 -3 29 -1 27 6 -5 14 -43 20 -51 8z"/>
+              <path d="M210 276 c-6 -8 -26 -16 -43 -18 -27 -3 -29 -5 -13 -13 12 -5 26 -4
+              38 4 11 7 22 10 24 8 9 -8 -8 -36 -25 -42 -10 -3 -28 -17 -41 -30 -23 -24 -23
+              -26 -5 -39 17 -12 17 -14 -5 -44 -13 -18 -20 -37 -16 -47 8 -21 30 -15 34 10
+              3 10 0 15 -7 11 -15 -10 -14 17 1 32 17 17 41 15 34 -3 -14 -39 35 -93 73 -80
+              28 9 46 60 33 90 -13 29 -28 31 -54 8 -17 -15 -18 -15 -18 6 0 13 10 26 26 33
+              24 11 24 13 8 25 -14 10 -15 15 -4 28 10 12 9 16 -5 21 -12 5 -15 14 -11 30 7
+              27 -5 32 -24 10z m-9 -80 c-6 -7 -9 -20 -6 -28 7 -19 -24 -33 -39 -18 -6 6 -2
+              18 14 35 24 26 51 36 31 11z m73 -92 c4 -9 4 -19 1 -22 -7 -8 -35 19 -29 29 8
+              14 21 11 28 -7z m-19 -34 c3 -6 -1 -13 -10 -16 -19 -8 -30 0 -20 15 8 14 22
+              14 30 1z"/>
+              <path d="M50 242 c0 -5 7 -15 16 -22 12 -11 18 -10 32 5 16 17 16 17 -2 11
+              -10 -3 -25 -1 -32 5 -8 7 -14 7 -14 1z"/>
+            </g>
+          </svg>
         </a>
-      </div>
-    
-    <span class="description"></span>
-    <!-- 
-      <p class="site-subtitle"></p>
-     -->
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
+      </li>
       
         
-        <li class="menu-item menu-item-home" id="menu-home">
-          
-            <a href="/" rel="section">
-              
-              回首
-            </a>
-          
+        <li class="nav-item">
+          <a href="/archives" >往事</a>
         </li>
+           
       
         
-        <li class="menu-item menu-item-archives" id="menu-archives">
-          
-            <a href="/archives/" rel="section">
-              
-              流年
-            </a>
-          
+        <li class="nav-item">
+          <a href="/categories" >记闻</a>
         </li>
+           
       
         
-        <li class="menu-item menu-item-tags" id="menu-tags">
-          
-            <a href="/tags/" rel="section">
-              
-              时光印记
-            </a>
-          
+        <li class="nav-item">
+          <a href="/tags" >印象</a>
         </li>
-      
-        
-        <li class="menu-item menu-item-categories" id="menu-categories">
-          
-            <a href="/categories/">
-              
-              分类
-              <span class="arrow"></span>
-              <ul class="submenu">
-              <!-- 分类链接 -->
-                
-                  <li><a href="/categories/见闻/" class="nav-link">见闻</a></li>
-                
-                  <li><a href="/categories/笔记/" class="nav-link">笔记</a></li>
-                
-              </ul>
-            </a>
-            
-          
-        </li>
-      
+           
       
     </ul>
+  </nav>
+</header>
+    
+<nav id="menu">
   
-
+    
+      <a href="/archives" >往事</a>
+       
+  
+    
+      <a href="/categories" >记闻</a>
+       
+  
+    
+      <a href="/tags" >印象</a>
+       
   
 </nav>
+    
+    <main class="blog-main">
+      <article class="blog-post">
+  
 
-
- 
-      </div>
+  <div class="post-content">
+    <div class="post-header">
       
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner" id="maininner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " ">
-    <link itemprop="mainEntityOfPage" href="aboutimes.com/2017/09/03/2017-09-03PSR-PHP标准规范/">
-
-    <span hidden itemprop="author">
-      <meta itemprop="name" content="Couh">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher">
-      <meta itemprop="name" content="舊時光">
-    </span>
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline"><a class="post-title-link post-title-link-external" itemprop="url">PSR PHP 标准规范</a></h1>
-        
+  
+    <h1 class="post-title">
+      <a href="/2017/09/03/2017-09-03PSR-PHP标准规范/">
+        PSR PHP 标准规范
+      </a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <svg style="vertical-align: middle;" class="icon" fill='#999' width="1em" height="1em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <path d="M744.571429 550.857143l-292.571429 292.571428q-5.714286 5.142857-13.142857 5.142858t-13.142857-5.142858l-164.571429-164.571428q-5.142857-5.714286-5.142857-13.142857t5.142857-12.571429l26.285714-26.285714q5.142857-5.142857 12.571429-5.142857t13.142857 5.142857l125.714286 125.714286 253.714286-253.714286q5.714286-5.142857 13.142857-5.142857t12.571428 5.142857l26.285715 26.285714q5.142857 5.142857 5.142857 12.571429t-5.142857 13.142857zM73.142857 950.857143h804.571429V365.714286H73.142857v585.142857zM292.571429 256V91.428571q0-8-5.142858-13.142857t-13.142857-5.142857h-36.571428q-8 0-13.142857 5.142857t-5.142858 13.142857v164.571429q0 8 5.142858 13.142857t13.142857 5.142857h36.571428q8 0 13.142857-5.142857t5.142858-13.142857z m438.857142 0V91.428571q0-8-5.142857-13.142857t-13.142857-5.142857h-36.571428q-8 0-13.142858 5.142857t-5.142857 13.142857v164.571429q0 8 5.142857 13.142857t13.142858 5.142857h36.571428q8 0 13.142857-5.142857t5.142857-13.142857z m219.428572-36.571429v731.428572q0 29.714286-21.714286 51.428571t-51.428571 21.714286H73.142857q-29.714286 0-51.428571-21.714286t-21.714286-51.428571V219.428571q0-29.714286 21.714286-51.428571t51.428571-21.714286h73.142857v-54.857143q0-37.714286 26.857143-64.571428T237.714286 0h36.571428q37.714286 0 64.571429 26.857143t26.857143 64.571428v54.857143h219.428571v-54.857143q0-37.714286 26.857143-64.571428t64.571429-26.857143h36.571428q37.714286 0 64.571429 26.857143t26.857143 64.571428v54.857143h73.142857q29.714286 0 51.428571 21.714286t21.714286 51.428571z" />
-              </svg>
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-03T00:00:00+08:00" style="color:#222;vertical-align: middle;">
-                2017-09-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <!-- <span class="post-meta-item-icon">
-                <i class="icon-classify"></i>
-              </span> -->
-
-              
-                
-                
-                <svg style="vertical-align: middle;" class="icon" fill='#999' width="1.2em" height="1.2em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M840.268442 529.277502l0 259.159458c0 28.579919-23.251563 51.831482-51.831482 51.831482L235.56304 840.268442c-28.579919 0-51.831482-23.252587-51.831482-51.831482L183.731558 235.56304c0-28.580942 23.252587-51.831482 51.831482-51.831482l276.43696 0 0-34.555004c-141.105738 0-276.43696 0-276.43696 0-47.709605 0-86.386486 38.674834-86.386486 86.386486l0 552.873919c0 47.709605 38.676881 86.386486 86.386486 86.386486l552.873919 0c47.710628 0 86.386486-38.676881 86.386486-86.386486 0 0 0-123.322723 0-259.159458l-0.343831-0.360204L840.268442 529.277502zM846.646626 237.488512l-354.401433 354.401433-60.607769-60.607769 354.401433-354.401433 60.607769 60.607769ZM379.594411 643.927705 479.007585 605.123934 418.399205 544.515554ZM862.172311 161.827689c-16.868179-16.868179-44.216038-16.868179-61.084217 0l61.084217 61.084217C879.040491 206.043726 879.040491 178.695868 862.172311 161.827689z" /></svg>
-                
-                
-                <span itemprop="about">
-                  <a href="/categories/笔记/" itemprop="url" rel="index" style="vertical-align: middle;">
-                    <!-- <span itemprop="name">笔记</span> -->
-                    笔记
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-          <span class="post-meta-divider">|</span>
-          <svg style="vertical-align: middle;" class="icon" fill='#999' width="1em" height="1em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <path d="M501.434368 0c-141.385728 0-256 114.614272-256 256s114.614272 256 256 256 256-114.614272 256-256S642.818048 0 501.434368 0zM503.228416 460.8c-113.106944 0-204.8-91.693056-204.8-204.8 0-113.108992 91.693056-204.8 204.8-204.8s204.8 91.691008 204.8 204.8C708.028416 369.106944 616.33536 460.8 503.228416 460.8z"  /><path d="M76.818432 950.798336C77.428736 710.965248 272.0256 516.73088 512 516.73088s434.571264 194.236416 435.181568 434.067456l52.789248 0C999.360512 681.811968 781.129728 463.941632 512 463.941632S24.639488 681.811968 24.029184 950.798336L76.818432 950.798336z"  />
-          </svg>
-          <span style="color:#222;vertical-align: middle;"> Couh</span>
-          <!-- 增加作者<span class="fa fa-user-o"> </span> -->
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
+<div class="post-meta">
+  2017-09-03
+  <!-- 九月 03, 2017 -->
+  
+     | by COUH
+  
+  
+</div>
 
       
-      
-
+    </div>
+    <div class="post-detail">
       
         <p>　　PSR PHP 标准规范制定了代码基本元素的相关标准， 以确保共享的 PHP 代码间具有较高程度的技术互通性，避免各个框架自行发展的风格阻碍 PHP 的发展。<a id="more"></a></p>
 <h2 id="1、基本代码规范-PSR-1"><a href="#1、基本代码规范-PSR-1" class="headerlink" title="1、基本代码规范 ( PSR-1 )"></a>1、基本代码规范 ( PSR-1 )</h2><h3 id="1-1、概览"><a href="#1-1、概览" class="headerlink" title="1.1、概览"></a>1.1、概览</h3><ul>
@@ -356,70 +177,23 @@
 <li>「从属效应」( side effects )一词的意思是，仅仅通过包含文件，不直接声明类、 函数和常量等，而执行的逻辑操作。</li>
 <li>「从属效应」包含却不仅限于：生成输出、直接的 require 或 include、连接外部服务、修改 ini 配置、抛出错误或异常、修改全局或静态变量、读或写文件等。</li>
 </ul>
-<pre><code class="line-numbers language-php">//从属效应代码
-&lt;?php
-// 「副作用」：修改 ini 配置
-ini_set(&#39;error_reporting&#39;, E_ALL);
-
-// 「副作用」：引入文件
-include &quot;file.php&quot;;
-
-// 「副作用」：生成输出
-echo &quot;&lt;html&gt;\n&quot;;
-
-// 声明函数
-function foo()
-{
-    // 函数主体部分
-}
-
-//无从属效应代码
-&lt;?php
-// 声明函数
-functionfoo(){
-    // 函数主体部分
-}
-
-// 条件声明**不**属于从属效应
-if (! function_exists(&#39;bar&#39;)) {
-    functionbar(){
-        // 函数主体部分
-    }
-}
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">//从属效应代码</span></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">// 「副作用」：修改 ini 配置</span></span><br><span class="line">ini_set(<span class="string">'error_reporting'</span>, E_ALL);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 「副作用」：引入文件</span></span><br><span class="line"><span class="keyword">include</span> <span class="string">"file.php"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 「副作用」：生成输出</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;html&gt;\n"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 声明函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 函数主体部分</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//无从属效应代码</span></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">// 声明函数</span></span><br><span class="line">functionfoo()&#123;</span><br><span class="line">    <span class="comment">// 函数主体部分</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 条件声明**不**属于从属效应</span></span><br><span class="line"><span class="keyword">if</span> (! function_exists(<span class="string">'bar'</span>)) &#123;</span><br><span class="line">    functionbar()&#123;</span><br><span class="line">        <span class="comment">// 函数主体部分</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="1-3、命名空间和类"><a href="#1-3、命名空间和类" class="headerlink" title="1.3、命名空间和类"></a>1.3、命名空间和类</h3><ul>
 <li>命名空间以及类的命名 <code>必须</code> 遵循 <a href="https://github.com/PizzaLiu/PHP-FIG/blob/master/PSR-1-basic-coding-standard-cn.md" target="_blank" rel="noopener">PSR-1</a>。根据规范，每个类都独立为一个文件，且命名空间至少有一个层次：顶级的组织名称（ vendor name ）。类的命名 <code>必须</code> 遵循 StudlyCaps 大写开头的驼峰命名规范</li>
 <li>PHP 5.3 及以后版本的代码 <code>必须</code> 使用正式的命名空间。</li>
 </ul>
-<pre><code class="line-numbers language-php">&lt;?php
-// PHP 5.3 及以后版本的写法
-namespace Vendor\Model;
-
-class Foo{
-}
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">// PHP 5.3 及以后版本的写法</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Vendor</span>\<span class="title">Model</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span></span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>5.2.x 及之前的版本 <code>应该</code> 使用伪命名空间的写法，约定俗成使用顶级的组织名称（ vendor name ）如 Vendor_ 为类前缀。</li>
 </ul>
-<pre><code class="line-numbers language-php">&lt;?php
-// 5.2.x及之前版本的写法
-class Vendor_Model_Foo{
-}
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">// 5.2.x及之前版本的写法</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Vendor_Model_Foo</span></span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="1-4、类的常量、属性和方法"><a href="#1-4、类的常量、属性和方法" class="headerlink" title="1.4、类的常量、属性和方法"></a>1.4、类的常量、属性和方法</h3><ul>
 <li>此处的「类」指代所有的类、接口以及可复用代码块（ traits ）。</li>
 </ul>
 <h4 id="1-4-1、常量"><a href="#1-4-1、常量" class="headerlink" title="1.4.1、常量"></a>1.4.1、常量</h4><ul>
 <li>类的常量中所有字母都 <code>必须</code> 大写，词间以下划线分隔。 参照以下代码：</li>
 </ul>
-<pre><code class="line-numbers language-php">&lt;?php
-namespace Vendor\Model;
-
-class Foo{
-    const VERSION = &#39;1.0&#39;;
-    const DATE_APPROVED = &#39;2012-06-01&#39;;
-}
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Vendor</span>\<span class="title">Model</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span></span>&#123;</span><br><span class="line">    <span class="keyword">const</span> VERSION = <span class="string">'1.0'</span>;</span><br><span class="line">    <span class="keyword">const</span> DATE_APPROVED = <span class="string">'2012-06-01'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="1-4-2、属性"><a href="#1-4-2、属性" class="headerlink" title="1.4.2、属性"></a>1.4.2、属性</h4><ul>
 <li>类的属性命名 <code>可以</code> 遵循 大写开头的驼峰式 ( StudlyCaps )、小写开头的驼峰式 ( camelCase ) 又或者是 下划线分隔式 ( under_score )，本规范不做强制要求，但无论遵循哪种命名方式，都 <code>应该</code> 在一定的范围内保持一致。这个范围 <code>可以</code> 是整个团队、整个包、整个类或整个方法。</li>
 </ul>
@@ -447,32 +221,7 @@ class Foo{
 <h3 id="2-2、示例"><a href="#2-2、示例" class="headerlink" title="2.2、示例"></a>2.2、示例</h3><ul>
 <li>示例简单地展示了以上大部分规范</li>
 </ul>
-<pre><code class="line-numbers language-php">&lt;?php
-namespace Vendor\Package;
-
-use FooInterface;
-use BarClass as Bar;
-use OtherVendor\OtherPackage\BazClass;
-
-class Foo extends Bar implements FooInterface
-{
-    public function sampleFunction($a, $b = null)
-    {
-        if ($a === $b) {
-            bar();
-        } elseif ($a &gt; $b) {
-            $foo-&gt;bar($arg1);
-        } else {
-            BazClass::bar($arg2, $arg3);
-        }
-    }
-
-    final public static functionbar()
-    {
-        // method body
-    }
-}
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Vendor</span>\<span class="title">Package</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">use</span> <span class="title">FooInterface</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">BarClass</span> <span class="title">as</span> <span class="title">Bar</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">OtherVendor</span>\<span class="title">OtherPackage</span>\<span class="title">BazClass</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> <span class="keyword">extends</span> <span class="title">Bar</span> <span class="keyword">implements</span> <span class="title">FooInterface</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">sampleFunction</span><span class="params">($a, $b = null)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> ($a === $b) &#123;</span><br><span class="line">            bar();</span><br><span class="line">        &#125; <span class="keyword">elseif</span> ($a &gt; $b) &#123;</span><br><span class="line">            $foo-&gt;bar($arg1);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            BazClass::bar($arg2, $arg3);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">public</span> <span class="keyword">static</span> functionbar()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// method body</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="2-3、文件"><a href="#2-3、文件" class="headerlink" title="2.3、文件"></a>2.3、文件</h3><ul>
 <li>代码 <code>必须</code> 符合 <a href="https://github.com/PizzaLiu/PHP-FIG/blob/master/PSR-2-coding-style-guide-cn.md" target="_blank" rel="noopener">PSR-2</a> 中的所有规范</li>
 <li>所有 PHP 文件 <code>必须</code> 使用 Unix LF ( linefeed ) 作为行的结束符。</li>
@@ -484,16 +233,7 @@ class Foo extends Bar implements FooInterface
 <li>每条 use 声明语句 <code>必须</code> 只有一个 use 关键词。</li>
 <li>use 声明语句块后 <code>必须</code> 要有一个空白行。</li>
 </ul>
-<pre><code class="line-numbers language-php">//示例
-&lt;?php
-namespace Vendor\Package;
-
-use FooClass;
-use BarClass as Bar;
-use OtherVendor\OtherPackage\BazClass;
-
-// ... additional PHP code ...
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">//示例</span></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Vendor</span>\<span class="title">Package</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">FooClass</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">BarClass</span> <span class="title">as</span> <span class="title">Bar</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">OtherVendor</span>\<span class="title">OtherPackage</span>\<span class="title">BazClass</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ... additional PHP code ...</span></span><br></pre></td></tr></table></figure>
 <h3 id="2-5、类、属性和方法"><a href="#2-5、类、属性和方法" class="headerlink" title="2.5、类、属性和方法"></a>2.5、类、属性和方法</h3><ul>
 <li>此处的「类」泛指所有的 class 类、接口以及（ traits ）可复用代码块。</li>
 </ul>
@@ -501,137 +241,46 @@ use OtherVendor\OtherPackage\BazClass;
 <li>关键词 extends 和 implements <code>必须</code>写在类名称的同一行。</li>
 <li>类的开始花括号 <code>必须</code>独占一行，结束花括号也 <code>必须</code>在类主体后独占一行。</li>
 </ul>
-<pre><code class="line-numbers language-php">&lt;?php
-namespace Vendor\Package;
-
-use FooClass;
-use BarClass as Bar;
-use OtherVendor\OtherPackage\BazClass;
-
-class ClassName extends ParentClass implements \ArrayAccess, \Countable
-{
-    // constants, properties, methods
-}
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Vendor</span>\<span class="title">Package</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">FooClass</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">BarClass</span> <span class="title">as</span> <span class="title">Bar</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">OtherVendor</span>\<span class="title">OtherPackage</span>\<span class="title">BazClass</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClassName</span> <span class="keyword">extends</span> <span class="title">ParentClass</span> <span class="keyword">implements</span> \<span class="title">ArrayAccess</span>, \<span class="title">Countable</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="comment">// constants, properties, methods</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>implements 的继承列表也 <code>可以</code> 分成多行，这样的话，每个继承接口名称都 <code>必须</code> 分开独立成行，包括第一个</li>
 </ul>
-<pre><code class="line-numbers language-php">&lt;?php
-namespace Vendor\Package;
-
-use FooClass;
-use BarClass as Bar;
-use OtherVendor\OtherPackage\BazClass;
-
-class ClassName extends ParentClass implements
-\ArrayAccess, 
-\Countable, 
-\Serializable
-{
-    // constants, properties, methods
-}
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Vendor</span>\<span class="title">Package</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">FooClass</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">BarClass</span> <span class="title">as</span> <span class="title">Bar</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">OtherVendor</span>\<span class="title">OtherPackage</span>\<span class="title">BazClass</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClassName</span> <span class="keyword">extends</span> <span class="title">ParentClass</span> <span class="keyword">implements</span></span></span><br><span class="line"><span class="class">\<span class="title">ArrayAccess</span>, </span></span><br><span class="line"><span class="class">\<span class="title">Countable</span>, </span></span><br><span class="line"><span class="class">\<span class="title">Serializable</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="comment">// constants, properties, methods</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="2-5-2、属性"><a href="#2-5-2、属性" class="headerlink" title="2.5.2、属性"></a>2.5.2、属性</h4><ul>
 <li>每个属性都 <code>必须</code> 添加访问修饰符。</li>
 <li><code>一定不能</code> 使用关键字 var 声明一个属性。</li>
 <li>每条语句 <code>一定不能</code> 定义超过一个属性。</li>
 <li><code>不该</code> 使用下划线作为前缀，来区分属性是 protected 或 private。</li>
 </ul>
-<pre><code class="line-numbers language-php">//示例
-&lt;?php
-namespace Vendor\Package;
-
-classClassName
-{
-    public $foo = null;
-}
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">//示例</span></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Vendor</span>\<span class="title">Package</span>;</span><br><span class="line"></span><br><span class="line">classClassName</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> $foo = <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="2-5-3、方法"><a href="#2-5-3、方法" class="headerlink" title="2.5.3、方法"></a>2.5.3、方法</h4><ul>
 <li>所有方法都 <code>必须</code> 添加访问修饰符。</li>
 <li><code>不该</code> 使用下划线作为前缀，来区分方法是 protected 或 private。</li>
 <li>方法名称后 <code>一定不能</code> 有空格符，其开始花括号 <code>必须</code>独占一行，结束花括号也 <code>必须</code> 在方法主体后单独成一行。参数左括号后和右括号前 <code>一定不能</code> 有空格。</li>
 </ul>
-<pre><code class="line-numbers language-php">//示例，留意其括号、逗号、空格以及花括号的位置。
-&lt;?php
-namespace Vendor\Package;
-
-class ClassName
-{
-    public function fooBarBaz($arg1, &amp;$arg2, $arg3 = [])
-    {
-        // method body
-    }
-}
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">//示例，留意其括号、逗号、空格以及花括号的位置。</span></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Vendor</span>\<span class="title">Package</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClassName</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">fooBarBaz</span><span class="params">($arg1, &amp;$arg2, $arg3 = [])</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">// method body</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="2-5-4、方法的参数"><a href="#2-5-4、方法的参数" class="headerlink" title="2.5.4、方法的参数"></a>2.5.4、方法的参数</h4><ul>
 <li>参数列表中，每个参数后面 <code>必须</code> 要有一个空格，而前面 <code>一定不能</code> 有空格。</li>
 <li>有默认值的参数，<code>必须</code>放到参数列表的末尾。</li>
 </ul>
-<pre><code class="line-numbers language-php">&lt;?php
-namespace Vendor\Package;
-
-class ClassName
-{
-    public functionfoo($arg1, &amp;$arg2, $arg3 = [])
-    {
-        // method body
-    }
-}
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Vendor</span>\<span class="title">Package</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClassName</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> functionfoo($arg1, &amp;$arg2, $arg3 = [])</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// method body</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>参数列表 <code>可以</code> 分列成多行，这样，包括第一个参数在内的每个参数都 <code>必须</code> 单独成行。</li>
 <li>拆分成多行的参数列表后，结束括号以及方法开始花括号 <code>必须</code> 写在同一行，中间用一个空格分隔。</li>
 </ul>
-<pre><code class="line-numbers language-php">&lt;?php
-namespace Vendor\Package;
-
-class ClassName
-{
-    public function aVeryLongMethodName(
-        ClassTypeHint $arg1,
-        &amp;$arg2,
-        array $arg3 = []
-    ){
-        // method body
-    }
-}
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Vendor</span>\<span class="title">Package</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClassName</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">aVeryLongMethodName</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">        ClassTypeHint $arg1,</span></span></span><br><span class="line"><span class="function"><span class="params">        &amp;$arg2,</span></span></span><br><span class="line"><span class="function"><span class="params">        array $arg3 = []</span></span></span><br><span class="line"><span class="function"><span class="params">    )</span></span>&#123;</span><br><span class="line">        <span class="comment">// method body</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="2-5-5、abstract-、-final-、-以及-static"><a href="#2-5-5、abstract-、-final-、-以及-static" class="headerlink" title="2.5.5、abstract 、 final 、 以及 static"></a>2.5.5、abstract 、 final 、 以及 static</h4><ul>
 <li>需要添加 abstract 或 final 声明时， <code>必须</code>写在访问修饰符前，而 static 则 <code>必须</code> 写在其后。</li>
 </ul>
-<pre><code class="line-numbers language-php">&lt;?php
-namespace Vendor\Package;
-
-abstract class ClassName
-{
-    protected static $foo;
-
-    abstract protected functionzim();
-
-    final public static functionbar()
-    {
-        // method body
-    }
-}
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Vendor</span>\<span class="title">Package</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">ClassName</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">static</span> $foo;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">protected</span> functionzim();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">public</span> <span class="keyword">static</span> functionbar()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// method body</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="2-5-6、方法及函数调用"><a href="#2-5-6、方法及函数调用" class="headerlink" title="2.5.6、方法及函数调用"></a>2.5.6、方法及函数调用</h4><ul>
 <li>方法及函数调用时，方法名或函数名与参数左括号之间 <code>一定不能</code> 有空格，参数右括号前也 <code>一定不能</code> 有空格。每个参数前 <code>一定不能</code> 有空格，但其后 <code>必须</code> 有一个空格。</li>
 </ul>
-<pre><code class="line-numbers language-php">&lt;?php
-bar();
-$foo-&gt;bar($arg1);
-Foo::bar($arg2, $arg3);
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">bar();</span><br><span class="line">$foo-&gt;bar($arg1);</span><br><span class="line">Foo::bar($arg2, $arg3);</span><br></pre></td></tr></table></figure>
 <ul>
 <li>参数 <code>可以</code> 分列成多行，此时包括第一个参数在内的每个参数都 <code>必须</code> 单独成行。</li>
 </ul>
-<pre><code class="line-numbers language-php">&lt;?php
-$foo-&gt;bar(
-    $longArgument,
-    $longerArgument,
-    $muchLongerArgument
-);
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$foo-&gt;bar(</span><br><span class="line">    $longArgument,</span><br><span class="line">    $longerArgument,</span><br><span class="line">    $muchLongerArgument</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 <h3 id="2-6、控制结构"><a href="#2-6、控制结构" class="headerlink" title="2.6、控制结构"></a>2.6、控制结构</h3><ul>
 <li>控制结构关键词后 <code>必须</code> 有一个空格。</li>
 <li>左括号 ( 后 <code>一定不能</code> 有空格。</li>
@@ -644,83 +293,34 @@ $foo-&gt;bar(
 <h4 id="2-6-1、if-、-elseif-和-else"><a href="#2-6-1、if-、-elseif-和-else" class="headerlink" title="2.6.1、if 、 elseif 和 else"></a>2.6.1、if 、 elseif 和 else</h4><ul>
 <li>标准的 if 结构如下代码所示，留意 括号、空格以及花括号的位置， 注意 else 和 elseif 都与前面的结束花括号在同一行。</li>
 </ul>
-<pre><code class="line-numbers language-php">&lt;?php
-if ($expr1) {
-    // if body
-} elseif ($expr2) {
-    // elseif body
-} else {
-    // else body;
-}
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">if</span> ($expr1) &#123;</span><br><span class="line">    <span class="comment">// if body</span></span><br><span class="line">&#125; <span class="keyword">elseif</span> ($expr2) &#123;</span><br><span class="line">    <span class="comment">// elseif body</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// else body;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li><code>应该</code> 使用关键词 elseif 代替所有 else if ，以使得所有的控制关键字都像是单独的一个词。</li>
 </ul>
 <h4 id="2-6-2、switch-和-case"><a href="#2-6-2、switch-和-case" class="headerlink" title="2.6.2、switch 和 case"></a>2.6.2、switch 和 case</h4><ul>
 <li>标准的 switch 结构如下代码所示，留意括号、空格以及花括号的位置。 case 语句 <code>必须</code> 相对 switch 进行一次缩进，而 break 语句以及 case 内的其它语句都 <code>必须</code> 相对 case 进行一次缩进。 如果存在非空的 case 直穿语句，主体里 <code>必须</code> 有类似 // no break 的注释。</li>
 </ul>
-<pre><code class="line-numbers language-php">&lt;?php
-switch ($expr) {
-    case 0:
-        echo &#39;First case, with a break&#39;;
-        break;
-    case 1:
-        echo &#39;Second case, which falls through&#39;;
-        // no break
-    case 2:
-    case 3:
-    case 4:
-        echo &#39;Third case, return instead of break&#39;;
-        return;
-    default:
-        echo &#39;Default case&#39;;
-        break;
-}
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">switch</span> ($expr) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">'First case, with a break'</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">'Second case, which falls through'</span>;</span><br><span class="line">        <span class="comment">// no break</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">'Third case, return instead of break'</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">'Default case'</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="2-6-3、while-和-do-while"><a href="#2-6-3、while-和-do-while" class="headerlink" title="2.6.3、while 和 do while"></a>2.6.3、while 和 do while</h4><ul>
 <li>一个规范的 while 语句 <code>应该</code> 如下所示，注意其 括号、空格以及花括号的位置。</li>
 </ul>
-<pre><code class="line-numbers language-php">&lt;?php
-while ($expr) {
-    // structure body
-}
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">while</span> ($expr) &#123;</span><br><span class="line">    <span class="comment">// structure body</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>标准的 do while 语句如下所示，同样的，注意其 括号、空格以及花括号的位置。</li>
 </ul>
-<pre><code class="line-numbers language-php">&lt;?php
-do {
-    // structure body;
-} while ($expr)
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">    <span class="comment">// structure body;</span></span><br><span class="line">&#125; <span class="keyword">while</span> ($expr)</span><br></pre></td></tr></table></figure>
 <h4 id="2-6-4、for"><a href="#2-6-4、for" class="headerlink" title="2.6.4、for"></a>2.6.4、for</h4><ul>
 <li>标准的 for 语句如下所示，注意其 括号、空格以及花括号的位置。</li>
 </ul>
-<pre><code class="line-numbers language-php">&lt;?php
-for ($i = 0; $i &lt; 10; $i++) {
-    // for body
-}
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">for</span> ($i = <span class="number">0</span>; $i &lt; <span class="number">10</span>; $i++) &#123;</span><br><span class="line">    <span class="comment">// for body</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="2-6-5、foreach"><a href="#2-6-5、foreach" class="headerlink" title="2.6.5、foreach"></a>2.6.5、foreach</h4><ul>
 <li>标准的 foreach 语句如下所示，注意其 括号、空格以及花括号的位置。</li>
 </ul>
-<pre><code class="line-numbers language-php">&lt;?php
-foreach ($iterable as $key =&gt; $value) {
-    // foreach body
-}
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">foreach</span> ($iterable <span class="keyword">as</span> $key =&gt; $value) &#123;</span><br><span class="line">    <span class="comment">// foreach body</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="2-6-6、try-catch"><a href="#2-6-6、try-catch" class="headerlink" title="2.6.6、try, catch"></a>2.6.6、try, catch</h4><ul>
 <li>标准的 try catch 语句如下所示，注意其 括号、空格以及花括号的位置。</li>
 </ul>
-<pre><code class="line-numbers language-php">&lt;?php
-try {
-    // try body
-} catch (FirstExceptionType $e) {
-    // catch body
-} catch (OtherExceptionType $e) {
-    // catch body
-}
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">// try body</span></span><br><span class="line">&#125; <span class="keyword">catch</span> (FirstExceptionType $e) &#123;</span><br><span class="line">    <span class="comment">// catch body</span></span><br><span class="line">&#125; <span class="keyword">catch</span> (OtherExceptionType $e) &#123;</span><br><span class="line">    <span class="comment">// catch body</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="2-7、闭包"><a href="#2-7、闭包" class="headerlink" title="2.7、闭包"></a>2.7、闭包</h3><ul>
 <li>闭包声明时，关键词 function 后以及关键词 use 的前后都 <code>必须</code> 要有一个空格。</li>
 <li>开始花括号 <code>必须</code> 写在声明的同一行，结束花括号 <code>必须</code> 紧跟主体结束的下一行。</li>
@@ -729,135 +329,54 @@ try {
 <li>闭包中有默认值的参数 <code>必须</code> 放到列表的后面。</li>
 <li>标准的闭包声明语句如下所示，注意其 括号、逗号、空格以及花括号的位置。</li>
 </ul>
-<pre><code class="line-numbers language-php">&lt;?php
-$closureWithArgs = function($arg1, $arg2){
-    // body
-};
-
-$closureWithArgsAndVars = function($arg1, $arg2)use($var1, $var2){
-    // body
-};
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$closureWithArgs = <span class="function"><span class="keyword">function</span><span class="params">($arg1, $arg2)</span></span>&#123;</span><br><span class="line">    <span class="comment">// body</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">$closureWithArgsAndVars = <span class="function"><span class="keyword">function</span><span class="params">($arg1, $arg2)</span><span class="title">use</span><span class="params">($var1, $var2)</span></span>&#123;</span><br><span class="line">    <span class="comment">// body</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>参数列表以及变量列表 <code>可以</code> 分成多行，这样，包括第一个在内的每个参数或变量都 <code>必须</code> 单独成行，而列表的右括号与闭包的开始花括号 <code>必须</code> 放在同一行。</li>
 <li>以下几个例子，包含了参数和变量列表被分成多行的多情况。</li>
 </ul>
-<pre><code class="line-numbers language-php">&lt;?php
-$longArgs_noVars = function($longArgument, $longerArgument, $muchLongerArgument){
-   // body
-};
-
-$noArgs_longVars = function()use($longVar1, $longerVar2, $muchLongerVar3){
-   // body
-};
-
-$longArgs_longVars = function($longArgument, $longerArgument, $muchLongerArgument)use($longVar1, $longerVar2, $muchLongerVar3){
-   // body
-};
-
-$longArgs_shortVars = function($longArgument, $longerArgument, $muchLongerArgument)use($var1){
-   // body
-};
-
-$shortArgs_longVars = function($arg)use($longVar1, $longerVar2, $muchLongerVar3){
-   // body
-};
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$longArgs_noVars = <span class="function"><span class="keyword">function</span><span class="params">($longArgument, $longerArgument, $muchLongerArgument)</span></span>&#123;</span><br><span class="line">   <span class="comment">// body</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">$noArgs_longVars = <span class="function"><span class="keyword">function</span><span class="params">()</span><span class="title">use</span><span class="params">($longVar1, $longerVar2, $muchLongerVar3)</span></span>&#123;</span><br><span class="line">   <span class="comment">// body</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">$longArgs_longVars = <span class="function"><span class="keyword">function</span><span class="params">($longArgument, $longerArgument, $muchLongerArgument)</span><span class="title">use</span><span class="params">($longVar1, $longerVar2, $muchLongerVar3)</span></span>&#123;</span><br><span class="line">   <span class="comment">// body</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">$longArgs_shortVars = <span class="function"><span class="keyword">function</span><span class="params">($longArgument, $longerArgument, $muchLongerArgument)</span><span class="title">use</span><span class="params">($var1)</span></span>&#123;</span><br><span class="line">   <span class="comment">// body</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">$shortArgs_longVars = <span class="function"><span class="keyword">function</span><span class="params">($arg)</span><span class="title">use</span><span class="params">($longVar1, $longerVar2, $muchLongerVar3)</span></span>&#123;</span><br><span class="line">   <span class="comment">// body</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>注意，闭包被直接用作函数或方法调用的参数时，以上规则仍然适用。</li>
 </ul>
-<pre><code class="line-numbers language-php">&lt;?php
-$foo-&gt;bar(
-    $arg1,
-    function($arg2)use($var1){
-        // body
-    },
-    $arg3
-);
-</code></pre>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$foo-&gt;bar(</span><br><span class="line">    $arg1,</span><br><span class="line">    <span class="function"><span class="keyword">function</span><span class="params">($arg2)</span><span class="title">use</span><span class="params">($var1)</span></span>&#123;</span><br><span class="line">        <span class="comment">// body</span></span><br><span class="line">    &#125;,</span><br><span class="line">    $arg3</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:0"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">0.</span><span style="display: inline-block; vertical-align: top;">详细描述可参见 <a href="http://www.ietf.org/rfc/rfc2119.txt" target="_blank" rel="noopener">RFC 2119</a></span><a href="#fnref:0" rev="footnote"> ↩</a></li><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;"><code>必须</code>( MUST )</span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;"><code>一定不能</code>( MUST NOT )</span><a href="#fnref:2" rev="footnote"> ↩</a></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">3.</span><span style="display: inline-block; vertical-align: top;"><code>需要</code>( REQUIRED )</span><a href="#fnref:3" rev="footnote"> ↩</a></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">4.</span><span style="display: inline-block; vertical-align: top;"><code>将会</code>( SHALL )</span><a href="#fnref:4" rev="footnote"> ↩</a></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">5.</span><span style="display: inline-block; vertical-align: top;"><code>不会</code>( SHALL NOT )</span><a href="#fnref:5" rev="footnote"> ↩</a></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">6.</span><span style="display: inline-block; vertical-align: top;"><code>应该</code>( SHOULD )</span><a href="#fnref:6" rev="footnote"> ↩</a></li><li id="fn:7"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">7.</span><span style="display: inline-block; vertical-align: top;"><code>不该</code>( SHOULD NOT )</span><a href="#fnref:7" rev="footnote"> ↩</a></li><li id="fn:8"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">8.</span><span style="display: inline-block; vertical-align: top;"><code>推荐</code>( RECOMMENDED )</span><a href="#fnref:8" rev="footnote"> ↩</a></li><li id="fn:9"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">9.</span><span style="display: inline-block; vertical-align: top;"><code>可以</code>( MAY )</span><a href="#fnref:9" rev="footnote"> ↩</a></li><li id="fn:10"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">10.</span><span style="display: inline-block; vertical-align: top;"><code>可选</code>( OPTIONAL )</span><a href="#fnref:10" rev="footnote"> ↩</a></li></ol></div></div>
+        <hr>
       
     </div>
 
-    <div>
+    
       
-        
+    
 
+    
       
+    
+
+    
+      
+  
+  
+  <div class="post-tags">
+    <a href="/tags/PHP/"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" fill="#ccc" style="-ms-transform: rotate(360deg) translate(-2px, 3px); -webkit-transform: rotate(360deg) translate(-2px, 3px); transform: rotate(360deg) translate(-2px, 3px);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M18.52 30a3 3 0 0 1-2.12-.88L2.88 15.61A3 3 0 0 1 2 13.49V5a3 3 0 0 1 3-3h8.49a3 3 0 0 1 2.12.88l13.51 13.51a3 3 0 0 1 0 4.25l-8.48 8.48a3 3 0 0 1-2.12.88zM5 4a1 1 0 0 0-1 1v8.49a1 1 0 0 0 .3.71l13.51 13.51a1 1 0 0 0 1.41 0l8.49-8.49a1 1 0 0 0 0-1.41L14.2 4.3a1 1 0 0 0-.71-.3H5z" /><path d="M10 14a4 4 0 1 1 4-4a4 4 0 0 1-4 4zm0-6a2 2 0 1 0 2 2a2 2 0 0 0-2-2z" /><rect x="0" y="0" width="32" height="32" fill="rgba(0, 0, 0, 0)" /></svg>PHP</a>
+  </div>
+  <hr>
+  
+
+      <div class="post-more">
+  
+    <div class="post-pre">
+      <span>下一篇</span>
+      <a href="/2017/09/22/2017-09-22liip脚本升级Mac自带PHP/">liip 脚本升级 Mac 自带 PHP</a>
     </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/PHP/" rel="tag" class="icon-tag-backup">
-              <svg style="vertical-align: middle;" fill="#999" class="icon" width="1em" height="1em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <path d="M329.142857 256q0-30.281143-21.430857-51.712t-51.712-21.430857-51.712 21.430857-21.430857 51.712 21.430857 51.712 51.712 21.430857 51.712-21.430857 21.430857-51.712zM938.861714 585.142857q0 30.281143-21.138286 51.419429l-280.576 281.161143q-22.308571 21.138286-52.004571 21.138286-30.281143 0-51.419429-21.138286l-408.576-409.161143q-21.723429-21.138286-36.864-57.709714t-15.140571-66.852571l0-237.714286q0-29.696 21.723429-51.419429t51.419429-21.723429l237.714286 0q30.281143 0 66.852571 15.140571t58.294857 36.864l408.576 407.990857q21.138286 22.308571 21.138286 52.004571z" />
-              </svg>
-             PHP
-           </a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/08/27/2017-08-27修正笔记本内建显示器连接类型/" rel="next" title="修正笔记本内建显示器连接类型">
-                <svg style="transform: translateX(calc(50% - .55em)) translateY(calc(50% - .35em));" class="icon" fill="#222" width="1em" height="1em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M359.261 495.219q85.098-85.098 341.118-341.118 5.091-5.819 5.091-10.91 0-5.091-5.091-10.183-5.091-5.091-10.183-5.091-5.091 0-10.91 5.091-119.282 118.555-357.119 356.392-5.091 5.091-5.091 10.183 0 5.819 5.091 10.91 0.727 0 1.455 0.727 88.734 89.462 355.665 356.392 5.819 5.091 10.91 5.091 5.091 0 10.183-5.091 5.091-4.364 5.091-10.183 0-5.819-5.091-10.91-113.464-113.464-341.118-341.118-1.455-2.182-1.455-5.091 0-2.909 1.455-5.091z" /></svg>
-                 修正笔记本内建显示器连接类型
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/22/2017-09-22liip脚本升级Mac自带PHP/" rel="prev" title="liip 脚本升级 Mac 自带 PHP">
-                liip 脚本升级 Mac 自带 PHP 
-                <svg style="transform: translateX(calc(50% - .55em)) translateY(calc(50% - .35em));" class="icon" fill="#222" width="1em" height="1em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M673.714 495.219q-85.098-85.098-341.118-341.118-5.091-5.819-5.091-10.91 0-5.091 5.091-10.183 5.091-5.091 10.183-5.091 5.091 0 10.91 5.091 119.282 119.282 357.119 357.119 5.091 5.091 5.091 10.91 0 5.091-5.091 10.183-0.727 0.727-1.455 1.455-88.734 88.734-355.665 354.937-5.819 5.091-10.91 5.091-5.091 0-10.183-5.091-5.091-5.091-5.091-10.183 0-5.091 5.091-10.91 113.464-113.464 341.118-341.118 5.091-5.091 0-10.183z" /></svg>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-
-
-          </div>
-          
-  <div class="comments" id="comments">
-    <!-- 评论 -->
+  
+  
+  <div class="post-next">
+    <span>上一篇</span>
+    <a href="/2017/08/27/2017-08-27修正笔记本内建显示器连接类型/">修正笔记本内建显示器连接类型</a>
+  </div>
+  
+</div>
+      <div class="comments" id="comments">
     <div id="showtalk">查看评论</div>
     <div id="container"></div>
     <script>
@@ -880,11 +399,11 @@ $foo-&gt;bar(
         if (status == 'true') {
           var gitment = new Gitment({
             id: document.title, 
-            owner: 'aboutimes',
-            repo: 'theme-hexo',
+            owner: '{{ config.gitment_owner }}',
+            repo: '{{ config.gitment_repo }}',
             oauth: {
-              client_id: 'a4658b7937231833073e',
-              client_secret: 'ee0e478222be08062f68c03d1f6ca433c05e5209',
+              client_id: '{{ config.client_id }}',
+              client_secret: '{{ config.client_secret }}',
             },
           });
           status = false;
@@ -897,243 +416,63 @@ $foo-&gt;bar(
         }
       };
     </script>
-    <!-- 评论 -->
+  </div>
     
   </div>
+</article>
 
-
-        </div>
-        
-          
-  
-
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner" id="sidebarinner">
-        
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-        </ul>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-              
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、基本代码规范-PSR-1"><span class="nav-text">1、基本代码规范 ( PSR-1 )</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1、概览"><span class="nav-text">1.1、概览</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2、文件"><span class="nav-text">1.2、文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1、PHP标签"><span class="nav-text">1.2.1、PHP标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-2、字符编码"><span class="nav-text">1.2.2、字符编码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-3、从属效应（副作用）"><span class="nav-text">1.2.3、从属效应（副作用）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3、命名空间和类"><span class="nav-text">1.3、命名空间和类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4、类的常量、属性和方法"><span class="nav-text">1.4、类的常量、属性和方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-1、常量"><span class="nav-text">1.4.1、常量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-2、属性"><span class="nav-text">1.4.2、属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-3、方法"><span class="nav-text">1.4.3、方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、代码风格规范-PSR-2"><span class="nav-text">2、代码风格规范 ( PSR-2 )</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1、概览"><span class="nav-text">2.1、概览</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2、示例"><span class="nav-text">2.2、示例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3、文件"><span class="nav-text">2.3、文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4、namespace-以及-use-声明"><span class="nav-text">2.4、namespace 以及 use 声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5、类、属性和方法"><span class="nav-text">2.5、类、属性和方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-1、扩展与继承"><span class="nav-text">2.5.1、扩展与继承</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-2、属性"><span class="nav-text">2.5.2、属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-3、方法"><span class="nav-text">2.5.3、方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-4、方法的参数"><span class="nav-text">2.5.4、方法的参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-5、abstract-、-final-、-以及-static"><span class="nav-text">2.5.5、abstract 、 final 、 以及 static</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-6、方法及函数调用"><span class="nav-text">2.5.6、方法及函数调用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6、控制结构"><span class="nav-text">2.6、控制结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-6-1、if-、-elseif-和-else"><span class="nav-text">2.6.1、if 、 elseif 和 else</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-6-2、switch-和-case"><span class="nav-text">2.6.2、switch 和 case</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-6-3、while-和-do-while"><span class="nav-text">2.6.3、while 和 do while</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-6-4、for"><span class="nav-text">2.6.4、for</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-6-5、foreach"><span class="nav-text">2.6.5、foreach</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-6-6、try-catch"><span class="nav-text">2.6.6、try, catch</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-7、闭包"><span class="nav-text">2.7、闭包</span></a></li></ol></li></ol></div>
-          </div>
-        </section>
-      <!--/noindex-->
-      
-      
-    </div>
-  </aside>
-  
-
-
-        
-      </div>
     </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="me" style="font-weight:lighter;">
-  
     
-      <span class="links-of-author-item">
-        
-       </span>
-    
-      <span class="links-of-author-item">
-        
-       </span>
-    
-  
-</div>
-<ul class="links-of-blogroll-list" style="font-weight:200;">
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="http://isujin.com" title="素錦" target="_blank">素錦</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="http://sometime.me" title="寒塘渡月" target="_blank">寒塘渡月</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="https://www.inoodle.net" title="伤心凉面" target="_blank">伤心凉面</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="http://www.lyh2.com" title="青筑" target="_blank">青筑</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="http://mir.no/work" title="MIR." target="_blank">MIR.</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="http://modelo.io" title="MODELO" target="_blank">MODELO</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="http://scz.617.cn" title="青衣十三楼" target="_blank">青衣十三楼</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="http://1416.me" title="1416教室" target="_blank">1416教室</a>
-    </li>
-  
-    <li class="links-of-blogroll-item"  style="display: inline-block;">
-      <a href="https://www.fieldevo.com/" title="Fieldevo" target="_blank">Fieldevo</a>
-    </li>
-  
-</ul>
-<div class="copyright" style="top:50px;font-weight:lighter;">
-  
-  &copy;  2012 - 
-  <span itemprop="copyrightYear">2020</span>  
-  <span class="author" itemprop="copyrightHolder">Couh. All rights reserved</span>
-</div>
+    <div class="back-to-top" id="back-to-top">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="2em" height="2em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path d="M8 256C8 119 119 8 256 8s248 111 248 248s-111 248-248 248S8 393 8 256zm292 116V256h70.9c10.7 0 16.1-13 8.5-20.5L264.5 121.2c-4.7-4.7-12.2-4.7-16.9 0l-115 114.3c-7.6 7.6-2.2 20.5 8.5 20.5H212v116c0 6.6 5.4 12 12 12h64c6.6 0 12-5.4 12-12z" fill="#999"></path></svg>
+    </div>
 
-        
+    <footer class="blog-footer">
+  
 
-        
-      </div>
-    </footer>
 
-    
-      <div class="back-to-top">
-        <svg style="vertical-align: middle;" class="icon" width="1em" height="1em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <path d="M504.962 328.269q-102.937 102.937-412.627 412.627-6.159 6.159-13.197 6.159-7.038 0-12.317-6.159-6.159-6.159-6.159-12.317 0-6.159 6.159-13.197 144.287-144.287 431.983-431.983 6.159-6.159 13.197-6.159 6.159 0 12.317 6.159 0.88 0.88 1.76 1.76 107.336 107.336 431.103 430.223 6.159 6.159 6.159 12.317 0 7.038-6.159 13.197-6.159 6.159-13.197 6.159-6.159 0-12.317-6.159-138.129-137.249-414.387-412.627-6.159-6.159-12.317 0z" />
-        </svg>
-        
-      </div>
-    
-
+<!-- <hr> -->
+<div class="blog-footer-friends">
+<!--   <p class="title">FRIENDS</p> -->
+  <div class="friends">
+  
+    <a href="https://www.26fe.cn" target="_blank">老爹的铁铺</a>
+  
+    <a href="http://isujin.com" target="_blank">素錦</a>
+  
+    <a href="http://sometime.me" target="_blank">寒塘渡月</a>
+  
+    <a href="https://www.inoodle.net" target="_blank">伤心凉面</a>
+  
+    <a href="http://mir.no/work" target="_blank">MIR.</a>
+  
+    <a href="http://modelo.io" target="_blank">MODELO</a>
+  
+    <a href="http://scz.617.cn" target="_blank">青衣十三楼</a>
+  
+    <a href="http://1416.me" target="_blank">1416教室</a>
+  
+    <a href="https://www.fieldevo.com/" target="_blank">Fieldevo</a>
+  
   </div>
+</div>
 
   
+ 
+  <div class="blog-footer-copyright">
+  <p class="copyright">Copyright &#169; 2012 - 2020 COUH. All rights reserved</p>
+</div>
+</footer>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+<script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
 
 
 
+<!--  -->
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/prism/prism.js"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-</body>
+<script type="text/javascript" src="/js/main.js"></script>
+  </body>
 </html>
