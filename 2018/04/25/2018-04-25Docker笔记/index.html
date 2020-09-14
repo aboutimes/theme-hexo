@@ -20,7 +20,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
   
 
-  <title>舊時光</title>
+  <title>Docker 笔记 | 舊時光</title>
 
 
   
@@ -32,7 +32,7 @@
   
 
   <script>
-    window.config = {"title":"舊時光","subtitle":"About Me","description":null,"author":"COUH","language":"zh-CN","timezone":null,"url":"aboutimes.com","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":"README.md","new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":"atom-one-light","default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":3,"pagination_dir":"page","theme":"finemoon","deploy":{"type":"git","repo":"git@github.com:aboutimes/theme-hexo.git","branch":"master"},"ignore":[],"gitalk":"enable","gitment_id":null,"gitment_owner":"aboutimes","gitment_repo":"theme-hexo","client_id":"a4658b7937231833073e","client_secret":"ee0e478222be08062f68c03d1f6ca433c05e5209","archive":1,"category":1,"archive_generator":{"per_page":0,"yearly":true,"monthly":true,"daily":false},"category_generator":{"per_page":0},"tag_generator":{"per_page":0},"plugins":"hexo-footnotes","marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"index_generator":{"per_page":3,"order_by":"-date"},"server":{"port":4000,"log":false,"ip":"0.0.0.0","compress":false,"header":true},"favicon":"/images/favicon.ico","menu":{"archives":"/archives","categories":"/categories","tags":"/tags"},"show_tag":true,"excerpt_link":"Read More","fancybox":false,"disqus_shortname":null,"comment":{"enable":true},"rss":"default","social":{"enable":false,"email":"dasd","instagram":"dasd","douban":"das","linkedin":"dsa","weibo":null,"stackoverflow":null,"facebook":null,"twitter":null,"github":null,"google":null,"zhihu":null,"pocket":null},"friends":{"老爹的铁铺":"https://www.26fe.cn","素錦":"http://isujin.com","寒塘渡月":"http://sometime.me","伤心凉面":"https://www.inoodle.net","MIR.":"http://mir.no/work","MODELO":"http://modelo.io","青衣十三楼":"http://scz.617.cn","1416教室":"http://1416.me","Fieldevo":"https://www.fieldevo.com/"},"since":2012,"google_analytics":null,"portfolio":null,"about":null,"poem":false};
+    window.config = {"title":"舊時光","subtitle":"About Me","description":null,"author":"COUH","language":"zh-CN","timezone":null,"url":"aboutimes.com","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":"README.md","new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":false,"line_number":false,"tab_replace":null},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":3,"pagination_dir":"page","theme":"finemoon","deploy":{"type":"git","repo":"git@github.com:aboutimes/theme-hexo.git","branch":"master"},"ignore":[],"gitalk":"enable","gitment_id":null,"gitment_owner":"aboutimes","gitment_repo":"theme-hexo","client_id":"a4658b7937231833073e","client_secret":"ee0e478222be08062f68c03d1f6ca433c05e5209","archive":1,"category":1,"archive_generator":{"per_page":0,"yearly":true,"monthly":true,"daily":false},"category_generator":{"per_page":0},"tag_generator":{"per_page":0},"plugins":"hexo-footnotes","index_generator":{"per_page":3,"order_by":"-date"},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"ip":"0.0.0.0","compress":false,"header":true},"favicon":"/images/favicon.ico","menu":{"archives":"/archives","categories":"/categories","tags":"/tags"},"show_tag":true,"excerpt_link":"Read More","fancybox":false,"disqus_shortname":null,"comment":{"enable":true},"rss":"default","social":{"enable":false,"email":"dasd","instagram":"dasd","douban":"das","linkedin":"dsa","weibo":null,"stackoverflow":null,"facebook":null,"twitter":null,"github":null,"google":null,"zhihu":null,"pocket":null},"friends":{"老爹的铁铺":"https://www.26fe.cn","素錦":"http://isujin.com","寒塘渡月":"http://sometime.me","伤心凉面":"https://www.inoodle.net","MIR.":"http://mir.no/work","MODELO":"http://modelo.io","青衣十三楼":"http://scz.617.cn","1416教室":"http://1416.me","Fieldevo":"https://www.fieldevo.com/"},"since":2012,"google_analytics":null,"portfolio":null,"about":null,"poem":false};
   </script>
 </head>
   <body>
@@ -157,7 +157,8 @@
     <div class="post-detail">
       
         <p><img src="/images/2018-04-35-01.png" alt=""><br>　　Docker 是一个基于 LXC(Linux Containers) 的开源容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上。让部署 Server 像手机安装 App 一样简单，摆脱环境搭建的烦恼。<a id="more"></a></p>
-<h2 id="1、容器"><a href="#1、容器" class="headerlink" title="1、容器"></a>1、容器</h2><p>　　容器技术一种操作系统层虚拟化（Operating system–level virtualization）技术，为 Linux 内核容器功能的一个用户空间接口。它将应用软件系统打包成一个软件容器（Container），内含应用软件本身的代码，以及所需要的操作系统核心和库。通过统一的名字空间和共用API来分配不同软件容器的可用硬件资源，创造出应用程序的独立沙箱运行环境，使得 Linux 用户可以容易的创建和管理系统或应用容器。<br>　　当一个 App 编译出来的时候，这个 App 相当于一个 <code>容器</code> 它包含了 <code>各种依赖的第三方 Frameworks</code> 和 <code>程序自己</code>，而 iPhone 相当于 App 的宿主，提供了 iOS 内核和系统提供的 Frameworks 。<br>那么一个容器里，包含了 程序依赖的其他程序 和 程序自己，内核则共用宿主的。Linux 的容器环境和 iOS 运行 App 的 Sandbox 沙盒技术也非常相似，容器内无法直接访问外部，但外部则可以访问容器内。</p>
+<h2 id="1、容器"><a href="#1、容器" class="headerlink" title="1、容器"></a>1、容器</h2><p>　　容器技术一种操作系统层虚拟化（Operating system–level virtualization）技术，为 Linux 内核容器功能的一个用户空间接口。它将应用软件系统打包成一个软件容器（Container），内含应用软件本身的代码，以及所需要的操作系统核心和库。通过统一的名字空间和共用API来分配不同软件容器的可用硬件资源，创造出应用程序的独立沙箱运行环境，使得 Linux 用户可以容易的创建和管理系统或应用容器。</p>
+<p>　　当一个 App 编译出来的时候，这个 App 相当于一个 <code>容器</code> 它包含了 <code>各种依赖的第三方 Frameworks</code> 和 <code>程序自己</code>，而 iPhone 相当于 App 的宿主，提供了 iOS 内核和系统提供的 Frameworks 。那么一个容器里，包含了<code>程序依赖的其他程序</code>和<code>程序自己</code>，内核则共用宿主的。Linux 的容器环境和 iOS 运行 App 的 Sandbox 沙盒技术也非常相似，容器内无法直接访问外部，但外部则可以访问容器内。</p>
 <blockquote>
 <p>一个 iOS App 要运行起来，需要四部分</p>
 <ul>
@@ -238,11 +239,11 @@
         if (status == 'true') {
           var gitment = new Gitment({
             id: document.title, 
-            owner: '{{ config.gitment_owner }}',
-            repo: '{{ config.gitment_repo }}',
+            owner: config.gitment_owner,
+            repo: config.gitment_repo,
             oauth: {
-              client_id: '{{ config.client_id }}',
-              client_secret: '{{ config.client_secret }}',
+              client_id: config.client_id,
+              client_secret: config.client_secret,
             },
           });
           status = false;
