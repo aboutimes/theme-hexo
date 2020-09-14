@@ -456,6 +456,9 @@ body {
 
 .blog-pager {
   padding: 50px 0; }
+  @media screen and (max-width: 900px) {
+    .blog-pager {
+      padding: 0 10px 40px 10px; } }
   .blog-pager a {
     text-transform: uppercase;
     background-color: #999;
