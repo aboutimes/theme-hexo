@@ -91,26 +91,27 @@
   Blog.prototype.popupMenu = function() {
     document.querySelector('.toggle-button').onclick = function(){
       menuToggle('menu');
-    };
-    
-    ['resize','click','tap','swipe'].forEach(function(item,index){
+      ['resize','click','tap','swipe'].forEach(function(item,index){
       // 点击、滑动非 toggle-button 区域，则隐藏菜单
-      window.addEventListener(item, (e) => {
-        let areaDom = e.target.parentNode?e.target.parentNode:false;
-        
-        if (areaDom) {
-          if (!areaDom.matches('.toggle-button') && !areaDom.parentNode.matches('.toggle-button')) {
-            menuToggle('menu', 'onlyhide');
-          }
-        }else {
-          menuToggle('menu', 'onlyhide');
+        if (document.querySelector('#menu').style.visibility=='visible') {
+          window.addEventListener(item, (e) => {
+            let areaDom = e.target.parentNode?e.target.parentNode:false;
+
+            if (areaDom) {
+              if (!areaDom.matches('.toggle-button') && !areaDom.parentNode.matches('.toggle-button')) {
+                menuToggle('menu', 'onlyhide');
+              }
+            }else {
+              menuToggle('menu', 'onlyhide');
+            }
+            
+            // if (!$(e.target).is('.toggle-button') && !$(e.target).parents().is('.toggle-button')) {
+            //   menuToggle('menu', 'onlyhide')
+            // }
+          });
         }
-        
-        // if (!$(e.target).is('.toggle-button') && !$(e.target).parents().is('.toggle-button')) {
-        //   menuToggle('menu', 'onlyhide')
-        // }
       });
-    });
+    }; 
   };
 
   /*

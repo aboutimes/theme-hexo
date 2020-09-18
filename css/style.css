@@ -974,16 +974,16 @@ figure.highlight {
     color: #5699e6; }
 
 .blog-footer {
-  margin: 0 auto;
-  max-width: 900px;
-  margin-top: 60px; }
+  margin: 60px auto 0;
+  max-width: 900px; }
   @media screen and (max-width: 900px) {
     .blog-footer {
       max-width: -webkit-calc(900px - (30px));
       max-width: calc(900px - (30px));
-      margin-top: 20px;
+      margin: 20px auto 0;
       padding-right: 10px;
-      padding-left: 10px; } }
+      padding-left: 10px;
+      overflow: hidden; } }
 
 .back-to-top {
   /*display: none;*/
