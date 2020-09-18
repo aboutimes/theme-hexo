@@ -424,7 +424,7 @@ table {
 
 html {
   box-sizing: border-box;
-  color: #333333;
+  color: #0a0a23;
   background-color: #4c4c4e;
   scroll-behavior: smooth; }
 
@@ -454,7 +454,7 @@ body {
         margin: 0; } }
 
 ::selection {
-  background: #75abea;
+  background: #002ead;
   color: #fff; }
 
 .blog-pager {
@@ -749,21 +749,26 @@ blockquote p {
   display: inline; }
 
 code {
-  /*background-color: #f9f2f4;*/
+  background-color: #CFD8DC;
   padding: 2px 4px;
   font-family: monospace, sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  /*font-size: 14px;*/
   color: #c7254e; }
 
 figure.highlight {
-  padding: 0;
-  width: 100%;
+  padding: 15px;
+  /*width: 100%;*/
   margin: 0 0 1.5rem;
-  background: #eceff1;
+  /*background: #e0e4e6;*/
+  background: #CFD8DC;
   color: #596E74;
-  border: 1px solid #B0BEC5;
-  overflow-x: auto; }
+  /*border: 1px solid #B0BEC5;*/
+  overflow-x: auto;
+  overflow-y: auto; }
+  @media screen and (max-width: 900px) {
+    figure.highlight {
+      padding: 5px; } }
   figure.highlight table {
     width: auto;
     border: none;
@@ -826,7 +831,7 @@ figure.highlight {
       margin: 0 auto 20px; } }
 
 .post-content {
-  padding: 25px; }
+  padding: 50px 80px; }
   @media screen and (max-width: 900px) {
     .post-content {
       padding: 10px; } }

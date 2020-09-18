@@ -92,7 +92,7 @@
     document.querySelector('.toggle-button').onclick = function(){
       menuToggle('menu');
     }; 
-    ['resize','click','tap','touch','swipe'].forEach(function(item,index){
+    ['resize','click','swipe'].forEach(function(item,index){
     // 点击、滑动非 toggle-button 区域，则隐藏菜单
       window.addEventListener(item, (e) => {
         let menuDom = document.querySelector('#menu');
