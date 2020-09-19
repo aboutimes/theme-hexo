@@ -47,7 +47,8 @@
     });
 
     $backToTop.onclick = function(){ 
-      if (typeof window.getComputedStyle(document.body).scrollBehavior == 'undefined') {
+      if (typeof window.getComputedStyle(document.body).scrollBehavior == 'undefined' || 
+        window.getComputedStyle(document.body).scrollBehavior!='smooth') {
         // 兼容不支持 scroll-behavior 浏览器
         scrollToTop();
       }else{
