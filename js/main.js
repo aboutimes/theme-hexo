@@ -16,7 +16,6 @@
     //   this.statistic();
     // }
     this.backToTop();
-    // this.popupMenu();
     this.highlight();
     // this.tagCount();
   };
@@ -65,73 +64,6 @@
         window.scrollTo(0, sTop - sTop / 8)
     }
   }
-
-
-  /**
-   * Compute tags FIXME: css not work
-   */
-  // Blog.prototype.tagCount = function() {
-  //   let $counts = $('.tag-count');
-  //   console.log($counts);
-  //   if ($counts.length === 0) {
-  //     return;
-  //   }
-  //   $counts.each(function(index) {
-  //     let count = $(this);
-  //     if (count.text() === 1) {
-  //       count.css('color', 'red');
-  //     }
-  //   });
-  // }
-
-
-  /**
-   * Responsive menu
-   */
-  Blog.prototype.popupMenu = function() {
-    document.querySelector('.toggle-button').onclick = function(){
-      menuToggle('menu');
-    }; 
-    ['resize','click','swipe'].forEach(function(item,index){
-    // 点击、滑动非 toggle-button 区域，则隐藏菜单
-      window.addEventListener(item, (e) => {
-        let menuDom = document.querySelector('#menu');
-        let isShow = menuDom.style.visibility?menuDom.style.visibility:'hidden';
-        if (isShow=='visible') {
-          let areaDom = e.target.parentNode?e.target.parentNode:false;
-          if (areaDom) {
-            if (!areaDom.matches('.toggle-button') && !areaDom.parentNode.matches('.toggle-button')) {
-              menuToggle('menu', 'onlyhide');
-            }
-          }else {
-            menuToggle('menu', 'onlyhide');
-          }
-        }
-      });
-    });
-      
-  };
-
-
-  /*
-  显示、隐藏菜单
-   */
-  function menuToggle(id, is_only_hide){
-    let menuDom = document.querySelector('#' + id);
-    let isShow = menuDom.style.visibility?menuDom.style.visibility:'hidden';
-    
-    if(isShow == 'hidden' && is_only_hide!="onlyhide") {
-      menuDom.style.maxHeight = '150px';
-      menuDom.style.opacity = '1';
-      menuDom.style.visibility = 'visible';
-    }
-    if(isShow == 'visible'){
-      menuDom.style.visibility = 'hidden';
-      menuDom.style.opacity = '0';
-      menuDom.style.maxHeight = '0';  
-    }
-  }
-  
 
   /**
    * Code hightlight

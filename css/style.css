@@ -441,7 +441,8 @@ body {
 
 .blog-main {
   margin: 50px auto;
-  max-width: 900px; }
+  max-width: 900px;
+  clear: both; }
   @media screen and (max-width: 900px) {
     .blog-main {
       max-width: -webkit-calc(900px - (30px));
@@ -546,20 +547,19 @@ body {
 .menu-link {
   background: #070707;
   text-align: center;
-  z-index: 1;
   width: 100%;
   -webkit-overflow-scrolling: touch;
-  z-index: 2;
+  z-index: 1;
   float: left;
   height: 0;
   visibility: hidden;
   opacity: 0;
-  transition: all 0.5s;
-  -moz-transition: all 0.5s;
+  transition: all 0.3s;
+  -moz-transition: all 0.3s;
   /* Firefox 4 */
-  -webkit-transition: all 0.5s;
+  -webkit-transition: all 0.3s;
   /* Safari 和 Chrome */
-  -o-transition: all 0.5s;
+  -o-transition: all 0.3s;
   /* Opera */ }
   .menu-link a {
     background: #070707;
