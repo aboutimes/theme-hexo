@@ -824,11 +824,11 @@ figure.highlight {
   -webkit-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
   word-wrap: break-word;
-  word-break: break-all;
   text-align: justify; }
   @media screen and (max-width: 900px) {
     .blog-post {
-      margin: 0 auto 20px; } }
+      margin: 0 auto 20px;
+      word-break: break-all; } }
 
 .post-content {
   padding: 50px 80px; }
