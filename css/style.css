@@ -522,6 +522,11 @@ body {
   height: 0;
   clear: both; }
 
+.mobile-menu:active .menu-link {
+  visibility: visible;
+  opacity: 1;
+  height: 40px; }
+
 .mobile-menu:hover .menu-link {
   visibility: visible;
   opacity: 1;
