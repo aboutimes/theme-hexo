@@ -370,7 +370,7 @@ th {
   color: #373C43;
   border-bottom: 1px #BEBBAE solid; }
 
-#menu a:hover, #menu a:active, .blog-header ul li a:hover, .blog-header ul li a:active, .post-more a:hover, .post-detail a:hover, .blog-archive .articles .articles-content:hover, .blog-archive .articles .articles-content:hover a, .card .content a:hover, .card .content a:active {
+.blog-header ul li a:hover, .blog-header ul li a:active, .menu-link a:hover, .menu-link a:active, .post-more a:hover, .post-detail a:hover, .blog-archive .articles .articles-content:hover, .blog-archive .articles .articles-content:hover a, .card .content a:hover, .card .content a:active {
   color: #1abc9c;
   /*border-bottom:1px #5699e6 solid;*/ }
 
@@ -472,50 +472,15 @@ body {
   .blog-pager .next {
     float: right; }
 
-#menu {
-  background: #070707;
-  text-align: center;
-  top: 60;
-  z-index: 1;
-  width: 100%;
-  -webkit-overflow-scrolling: touch;
-  visibility: hidden;
-  opacity: 0;
-  max-height: 0;
-  transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  /* Firefox 4 */
-  -webkit-transition: all 0.3s;
-  /* Safari 和 Chrome */
-  -o-transition: all 0.3s;
-  /* Opera */ }
-  #menu a {
-    color: #888;
-    border-top: 1px solid #888;
-    display: block;
-    padding: 10px;
-    text-transform: uppercase;
-    font-weight: 300;
-    letter-spacing: 1px;
-    line-height: 20px; }
-
 .blog-header {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  height: 60px; }
   .blog-header ul {
     padding: 0 15px;
     list-style: none;
     display: flex;
-    height: 46px; }
-    .blog-header ul .title {
-      margin-right: auto; }
-      .blog-header ul .title a {
-        font-size: 18px; }
-        .blog-header ul .title a:hover {
-          border-bottom: none; }
-      @media screen and (max-width: 900px) {
-        .blog-header ul .title {
-          margin-left: -15px; } }
+    height: 60px; }
     .blog-header ul li {
       cursor: pointer; }
       .blog-header ul li a {
@@ -535,16 +500,83 @@ body {
     @media screen and (max-width: 900px) {
       .blog-header ul .nav-item {
         display: none; } }
+  .blog-header .logo {
+    position: relative;
+    height: 60px;
+    top: 10px;
+    left: 10px; }
+  .blog-header .menu {
+    height: 60px; }
+  .blog-header .desktop-menu {
+    float: right;
+    margin: 0;
+    right: 10px;
+    top: -38px;
+    /* 60/2 + 16/2 = 38 */ }
+    @media screen and (max-width: 900px) {
+      .blog-header .desktop-menu {
+        /*height: 20;*/
+        float: right; } }
 
-.mobile {
-  display: none;
-  position: absolute;
-  top: 21px;
-  right: 20px;
-  cursor: pointer; }
+.mobile-menu {
+  height: 0;
+  clear: both; }
+
+.mobile-menu:hover .menu-link {
+  visibility: visible;
+  opacity: 1;
+  height: 40px; }
+
+.mobile-menu:after {
+  content: "";
+  border: none;
+  clear: both;
+  height: 0; }
+
+.menu-body {
+  position: relative;
+  /*  top: 60px;
+  bottom: 60px;*/ }
+
+.menu-link {
+  background: #070707;
+  text-align: center;
+  z-index: 1;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  z-index: 2;
+  float: left;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.5s;
+  /* Safari 和 Chrome */
+  -o-transition: all 0.5s;
+  /* Opera */ }
+  .menu-link a {
+    background: #070707;
+    color: #888;
+    display: block;
+    border-top: 1px solid #888;
+    display: block;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 20px; }
+
+.menu-icon {
+  display: none; }
   @media screen and (max-width: 900px) {
-    .mobile {
-      display: inline; } }
+    .menu-icon {
+      position: absolute;
+      top: 22px;
+      right: 20px;
+      cursor: pointer;
+      display: block; } }
 
 .blog-slide {
   height: 60px;
@@ -841,13 +873,16 @@ figure.highlight {
 
 .blog-archive {
   background: #f5f5f5;
-  padding: 30px; }
+  padding: 30px 80px; }
+  @media screen and (max-width: 900px) {
+    .blog-archive {
+      padding: 30px; } }
   .blog-archive .fas {
     margin-right: 10px; }
   .blog-archive .archive-title {
     margin: 15px 0; }
   .blog-archive .articles {
-    margin-left: 35px; }
+    /*margin-left: 35px;*/ }
     @media screen and (max-width: 900px) {
       .blog-archive .articles {
         margin-left: 0; } }
@@ -863,7 +898,10 @@ figure.highlight {
 
 .blog-tags {
   background: #f5f5f5;
-  padding: 30px; }
+  padding: 30px 80px; }
+  @media screen and (max-width: 900px) {
+    .blog-tags {
+      padding: 30px; } }
   .blog-tags .content {
     display: flex;
     flex-wrap: wrap; }

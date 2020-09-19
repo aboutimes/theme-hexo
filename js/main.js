@@ -16,7 +16,7 @@
     //   this.statistic();
     // }
     this.backToTop();
-    this.popupMenu();
+    // this.popupMenu();
     this.highlight();
     // this.tagCount();
   };
