@@ -50,3 +50,7 @@
 .hljs-link {
   text-decoration: underline;
 }
+.code pre{
+  white-space: normal;
+  /*代码块自动换行*/
+}

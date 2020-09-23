@@ -159,38 +159,38 @@
 </ul>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"><span class="section">#### 四级标题</span></span><br><span class="line"><span class="section">##### 五级标题</span></span><br><span class="line"><span class="section">###### 六级标题</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>效果<blockquote>
+<li>效果</li>
+</ul>
+<blockquote>
 <p><span style="font-size: 24px; font-weight: bold;">一级标题</span><br><span style="font-size: 20px; font-weight: bold;">二级标题</span><br><span style="font-size: 18px; font-weight: bold;">三级标题</span><br><span style="font-size: 16px; font-weight: bold;">四级标题</span><br><span style="font-size: 14px; font-weight: bold;">五级标题</span><br><span style="font-size: 12px; font-weight: bold;">六级标题</span></p>
 </blockquote>
-</li>
-</ul>
 <h2 id="2、段落和换行"><a href="#2、段落和换行" class="headerlink" title="2、段落和换行"></a>2、段落和换行</h2><p>　　在 Markdown 中段落由一行或者多行文本组成，相邻的两行文字会被视为同一段落，如果存在空行则被视为不同段落( Markdown 对空行的定义是看起来是空行就是空行，即使空行中存在 空格 TAB 回车 等不可见字符，同样会被视为空行 )。Markdown支持段内换行，如果你想进行段落内换行可以在上一行结尾插入两个以上的空格后再回车。</p>
 <ul>
 <li>语法</li>
 </ul>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">第一行</span><br><span class="line">相邻被视为同一段落。  </span><br><span class="line"></span><br><span class="line">第一行[<span class="string">空格</span>][<span class="symbol">空格</span>]</span><br><span class="line">上一行结尾存在两个空格，段内换行  </span><br><span class="line"></span><br><span class="line">第一行</span><br><span class="line"></span><br><span class="line">两行之间存在空行，视为不同段落。</span><br></pre></td></tr></table></figure>
 <ul>
-<li>效果<blockquote>
+<li>效果</li>
+</ul>
+<blockquote>
 <p>第一行相邻被视为同一段落。  </p>
 <p>第一行<br>上一行结尾存在两个空格，段内换行  </p>
 <p>第一行</p>
 <p>两行之间存在空行，视为不同段落。</p>
 </blockquote>
-</li>
-</ul>
 <h2 id="3、引用-强调-斜体-删除线-注脚"><a href="#3、引用-强调-斜体-删除线-注脚" class="headerlink" title="3、引用 / 强调 / 斜体 / 删除线 / 注脚"></a>3、引用 / 强调 / 斜体 / 删除线 / 注脚</h2><ul>
 <li>语法</li>
 </ul>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&gt;引用</span><br><span class="line">&gt;一级引用</span><br><span class="line">&gt;</span><br><span class="line">&gt;强调</span><br><span class="line">&gt;<span class="strong">**强调**</span> </span><br><span class="line">&gt;</span><br><span class="line">&gt;斜体</span><br><span class="line">&gt;<span class="emphasis">*斜体*</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;删除线</span><br><span class="line">&gt;~~删除线~~</span><br><span class="line">&gt;</span><br><span class="line">&gt;注脚</span><br><span class="line">&gt;文献注脚 [ ^ 1 ] </span><br><span class="line">&gt;</span><br><span class="line">&gt;&gt;二级引用</span><br></pre></td></tr></table></figure>
 <ul>
-<li>效果<blockquote>
+<li>效果</li>
+</ul>
+<blockquote>
 <p>一级引用<br><strong>强调</strong><br><em>斜体</em><br><del>删除线</del><br>文献注脚<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
 <blockquote>
 <p>二级引用</p>
 </blockquote>
 </blockquote>
-</li>
-</ul>
 <h2 id="4、列表"><a href="#4、列表" class="headerlink" title="4、列表"></a>4、列表</h2><ul>
 <li>语法</li>
 </ul>
@@ -213,16 +213,18 @@
 </ul>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">代码块</span><br><span class="line">"<span class="code">``两点包裹，不含引号`</span>`"</span><br><span class="line">代码段</span><br><span class="line">"<span class="code">```"</span></span><br><span class="line"><span class="code">三点包裹，不含引号</span></span><br><span class="line"><span class="code">"```"</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>效果<br><code>代码块</code></li>
+<li>效果</li>
 </ul>
+<p><code>代码块</code></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">代码段</span><br></pre></td></tr></table></figure>
 <h2 id="6、链接"><a href="#6、链接" class="headerlink" title="6、链接"></a>6、链接</h2><ul>
 <li>语法</li>
 </ul>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">无事种芭蕉</span>][<span class="symbol">a</span>]</span><br><span class="line">[<span class="symbol">a</span>]: <span class="link">https://aboutimes.com "无事种芭蕉"</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>效果<br><a href="https://aboutimes.com" title="无事种芭蕉">无事种芭蕉</a></li>
+<li>效果</li>
 </ul>
+<p><a href="https://aboutimes.com" title="无事种芭蕉">无事种芭蕉</a></p>
 <h2 id="7、分割线"><a href="#7、分割线" class="headerlink" title="7、分割线"></a>7、分割线</h2><ul>
 <li>语法</li>
 </ul>
@@ -237,8 +239,9 @@
 </ul>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">图片说明</span>](<span class="link">/path/to/img.jpg</span>)</span><br></pre></td></tr></table></figure>
 <ul>
-<li>效果<br><img src="/images/git-1.png" alt="图片说明"></li>
+<li>效果</li>
 </ul>
+<p><img src="/images/git-1.png" alt="图片说明"></p>
 <h2 id="9、表格"><a href="#9、表格" class="headerlink" title="9、表格"></a>9、表格</h2><ul>
 <li>语法</li>
 </ul>
