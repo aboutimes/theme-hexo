@@ -762,6 +762,9 @@ figure figcaption {
   .post-tags a .category-count {
     color: #ccc; }
 
+.post-tags a:hover {
+  color: #1abc9c; }
+
 .post-comments {
   margin: 60px 0; }
 
